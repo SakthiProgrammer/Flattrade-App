@@ -1,0 +1,6 @@
+2025/01/08 19:25:09 LoginUser-(+)
+2025/01/08 19:25:09 RegisterUser-(+)
+2025/01/08 19:25:09 createClient-(+)
+2025/01/08 19:25:09 LCU-002 Error 1054 (42S22): Unknown column 'kyc_is_completed' in 'field list'
+2025/01/08 19:25:09 createClient-(-)
+2025/01/08 19:25:09 RegisterUser-(-)

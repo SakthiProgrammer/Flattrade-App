@@ -1,0 +1,9 @@
+
+# ====== Database Details ======
+
+DBUser = "ST918"
+DBPass = "Best@123"
+DBPort = 3306
+DBHost = "192.168.2.5"
+DBName = "training"
+

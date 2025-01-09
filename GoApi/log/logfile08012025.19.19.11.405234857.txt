@@ -1,0 +1,18 @@
+2025/01/08 19:19:13 LoginUser-(+)
+2025/01/08 19:19:13 RegisterUser-(+)
+2025/01/08 19:19:13 createClient-(+)
+2025/01/08 19:19:13 LCU-002 Error 1054 (42S22): Unknown column 'phone_number' in 'field list'
+2025/01/08 19:19:13 createClient-(-)
+2025/01/08 19:19:13 RegisterUser-(-)
+2025/01/08 19:21:50 LoginUser-(+)
+2025/01/08 19:21:50 RegisterUser-(+)
+2025/01/08 19:21:50 createClient-(+)
+2025/01/08 19:21:50 LCU-002 Error 1054 (42S22): Unknown column 'phone_number' in 'field list'
+2025/01/08 19:21:50 createClient-(-)
+2025/01/08 19:21:50 RegisterUser-(-)
+2025/01/08 19:23:17 LoginUser-(+)
+2025/01/08 19:23:17 RegisterUser-(+)
+2025/01/08 19:23:17 createClient-(+)
+2025/01/08 19:23:17 LCU-002 Error 1054 (42S22): Unknown column 'phone_number' in 'field list'
+2025/01/08 19:23:17 createClient-(-)
+2025/01/08 19:23:17 RegisterUser-(-)

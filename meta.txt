@@ -1,0 +1,6 @@
+
+===== api === 
+
+login - completed 
+register - completed POST, 
+

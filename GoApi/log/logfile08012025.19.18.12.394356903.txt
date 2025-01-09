@@ -1,0 +1,10 @@
+2025/01/08 19:18:13 LoginUser-(+)
+2025/01/08 19:18:13 RegisterUser-(+)
+2025/01/08 19:18:13 LRU-002 json: cannot unmarshal string into Go struct field Client.client_id of type int
+2025/01/08 19:18:13 RegisterUser-(-)
+2025/01/08 19:18:48 LoginUser-(+)
+2025/01/08 19:18:48 RegisterUser-(+)
+2025/01/08 19:18:48 createClient-(+)
+2025/01/08 19:18:48 LCU-002 Error 1054 (42S22): Unknown column 'client_id' in 'field list'
+2025/01/08 19:18:48 createClient-(-)
+2025/01/08 19:18:48 RegisterUser-(-)
