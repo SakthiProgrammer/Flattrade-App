@@ -104,6 +104,10 @@ func createClient(lClientResponse *ClinetResponse, lClient *Client) {
 
 	lGormDB, lErr := gormdb.GormDBConnection()
 
+	lSql, _ := lGormDB.DB()
+
+	defer lSql.Close()
+
 	if lErr != nil {
 
 		log.Println("LCC-001", lErr.Error())
@@ -136,10 +140,6 @@ func createClient(lClientResponse *ClinetResponse, lClient *Client) {
 			lClient.UpdatedAt = time.Now()
 
 			lResult = lGormDB.Table("st_918_client_table").Create(&lClient)
-
-			lSql, _ := lGormDB.DB()
-
-			defer lSql.Close()
 
 			if lResult.Error != nil {
 				log.Println("LCC-003", lResult.Error)

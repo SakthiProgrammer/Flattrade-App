@@ -12,7 +12,7 @@ import (
 type BankRec struct {
 	ID         int    `json:"id" gorm:"column:Id"`
 	BankName   string `json:"bank_name" gorm:"column:Bank_Name"`
-	BranchName string `json:"branch_name" gorm:"column:Branch_Name"`
+	BranchName string `json:"branch_name" gorm:"column:Branch_name"`
 	IFSCCODE   string `json:"ifsc_code" gorm:"column:Ifsc_code"`
 	Address    string `json:"address" gorm:"column:Address"`
 	CreatedBy  string `json:"created_by" gorm:"column:Created_By"`
@@ -41,6 +41,10 @@ func GetBanks(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
 
 		lGormDb, lErr := gormdb.GormDBConnection()
+
+		lSql, _ := lGormDb.DB()
+
+		defer lSql.Close()
 
 		if lErr != nil {
 

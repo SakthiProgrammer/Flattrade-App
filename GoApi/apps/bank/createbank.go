@@ -92,6 +92,10 @@ func createBankInDB(lBankResponse *BankResponse, lBank *Bank) {
 
 	lGormDB, lErr := gormdb.GormDBConnection()
 
+	lSql, _ := lGormDB.DB()
+
+	defer lSql.Close()
+
 	if lErr != nil {
 
 		log.Println("BCBIDB-001", lErr.Error())

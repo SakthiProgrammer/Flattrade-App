@@ -13,4 +13,8 @@ export default {
   LoginsApi(body, headers) {
     return baseApiClient.post("/login", body, headers);
   },
+
+  GetBankDetails() {
+    return baseApiClient.get("/getbanks");
+  },
 };

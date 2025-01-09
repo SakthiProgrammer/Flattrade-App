@@ -43,19 +43,19 @@
                 </v-row>
 
                 <v-row>
-                    <!-- Bank Name -->
-
                     <v-col cols="12" sm="4" md="4" lg="4">
-                        <v-select v-model="name" :items="Bank" item-text="name" item-value="id" outlined
-                            label="Bank Name" required></v-select>
+                        <v-select v-model="SelectedBank" :items="bankDetails.bank_details" item-text="bank_name"
+                            item-value="id" outlined label="Bank Name" required @change="updateBankDetails">
+                        </v-select>
                     </v-col>
 
                     <v-col cols="12" sm="4" md="4" lg="4">
-                        <v-text-field label="Branch Name" required outlined disabled></v-text-field>
+                        <v-text-field v-model="branchName" label="Branch Name" required outlined
+                            readonly></v-text-field>
                     </v-col>
 
                     <v-col cols="12" sm="4" md="4" lg="4">
-                        <v-text-field label="Ifsc Code" required outlined disabled></v-text-field>
+                        <v-text-field v-model="ifscCode" label="IFSC Code" required outlined readonly></v-text-field>
                     </v-col>
 
                 </v-row>
@@ -63,29 +63,51 @@
                 <v-row>
                     <v-col cols="12">
                         <div class="d-flex justify-center mx-8">
-                            <v-btn class="green" dark>Login</v-btn>
+                            <v-btn class="green" dark>Register</v-btn>
                         </div>
                     </v-col>
                 </v-row>
             </v-form>
         </v-card>
+        
     </v-container>
 </template>
 
 
 
 <script>
+import EventService from '../../EventServices/EventService';
+
 
 export default {
     data() {
         return {
-            bankDetails: []
+            SelectedBank: "",
+            bankDetails: [],
+            branchName: "",
+            ifscCode: ""
         }
     },
 
-    // mounted() {
-    //     bankDetails =
-    // },
+    mounted() {
+        alert("hi")
+        EventService.GetBankDetails()
+            .then((res) => {
+                this.bankDetails = res.data
+            })
+            .catch((err) => alert(err))
+    },
+    methods: {
+        updateBankDetails() {
+            const selectedItem = this.bankDetails.bank_details.find((bank) => bank.id === this.SelectedBank);
+            console.log(selectedItem);
+            if (selectedItem) {
+                this.branchName = selectedItem.branch_name;
+                this.ifscCode = selectedItem.ifsc_code
+            }
+        }
+    }
+
 }
 
 </script>
