@@ -20,8 +20,8 @@ func main() {
 
 	log.SetOutput(f)
 
-	http.HandleFunc("/loginuser", login.LoginUser)
-	http.HandleFunc("/registeruser", login.RegisterUser)
+	http.HandleFunc("/login", login.LoginAll)
+	http.HandleFunc("/registeruser", login.Register)
 
 	http.ListenAndServe(":29091", nil)
 }

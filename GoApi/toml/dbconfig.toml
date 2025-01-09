@@ -7,3 +7,9 @@ DBPort = 3306
 DBHost = "192.168.2.5"
 DBName = "training"
 
+
+# ======= Admin id & pass ======
+
+AdminId = "AD-0012"
+AdminPassword = "admin@143"
+

@@ -4,23 +4,35 @@ import (
 	"encoding/json"
 	"flattrade/apps/DBConnection/gormdb"
 	common "flattrade/common"
+	"flattrade/genpkg"
 	"fmt"
 	"io"
 	"log"
 	"net/http"
+	"strings"
+
+	"gorm.io/gorm"
 )
 
-type UserLogin struct {
+type Login struct {
 	UserId   string `json:"user_id" gorm:"userid"`
 	Password string `json:"password" gorm:"password"`
 }
 
-type UserLoginResponse struct {
+type LoginResponse struct {
 	Status string `json:"status"`
 	ErrMsg string `json:"errMsg"`
 }
 
-func LoginUser(w http.ResponseWriter, r *http.Request) {
+/* =================================== login for CLIENT, ADMIN, USER(employee) =============================================
+
+		* USER - U
+		* ADMIN - A
+		* CLIENT - C
+
+   =========================================================================================================================*/
+
+func LoginAll(w http.ResponseWriter, r *http.Request) {
 
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
 	(w).Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
@@ -29,53 +41,65 @@ func LoginUser(w http.ResponseWriter, r *http.Request) {
 
 	log.Println("LoginUser-(+)")
 
-	var lUserLoginResponse UserLoginResponse
-	var lUser UserLogin
+	var lLoginResponse LoginResponse
+	var lUser Login
 
-	lUserLoginResponse.Status = common.SuccessCode
+	lRole := r.Header.Get("role")
 
-	if r.Method == http.MethodPost {
+	lRole = strings.ToUpper(lRole)
 
-		lBody, lErr := io.ReadAll(r.Body)
+	if isRoleValid(lRole) {
+		lLoginResponse.ErrMsg = "Provide a role in header"
+		lLoginResponse.Status = common.ErrorCode
 
-		if lErr != nil {
+	} else {
 
-			log.Println("LULU-001", lErr.Error())
-			lUserLoginResponse.ErrMsg = lErr.Error()
-			lUserLoginResponse.Status = common.ErrorCode
+		lLoginResponse.Status = common.SuccessCode
 
-		} else {
+		if r.Method == http.MethodPost {
 
-			lErr := json.Unmarshal(lBody, &lUser)
-
-			lUserPassword := lUser.Password
+			lBody, lErr := io.ReadAll(r.Body)
 
 			if lErr != nil {
 
-				log.Println("LULU-002", lErr.Error())
-				lUserLoginResponse.ErrMsg = lErr.Error()
-				lUserLoginResponse.Status = common.ErrorCode
+				log.Println("LULU-001", lErr.Error())
+				lLoginResponse.ErrMsg = lErr.Error()
+				lLoginResponse.Status = common.ErrorCode
 
 			} else {
 
-				if validate(&lUserLoginResponse, &lUser) {
-					checkUser(&lUserLoginResponse, &lUser, lUserPassword)
+				lErr := json.Unmarshal(lBody, &lUser)
+
+				lUserPassword := lUser.Password
+
+				if lErr != nil {
+
+					log.Println("LULU-002", lErr.Error())
+					lLoginResponse.ErrMsg = lErr.Error()
+					lLoginResponse.Status = common.ErrorCode
+
+				} else {
+					if validate(&lLoginResponse, &lUser) {
+
+						checkUser(&lLoginResponse, &lUser, lUserPassword, lRole, r)
+
+					}
+
 				}
-
 			}
-		}
 
-	} else {
-		lUserLoginResponse.Status = common.ErrorCode
-		lUserLoginResponse.ErrMsg = "Invalid Method"
+		} else {
+			lLoginResponse.Status = common.ErrorCode
+			lLoginResponse.ErrMsg = "Invalid Method"
+		}
 	}
 
-	lData, lErr := json.Marshal(lUserLoginResponse)
+	lData, lErr := json.Marshal(lLoginResponse)
 
 	if lErr != nil {
 		log.Println("")
-		lUserLoginResponse.Status = common.ErrorCode
-		lUserLoginResponse.ErrMsg = "Server Error"
+		lLoginResponse.Status = common.ErrorCode
+		lLoginResponse.ErrMsg = "Server Error"
 	} else {
 		fmt.Fprintf(w, string(lData))
 	}
@@ -84,22 +108,30 @@ func LoginUser(w http.ResponseWriter, r *http.Request) {
 
 }
 
+func isRoleValid(lRole string) bool {
+
+	if lRole != "C" && lRole != "A" && lRole != "U" {
+		return true
+	}
+	return false
+}
+
 /* ========================================== Validate the userid and password =================================================== */
 
-func validate(lUserLoginResponse *UserLoginResponse, lUser *UserLogin) bool {
+func validate(lLoginResponse *LoginResponse, lUser *Login) bool {
 
 	log.Println("validate-(+)")
 	if lUser.Password == "" && lUser.UserId == "" {
-		lUserLoginResponse.ErrMsg = "user_id & password field is required"
-		lUserLoginResponse.Status = common.ErrorCode
+		lLoginResponse.ErrMsg = "user_id & password field is required"
+		lLoginResponse.Status = common.ErrorCode
 		return false
 	} else if lUser.UserId == "" {
-		lUserLoginResponse.ErrMsg = "userid field is required"
-		lUserLoginResponse.Status = common.ErrorCode
+		lLoginResponse.ErrMsg = "userid field is required"
+		lLoginResponse.Status = common.ErrorCode
 		return false
 	} else if lUser.Password == "" {
-		lUserLoginResponse.ErrMsg = "password field is required"
-		lUserLoginResponse.Status = common.ErrorCode
+		lLoginResponse.ErrMsg = "password field is required"
+		lLoginResponse.Status = common.ErrorCode
 		return false
 	}
 
@@ -110,45 +142,126 @@ func validate(lUserLoginResponse *UserLoginResponse, lUser *UserLogin) bool {
 
 /* ========================================== For check in db user is Available or Not ============================================ */
 
-func checkUser(lUserLoginResponse *UserLoginResponse, lUser *UserLogin, lUserPassword string) {
+func checkUser(lLoginResponse *LoginResponse, lUser *Login, lUserPassword string, lRole string, r *http.Request) {
 
 	log.Println("checkUser-(+)")
 
-	lGormDB, lErr := gormdb.GormDBConnection()
+	if lRole == "A" {
 
-	if lErr != nil {
-
-		log.Println("LCU-001", lErr.Error())
-		lUserLoginResponse.ErrMsg = lErr.Error()
-		lUserLoginResponse.Status = common.ErrorCode
+		checkAdmin(lLoginResponse, lUser, lRole)
 
 	} else {
 
-		fmt.Println(lUserLoginResponse)
-		fmt.Println(lUserPassword)
-		lResult := lGormDB.Table("st_918_emp").Select("password").Where("userid=?", lUser.UserId).Find(&lUser.Password)
+		lGormDB, lErr := gormdb.GormDBConnection()
 
-		if lResult.Error != nil || lResult.RowsAffected == 0 {
-			log.Println("LCU-002", lResult.Error.Error())
-			lUserLoginResponse.Status = common.ErrorCode
-			lUserLoginResponse.ErrMsg = "Invalid User Id"
+		if lErr != nil {
+
+			log.Println("LCU-001", lErr.Error())
+			lLoginResponse.ErrMsg = lErr.Error()
+			lLoginResponse.Status = common.ErrorCode
 
 		} else {
 
-			if lUser.Password != lUserPassword {
+			fmt.Println(lLoginResponse)
+			fmt.Println(lUserPassword)
 
-				lUserLoginResponse.Status = common.ErrorCode
-				lUserLoginResponse.ErrMsg = "Password is Incorrect"
+			var lTableName string
+
+			var lResult *gorm.DB
+
+			if lRole == "C" {
+
+				lTableName = "st_918_client_table"
+
+				lResult = lGormDB.Table(lTableName).Select("password").Where("client_id=?", lUser.UserId).Find(&lUser.Password)
+
+			} else if lRole == "U" {
+
+				/*  ==============USER-ROLES=============
+					1. BO  -  Back Officer
+					2. B   - Biller
+					3. APR - Approver
+				    ===================================== */
+
+				lUserRole := r.Header.Get("UserRole")
+				lUserRole = strings.ToUpper(lUserRole)
+
+				if isValidUserRole(lUserRole) {
+
+					lLoginResponse.ErrMsg = "Provide a UserRole in header - B|BO|APR"
+					lLoginResponse.Status = common.ErrorCode
+					return
+
+				} else {
+
+					lTableName = "st_918_config_users_table"
+
+					lResult = lGormDB.Table(lTableName).Select("password").Where("user_id=?", lUser.UserId).Where("role=?", lUserRole).Find(&lUser.Password)
+
+				}
+
+			}
+
+			if lResult != nil && lResult.Error != nil || lResult.RowsAffected == 0 {
+				log.Println("LCU-002", lResult.Error)
+				lLoginResponse.Status = common.ErrorCode
+				lLoginResponse.ErrMsg = "Invalid User Id"
 
 			} else {
 
-				lUserLoginResponse.Status = common.SuccessCode
-				lUserLoginResponse.ErrMsg = ""
-				fmt.Println("Login Successfully")
+				if lUser.Password != lUserPassword {
+
+					lLoginResponse.Status = common.ErrorCode
+					lLoginResponse.ErrMsg = "Password is Incorrect"
+
+				} else {
+
+					lLoginResponse.Status = common.SuccessCode
+					lLoginResponse.ErrMsg = ""
+					fmt.Println("Login Successfully")
+				}
 			}
 		}
+
 	}
 
 	log.Println("checkUser-(-)")
 
+}
+
+/* =============   IF ROLE IS USER -- then SUB-ROLES are B, BO, APR   =========================== */
+
+func isValidUserRole(lUserRole string) bool {
+
+	log.Println("isValidUserRole-(-)")
+
+	if lUserRole != "BO" && lUserRole != "B" && lUserRole != "APR" {
+		return true
+	}
+	log.Println("isValidUserRole-(-)")
+	return false
+}
+
+/* ======================= FOR check Admin id & Password in toml file =============================== */
+
+func checkAdmin(lLoginResponse *LoginResponse, lUser *Login, lRole string) {
+
+	log.Println("checkAdmin-(+)")
+	config := genpkg.ReadTomlConfig("./toml/dbconfig.toml")
+	AdminId := fmt.Sprintf("%v", config.(map[string]interface{})["AdminId"])
+	AdminPassword := fmt.Sprintf("%v", config.(map[string]interface{})["AdminPassword"])
+
+	if lUser.UserId != AdminId {
+
+		lLoginResponse.Status = common.ErrorCode
+		lLoginResponse.ErrMsg = "Admin Not Found"
+
+	} else if lUser.Password != AdminPassword {
+		lLoginResponse.Status = common.ErrorCode
+		lLoginResponse.ErrMsg = "Password Incorrect"
+	} else {
+		lLoginResponse.Status = common.SuccessCode
+	}
+
+	log.Println("checkAdmin-(-)")
 }

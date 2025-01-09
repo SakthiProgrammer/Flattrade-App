@@ -35,7 +35,7 @@ type ClinetResponse struct {
 	Status     string `json:"status"`
 }
 
-func RegisterUser(w http.ResponseWriter, r *http.Request) {
+func Register(w http.ResponseWriter, r *http.Request) {
 
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
 	(w).Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
