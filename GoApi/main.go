@@ -24,6 +24,7 @@ func main() {
 	http.HandleFunc("/login", login.LoginAll)
 	http.HandleFunc("/registeruser", login.RegisterClient)
 	http.HandleFunc("/getbanks", bank.GetBanks)
+	http.HandleFunc("/createbank", bank.CreateBank)
 
 	http.ListenAndServe(":29091", nil)
 }

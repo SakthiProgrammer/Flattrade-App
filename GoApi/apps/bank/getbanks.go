@@ -29,8 +29,8 @@ type BankResp struct {
 
 func GetBanks(w http.ResponseWriter, r *http.Request) {
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
-	(w).Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
-	(w).Header().Set("Access-Control-Allow-Headers", "ADMIN, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
+	(w).Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
+	(w).Header().Set("Access-Control-Allow-Headers", "ADMIN, CLIENT, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 	(w).Header().Set("Content-Type", "application/json")
 
 	log.Println("GetBank-(+)")
