@@ -1,0 +1,8 @@
+2025/01/09 14:41:10 LoginUser-(+)
+2025/01/09 14:41:10 RegisterUser-(+)
+2025/01/09 14:41:10 createClient-(+)
+2025/01/09 14:41:10 Database connection established successfully.
+2025/01/09 14:41:10 generateUniqueID-(+)
+2025/01/09 14:41:10 generateUniqueID-(-)
+2025/01/09 14:41:10 createClient-(-)
+2025/01/09 14:41:10 RegisterUser-(-)

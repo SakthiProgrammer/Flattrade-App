@@ -1,0 +1,71 @@
+<!-- <template>
+    <v-container class="d-flex justify-center align-center fill-height">
+        <app-userlogin-form />
+        <app-adminlogin-form /> </v-container>
+
+</template>
+
+<script>
+
+import AdminLoginForm from "../components/login/AdminLoginForm.vue";
+import UserLogin from "../components/login/components/LoginForm.vue"
+
+export default {
+    data() {
+        return {
+
+        }
+    },
+    components: {
+        "app-userlogin-form": UserLogin,
+        "app-adminlogin-form": AdminLoginForm
+
+    }
+}
+
+</script>  -->
+
+<template>
+    <div class="my-auto">
+        <v-app-bar app color="" height="80px">
+            <v-img class="ml-3" lazy-src="https://picsum.photos/id/11/10/6" max-height="160" max-width="160"
+                src="../assets/logo-blue.png"></v-img>
+            <v-spacer></v-spacer>
+            <v-btn @click="selectRole('admin')" class="ma-2 my-5" outlined color="indigo" rounded>
+                Admin
+            </v-btn>
+            <v-btn @click="selectRole('user')" class="ma-2 my-5" outlined color="indigo" rounded>
+                User
+            </v-btn>
+        </v-app-bar>
+
+        <v-container>
+            <h1 class="text-center">Welcome to Flattrade</h1>
+
+            <!-- Conditionally load Admin or User login form based on selectedRole -->
+            <component :is="selectedRole === 'admin' ? 'AdminLogin' : 'UserLogin'"></component>
+        </v-container>
+    </div>
+</template>
+
+<script>
+import AdminLogin from '../components/login/AdminLoginForm.vue';
+import UserLogin from '../components/login/UserLoginForm.vue';
+
+export default {
+    components: {
+        AdminLogin,
+        UserLogin,
+    },
+    data() {
+        return {
+            selectedRole: null, // To track whether Admin or User is selected
+        };
+    },
+    methods: {
+        selectRole(role) {
+            this.selectedRole = role;
+        },
+    },
+};
+</script>

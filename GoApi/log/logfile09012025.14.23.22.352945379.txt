@@ -1,0 +1,14 @@
+2025/01/09 14:23:24 LoginUser-(+)
+2025/01/09 14:23:24 RegisterUser-(+)
+2025/01/09 14:23:24 createClient-(+)
+2025/01/09 14:23:24 Database connection established successfully.
+2025/01/09 14:23:24 LCC-002 model value required
+2025/01/09 14:23:24 createClient-(-)
+2025/01/09 14:23:24 RegisterUser-(-)
+2025/01/09 14:24:03 LoginUser-(+)
+2025/01/09 14:24:03 RegisterUser-(+)
+2025/01/09 14:24:03 createClient-(+)
+2025/01/09 14:24:03 Database connection established successfully.
+2025/01/09 14:24:03 LCC-002 model value required
+2025/01/09 14:24:03 createClient-(-)
+2025/01/09 14:24:03 RegisterUser-(-)

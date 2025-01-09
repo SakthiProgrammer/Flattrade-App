@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flattrade/apps/bank"
 	login "flattrade/apps/login"
 	"log"
 	"net/http"
@@ -21,7 +22,8 @@ func main() {
 	log.SetOutput(f)
 
 	http.HandleFunc("/login", login.LoginAll)
-	http.HandleFunc("/registeruser", login.Register)
+	http.HandleFunc("/registeruser", login.RegisterClient)
+	http.HandleFunc("/getbanks", bank.GetBanks)
 
 	http.ListenAndServe(":29091", nil)
 }

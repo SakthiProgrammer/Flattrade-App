@@ -15,8 +15,8 @@ import (
 )
 
 type Login struct {
-	UserId   string `json:"user_id" gorm:"userid"`
-	Password string `json:"password" gorm:"password"`
+	UserId   string `json:"user_id" gorm:"column:userid"`
+	Password string `json:"password" gorm:"column:password"`
 }
 
 type LoginResponse struct {
@@ -174,6 +174,10 @@ func checkUser(lLoginResponse *LoginResponse, lUser *Login, lUserPassword string
 				lTableName = "st_918_client_table"
 
 				lResult = lGormDB.Table(lTableName).Select("password").Where("client_id=?", lUser.UserId).Find(&lUser.Password)
+
+				lSql, _ := lGormDB.DB()
+
+				defer lSql.Close()
 
 			} else if lRole == "U" {
 

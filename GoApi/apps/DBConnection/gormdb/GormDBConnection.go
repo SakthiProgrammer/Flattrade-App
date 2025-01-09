@@ -28,5 +28,16 @@ func GormDBConnection() (*gorm.DB, error) {
 		return gormDB, lErr
 	}
 
+	/* sqlDB, err := gormDB.DB()
+	if err != nil {
+		log.Println("GGDBC-002", err.Error())
+		return nil, err
+	}
+
+	// Set connection pool settings
+	sqlDB.SetMaxOpenConns(10)                  // Max open connections
+	sqlDB.SetMaxIdleConns(5)                   // Max idle connections
+	sqlDB.SetConnMaxLifetime(30 * time.Minute) // Max connection lifetime */
+	log.Println("Database connection established successfully.")
 	return gormDB, nil
 }

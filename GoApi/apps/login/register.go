@@ -4,15 +4,17 @@ import (
 	"encoding/json"
 	"flattrade/apps/DBConnection/gormdb"
 	common "flattrade/common"
+	"flattrade/genpkg"
 	"fmt"
 	"io"
 	"log"
 	"net/http"
+	"strconv"
 	"time"
 )
 
 type Client struct {
-	// ClientID       int       `json:"client_id" gorm:"column:client_id"`
+	ClientID       int    `json:"client_id" gorm:"primaryKey; column:client_id"`
 	PhoneNumber    string `json:"phone_number"gorm:"column:phone_number"`
 	FirstName      string `json:"first_name" gorm:"column:first_name"`
 	LastName       string `json:"last_name" gorm:"column:last_name"`
@@ -22,6 +24,7 @@ type Client struct {
 	BankAccount    string `json:"bank_account" gorm:"column:bank_account"`
 	Email          string `json:"email" gorm:"column:email"`
 	// BankID         int       `json:"bank_id" gorm:"column:bank_id"`
+	UniqeID   string    `json:"unique_id" gorm:"column:unique_id"`
 	Password  string    `json:"password"gorm:"column:password"`
 	CreatedBy string    `json:"created_by"gorm:"column:created_by"`
 	CreatedAt time.Time `json:"created_at"gorm:"column:created_at"`
@@ -31,11 +34,11 @@ type Client struct {
 
 type ClinetResponse struct {
 	ClientInfo Client `json:"client_info"`
-	ErrMsg     string `json:"err_msg"`
+	ErrMsg     string `json:"errMsg"`
 	Status     string `json:"status"`
 }
 
-func Register(w http.ResponseWriter, r *http.Request) {
+func RegisterClient(w http.ResponseWriter, r *http.Request) {
 
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
 	(w).Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
@@ -57,7 +60,7 @@ func Register(w http.ResponseWriter, r *http.Request) {
 
 		if lErr != nil {
 
-			log.Println("LRU-001", lErr.Error())
+			log.Println("LRC-001", lErr.Error())
 			lClientResponse.ErrMsg = lErr.Error()
 			lClientResponse.Status = common.ErrorCode
 
@@ -67,7 +70,7 @@ func Register(w http.ResponseWriter, r *http.Request) {
 
 			if lErr != nil {
 
-				log.Println("LRU-002", lErr.Error())
+				log.Println("LRC-002", lErr.Error())
 				lClientResponse.ErrMsg = lErr.Error()
 				lClientResponse.Status = common.ErrorCode
 
@@ -86,7 +89,7 @@ func Register(w http.ResponseWriter, r *http.Request) {
 	lData, lErr := json.Marshal(lClientResponse)
 
 	if lErr != nil {
-		log.Println("")
+		log.Println("LRC", lErr.Error())
 		lClientResponse.Status = common.ErrorCode
 		lClientResponse.ErrMsg = "Server Error"
 	} else {
@@ -103,32 +106,68 @@ func createClient(lClientResponse *ClinetResponse, lClient *Client) {
 
 	if lErr != nil {
 
-		log.Println("LCU-001", lErr.Error())
+		log.Println("LCC-001", lErr.Error())
 		lClientResponse.ErrMsg = lErr.Error()
 		lClientResponse.Status = common.ErrorCode
 
 	} else {
 
-		fmt.Println(lClientResponse)
-
-		lClient.CreatedBy = lClient.FirstName + " " + lClient.LastName
-		lClient.CreatedAt = time.Now()
-		lClient.UpdatedBy = lClient.FirstName + " " + lClient.LastName
-		lClient.UpdatedAt = time.Now()
-
-		lResult := lGormDB.Table("st_918_client_table").Create(lClient)
+		var lastClientID Client
+		lResult := lGormDB.Table("st_918_client_table").
+			Order("client_id desc").
+			Limit(1).
+			Pluck("client_id", &lastClientID)
+		fmt.Println()
 
 		if lResult.Error != nil {
-			log.Println("LCU-002", lResult.Error.Error())
+			log.Println("LCC-002", lResult.Error)
 			lClientResponse.Status = common.ErrorCode
 			lClientResponse.ErrMsg = lResult.Error.Error()
 
 		} else {
 
-			lClientResponse.ClientInfo = *lClient
-			lClientResponse.Status = common.SuccessCode
+			lUniqueId := generateUniqueID(lastClientID.ClientID)
+
+			fmt.Println(lClientResponse)
+			lClient.UniqeID = lUniqueId
+			lClient.CreatedBy = lClient.FirstName + " " + lClient.LastName
+			lClient.CreatedAt = time.Now()
+			lClient.UpdatedBy = lClient.FirstName + " " + lClient.LastName
+			lClient.UpdatedAt = time.Now()
+
+			lResult = lGormDB.Table("st_918_client_table").Create(&lClient)
+
+			lSql, _ := lGormDB.DB()
+
+			defer lSql.Close()
+
+			if lResult.Error != nil {
+				log.Println("LCC-003", lResult.Error)
+				lClientResponse.Status = common.ErrorCode
+				lClientResponse.ErrMsg = lResult.Error.Error()
+
+			} else {
+				lClientResponse.ClientInfo = *lClient
+				lClientResponse.Status = common.SuccessCode
+			}
 		}
+
 	}
+
 	log.Println("createClient-(-)")
+
+}
+
+func generateUniqueID(clientId int) string {
+
+	log.Println("generateUniqueID-(+)")
+
+	config := genpkg.ReadTomlConfig("./toml/dbconfig.toml")
+	lUniqueIdFormat := fmt.Sprintf("%v", config.(map[string]interface{})["UniqueId"])
+	lUniqueId := lUniqueIdFormat
+	lUniqueId = lUniqueId + strconv.Itoa(clientId+1)
+
+	log.Println("generateUniqueID-(-)")
+	return lUniqueId
 
 }

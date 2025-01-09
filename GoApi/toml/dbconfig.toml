@@ -13,3 +13,7 @@ DBName = "training"
 AdminId = "AD-0012"
 AdminPassword = "admin@143"
 
+# ======= Unique User Id Format ====
+
+UniqueId = "FT000"
+

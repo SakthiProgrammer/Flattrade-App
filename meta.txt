@@ -1,6 +1,16 @@
 
+
+====== Table Names ======
+
+
+
+
+
+
+
 ===== api === 
 
-login - completed 
-register - completed POST, 
+login - completed 100%
+register - completed POST, 80%
+bank -  GET, POST 70%
 
