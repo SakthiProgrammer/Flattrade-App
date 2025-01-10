@@ -7,7 +7,6 @@
   <script>
 import UserTable from '../components/admin/user/UserTable.vue';
 
-
   export default {
     components:{
         UserTable

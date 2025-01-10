@@ -7,8 +7,8 @@
 <script>
 import BrokerageTable from '../components/admin/brokerage/BrokerageTable.vue';
 export default{
-components:{
-    BrokerageTable
-}
+    components:{
+        BrokerageTable
+    }
 }
 </script>
