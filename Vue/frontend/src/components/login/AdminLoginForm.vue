@@ -1,4 +1,5 @@
 <template>
+    <div>
     <v-container>
         <v-card class="pa-md-15 mx-lg-auto pa-sm-10" width="500px">
             <v-row>
@@ -26,6 +27,7 @@
             </v-row>
         </v-card>
     </v-container>
+</div>
 </template>
 
 <script>

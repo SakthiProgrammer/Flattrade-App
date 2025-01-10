@@ -26,26 +26,32 @@ export default {
 </script>  -->
 
 <template>
-    <div class="my-auto">
-        <v-app-bar app color="" height="80px">
-            <v-img class="ml-3" lazy-src="https://picsum.photos/id/11/10/6" max-height="160" max-width="160"
-                src="../assets/logo-blue.png"></v-img>
-            <v-spacer></v-spacer>
-            <v-btn @click="selectRole('admin')" class="ma-2 my-5" outlined color="indigo" rounded>
-                Admin
-            </v-btn>
-            <v-btn @click="selectRole('user')" class="ma-2 my-5" outlined color="indigo" rounded>
-                User
-            </v-btn>
-        </v-app-bar>
+    <div class="my-auto fill-height">
+    <v-container>
+        <v-row class="fill-height align-center justify-center text-center">
+            <!-- Left Column -->
+            <v-col cols="12" md="6" sm="12" class="d-flex flex-column align-center justify-center">
+                <h1>Welcome to Flattrade</h1>
+                <div>
+                <v-btn @click="selectRole('admin')" class="ma-2 my-5" outlined color="indigo" rounded>
+                    Admin
+                </v-btn>
+                <v-btn @click="selectRole('user')" class="ma-2 my-5" outlined color="indigo" rounded>
+                    User
+                </v-btn>
+            </div>
+                {{ selectedRole }}
+            </v-col>
 
-        <v-container>
-            <h1 class="text-center">Welcome to Flattrade</h1>
+            <!-- Right Column -->
+            <v-col cols="12" md="6" sm="12" class="d-flex align-center justify-center">
+                <!-- Conditionally load Admin or User login form based on selectedRole -->
+                <component :is="selectedRole === 'admin' ? 'AdminLogin' : 'UserLogin'"></component>
+            </v-col>
+        </v-row>
+    </v-container>
+</div>
 
-            <!-- Conditionally load Admin or User login form based on selectedRole -->
-            <component :is="selectedRole === 'admin' ? 'AdminLogin' : 'UserLogin'"></component>
-        </v-container>
-    </div>
 </template>
 
 <script>
@@ -59,7 +65,7 @@ export default {
     },
     data() {
         return {
-            selectedRole: null, // To track whether Admin or User is selected
+            selectedRole: 'user', // To track whether Admin or User is selected
         };
     },
     methods: {
@@ -67,5 +73,6 @@ export default {
             this.selectedRole = role;
         },
     },
+    
 };
 </script>
