@@ -17,4 +17,8 @@ export default {
   GetBankDetails() {
     return baseApiClient.get("/getbanks");
   },
+
+  CreateClient(ClientData) {
+    return baseApiClient.post("/registerclient", ClientData);
+  },
 };

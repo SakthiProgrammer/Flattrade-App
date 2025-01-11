@@ -43,9 +43,7 @@ export default {
                 {{ selectedRole }}
             </v-col>
 
-            <!-- Right Column -->
             <v-col cols="12" md="6" sm="12" class="d-flex align-center justify-center">
-                <!-- Conditionally load Admin or User login form based on selectedRole -->
                 <component :is="selectedRole === 'admin' ? 'AdminLogin' : 'UserLogin'"></component>
             </v-col>
         </v-row>
