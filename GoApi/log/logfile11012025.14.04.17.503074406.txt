@@ -1,0 +1,141 @@
+2025/01/11 14:04:21 LoginUser-(+)
+2025/01/11 14:04:21 RegisterUser-(+)
+2025/01/11 14:04:21 RegisterUser-(-)
+2025/01/11 14:04:29 LoginUser-(+)
+2025/01/11 14:04:29 RegisterUser-(+)
+2025/01/11 14:04:29 RegisterUser-(-)
+2025/01/11 14:04:29 LoginUser-(+)
+2025/01/11 14:04:29 RegisterUser-(+)
+2025/01/11 14:04:29 createClient-(+)
+2025/01/11 14:04:29 Database connection established successfully.
+2025/01/11 14:04:29 generateUniqueID-(+)
+2025/01/11 14:04:29 generateUniqueID-(-)
+2025/01/11 14:04:29 LCC-003 Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`training`.`st_918_client_table`, CONSTRAINT `st_918_client_table_ibfk_1` FOREIGN KEY (`bank_id`) REFERENCES `st_918_bank_details` (`Id`))
+2025/01/11 14:04:29 createClient-(-)
+2025/01/11 14:04:29 RegisterUser-(-)
+2025/01/11 14:05:04 LoginUser-(+)
+2025/01/11 14:05:04 RegisterUser-(+)
+2025/01/11 14:05:04 RegisterUser-(-)
+2025/01/11 14:05:04 LoginUser-(+)
+2025/01/11 14:05:04 RegisterUser-(+)
+2025/01/11 14:05:04 createClient-(+)
+2025/01/11 14:05:04 Database connection established successfully.
+2025/01/11 14:05:04 generateUniqueID-(+)
+2025/01/11 14:05:04 generateUniqueID-(-)
+2025/01/11 14:05:04 LCC-003 Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`training`.`st_918_client_table`, CONSTRAINT `st_918_client_table_ibfk_1` FOREIGN KEY (`bank_id`) REFERENCES `st_918_bank_details` (`Id`))
+2025/01/11 14:05:04 createClient-(-)
+2025/01/11 14:05:04 RegisterUser-(-)
+2025/01/11 14:05:15 LoginUser-(+)
+2025/01/11 14:05:15 RegisterUser-(+)
+2025/01/11 14:05:15 RegisterUser-(-)
+2025/01/11 14:05:15 LoginUser-(+)
+2025/01/11 14:05:15 RegisterUser-(+)
+2025/01/11 14:05:15 createClient-(+)
+2025/01/11 14:05:15 Database connection established successfully.
+2025/01/11 14:05:15 generateUniqueID-(+)
+2025/01/11 14:05:15 generateUniqueID-(-)
+2025/01/11 14:05:15 LCC-003 Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`training`.`st_918_client_table`, CONSTRAINT `st_918_client_table_ibfk_1` FOREIGN KEY (`bank_id`) REFERENCES `st_918_bank_details` (`Id`))
+2025/01/11 14:05:15 createClient-(-)
+2025/01/11 14:05:15 RegisterUser-(-)
+2025/01/11 14:05:17 LoginUser-(+)
+2025/01/11 14:05:17 RegisterUser-(+)
+2025/01/11 14:05:17 createClient-(+)
+2025/01/11 14:05:17 Database connection established successfully.
+2025/01/11 14:05:17 generateUniqueID-(+)
+2025/01/11 14:05:17 generateUniqueID-(-)
+2025/01/11 14:05:17 LCC-003 Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`training`.`st_918_client_table`, CONSTRAINT `st_918_client_table_ibfk_1` FOREIGN KEY (`bank_id`) REFERENCES `st_918_bank_details` (`Id`))
+2025/01/11 14:05:17 createClient-(-)
+2025/01/11 14:05:17 RegisterUser-(-)
+2025/01/11 14:10:46 LoginUser-(+)
+2025/01/11 14:10:46 RegisterUser-(+)
+2025/01/11 14:10:46 RegisterUser-(-)
+2025/01/11 14:10:46 LoginUser-(+)
+2025/01/11 14:10:46 RegisterUser-(+)
+2025/01/11 14:10:46 createClient-(+)
+2025/01/11 14:10:46 Database connection established successfully.
+2025/01/11 14:10:46 generateUniqueID-(+)
+2025/01/11 14:10:46 generateUniqueID-(-)
+2025/01/11 14:10:46 LCC-003 Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`training`.`st_918_client_table`, CONSTRAINT `st_918_client_table_ibfk_1` FOREIGN KEY (`bank_id`) REFERENCES `st_918_bank_details` (`Id`))
+2025/01/11 14:10:46 createClient-(-)
+2025/01/11 14:10:46 RegisterUser-(-)
+2025/01/11 14:12:53 GetBank-(+)
+2025/01/11 14:12:53 Database connection established successfully.
+2025/01/11 14:12:53 Success
+2025/01/11 14:12:53 GetBank-(-)
+2025/01/11 14:13:36 GetBank-(+)
+2025/01/11 14:13:37 Database connection established successfully.
+2025/01/11 14:13:37 Success
+2025/01/11 14:13:37 GetBank-(-)
+2025/01/11 14:14:48 GetBank-(+)
+2025/01/11 14:14:48 Database connection established successfully.
+2025/01/11 14:14:48 Success
+2025/01/11 14:14:48 GetBank-(-)
+2025/01/11 14:15:25 GetBank-(+)
+2025/01/11 14:15:25 Database connection established successfully.
+2025/01/11 14:15:25 Success
+2025/01/11 14:15:25 GetBank-(-)
+2025/01/11 14:16:01 GetBank-(+)
+2025/01/11 14:16:01 Database connection established successfully.
+2025/01/11 14:16:01 Success
+2025/01/11 14:16:01 GetBank-(-)
+2025/01/11 14:16:02 GetBank-(+)
+2025/01/11 14:16:02 Database connection established successfully.
+2025/01/11 14:16:02 Success
+2025/01/11 14:16:02 GetBank-(-)
+2025/01/11 14:16:09 LoginUser-(+)
+2025/01/11 14:16:09 RegisterUser-(+)
+2025/01/11 14:16:09 RegisterUser-(-)
+2025/01/11 14:16:09 LoginUser-(+)
+2025/01/11 14:16:09 RegisterUser-(+)
+2025/01/11 14:16:09 createClient-(+)
+2025/01/11 14:16:09 Database connection established successfully.
+2025/01/11 14:16:09 generateUniqueID-(+)
+2025/01/11 14:16:09 generateUniqueID-(-)
+2025/01/11 14:16:09 LCC-003 Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`training`.`st_918_client_table`, CONSTRAINT `st_918_client_table_ibfk_1` FOREIGN KEY (`bank_id`) REFERENCES `st_918_bank_details` (`Id`))
+2025/01/11 14:16:09 createClient-(-)
+2025/01/11 14:16:09 RegisterUser-(-)
+2025/01/11 14:24:59 GetBank-(+)
+2025/01/11 14:24:59 Database connection established successfully.
+2025/01/11 14:24:59 Success
+2025/01/11 14:24:59 GetBank-(-)
+2025/01/11 14:25:16 GetBank-(+)
+2025/01/11 14:25:16 Database connection established successfully.
+2025/01/11 14:25:16 Success
+2025/01/11 14:25:16 GetBank-(-)
+2025/01/11 14:25:32 GetBank-(+)
+2025/01/11 14:25:32 Database connection established successfully.
+2025/01/11 14:25:32 Success
+2025/01/11 14:25:32 GetBank-(-)
+2025/01/11 14:26:08 LoginUser-(+)
+2025/01/11 14:26:08 RegisterUser-(+)
+2025/01/11 14:26:08 RegisterUser-(-)
+2025/01/11 14:26:08 LoginUser-(+)
+2025/01/11 14:26:08 RegisterUser-(+)
+2025/01/11 14:26:08 createClient-(+)
+2025/01/11 14:26:08 Database connection established successfully.
+2025/01/11 14:26:08 generateUniqueID-(+)
+2025/01/11 14:26:08 generateUniqueID-(-)
+2025/01/11 14:26:08 createClient-(-)
+2025/01/11 14:26:08 RegisterUser-(-)
+2025/01/11 14:26:29 LoginUser-(+)
+2025/01/11 14:26:29 RegisterUser-(+)
+2025/01/11 14:26:29 RegisterUser-(-)
+2025/01/11 14:26:29 LoginUser-(+)
+2025/01/11 14:26:29 RegisterUser-(+)
+2025/01/11 14:26:29 createClient-(+)
+2025/01/11 14:26:29 Database connection established successfully.
+2025/01/11 14:26:29 generateUniqueID-(+)
+2025/01/11 14:26:29 generateUniqueID-(-)
+2025/01/11 14:26:29 createClient-(-)
+2025/01/11 14:26:29 RegisterUser-(-)
+2025/01/11 14:28:34 LoginUser-(+)
+2025/01/11 14:28:34 RegisterUser-(+)
+2025/01/11 14:28:34 RegisterUser-(-)
+2025/01/11 14:28:35 LoginUser-(+)
+2025/01/11 14:28:35 RegisterUser-(+)
+2025/01/11 14:28:35 createClient-(+)
+2025/01/11 14:28:35 Database connection established successfully.
+2025/01/11 14:28:35 generateUniqueID-(+)
+2025/01/11 14:28:35 generateUniqueID-(-)
+2025/01/11 14:28:35 createClient-(-)
+2025/01/11 14:28:35 RegisterUser-(-)

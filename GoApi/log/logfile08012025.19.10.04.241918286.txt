@@ -1,4 +1,0 @@
-2025/01/08 19:11:58 LoginUser-(+)
-2025/01/08 19:11:58 RegisterUser-(+)
-2025/01/08 19:11:58 LRU-002 json: cannot unmarshal number into Go struct field Client.bank_id of type string
-2025/01/08 19:11:58 RegisterUser-(-)

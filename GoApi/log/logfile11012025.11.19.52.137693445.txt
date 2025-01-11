@@ -1,0 +1,6 @@
+2025/01/11 11:20:54 UpdateClient-(+)
+2025/01/11 11:20:54 updateClientInDB-(+)
+2025/01/11 11:20:54 Database connection established successfully.
+2025/01/11 11:20:54 BUBINDB-002 Error 1054 (42S22): Unknown column 'charge_id' in 'where clause'
+2025/01/11 11:20:54 updateClientInDB-(-)
+2025/01/11 11:20:54 UpdateClient-(-)

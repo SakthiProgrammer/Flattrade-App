@@ -9,7 +9,7 @@ import (
 	"net/http"
 )
 
-type BankRec struct {
+type GetBankRec struct {
 	ID         int    `json:"id" gorm:"column:Id"`
 	BankName   string `json:"bank_name" gorm:"column:Bank_Name"`
 	BranchName string `json:"branch_name" gorm:"column:Branch_name"`
@@ -21,10 +21,10 @@ type BankRec struct {
 	UpdatedAt  string `json:"updated_at" gorm:"column:Updated_At"`
 }
 
-type BankResp struct {
-	BankDetailsArr []BankRec `json:"bank_details"`
-	ErrMsg         string    `json:"errMsg"`
-	Status         string    `json:"status"`
+type GetBankResp struct {
+	BankDetailsArr []GetBankRec `json:"bank_details"`
+	ErrMsg         string       `json:"errMsg"`
+	Status         string       `json:"status"`
 }
 
 func GetBanks(w http.ResponseWriter, r *http.Request) {
@@ -35,7 +35,7 @@ func GetBanks(w http.ResponseWriter, r *http.Request) {
 
 	log.Println("GetBank-(+)")
 
-	var lBankResp BankResp
+	var lBankResp GetBankResp
 	lBankResp.Status = common.SuccessCode
 
 	if r.Method == http.MethodGet {

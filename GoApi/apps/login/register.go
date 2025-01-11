@@ -14,22 +14,22 @@ import (
 )
 
 type Client struct {
-	ClientID       int    `json:"client_id" gorm:"primaryKey; column:client_id"`
-	PhoneNumber    string `json:"phone_number"gorm:"column:phone_number"`
-	FirstName      string `json:"first_name" gorm:"column:first_name"`
-	LastName       string `json:"last_name" gorm:"column:last_name"`
-	PanNumber      string `json:"pan_number" gorm:"column:pan_number"`
-	NomineeName    string `json:"nominee_name" gorm:"column:nominee_name"`
-	KycIsCompleted bool   `json:"kyc_is_completed" gorm:"column:kyc_iscompleted"`
-	BankAccount    string `json:"bank_account" gorm:"column:bank_account"`
-	Email          string `json:"email" gorm:"column:email"`
-	// BankID         int       `json:"bank_id" gorm:"column:bank_id"`
-	UniqeID   string    `json:"unique_id" gorm:"column:unique_id"`
-	Password  string    `json:"password"gorm:"column:password"`
-	CreatedBy string    `json:"created_by"gorm:"column:created_by"`
-	CreatedAt time.Time `json:"created_at"gorm:"column:created_at"`
-	UpdatedBy string    `json:"updated_by"gorm:"column:updated_by"`
-	UpdatedAt time.Time `json:"updated_at"gorm:"column:updated_at"`
+	ClientID       int       `json:"client_id" gorm:"primaryKey; column:client_id"`
+	PhoneNumber    string    `json:"phone_number"gorm:"column:phone_number"`
+	FirstName      string    `json:"first_name" gorm:"column:first_name"`
+	LastName       string    `json:"last_name" gorm:"column:last_name"`
+	PanNumber      string    `json:"pan_number" gorm:"column:pan_number"`
+	NomineeName    string    `json:"nominee_name" gorm:"column:nominee_name"`
+	KycIsCompleted string    `json:"_" gorm:"column:kyc_iscompleted"`
+	BankAccount    string    `json:"bank_account" gorm:"column:bank_account"`
+	Email          string    `json:"email" gorm:"column:email"`
+	BankID         int       `json:"bank_id" gorm:"column:bank_id"`
+	UniqeID        string    `json:"unique_id" gorm:"column:unique_id"`
+	Password       string    `json:"password"gorm:"column:password"`
+	CreatedBy      string    `json:"created_by"gorm:"column:created_by"`
+	CreatedAt      time.Time `json:"created_at"gorm:"column:created_at"`
+	UpdatedBy      string    `json:"updated_by"gorm:"column:updated_by"`
+	UpdatedAt      time.Time `json:"updated_at"gorm:"column:updated_at"`
 }
 
 type ClinetResponse struct {
@@ -101,6 +101,8 @@ func RegisterClient(w http.ResponseWriter, r *http.Request) {
 func createClient(lClientResponse *ClinetResponse, lClient *Client) {
 
 	log.Println("createClient-(+)")
+
+	lClient.KycIsCompleted = common.Pending
 
 	lGormDB, lErr := gormdb.GormDBConnection()
 

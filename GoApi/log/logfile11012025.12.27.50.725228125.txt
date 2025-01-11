@@ -1,0 +1,26 @@
+2025/01/11 12:27:57 CreateUser - (+)
+2025/01/11 12:27:57 CreateUser - (-)
+2025/01/11 12:29:04 CreateUser - (+)
+2025/01/11 12:29:04 createUserInDB-(+)
+2025/01/11 12:29:04 Database connection established successfully.
+2025/01/11 12:29:04 UCU-005 Error 1146 (42S02): Table 'training.st_918_config_user_table' doesn't exist
+2025/01/11 12:29:04 http: panic serving [::1]:59776: runtime error: invalid memory address or nil pointer dereference
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/lib/go-1.18/src/net/http/server.go:1825 +0xbf
+panic({0x8348a0, 0xbb6c90})
+	/usr/lib/go-1.18/src/runtime/panic.go:844 +0x258
+flattrade/apps/user.createUserInDB(0xc0001ad9a0, 0xc000102480)
+	/home/dev-48/Desktop/Trade App (copy)/GoApi/apps/user/createuser.go:112 +0x29e
+flattrade/apps/user.CreateUser({0x950740, 0xc00010a0e0}, 0xc00009c000)
+	/home/dev-48/Desktop/Trade App (copy)/GoApi/apps/user/createuser.go:65 +0x58f
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x950740?, 0xc00010a0e0?}, 0xc000104710?)
+	/usr/lib/go-1.18/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x950740, 0xc00010a0e0}, 0xc00009c000)
+	/usr/lib/go-1.18/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x94f8d0?}, {0x950740, 0xc00010a0e0}, 0xc00009c000)
+	/usr/lib/go-1.18/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000297d60, {0x950d28, 0xc000286f90})
+	/usr/lib/go-1.18/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/lib/go-1.18/src/net/http/server.go:3071 +0x4db

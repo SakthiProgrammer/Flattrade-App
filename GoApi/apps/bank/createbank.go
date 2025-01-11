@@ -12,7 +12,7 @@ import (
 	"time"
 )
 
-type Bank struct {
+type CreateBankRec struct {
 	BankName   string    `json:"bank_name" gorm:"column:bank_name"`
 	BranchName string    `json:"branch_name" gorm:"column:branch_name"`
 	IFSCCODE   string    `json:"ifsc_code" gorm:"column:ifsc_code"`
@@ -23,10 +23,10 @@ type Bank struct {
 	UpdatedAt  time.Time `json:"updated_at"gorm:"column:updated_at"`
 }
 
-type BankResponse struct {
-	BankDetails Bank   `json:"bank_details"`
-	ErrMsg      string `json:"errMsg"`
-	Status      string `json:"status"`
+type CreateBankResp struct {
+	BankDetails CreateBankRec `json:"bank_details"`
+	ErrMsg      string        `json:"errMsg"`
+	Status      string        `json:"status"`
 }
 
 func CreateBank(w http.ResponseWriter, r *http.Request) {
@@ -38,8 +38,8 @@ func CreateBank(w http.ResponseWriter, r *http.Request) {
 
 	log.Println("CreateBank-(+)")
 
-	var lBankResponse BankResponse
-	var lBank Bank
+	var lBankResponse CreateBankResp
+	var lBank CreateBankRec
 
 	lBankResponse.Status = common.SuccessCode
 	if r.Method == http.MethodPost {
@@ -86,9 +86,9 @@ func CreateBank(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func createBankInDB(lBankResponse *BankResponse, lBank *Bank) {
+func createBankInDB(lBankResponse *CreateBankResp, lBank *CreateBankRec) {
 
-	log.Println("createClient-(+)")
+	log.Println("createBankInDB-(+)")
 
 	lGormDB, lErr := gormdb.GormDBConnection()
 
@@ -107,12 +107,15 @@ func createBankInDB(lBankResponse *BankResponse, lBank *Bank) {
 		fmt.Println(lBankResponse)
 		config := genpkg.ReadTomlConfig("./toml/dbconfig.toml")
 		AdminId := fmt.Sprintf("%v", config.(map[string]interface{})["AdminId"])
-		lBank.CreatedBy = "Admin: " + AdminId
-		lBank.CreatedAt = time.Now()
-		lBank.UpdatedBy = "Admin: " + AdminId
-		lBank.UpdatedAt = time.Now()
 
-		lResult := lGormDB.Table("st_918_bank_details").Create(lBank)
+		lName := "Admin: " + AdminId
+		lCurrTime := time.Now()
+		lBank.CreatedBy = lName
+		lBank.CreatedAt = lCurrTime
+		lBank.UpdatedBy = lName
+		lBank.UpdatedAt = lCurrTime
+
+		lResult := lGormDB.Table("st_918_bank_details").Create(&lBank)
 
 		if lResult.Error != nil {
 			log.Println("BCBIDB-002", lResult.Error)
@@ -124,6 +127,7 @@ func createBankInDB(lBankResponse *BankResponse, lBank *Bank) {
 			lBankResponse.Status = common.SuccessCode
 		}
 	}
-	log.Println("createClient-(-)")
+
+	log.Println("createBankInDB-(-)")
 
 }

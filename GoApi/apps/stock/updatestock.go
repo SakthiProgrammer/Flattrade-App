@@ -2,34 +2,52 @@ package stock
 
 import (
 	"encoding/json"
+	"flattrade/apps/DBConnection/gormdb"
 	"flattrade/common"
+	"flattrade/genpkg"
 	"fmt"
 	"io"
 	"log"
 	"net/http"
-
-	"gorm.io/driver/mysql"
-	"gorm.io/gorm"
+	"time"
 )
+
+type UpdateStockRec struct {
+	ID         int     `json:"id" gorm:"column:stock_id"`
+	StockName  string  `json:"stock_name" gorm:"column:stock_name"`
+	StockPrice float64 `json:"stock_price" gorm:"column:stock_price"`
+	Segment    string  `json:"segment" gorm:"column:segment"`
+	ISIN       string  `json:"isin" gorm:"column:isin"`
+	// CreatedBy  string    `json:"created_by" gorm:"column:created_by"`
+	// CreatedAt  time.Time `json:"created_at" gorm:"column:created_at"`
+	UpdatedBy string    `json:"-" gorm:"column:updated_by"`
+	UpdatedAt time.Time `json:"-" gorm:"column:updated_at"`
+}
+
+type UpdateStockResp struct {
+	Stock  UpdateStockRec `json:"stock_details"`
+	ErrMsg string         `json:"errMsg"`
+	Status string         `json:"status"`
+}
 
 func UpdateStock(w http.ResponseWriter, r *http.Request) {
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
-	(w).Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
+	(w).Header().Set("Access-Control-Allow-Methods", ", OPTIONS")
 	(w).Header().Set("Access-Control-Allow-Headers", "Stock, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 	w.Header().Set("Content-Type", "application/json")
 
 	log.Println("UpdateStock- (+)")
 
-	var lStock Stock
-	var lStockResp StockResp
+	var lStock UpdateStockRec
+	var lStockResp UpdateStockResp
 
 	lStockResp.Status = common.SuccessCode
-	if r.Method == http.MethodPost {
+	if r.Method == http.MethodPut {
 
 		lData, lErr := io.ReadAll(r.Body)
 
 		if lErr != nil {
-			log.Println("SUS-001", lErr.Error())
+			log.Println("SUPS-001", lErr.Error())
 			lStockResp.ErrMsg = lErr.Error()
 			lStockResp.Status = common.ErrorCode
 
@@ -38,41 +56,19 @@ func UpdateStock(w http.ResponseWriter, r *http.Request) {
 
 			if lErr != nil {
 
-				log.Println("SUS-002", lErr.Error())
+				log.Println("SUPS-002", lErr.Error())
 				lStockResp.ErrMsg = lErr.Error()
 				lStockResp.Status = common.ErrorCode
 			} else {
 
 				if lErr != nil {
-					log.Println("SUS-003", lErr.Error())
+					log.Println("SUPS-003", lErr.Error())
 					lStockResp.ErrMsg = lErr.Error()
 					lStockResp.Status = common.ErrorCode
 
 				} else {
 
-					lDsn := "ST918:Best@123@tcp(192.168.2.5)/training"
-					lGormDB, lErr := gorm.Open(mysql.Open(lDsn), &gorm.Config{})
-
-					if lErr != nil {
-						log.Println("SUS-004", lErr.Error())
-						lStockResp.ErrMsg = lErr.Error()
-						lStockResp.Status = common.ErrorCode
-
-					} else {
-
-						lResult := lGormDB.Table("st_918_Stock_Table").Where("stock_id=?", lStock.ID).UpdateColumns(&lStock)
-
-						if lResult.Error != nil {
-							log.Println("SUS-005", lResult.Error)
-							lStockResp.ErrMsg = lErr.Error()
-							lStockResp.Status = common.ErrorCode
-
-						} else {
-
-							fmt.Println(lResult.RowsAffected)
-							lStockResp.StockDetailsArr = append(lStockResp.StockDetailsArr, lStock)
-						}
-					}
+					updateClientInDB(&lStockResp, &lStock)
 
 				}
 
@@ -89,7 +85,7 @@ func UpdateStock(w http.ResponseWriter, r *http.Request) {
 	lData, lErr := json.Marshal(lStockResp)
 
 	if lErr != nil {
-		log.Println("SUS-006", lErr.Error())
+		log.Println("SUPS-006", lErr.Error())
 		lStockResp.ErrMsg = lErr.Error()
 		lStockResp.Status = common.ErrorCode
 
@@ -98,4 +94,47 @@ func UpdateStock(w http.ResponseWriter, r *http.Request) {
 	}
 
 	log.Println("UpdateStock- (-)")
+}
+
+func updateClientInDB(lStockResp *UpdateStockResp, lStock *UpdateStockRec) {
+
+	log.Println("updateClientInDB-(+)")
+
+	lGormDB, lErr := gormdb.GormDBConnection()
+
+	lSql, _ := lGormDB.DB()
+
+	defer lSql.Close()
+
+	if lErr != nil {
+
+		log.Println("SUPSINDB-001", lErr.Error())
+		lStockResp.ErrMsg = lErr.Error()
+		lStockResp.Status = common.ErrorCode
+
+	} else {
+
+		fmt.Println(lStockResp)
+		config := genpkg.ReadTomlConfig("./toml/dbconfig.toml")
+		AdminId := fmt.Sprintf("%v", config.(map[string]interface{})["AdminId"])
+		// lStock.CreatedBy = "Admin: " + AdminId
+		// lStock.CreatedAt = time.Now()
+		lStock.UpdatedBy = "Admin: " + AdminId
+		lStock.UpdatedAt = time.Now()
+
+		lResult := lGormDB.Table("st_917_stocktable").Where("stock_id = ?", lStock.ID).UpdateColumns(&lStock)
+
+		if lResult.Error != nil {
+			log.Println("SUPSINDB-002", lResult.Error)
+			lStockResp.Status = common.ErrorCode
+			lStockResp.ErrMsg = lResult.Error.Error()
+
+		} else {
+			lStockResp.Stock = *lStock
+			lStockResp.Status = common.SuccessCode
+		}
+	}
+
+	log.Println("updateClientInDB-(-)")
+
 }

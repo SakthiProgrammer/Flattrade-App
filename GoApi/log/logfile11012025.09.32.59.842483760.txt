@@ -1,0 +1,11 @@
+2025/01/11 09:33:02 CreateBank-(+)
+2025/01/11 09:33:02 CreateBank-(-)
+2025/01/11 09:33:29 CreateBank-(+)
+2025/01/11 09:33:29 createBankInDB-(+)
+2025/01/11 09:33:29 Database connection established successfully.
+2025/01/11 09:33:29 createBankInDB-(-)
+2025/01/11 09:33:29 CreateBank-(-)
+2025/01/11 09:33:39 GetBank-(+)
+2025/01/11 09:33:39 Database connection established successfully.
+2025/01/11 09:33:39 Success
+2025/01/11 09:33:39 GetBank-(-)

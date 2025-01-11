@@ -1,3 +1,0 @@
-2025/01/09 12:41:01 GetBank-(+)
-2025/01/09 12:41:01 BCB-002 sql: Scan error on column index 6, name "Created_At": unsupported Scan, storing driver.Value type []uint8 into type *time.Time; sql: Scan error on column index 6, name "Created_At": unsupported Scan, storing driver.Value type []uint8 into type *time.Time; sql: Scan error on column index 6, name "Created_At": unsupported Scan, storing driver.Value type []uint8 into type *time.Time
-2025/01/09 12:41:01 GetBank-(-)

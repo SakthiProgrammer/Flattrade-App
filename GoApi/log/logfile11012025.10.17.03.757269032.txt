@@ -1,0 +1,48 @@
+2025/01/11 10:17:11 UpdateBank-(+)
+2025/01/11 10:17:11 UpdateBank-(-)
+2025/01/11 10:17:16 UpdateBank-(+)
+2025/01/11 10:17:16 updateBankInDB-(+)
+2025/01/11 10:17:16 Database connection established successfully.
+2025/01/11 10:17:16 updateBankInDB-(-)
+2025/01/11 10:17:16 UpdateBank-(-)
+2025/01/11 10:17:23 UpdateBank-(+)
+2025/01/11 10:17:23 updateBankInDB-(+)
+2025/01/11 10:17:23 Database connection established successfully.
+2025/01/11 10:17:23 updateBankInDB-(-)
+2025/01/11 10:17:23 UpdateBank-(-)
+2025/01/11 10:17:28 CreateBank-(+)
+2025/01/11 10:17:28 CreateBank-(-)
+2025/01/11 10:17:32 GetBank-(+)
+2025/01/11 10:17:32 Database connection established successfully.
+2025/01/11 10:17:32 http: panic serving [::1]:59564: reflect: reflect.Value.Set using unaddressable value
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	/usr/lib/go-1.18/src/net/http/server.go:1825 +0xbf
+panic({0x80e9e0, 0xc0002e6100})
+	/usr/lib/go-1.18/src/runtime/panic.go:844 +0x258
+reflect.flag.mustBeAssignableSlow(0x5a0?)
+	/usr/lib/go-1.18/src/reflect/value.go:262 +0x85
+reflect.flag.mustBeAssignable(...)
+	/usr/lib/go-1.18/src/reflect/value.go:249
+reflect.Value.Set({0x808080?, 0xbe8e80?, 0x0?}, {0x808080?, 0xc00028ea68?, 0x5145145145145?})
+	/usr/lib/go-1.18/src/reflect/value.go:2082 +0x6a
+gorm.io/gorm.Scan({0x944b68, 0xc0002adb80}, 0xc0002871a0, 0x0)
+	/home/dev-48/go/pkg/mod/gorm.io/gorm@v1.25.12/scan.go:293 +0xcfd
+gorm.io/gorm/callbacks.Query(0xc0002871a0)
+	/home/dev-48/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/query.go:27 +0x105
+gorm.io/gorm.(*processor).Execute(0xc0002d6280, 0x727c17?)
+	/home/dev-48/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3af
+gorm.io/gorm.(*DB).Find(0x0?, {0x808080?, 0xbe8e80}, {0x0, 0x0, 0x0})
+	/home/dev-48/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:170 +0x13f
+flattrade/apps/bank.GetBanks({0x943ae0, 0xc0002960e0}, 0xc00023c100)
+	/home/dev-48/Desktop/Trade App (copy)/GoApi/apps/bank/getbanks.go:57 +0x565
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x943ae0?, 0xc0002960e0?}, 0xc000284d90?)
+	/usr/lib/go-1.18/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x943ae0, 0xc0002960e0}, 0xc00023c100)
+	/usr/lib/go-1.18/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x942c70?}, {0x943ae0, 0xc0002960e0}, 0xc00023c100)
+	/usr/lib/go-1.18/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b0000, {0x9440c8, 0xc0001eef90})
+	/usr/lib/go-1.18/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/lib/go-1.18/src/net/http/server.go:3071 +0x4db

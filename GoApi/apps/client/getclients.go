@@ -1,13 +1,38 @@
 package client
 
-/*
-import "net/http"
+import (
+	"encoding/json"
+	"flattrade/apps/DBConnection/gormdb"
+	"flattrade/common"
+	"fmt"
+	"log"
+	"net/http"
+)
 
-type Client struct{
-
+type GetClientRec struct {
+	ClientID       uint   `json:"client_id" gorm:"column:client_id"`
+	FirstName      string `json:"first_name" gorm:"column:first_name"`
+	LastName       string `json:"last_name" gorm:"column:last_name"`
+	Email          string `json:"email" gorm:"column:email"`
+	PhoneNumber    string `json:"phone_number" gorm:"column:phone_number"`
+	PanNumber      string `json:"pan_number" gorm:"column:pan_number"`
+	NomineeName    string `json:"nominee_name" gorm:"column:nominee_name"`
+	BankID         uint   `json:"bank_id" gorm:"column:bank_id"`
+	BankAccount    string `json:"bank_account" gorm:"column:bank_account"`
+	KycIsCompleted string `json:"kyc_is_completed" gorm:"column:kyc_iScompleted"`
+	CreatedBy      string `json:"created_by" gorm:"column:Created_by"`
+	CreatedAt      string `json:"created_at" gorm:"column:Created_at"`
+	UpdatedBy      string `json:"updated_by" gorm:"column:updated_by"`
+	UpdatedAt      string `json:"updated_at" gorm:"column:updated_at"`
 }
 
-func GetClients(w http.ResponseWriter, r *http.Request){
+type GetClientResp struct {
+	ClientArr []GetClientRec `json:"client_details"`
+	ErrMsg    string         `json:"errMsg"`
+	Status    string         `json:"status"`
+}
+
+func GetClients(w http.ResponseWriter, r *http.Request) {
 
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
 	(w).Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
@@ -16,12 +41,12 @@ func GetClients(w http.ResponseWriter, r *http.Request){
 
 	log.Println("GetClients-(+)")
 
-	var lStockResp StockResp
+	var lClientResp GetClientResp
 
 	// var lStock Stock
 
 	if r.Method == http.MethodGet {
-		lStockResp.Status = common.SuccessCode
+		lClientResp.Status = common.SuccessCode
 
 		lGormDb, lErr := gormdb.GormDBConnection()
 
@@ -30,41 +55,41 @@ func GetClients(w http.ResponseWriter, r *http.Request){
 		defer lSql.Close()
 
 		if lErr != nil {
-			log.Println("SGS-001", lErr.Error())
-			lStockResp.Status = common.ErrorCode
-			lStockResp.ErrMsg = lErr.Error()
+			log.Println("CGCS-001", lErr.Error())
+			lClientResp.Status = common.ErrorCode
+			lClientResp.ErrMsg = lErr.Error()
 
 		} else {
 
-			lResult := lGormDb.Table("st_918_Stock_Table").Find(&lStockResp.StockDetailsArr)
+			lResult := lGormDb.Table("st_918_client_table").Find(&lClientResp.ClientArr)
 
 			if lResult.Error != nil {
-				log.Println("SGS-002", lResult.Error)
-				lStockResp.ErrMsg = lResult.Error.Error()
-				lStockResp.Status = common.ErrorCode
+				log.Println("CGCS-002", lResult.Error)
+				lClientResp.ErrMsg = lResult.Error.Error()
+				lClientResp.Status = common.ErrorCode
 			} else {
 				log.Println("Successfully Get")
-				lStockResp.Status = common.SuccessCode
-				fmt.Printf("%+v", lStockResp)
+				lClientResp.Status = common.SuccessCode
+				fmt.Printf("%+v", lClientResp)
 			}
 		}
 
 	} else {
-		log.Println("SGS-", "Invalid Method")
-		lStockResp.ErrMsg = "Invalid Method"
-		lStockResp.Status = common.ErrorCode
+		log.Println("CGCS-003", "Invalid Method")
+		lClientResp.ErrMsg = "Invalid Method"
+		lClientResp.Status = common.ErrorCode
 	}
 
-	lData, lErr := json.Marshal(lStockResp)
+	lData, lErr := json.Marshal(lClientResp)
 
 	if lErr != nil {
-		log.Println("SGS-", lErr.Error())
-		lStockResp.ErrMsg = lErr.Error()
-		lStockResp.Status = common.SuccessCode
+		log.Println("CGCS-004", lErr.Error())
+		lClientResp.ErrMsg = lErr.Error()
+		lClientResp.Status = common.SuccessCode
 	} else {
 		fmt.Fprintf(w, string(lData))
 	}
 
 	log.Println("GetClients-(-)")
 
-} */
+}

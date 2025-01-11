@@ -9,23 +9,23 @@ import (
 	"net/http"
 )
 
-/* type Stock struct {
-	ID         int       `json:"id" gorm:"column:Id"`
-	StockName  string    `json:"stock_name" gorm:"column:Stock_Name"`
-	StockPrice float64   `json:"stock_price" gorm:"column:Stock_Price"`
-	Segment    string    `json:"segment" gorm:"column:Segment"`
-	ISIN       string    `json:"isin" gorm:"column:ISIN"`
-	CreatedBy  string    `json:"created_by" gorm:"column:Created_By"`
-	CreatedAt  time.Time `json:"created_at" gorm:"column:Created_At"`
-	UpdatedBy  string    `json:"updated_by" gorm:"column:Updated_By"`
-	UpdatedAt  time.Time `json:"updated_at" gorm:"column:Updated_At"`
+type GetStockRec struct {
+	ID         int     `json:"id" gorm:"column:stock_id"`
+	StockName  string  `json:"stock_name" gorm:"column:stock_name"`
+	StockPrice float64 `json:"stock_price" gorm:"column:stock_price"`
+	Segment    string  `json:"segment" gorm:"column:segment"`
+	ISIN       string  `json:"isin" gorm:"column:isin"`
+	CreatedBy  string  `json:"created_by" gorm:"column:created_by"`
+	CreatedAt  string  `json:"created_at" gorm:"column:created_at"`
+	UpdatedBy  string  `json:"updated_by" gorm:"column:updated_by"`
+	UpdatedAt  string  `json:"updated_at" gorm:"column:updated_at"`
 }
 
-type StockResp struct {
-	StockDetailsArr []Stock `json:"stock_details"`
-	ErrMsg          string  `json:"errMsg"`
-	Status          string  `json:"status"`
-} */
+type GetStockResp struct {
+	StockDetailsArr []GetStockRec `json:"stock_details"`
+	ErrMsg          string        `json:"errMsg"`
+	Status          string        `json:"status"`
+}
 
 func GetStocks(w http.ResponseWriter, r *http.Request) {
 
@@ -36,7 +36,7 @@ func GetStocks(w http.ResponseWriter, r *http.Request) {
 
 	log.Println("GetStocks-(+)")
 
-	var lStockResp StockResp
+	var lStockResp GetStockResp
 
 	// var lStock Stock
 
@@ -56,7 +56,7 @@ func GetStocks(w http.ResponseWriter, r *http.Request) {
 
 		} else {
 
-			lResult := lGormDb.Table("st_918_Stock_Table").Find(&lStockResp.StockDetailsArr)
+			lResult := lGormDb.Table("st_917_stocktable").Find(&lStockResp.StockDetailsArr)
 
 			if lResult.Error != nil {
 				log.Println("SGS-002", lResult.Error)

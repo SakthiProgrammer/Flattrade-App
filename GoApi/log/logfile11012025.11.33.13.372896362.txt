@@ -1,0 +1,30 @@
+2025/01/11 11:33:20 GetStocks-(+)
+2025/01/11 11:33:20 Database connection established successfully.
+2025/01/11 11:33:20 Successfully Get
+2025/01/11 11:33:20 GetStocks-(-)
+2025/01/11 11:34:41 CreateStock - (+)
+2025/01/11 11:34:41 CreateStock - (-)
+2025/01/11 11:34:45 CreateStock - (+)
+2025/01/11 11:34:45 CreateStocksInDB-(+)
+2025/01/11 11:34:45 Database connection established successfully.
+2025/01/11 11:34:45 SCS-005 Error 1054 (42S22): Unknown column 'Stock_Name' in 'field list'
+2025/01/11 11:34:45 http: panic serving [::1]:43576: runtime error: invalid memory address or nil pointer dereference
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	/usr/lib/go-1.18/src/net/http/server.go:1825 +0xbf
+panic({0x8333a0, 0xbb4c10})
+	/usr/lib/go-1.18/src/runtime/panic.go:844 +0x258
+flattrade/apps/stock.createStocksInDB(0xc0001279a0, 0xc0000ac870)
+	/home/dev-48/Desktop/Trade App (copy)/GoApi/apps/stock/createstock.go:113 +0x29e
+flattrade/apps/stock.CreateStock({0x94e9a0, 0xc0000ba0e0}, 0xc0002a0100)
+	/home/dev-48/Desktop/Trade App (copy)/GoApi/apps/stock/createstock.go:66 +0x58f
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x94e9a0?, 0xc0000ba0e0?}, 0xc0000af0f0?)
+	/usr/lib/go-1.18/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x94e9a0, 0xc0000ba0e0}, 0xc0002a0100)
+	/usr/lib/go-1.18/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x94db30?}, {0x94e9a0, 0xc0000ba0e0}, 0xc0002a0100)
+	/usr/lib/go-1.18/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000288000, {0x94ef88, 0xc0001eef90})
+	/usr/lib/go-1.18/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/lib/go-1.18/src/net/http/server.go:3071 +0x4db

@@ -1,0 +1,17 @@
+2025/01/11 09:28:18 GetBank-(+)
+2025/01/11 09:28:18 Database connection established successfully.
+2025/01/11 09:28:18 Success
+2025/01/11 09:28:18 GetBank-(-)
+2025/01/11 09:29:48 CreateBank-(+)
+2025/01/11 09:29:48 CreateBank-(-)
+2025/01/11 09:29:57 CreateBank-(+)
+2025/01/11 09:29:57 createClient-(+)
+2025/01/11 09:29:57 Database connection established successfully.
+2025/01/11 09:29:57 createClient-(-)
+2025/01/11 09:29:57 CreateBank-(-)
+2025/01/11 09:30:11 GetBank-(+)
+2025/01/11 09:30:11 Database connection established successfully.
+2025/01/11 09:30:11 Success
+2025/01/11 09:30:11 GetBank-(-)
+2025/01/11 09:30:39 CreateBank-(+)
+2025/01/11 09:30:39 CreateBank-(-)

@@ -1,0 +1,34 @@
+2025/01/11 10:18:46 GetBank-(+)
+2025/01/11 10:18:46 Database connection established successfully.
+2025/01/11 10:18:46 http: panic serving [::1]:53552: reflect: reflect.Value.Set using unaddressable value
+goroutine 5 [running]:
+net/http.(*conn).serve.func1()
+	/usr/lib/go-1.18/src/net/http/server.go:1825 +0xbf
+panic({0x80ea40, 0xc000020e40})
+	/usr/lib/go-1.18/src/runtime/panic.go:844 +0x258
+reflect.flag.mustBeAssignableSlow(0x5a0?)
+	/usr/lib/go-1.18/src/reflect/value.go:262 +0x85
+reflect.flag.mustBeAssignable(...)
+	/usr/lib/go-1.18/src/reflect/value.go:249
+reflect.Value.Set({0x8080e0?, 0xbe8e80?, 0x0?}, {0x8080e0?, 0xc00000e438?, 0x5145145145145?})
+	/usr/lib/go-1.18/src/reflect/value.go:2082 +0x6a
+gorm.io/gorm.Scan({0x944ba8, 0xc000102d00}, 0xc0001045d0, 0x0)
+	/home/dev-48/go/pkg/mod/gorm.io/gorm@v1.25.12/scan.go:293 +0xcfd
+gorm.io/gorm/callbacks.Query(0xc0001045d0)
+	/home/dev-48/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/query.go:27 +0x105
+gorm.io/gorm.(*processor).Execute(0xc000100140, 0x727c17?)
+	/home/dev-48/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3af
+gorm.io/gorm.(*DB).Find(0x0?, {0x8080e0?, 0xbe8e80}, {0x0, 0x0, 0x0})
+	/home/dev-48/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:170 +0x13f
+flattrade/apps/bank.GetBanks({0x943b20, 0xc000112000}, 0xc00010a000)
+	/home/dev-48/Desktop/Trade App (copy)/GoApi/apps/bank/getbanks.go:57 +0x565
+net/http.HandlerFunc.ServeHTTP(0x80ec00?, {0x943b20?, 0xc000112000?}, 0xc00010e0c0?)
+	/usr/lib/go-1.18/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x943b20, 0xc000112000}, 0xc00010a000)
+	/usr/lib/go-1.18/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x942cb0?}, {0x943b20, 0xc000112000}, 0xc00010a000)
+	/usr/lib/go-1.18/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000106000, {0x944108, 0xc000218f90})
+	/usr/lib/go-1.18/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/lib/go-1.18/src/net/http/server.go:3071 +0x4db

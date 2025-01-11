@@ -1,0 +1,10 @@
+2025/01/11 12:47:42 UpdateUser-(+)
+2025/01/11 12:47:42 updateUserInDB-(+)
+2025/01/11 12:47:42 Database connection established successfully.
+2025/01/11 12:47:42 updateUserInDB-(-)
+2025/01/11 12:47:42 UpdateUser-(-)
+2025/01/11 12:48:48 UpdateUser-(+)
+2025/01/11 12:48:48 updateUserInDB-(+)
+2025/01/11 12:48:48 Database connection established successfully.
+2025/01/11 12:48:48 updateUserInDB-(-)
+2025/01/11 12:48:48 UpdateUser-(-)

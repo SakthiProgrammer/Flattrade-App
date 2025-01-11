@@ -4,31 +4,32 @@ import (
 	"encoding/json"
 	"flattrade/apps/DBConnection/gormdb"
 	"flattrade/common"
+	"flattrade/genpkg"
 	"fmt"
 	"io"
 	"log"
 	"net/http"
+	"time"
 )
 
-/*
-	type Stock struct {
-		ID         int     `json:"id" gorm:"column:Id"`
-		StockName  string  `json:"stock_name" gorm:"column:Stock_Name"`
-		StockPrice float64 `json:"stock_price" gorm:"column:Stock_Price"`
-		Segment    string  `json:"segment" gorm:"column:Segment"`
-		ISIN       string  `json:"isin" gorm:"column:ISIN"`
-		CreatedBy  string    `json:"created_by" gorm:"column:Created_By"`
-		CreatedAt  time.Time `json:"created_at" gorm:"column:Created_At"`
-		UpdatedBy  string    `json:"updated_by" gorm:"column:Updated_By"`
-		UpdatedAt  time.Time `json:"updated_at" gorm:"column:Updated_At"`
-	}
+type CreateStockRec struct {
+	ID         int       `json:"id" gorm:"column:stock_id"`
+	StockName  string    `json:"stock_name" gorm:"column:stock_name"`
+	StockPrice float64   `json:"stock_price" gorm:"column:stock_price"`
+	Segment    string    `json:"segment" gorm:"column:segment"`
+	ISIN       string    `json:"isin" gorm:"column:isin"`
+	CreatedBy  string    `json:"created_by" gorm:"column:created_by"`
+	CreatedAt  time.Time `json:"created_at" gorm:"column:created_at"`
+	UpdatedBy  string    `json:"updated_by" gorm:"column:updated_by"`
+	UpdatedAt  time.Time `json:"updated_at" gorm:"column:updated_at"`
+}
 
-	type StockResp struct {
-		StockDetailsArr []Stock `json:"stock_details"`
-		ErrMsg          string  `json:"errMsg"`
-		Status          string  `json:"status"`
-	}
-*/
+type CreateStockResp struct {
+	StockDetailsArr CreateStockRec `json:"stock_details"`
+	ErrMsg          string         `json:"errMsg"`
+	Status          string         `json:"status"`
+}
+
 func CreateStock(w http.ResponseWriter, r *http.Request) {
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
 	(w).Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
@@ -36,8 +37,8 @@ func CreateStock(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	log.Println("CreateStock - (+)")
-	var lStock Stock
-	var lStockResp StockResp
+	var lStock CreateStockRec
+	var lStockResp CreateStockResp
 	lStockResp.Status = common.SuccessCode
 
 	if r.Method == http.MethodPost {
@@ -90,7 +91,7 @@ func CreateStock(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func createStocksInDB(lStockResp *StockResp, lStock *Stock) {
+func createStocksInDB(lStockResp *CreateStockResp, lStock *CreateStockRec) {
 
 	log.Println("CreateStocksInDB-(+)")
 
@@ -106,7 +107,16 @@ func createStocksInDB(lStockResp *StockResp, lStock *Stock) {
 		lStockResp.Status = common.ErrorCode
 	} else {
 
-		lResult := lGormDB.Table("st_918_Stock_Table").Create(&lStock)
+		config := genpkg.ReadTomlConfig("./toml/dbconfig.toml")
+		AdminId := fmt.Sprintf("%v", config.(map[string]interface{})["AdminId"])
+		lName := "Admin: " + AdminId
+		lCurrTime := time.Now()
+		lStock.CreatedBy = lName
+		lStock.CreatedAt = lCurrTime
+		lStock.UpdatedBy = lName
+		lStock.UpdatedAt = lCurrTime
+
+		lResult := lGormDB.Table("st_917_stocktable").Create(&lStock)
 
 		if lResult.Error != nil {
 			log.Println("SCS-005", lResult.Error)
@@ -115,7 +125,7 @@ func createStocksInDB(lStockResp *StockResp, lStock *Stock) {
 
 		} else {
 			fmt.Println(lResult.RowsAffected)
-			lStockResp.StockDetailsArr = append(lStockResp.StockDetailsArr, *lStock)
+			lStockResp.StockDetailsArr = *lStock
 		}
 	}
 
