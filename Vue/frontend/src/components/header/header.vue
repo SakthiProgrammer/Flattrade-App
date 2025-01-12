@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar app elevation="3" elevate-on-scroll color="white" height="80px">
+  <v-app-bar app elevation="3" elevate-on-scroll color="white" height="80px">
     <v-container fluid>
       <v-row align="center" no-gutters>
         <!-- Logo -->
@@ -19,8 +19,8 @@
             <v-list-item
               v-for="(link, index) in navLinks"
               :key="index"
-              :link="true"
-              :to="link.path"
+              @click="handleComponents(link)"
+              class="clickable"
             >
               <v-list-item-content class="px-5">
                 <v-list-item-title class="h6 font-weight-medium">
@@ -41,45 +41,46 @@
         </v-col>
       </v-row>
     </v-container>
-
-    
   </v-app-bar>
-  </template>
-  
+</template>
 
 <script>
 export default {
-    data() {
-        return {
-            drawer: false,
-            userType: null, // 'user', 'admin', or null
-            navLinks: [] // To hold navigation links dynamically
-        };
-    },
-    mounted() {
-        // Example: Fetch the user type from localStorage or API
-        this.userType = "admin"// 'user', 'admin', or null
+  data() {
+    return {
+      drawer: false,
+      userType: null, // 'user', 'admin', or null
+      navLinks: [], // To hold navigation links dynamically
+    };
+  },
+  mounted() {
+    // Example: Fetch the user type from localStorage or API
+    this.userType = "user"; // 'user', 'admin', or null
 
-        // Set navigation links based on userType
-        if (this.userType === 'user') {
-            this.navLinks = [
-                { title: 'Home', path: '/u/home' },
-                { title: 'Execution', path: '/execution' }
-            ];
-        } else if (this.userType === 'admin') {
-            this.navLinks = [
-                { title: 'Home', path: '/a/home' },
-                { title: 'Stock', path: '/stock' },
-                { title: 'Brokerage', path: '/brokerage' },
-                { title: 'Bank', path: '/bank' },
-                { title: 'User', path: '/user' }
-            ];
-        // } else {
-        //     this.navLinks = [
-        //         { title: 'Login', path: '/login' }
-        //     ];
-        }
+    // Restore the current component from localStorage
+    const savedComponent = localStorage.getItem("currentComponent");
+    this.currentComponent = savedComponent || "Home"; // Default to "Home" if nothing is saved
+
+    // Set navigation links based on userType
+    if (this.userType === "user") {
+      this.navLinks = [
+        { title: "Home", path: "/u/home" },
+        { title: "Execution" },
+      ];
+    } else if (this.userType === "admin") {
+      this.navLinks = [
+        { title: "Home" },
+        { title: "Stock" },
+        { title: "Brokerage" },
+        { title: "Bank" },
+        { title: "User" },
+      ];
     }
+  },
+  methods: {
+    handleComponents(link) {
+      this.$emit("handleComponent", link.title); // Emit the current component
+    },
+  },
 };
 </script>
-

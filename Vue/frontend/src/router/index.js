@@ -2,13 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
-import UserLandingPage from "../views/UserLandingPage.vue";
-import Execution from "../views/Execution.vue";
-import AdminLandingPage from "../views/AdminLandingPage.vue";
-import Stock from "../views/Stock.vue";
-import Bank from "../views/Bank.vue";
-import Brokerage from "../views/Brokerage.vue";
-import User from "../views/User.vue";
+import ClientHomePage from "../views/ClientHomePage.vue";
+import AdminDashboard from "../views/AdminDashboard.vue";
 
 Vue.use(VueRouter);
 
@@ -24,31 +19,31 @@ const routes = [
     component: Register,
   },
   {
-    path: "/u/home",
-    name: "UserLandingPage",
-    component: UserLandingPage,
+    path: "/c/home",
+    name: "ClientHomePage",
+    component: ClientHomePage,
   },
   {
     path: "/a/home",
     name: "AdminLandingPage",
-    component: AdminLandingPage,
+    component: AdminDashboard,
   },
   {
-    path: "/execution",
-    name: "Execution",
-    component: Execution,
+    path: "/u/home",
+    name: "User",
+    // component: Execution,
   },
   {
-    path: "/stock",
-    name: "Stock",
-    component: Stock,
+    path: "/bo/home",
+    name: "BackOfficer",
+    // component: Stock,
   },
   {
-    path: "/bank",
+    path: "/appr/home",
     name: "Bank",
-    component: Bank,
+    // component: Bank,
   },
-  {
+  /*  {
     path: "/brokerage",
     name: "Brokerage",
     component: Brokerage,
@@ -57,7 +52,7 @@ const routes = [
     path: "/user",
     name: "User",
     component: User,
-  },
+  }, */
 ];
 
 const router = new VueRouter({

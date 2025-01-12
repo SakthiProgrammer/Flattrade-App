@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import ExecutionTable from '../components/execution/ExecutionTable.vue';
+import ExecutionTable from './components/ExecutionTable.vue';
 
 
     export default{

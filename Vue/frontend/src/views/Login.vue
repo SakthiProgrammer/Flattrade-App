@@ -26,6 +26,8 @@ export default {
 </script>  -->
 
 <template>
+    <div>
+        <Header/>
     <div class="my-auto fill-height">
     <v-container>
         <v-row class="fill-height align-center justify-center text-center">
@@ -49,10 +51,12 @@ export default {
         </v-row>
     </v-container>
 </div>
+</div>
 
 </template>
 
 <script>
+import Header from '../components/header/header.vue';
 import AdminLogin from '../components/login/AdminLoginForm.vue';
 import UserLogin from '../components/login/UserLoginForm.vue';
 
@@ -60,6 +64,7 @@ export default {
     components: {
         AdminLogin,
         UserLogin,
+        Header
     },
     data() {
         return {
