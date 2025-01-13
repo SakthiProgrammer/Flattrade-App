@@ -4,6 +4,52 @@ hi from my lap
 
 
 
+Id
+client_id
+stock_id
+trade_type
+quantity
+trade_price
+trade_date
+back_officer_approval_status
+biller_Approvel_status
+approver_Approvel_status
+Created_By
+Created_At
+Updated_By
+A
+A
+A
+A
+B
+B
+B
+A
+A
+A
+A
+A
+A
+A
+Updated_At
+B
+B
+B
+B
+B
+B
+A
+A
+A
+A
+B
+B
+B
+B
+C
+C
+C
+Ta
 
 
 
