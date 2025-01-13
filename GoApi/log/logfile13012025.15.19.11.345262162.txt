@@ -1,0 +1,36 @@
+2025/01/13 15:19:12 GetUsers-(+)
+2025/01/13 15:19:12 Database connection established successfully.
+2025/01/13 15:19:12 Successfully Get
+2025/01/13 15:19:12 GetUsers-(-)
+2025/01/13 15:19:21 GetUsers-(+)
+2025/01/13 15:19:21 Database connection established successfully.
+2025/01/13 15:19:21 Successfully Get
+2025/01/13 15:19:21 GetUsers-(-)
+2025/01/13 15:19:53 GetClients-(+)
+2025/01/13 15:19:53 Database connection established successfully.
+2025/01/13 15:19:53 strToInt-(+)
+2025/01/13 15:19:53 strToInt-(-)
+2025/01/13 15:19:53 Successfully Get
+2025/01/13 15:19:53 GetClients-(-)
+2025/01/13 15:19:59 GetClients-(+)
+2025/01/13 15:19:59 Database connection established successfully.
+2025/01/13 15:19:59 strToInt-(+)
+2025/01/13 15:19:59 strToInt-(-)
+2025/01/13 15:19:59 Successfully Get
+2025/01/13 15:19:59 GetClients-(-)
+2025/01/13 15:20:02 GetClients-(+)
+2025/01/13 15:20:02 Database connection established successfully.
+2025/01/13 15:20:02 strToInt-(+)
+2025/01/13 15:20:02 strToInt-(-)
+2025/01/13 15:20:02 Successfully Get
+2025/01/13 15:20:02 GetClients-(-)
+2025/01/13 15:20:17 GetClients-(+)
+2025/01/13 15:20:17 Database connection established successfully.
+2025/01/13 15:20:17 Successfully Get
+2025/01/13 15:20:17 GetClients-(-)
+2025/01/13 15:20:20 GetClients-(+)
+2025/01/13 15:20:20 Database connection established successfully.
+2025/01/13 15:20:20 strToInt-(+)
+2025/01/13 15:20:20 strToInt-(-)
+2025/01/13 15:20:20 Successfully Get
+2025/01/13 15:20:20 GetClients-(-)

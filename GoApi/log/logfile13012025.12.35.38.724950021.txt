@@ -1,0 +1,649 @@
+2025/01/13 12:36:33 GetClients-(+)
+2025/01/13 12:36:33 Database connection established successfully.
+2025/01/13 12:36:33 Successfully Get
+2025/01/13 12:36:33 GetClients-(-)
+2025/01/13 12:36:33 GetStocks-(+)
+2025/01/13 12:36:33 Database connection established successfully.
+2025/01/13 12:36:33 Successfully Get
+2025/01/13 12:36:33 GetStocks-(-)
+2025/01/13 12:36:57 GetClients-(+)
+2025/01/13 12:36:57 Database connection established successfully.
+2025/01/13 12:36:57 Successfully Get
+2025/01/13 12:36:57 GetClients-(-)
+2025/01/13 12:36:57 GetStocks-(+)
+2025/01/13 12:36:57 Database connection established successfully.
+2025/01/13 12:36:57 Successfully Get
+2025/01/13 12:36:57 GetStocks-(-)
+2025/01/13 12:37:29 GetStocks-(+)
+2025/01/13 12:37:29 Database connection established successfully.
+2025/01/13 12:37:29 Successfully Get
+2025/01/13 12:37:29 GetStocks-(-)
+2025/01/13 12:37:34 GetClients-(+)
+2025/01/13 12:37:34 Database connection established successfully.
+2025/01/13 12:37:34 Successfully Get
+2025/01/13 12:37:34 GetClients-(-)
+2025/01/13 12:37:34 GetStocks-(+)
+2025/01/13 12:37:34 Database connection established successfully.
+2025/01/13 12:37:34 Successfully Get
+2025/01/13 12:37:34 GetStocks-(-)
+2025/01/13 12:38:06 GetStocks-(+)
+2025/01/13 12:38:07 Database connection established successfully.
+2025/01/13 12:38:07 Successfully Get
+2025/01/13 12:38:07 GetStocks-(-)
+2025/01/13 12:38:14 GetStocks-(+)
+2025/01/13 12:38:14 Database connection established successfully.
+2025/01/13 12:38:14 Successfully Get
+2025/01/13 12:38:14 GetStocks-(-)
+2025/01/13 12:38:17 GetStocks-(+)
+2025/01/13 12:38:17 Database connection established successfully.
+2025/01/13 12:38:17 Successfully Get
+2025/01/13 12:38:17 GetStocks-(-)
+2025/01/13 12:38:20 GetStocks-(+)
+2025/01/13 12:38:20 Database connection established successfully.
+2025/01/13 12:38:20 Successfully Get
+2025/01/13 12:38:20 GetStocks-(-)
+2025/01/13 12:38:25 GetClients-(+)
+2025/01/13 12:38:25 Database connection established successfully.
+2025/01/13 12:38:25 Successfully Get
+2025/01/13 12:38:25 GetClients-(-)
+2025/01/13 12:38:25 GetStocks-(+)
+2025/01/13 12:38:25 Database connection established successfully.
+2025/01/13 12:38:25 Successfully Get
+2025/01/13 12:38:25 GetStocks-(-)
+2025/01/13 12:39:17 GetClients-(+)
+2025/01/13 12:39:17 Database connection established successfully.
+2025/01/13 12:39:17 Successfully Get
+2025/01/13 12:39:17 GetClients-(-)
+2025/01/13 12:39:17 GetStocks-(+)
+2025/01/13 12:39:17 Database connection established successfully.
+2025/01/13 12:39:17 Successfully Get
+2025/01/13 12:39:17 GetStocks-(-)
+2025/01/13 12:39:25 GetClients-(+)
+2025/01/13 12:39:25 Database connection established successfully.
+2025/01/13 12:39:25 Successfully Get
+2025/01/13 12:39:25 GetClients-(-)
+2025/01/13 12:39:25 GetStocks-(+)
+2025/01/13 12:39:25 Database connection established successfully.
+2025/01/13 12:39:25 Successfully Get
+2025/01/13 12:39:25 GetStocks-(-)
+2025/01/13 12:41:06 GetClients-(+)
+2025/01/13 12:41:06 Database connection established successfully.
+2025/01/13 12:41:06 Successfully Get
+2025/01/13 12:41:06 GetClients-(-)
+2025/01/13 12:41:06 GetStocks-(+)
+2025/01/13 12:41:06 Database connection established successfully.
+2025/01/13 12:41:06 Successfully Get
+2025/01/13 12:41:06 GetStocks-(-)
+2025/01/13 12:42:19 UpdateStock- (+)
+2025/01/13 12:42:19 UpdateStock- (-)
+2025/01/13 12:42:33 GetClients-(+)
+2025/01/13 12:42:33 Database connection established successfully.
+2025/01/13 12:42:33 Successfully Get
+2025/01/13 12:42:33 GetClients-(-)
+2025/01/13 12:42:33 GetStocks-(+)
+2025/01/13 12:42:33 Database connection established successfully.
+2025/01/13 12:42:33 Successfully Get
+2025/01/13 12:42:33 GetStocks-(-)
+2025/01/13 12:42:43 GetStocks-(+)
+2025/01/13 12:42:43 Database connection established successfully.
+2025/01/13 12:42:43 Successfully Get
+2025/01/13 12:42:43 GetStocks-(-)
+2025/01/13 12:42:45 GetStocks-(+)
+2025/01/13 12:42:45 Database connection established successfully.
+2025/01/13 12:42:45 Successfully Get
+2025/01/13 12:42:45 GetStocks-(-)
+2025/01/13 12:42:51 GetClients-(+)
+2025/01/13 12:42:51 Database connection established successfully.
+2025/01/13 12:42:51 Successfully Get
+2025/01/13 12:42:51 GetClients-(-)
+2025/01/13 12:42:51 GetStocks-(+)
+2025/01/13 12:42:51 Database connection established successfully.
+2025/01/13 12:42:51 Successfully Get
+2025/01/13 12:42:51 GetStocks-(-)
+2025/01/13 12:42:53 GetStocks-(+)
+2025/01/13 12:42:53 Database connection established successfully.
+2025/01/13 12:42:53 Successfully Get
+2025/01/13 12:42:53 GetStocks-(-)
+2025/01/13 12:42:55 GetStocks-(+)
+2025/01/13 12:42:55 Database connection established successfully.
+2025/01/13 12:42:55 Successfully Get
+2025/01/13 12:42:55 GetStocks-(-)
+2025/01/13 12:42:56 GetStocks-(+)
+2025/01/13 12:42:56 Database connection established successfully.
+2025/01/13 12:42:56 Successfully Get
+2025/01/13 12:42:56 GetStocks-(-)
+2025/01/13 12:43:10 GetStocks-(+)
+2025/01/13 12:43:10 Database connection established successfully.
+2025/01/13 12:43:10 Successfully Get
+2025/01/13 12:43:10 GetStocks-(-)
+2025/01/13 12:43:13 GetStocks-(+)
+2025/01/13 12:43:13 Database connection established successfully.
+2025/01/13 12:43:13 Successfully Get
+2025/01/13 12:43:13 GetStocks-(-)
+2025/01/13 12:43:23 GetStocks-(+)
+2025/01/13 12:43:23 Database connection established successfully.
+2025/01/13 12:43:23 Successfully Get
+2025/01/13 12:43:23 GetStocks-(-)
+2025/01/13 12:43:23 GetStocks-(+)
+2025/01/13 12:43:23 Database connection established successfully.
+2025/01/13 12:43:23 Successfully Get
+2025/01/13 12:43:23 GetStocks-(-)
+2025/01/13 12:43:34 GetClients-(+)
+2025/01/13 12:43:34 Database connection established successfully.
+2025/01/13 12:43:34 Successfully Get
+2025/01/13 12:43:34 GetClients-(-)
+2025/01/13 12:43:34 GetStocks-(+)
+2025/01/13 12:43:34 Database connection established successfully.
+2025/01/13 12:43:34 Successfully Get
+2025/01/13 12:43:34 GetStocks-(-)
+2025/01/13 12:43:47 GetClients-(+)
+2025/01/13 12:43:47 Database connection established successfully.
+2025/01/13 12:43:47 Successfully Get
+2025/01/13 12:43:47 GetClients-(-)
+2025/01/13 12:43:47 GetStocks-(+)
+2025/01/13 12:43:47 Database connection established successfully.
+2025/01/13 12:43:47 Successfully Get
+2025/01/13 12:43:47 GetStocks-(-)
+2025/01/13 12:43:52 GetStocks-(+)
+2025/01/13 12:43:52 Database connection established successfully.
+2025/01/13 12:43:52 Successfully Get
+2025/01/13 12:43:52 GetStocks-(-)
+2025/01/13 12:44:24 GetStocks-(+)
+2025/01/13 12:44:24 Database connection established successfully.
+2025/01/13 12:44:24 Successfully Get
+2025/01/13 12:44:24 GetStocks-(-)
+2025/01/13 12:44:25 GetClients-(+)
+2025/01/13 12:44:25 Database connection established successfully.
+2025/01/13 12:44:25 Successfully Get
+2025/01/13 12:44:25 GetClients-(-)
+2025/01/13 12:44:25 GetStocks-(+)
+2025/01/13 12:44:25 Database connection established successfully.
+2025/01/13 12:44:25 Successfully Get
+2025/01/13 12:44:25 GetStocks-(-)
+2025/01/13 12:44:26 GetStocks-(+)
+2025/01/13 12:44:26 Database connection established successfully.
+2025/01/13 12:44:26 Successfully Get
+2025/01/13 12:44:26 GetStocks-(-)
+2025/01/13 12:44:30 GetStocks-(+)
+2025/01/13 12:44:30 Database connection established successfully.
+2025/01/13 12:44:30 Successfully Get
+2025/01/13 12:44:30 GetStocks-(-)
+2025/01/13 12:44:34 GetStocks-(+)
+2025/01/13 12:44:34 Database connection established successfully.
+2025/01/13 12:44:34 Successfully Get
+2025/01/13 12:44:34 GetStocks-(-)
+2025/01/13 12:44:41 GetStocks-(+)
+2025/01/13 12:44:41 Database connection established successfully.
+2025/01/13 12:44:41 Successfully Get
+2025/01/13 12:44:41 GetStocks-(-)
+2025/01/13 12:44:52 GetStocks-(+)
+2025/01/13 12:44:52 Database connection established successfully.
+2025/01/13 12:44:52 Successfully Get
+2025/01/13 12:44:52 GetStocks-(-)
+2025/01/13 12:44:53 GetClients-(+)
+2025/01/13 12:44:53 Database connection established successfully.
+2025/01/13 12:44:53 Successfully Get
+2025/01/13 12:44:53 GetClients-(-)
+2025/01/13 12:44:53 GetStocks-(+)
+2025/01/13 12:44:53 Database connection established successfully.
+2025/01/13 12:44:53 Successfully Get
+2025/01/13 12:44:53 GetStocks-(-)
+2025/01/13 12:44:57 GetStocks-(+)
+2025/01/13 12:44:57 Database connection established successfully.
+2025/01/13 12:44:57 Successfully Get
+2025/01/13 12:44:57 GetStocks-(-)
+2025/01/13 12:45:02 GetStocks-(+)
+2025/01/13 12:45:02 Database connection established successfully.
+2025/01/13 12:45:02 Successfully Get
+2025/01/13 12:45:02 GetStocks-(-)
+2025/01/13 12:45:07 GetStocks-(+)
+2025/01/13 12:45:07 Database connection established successfully.
+2025/01/13 12:45:07 Successfully Get
+2025/01/13 12:45:07 GetStocks-(-)
+2025/01/13 12:45:21 GetClients-(+)
+2025/01/13 12:45:21 Database connection established successfully.
+2025/01/13 12:45:21 Successfully Get
+2025/01/13 12:45:21 GetClients-(-)
+2025/01/13 12:45:21 GetStocks-(+)
+2025/01/13 12:45:21 Database connection established successfully.
+2025/01/13 12:45:22 Successfully Get
+2025/01/13 12:45:22 GetStocks-(-)
+2025/01/13 12:45:43 UpdateStock- (+)
+2025/01/13 12:45:43 UpdateStock- (-)
+2025/01/13 12:45:43 UpdateStock- (+)
+2025/01/13 12:45:43 UpdateStock- (-)
+2025/01/13 12:46:10 GetStocks-(+)
+2025/01/13 12:46:10 Database connection established successfully.
+2025/01/13 12:46:10 Successfully Get
+2025/01/13 12:46:10 GetStocks-(-)
+2025/01/13 12:46:33 CreateStock - (+)
+2025/01/13 12:46:33 CreateStock - (-)
+2025/01/13 12:46:33 CreateStock - (+)
+2025/01/13 12:46:33 SCS-002 json: cannot unmarshal string into Go struct field CreateStockRec.stock_price of type float64
+2025/01/13 12:46:33 CreateStock - (-)
+2025/01/13 12:48:10 GetStocks-(+)
+2025/01/13 12:48:10 Database connection established successfully.
+2025/01/13 12:48:10 Successfully Get
+2025/01/13 12:48:10 GetStocks-(-)
+2025/01/13 12:48:16 GetStocks-(+)
+2025/01/13 12:48:16 Database connection established successfully.
+2025/01/13 12:48:16 Successfully Get
+2025/01/13 12:48:16 GetStocks-(-)
+2025/01/13 12:48:16 GetStocks-(+)
+2025/01/13 12:48:16 Database connection established successfully.
+2025/01/13 12:48:16 Successfully Get
+2025/01/13 12:48:16 GetStocks-(-)
+2025/01/13 12:48:28 GetClients-(+)
+2025/01/13 12:48:28 Database connection established successfully.
+2025/01/13 12:48:28 Successfully Get
+2025/01/13 12:48:28 GetClients-(-)
+2025/01/13 12:48:28 GetStocks-(+)
+2025/01/13 12:48:28 Database connection established successfully.
+2025/01/13 12:48:28 Successfully Get
+2025/01/13 12:48:28 GetStocks-(-)
+2025/01/13 12:48:44 CreateStock - (+)
+2025/01/13 12:48:44 CreateStock - (-)
+2025/01/13 12:48:44 CreateStock - (+)
+2025/01/13 12:48:44 CreateStocksInDB-(+)
+2025/01/13 12:48:44 Database connection established successfully.
+2025/01/13 12:48:44 CreateStocksInDB-(-)
+2025/01/13 12:48:44 CreateStock - (-)
+2025/01/13 12:48:52 GetClients-(+)
+2025/01/13 12:48:52 Database connection established successfully.
+2025/01/13 12:48:52 Successfully Get
+2025/01/13 12:48:52 GetClients-(-)
+2025/01/13 12:48:52 GetStocks-(+)
+2025/01/13 12:48:52 Database connection established successfully.
+2025/01/13 12:48:52 Successfully Get
+2025/01/13 12:48:52 GetStocks-(-)
+2025/01/13 12:50:40 GetClients-(+)
+2025/01/13 12:50:40 Database connection established successfully.
+2025/01/13 12:50:40 Successfully Get
+2025/01/13 12:50:40 GetClients-(-)
+2025/01/13 12:50:40 GetStocks-(+)
+2025/01/13 12:50:40 Database connection established successfully.
+2025/01/13 12:50:40 Successfully Get
+2025/01/13 12:50:40 GetStocks-(-)
+2025/01/13 12:50:43 GetStocks-(+)
+2025/01/13 12:50:43 Database connection established successfully.
+2025/01/13 12:50:43 Successfully Get
+2025/01/13 12:50:43 GetStocks-(-)
+2025/01/13 12:50:43 GetStocks-(+)
+2025/01/13 12:50:43 Database connection established successfully.
+2025/01/13 12:50:43 Successfully Get
+2025/01/13 12:50:43 GetStocks-(-)
+2025/01/13 12:51:09 CreateStock - (+)
+2025/01/13 12:51:09 CreateStock - (-)
+2025/01/13 12:51:09 CreateStock - (+)
+2025/01/13 12:51:09 CreateStocksInDB-(+)
+2025/01/13 12:51:09 Database connection established successfully.
+2025/01/13 12:51:09 CreateStocksInDB-(-)
+2025/01/13 12:51:09 CreateStock - (-)
+2025/01/13 12:52:19 GetStocks-(+)
+2025/01/13 12:52:19 Database connection established successfully.
+2025/01/13 12:52:19 Successfully Get
+2025/01/13 12:52:19 GetStocks-(-)
+2025/01/13 12:53:04 CreateStock - (+)
+2025/01/13 12:53:04 CreateStock - (-)
+2025/01/13 12:53:04 CreateStock - (+)
+2025/01/13 12:53:04 CreateStocksInDB-(+)
+2025/01/13 12:53:04 Database connection established successfully.
+2025/01/13 12:53:04 CreateStocksInDB-(-)
+2025/01/13 12:53:04 CreateStock - (-)
+2025/01/13 12:53:22 GetClients-(+)
+2025/01/13 12:53:22 Database connection established successfully.
+2025/01/13 12:53:22 Successfully Get
+2025/01/13 12:53:22 GetClients-(-)
+2025/01/13 12:53:22 GetStocks-(+)
+2025/01/13 12:53:22 Database connection established successfully.
+2025/01/13 12:53:22 Successfully Get
+2025/01/13 12:53:22 GetStocks-(-)
+2025/01/13 12:53:43 GetStocks-(+)
+2025/01/13 12:53:43 Database connection established successfully.
+2025/01/13 12:53:43 Successfully Get
+2025/01/13 12:53:43 GetStocks-(-)
+2025/01/13 12:53:51 GetClients-(+)
+2025/01/13 12:53:51 Database connection established successfully.
+2025/01/13 12:53:51 Successfully Get
+2025/01/13 12:53:51 GetClients-(-)
+2025/01/13 12:53:51 GetStocks-(+)
+2025/01/13 12:53:51 Database connection established successfully.
+2025/01/13 12:53:51 Successfully Get
+2025/01/13 12:53:51 GetStocks-(-)
+2025/01/13 12:54:22 CreateStock - (+)
+2025/01/13 12:54:22 CreateStock - (-)
+2025/01/13 12:54:22 CreateStock - (+)
+2025/01/13 12:54:22 CreateStocksInDB-(+)
+2025/01/13 12:54:22 Database connection established successfully.
+2025/01/13 12:54:22 CreateStocksInDB-(-)
+2025/01/13 12:54:22 CreateStock - (-)
+2025/01/13 12:55:57 LoginUser-(+)
+2025/01/13 12:55:57 LoginUser-(-)
+2025/01/13 12:55:57 LoginUser-(+)
+2025/01/13 12:55:57 validate-(+)
+2025/01/13 12:55:57 validate-(-)
+2025/01/13 12:55:57 checkUser-(+)
+2025/01/13 12:55:57 checkAdmin-(+)
+2025/01/13 12:55:57 checkAdmin-(-)
+2025/01/13 12:55:57 checkUser-(-)
+2025/01/13 12:55:57 LoginUser-(-)
+2025/01/13 12:55:57 GetClients-(+)
+2025/01/13 12:55:57 Database connection established successfully.
+2025/01/13 12:55:57 Successfully Get
+2025/01/13 12:55:57 GetClients-(-)
+2025/01/13 12:55:57 GetStocks-(+)
+2025/01/13 12:55:57 Database connection established successfully.
+2025/01/13 12:55:57 Successfully Get
+2025/01/13 12:55:57 GetStocks-(-)
+2025/01/13 12:56:00 GetClients-(+)
+2025/01/13 12:56:00 Database connection established successfully.
+2025/01/13 12:56:00 Successfully Get
+2025/01/13 12:56:00 GetClients-(-)
+2025/01/13 12:56:01 GetStocks-(+)
+2025/01/13 12:56:01 Database connection established successfully.
+2025/01/13 12:56:01 Successfully Get
+2025/01/13 12:56:01 GetStocks-(-)
+2025/01/13 12:56:03 GetClients-(+)
+2025/01/13 12:56:03 Database connection established successfully.
+2025/01/13 12:56:03 Successfully Get
+2025/01/13 12:56:03 GetClients-(-)
+2025/01/13 12:56:03 GetStocks-(+)
+2025/01/13 12:56:03 Database connection established successfully.
+2025/01/13 12:56:03 Successfully Get
+2025/01/13 12:56:03 GetStocks-(-)
+2025/01/13 12:56:04 GetClients-(+)
+2025/01/13 12:56:04 Database connection established successfully.
+2025/01/13 12:56:04 Successfully Get
+2025/01/13 12:56:04 GetClients-(-)
+2025/01/13 12:56:06 GetStocks-(+)
+2025/01/13 12:56:06 Database connection established successfully.
+2025/01/13 12:56:06 Successfully Get
+2025/01/13 12:56:06 GetStocks-(-)
+2025/01/13 13:35:02 GetStocks-(+)
+2025/01/13 13:35:02 Database connection established successfully.
+2025/01/13 13:35:02 Successfully Get
+2025/01/13 13:35:02 GetStocks-(-)
+2025/01/13 13:35:04 GetStocks-(+)
+2025/01/13 13:35:04 Database connection established successfully.
+2025/01/13 13:35:04 Successfully Get
+2025/01/13 13:35:04 GetStocks-(-)
+2025/01/13 13:35:11 GetStocks-(+)
+2025/01/13 13:35:11 Database connection established successfully.
+2025/01/13 13:35:11 Successfully Get
+2025/01/13 13:35:11 GetStocks-(-)
+2025/01/13 13:35:12 GetStocks-(+)
+2025/01/13 13:35:12 Database connection established successfully.
+2025/01/13 13:35:12 Successfully Get
+2025/01/13 13:35:12 GetStocks-(-)
+2025/01/13 13:35:18 GetStocks-(+)
+2025/01/13 13:35:18 Database connection established successfully.
+2025/01/13 13:35:18 Successfully Get
+2025/01/13 13:35:18 GetStocks-(-)
+2025/01/13 13:35:22 GetStocks-(+)
+2025/01/13 13:35:22 Database connection established successfully.
+2025/01/13 13:35:22 Successfully Get
+2025/01/13 13:35:22 GetStocks-(-)
+2025/01/13 13:35:51 GetCharges-(+)
+2025/01/13 13:35:51 Database connection established successfully.
+2025/01/13 13:35:51 Success
+2025/01/13 13:35:51 GetCharges-(-)
+2025/01/13 13:36:45 GetClients-(+)
+2025/01/13 13:36:45 Database connection established successfully.
+2025/01/13 13:36:45 Successfully Get
+2025/01/13 13:36:45 GetClients-(-)
+2025/01/13 13:37:03 GetClients-(+)
+2025/01/13 13:37:03 Database connection established successfully.
+2025/01/13 13:37:03 Successfully Get
+2025/01/13 13:37:03 GetClients-(-)
+2025/01/13 13:37:46 GetClients-(+)
+2025/01/13 13:37:46 GetCharges-(+)
+2025/01/13 13:37:46 Database connection established successfully.
+2025/01/13 13:37:46 Database connection established successfully.
+2025/01/13 13:37:46 Successfully Get
+2025/01/13 13:37:46 GetClients-(-)
+2025/01/13 13:37:46 Success
+2025/01/13 13:37:46 GetCharges-(-)
+2025/01/13 13:37:52 GetCharges-(+)
+2025/01/13 13:37:52 Database connection established successfully.
+2025/01/13 13:37:52 Success
+2025/01/13 13:37:52 GetCharges-(-)
+2025/01/13 13:38:12 GetClients-(+)
+2025/01/13 13:38:12 Database connection established successfully.
+2025/01/13 13:38:12 Successfully Get
+2025/01/13 13:38:12 GetClients-(-)
+2025/01/13 13:38:12 GetCharges-(+)
+2025/01/13 13:38:12 Database connection established successfully.
+2025/01/13 13:38:12 Success
+2025/01/13 13:38:12 GetCharges-(-)
+2025/01/13 13:38:26 GetClients-(+)
+2025/01/13 13:38:26 Database connection established successfully.
+2025/01/13 13:38:26 Successfully Get
+2025/01/13 13:38:26 GetClients-(-)
+2025/01/13 13:38:26 GetCharges-(+)
+2025/01/13 13:38:26 Database connection established successfully.
+2025/01/13 13:38:26 Success
+2025/01/13 13:38:26 GetCharges-(-)
+2025/01/13 13:38:29 GetCharges-(+)
+2025/01/13 13:38:29 Database connection established successfully.
+2025/01/13 13:38:29 Success
+2025/01/13 13:38:29 GetCharges-(-)
+2025/01/13 13:38:29 GetCharges-(+)
+2025/01/13 13:38:29 Database connection established successfully.
+2025/01/13 13:38:29 Success
+2025/01/13 13:38:29 GetCharges-(-)
+2025/01/13 13:38:44 GetCharges-(+)
+2025/01/13 13:38:44 Database connection established successfully.
+2025/01/13 13:38:44 Success
+2025/01/13 13:38:44 GetCharges-(-)
+2025/01/13 13:38:45 GetCharges-(+)
+2025/01/13 13:38:45 Database connection established successfully.
+2025/01/13 13:38:45 Success
+2025/01/13 13:38:45 GetCharges-(-)
+2025/01/13 13:38:45 GetCharges-(+)
+2025/01/13 13:38:45 Database connection established successfully.
+2025/01/13 13:38:45 Success
+2025/01/13 13:38:45 GetCharges-(-)
+2025/01/13 13:38:50 GetClients-(+)
+2025/01/13 13:38:50 Database connection established successfully.
+2025/01/13 13:38:50 Successfully Get
+2025/01/13 13:38:50 GetClients-(-)
+2025/01/13 13:38:50 GetCharges-(+)
+2025/01/13 13:38:50 Database connection established successfully.
+2025/01/13 13:38:50 Success
+2025/01/13 13:38:50 GetCharges-(-)
+2025/01/13 13:39:16 GetCharges-(+)
+2025/01/13 13:39:16 Database connection established successfully.
+2025/01/13 13:39:16 Success
+2025/01/13 13:39:16 GetCharges-(-)
+2025/01/13 13:39:17 GetClients-(+)
+2025/01/13 13:39:17 Database connection established successfully.
+2025/01/13 13:39:17 Successfully Get
+2025/01/13 13:39:17 GetClients-(-)
+2025/01/13 13:39:17 GetCharges-(+)
+2025/01/13 13:39:17 Database connection established successfully.
+2025/01/13 13:39:17 Success
+2025/01/13 13:39:17 GetCharges-(-)
+2025/01/13 13:39:30 GetClients-(+)
+2025/01/13 13:39:30 Database connection established successfully.
+2025/01/13 13:39:30 Successfully Get
+2025/01/13 13:39:30 GetClients-(-)
+2025/01/13 13:39:30 GetCharges-(+)
+2025/01/13 13:39:30 Database connection established successfully.
+2025/01/13 13:39:30 Success
+2025/01/13 13:39:30 GetCharges-(-)
+2025/01/13 13:39:47 GetCharges-(+)
+2025/01/13 13:39:47 Database connection established successfully.
+2025/01/13 13:39:47 Success
+2025/01/13 13:39:47 GetCharges-(-)
+2025/01/13 13:39:54 GetCharges-(+)
+2025/01/13 13:39:54 Database connection established successfully.
+2025/01/13 13:39:54 Success
+2025/01/13 13:39:54 GetCharges-(-)
+2025/01/13 13:39:59 GetCharges-(+)
+2025/01/13 13:39:59 Database connection established successfully.
+2025/01/13 13:39:59 Success
+2025/01/13 13:39:59 GetCharges-(-)
+2025/01/13 13:40:04 GetClients-(+)
+2025/01/13 13:40:04 Database connection established successfully.
+2025/01/13 13:40:04 Successfully Get
+2025/01/13 13:40:04 GetClients-(-)
+2025/01/13 13:40:04 GetCharges-(+)
+2025/01/13 13:40:04 Database connection established successfully.
+2025/01/13 13:40:04 Success
+2025/01/13 13:40:04 GetCharges-(-)
+2025/01/13 13:40:32 GetClients-(+)
+2025/01/13 13:40:32 Database connection established successfully.
+2025/01/13 13:40:32 GetCharges-(+)
+2025/01/13 13:40:32 Successfully Get
+2025/01/13 13:40:32 GetClients-(-)
+2025/01/13 13:40:32 Database connection established successfully.
+2025/01/13 13:40:32 Success
+2025/01/13 13:40:32 GetCharges-(-)
+2025/01/13 13:41:10 GetClients-(+)
+2025/01/13 13:41:10 Database connection established successfully.
+2025/01/13 13:41:10 Successfully Get
+2025/01/13 13:41:10 GetClients-(-)
+2025/01/13 13:41:10 GetCharges-(+)
+2025/01/13 13:41:10 Database connection established successfully.
+2025/01/13 13:41:10 Success
+2025/01/13 13:41:10 GetCharges-(-)
+2025/01/13 13:41:19 GetCharges-(+)
+2025/01/13 13:41:19 Database connection established successfully.
+2025/01/13 13:41:19 Success
+2025/01/13 13:41:19 GetCharges-(-)
+2025/01/13 13:42:53 GetClients-(+)
+2025/01/13 13:42:53 Database connection established successfully.
+2025/01/13 13:42:53 Successfully Get
+2025/01/13 13:42:53 GetClients-(-)
+2025/01/13 13:42:53 GetCharges-(+)
+2025/01/13 13:42:53 Database connection established successfully.
+2025/01/13 13:42:53 Success
+2025/01/13 13:42:53 GetCharges-(-)
+2025/01/13 13:44:03 GetClients-(+)
+2025/01/13 13:44:03 Database connection established successfully.
+2025/01/13 13:44:03 Successfully Get
+2025/01/13 13:44:03 GetClients-(-)
+2025/01/13 13:44:03 GetCharges-(+)
+2025/01/13 13:44:03 Database connection established successfully.
+2025/01/13 13:44:03 Success
+2025/01/13 13:44:03 GetCharges-(-)
+2025/01/13 13:44:21 GetCharges-(+)
+2025/01/13 13:44:21 Database connection established successfully.
+2025/01/13 13:44:21 Success
+2025/01/13 13:44:21 GetCharges-(-)
+2025/01/13 13:44:22 GetClients-(+)
+2025/01/13 13:44:22 GetCharges-(+)
+2025/01/13 13:44:22 Database connection established successfully.
+2025/01/13 13:44:22 Database connection established successfully.
+2025/01/13 13:44:22 Successfully Get
+2025/01/13 13:44:22 GetClients-(-)
+2025/01/13 13:44:22 Success
+2025/01/13 13:44:22 GetCharges-(-)
+2025/01/13 13:44:31 GetCharges-(+)
+2025/01/13 13:44:31 Database connection established successfully.
+2025/01/13 13:44:31 Success
+2025/01/13 13:44:31 GetCharges-(-)
+2025/01/13 13:44:31 GetCharges-(+)
+2025/01/13 13:44:31 Database connection established successfully.
+2025/01/13 13:44:31 Success
+2025/01/13 13:44:31 GetCharges-(-)
+2025/01/13 13:45:04 GetClients-(+)
+2025/01/13 13:45:04 Database connection established successfully.
+2025/01/13 13:45:04 Successfully Get
+2025/01/13 13:45:04 GetClients-(-)
+2025/01/13 13:45:04 GetCharges-(+)
+2025/01/13 13:45:04 Database connection established successfully.
+2025/01/13 13:45:04 Success
+2025/01/13 13:45:04 GetCharges-(-)
+2025/01/13 13:45:32 GetClients-(+)
+2025/01/13 13:45:32 Database connection established successfully.
+2025/01/13 13:45:32 Successfully Get
+2025/01/13 13:45:32 GetClients-(-)
+2025/01/13 13:45:32 GetCharges-(+)
+2025/01/13 13:45:32 Database connection established successfully.
+2025/01/13 13:45:32 Success
+2025/01/13 13:45:32 GetCharges-(-)
+2025/01/13 13:46:10 GetCharges-(+)
+2025/01/13 13:46:10 Database connection established successfully.
+2025/01/13 13:46:10 Success
+2025/01/13 13:46:10 GetCharges-(-)
+2025/01/13 13:46:10 GetCharges-(+)
+2025/01/13 13:46:10 Database connection established successfully.
+2025/01/13 13:46:10 Success
+2025/01/13 13:46:10 GetCharges-(-)
+2025/01/13 13:46:10 GetCharges-(+)
+2025/01/13 13:46:10 Database connection established successfully.
+2025/01/13 13:46:10 Success
+2025/01/13 13:46:10 GetCharges-(-)
+2025/01/13 13:46:11 GetCharges-(+)
+2025/01/13 13:46:11 Database connection established successfully.
+2025/01/13 13:46:11 Success
+2025/01/13 13:46:11 GetCharges-(-)
+2025/01/13 13:46:11 GetCharges-(+)
+2025/01/13 13:46:11 Database connection established successfully.
+2025/01/13 13:46:11 Success
+2025/01/13 13:46:11 GetCharges-(-)
+2025/01/13 13:46:11 GetClients-(+)
+2025/01/13 13:46:11 Database connection established successfully.
+2025/01/13 13:46:11 Successfully Get
+2025/01/13 13:46:11 GetClients-(-)
+2025/01/13 13:46:11 GetCharges-(+)
+2025/01/13 13:46:11 Database connection established successfully.
+2025/01/13 13:46:11 Success
+2025/01/13 13:46:11 GetCharges-(-)
+2025/01/13 13:46:15 GetCharges-(+)
+2025/01/13 13:46:15 Database connection established successfully.
+2025/01/13 13:46:15 Success
+2025/01/13 13:46:15 GetCharges-(-)
+2025/01/13 13:46:15 GetCharges-(+)
+2025/01/13 13:46:15 Database connection established successfully.
+2025/01/13 13:46:15 Success
+2025/01/13 13:46:15 GetCharges-(-)
+2025/01/13 13:46:31 GetCharges-(+)
+2025/01/13 13:46:31 Database connection established successfully.
+2025/01/13 13:46:31 Success
+2025/01/13 13:46:31 GetCharges-(-)
+2025/01/13 13:46:31 GetClients-(+)
+2025/01/13 13:46:31 Database connection established successfully.
+2025/01/13 13:46:31 Successfully Get
+2025/01/13 13:46:31 GetClients-(-)
+2025/01/13 13:46:31 GetCharges-(+)
+2025/01/13 13:46:31 Database connection established successfully.
+2025/01/13 13:46:31 Success
+2025/01/13 13:46:31 GetCharges-(-)
+2025/01/13 13:46:42 GetClients-(+)
+2025/01/13 13:46:42 Database connection established successfully.
+2025/01/13 13:46:42 Successfully Get
+2025/01/13 13:46:42 GetClients-(-)
+2025/01/13 13:46:42 GetCharges-(+)
+2025/01/13 13:46:42 Database connection established successfully.
+2025/01/13 13:46:42 Success
+2025/01/13 13:46:42 GetCharges-(-)
+2025/01/13 13:46:53 CreateBank-(+)
+2025/01/13 13:46:53 CreateBank-(-)
+2025/01/13 13:46:53 CreateBank-(+)
+2025/01/13 13:46:53 createChargeInDB-(+)
+2025/01/13 13:46:53 Database connection established successfully.
+2025/01/13 13:46:53 BCCIDB-002 Error 1292 (22007): Incorrect date value: '' for column `training`.`st_919_config_charges_table`.`effective_date` at row 1
+2025/01/13 13:46:53 createChargeInDB-(-)
+2025/01/13 13:46:53 CreateBank-(-)
+2025/01/13 13:47:59 GetCharges-(+)
+2025/01/13 13:47:59 Database connection established successfully.
+2025/01/13 13:47:59 Success
+2025/01/13 13:47:59 GetCharges-(-)
+2025/01/13 13:48:02 GetCharges-(+)
+2025/01/13 13:48:02 Database connection established successfully.
+2025/01/13 13:48:02 Success
+2025/01/13 13:48:02 GetCharges-(-)
+2025/01/13 13:48:04 GetCharges-(+)
+2025/01/13 13:48:04 Database connection established successfully.
+2025/01/13 13:48:04 Success
+2025/01/13 13:48:04 GetCharges-(-)
+2025/01/13 13:48:18 CreateBank-(+)
+2025/01/13 13:48:18 CreateBank-(-)
+2025/01/13 13:48:18 CreateBank-(+)
+2025/01/13 13:48:18 createChargeInDB-(+)
+2025/01/13 13:48:18 Database connection established successfully.
+2025/01/13 13:48:18 BCCIDB-002 Error 1292 (22007): Incorrect date value: '' for column `training`.`st_919_config_charges_table`.`effective_date` at row 1
+2025/01/13 13:48:18 createChargeInDB-(-)
+2025/01/13 13:48:18 CreateBank-(-)

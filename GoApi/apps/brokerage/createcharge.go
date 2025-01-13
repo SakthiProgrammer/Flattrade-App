@@ -9,6 +9,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"strings"
 	"time"
 )
 
@@ -16,7 +17,7 @@ type CreateChargeRec struct {
 	// ChargeID         uint      `json:"charge_id" gorm:"column:charge_iD"`
 	ChargeType       string    `json:"charge_type" gorm:"column:charge_type"`
 	ChargePercentage float64   `json:"charge_percentage" gorm:"column:charge_percentage"`
-	EffectiveDate    string    `json:"effective_date" gorm:"column:effective_date"`
+	EffectiveDate    time.Time `json:"effective_date" gorm:"column:effective_date"`
 	CreatedBy        string    `json:"created_by" gorm:"column:Created_By"`
 	CreatedAt        time.Time `json:"created_at" gorm:"column:Created_At"`
 	UpdatedBy        string    `json:"updated_by" gorm:"column:Updated_By"`
@@ -107,6 +108,24 @@ func createChargeInDB(lChargeResp *CreateChargeResp, lCharge *CreateChargeRec) {
 		config := genpkg.ReadTomlConfig("./toml/dbconfig.toml")
 		AdminId := fmt.Sprintf("%v", config.(map[string]interface{})["AdminId"])
 		lName := "Admin: " + AdminId
+
+		// Clean up the EffectiveDate string by trimming any unwanted quotes
+		cleanedEffectiveDate := strings.Trim(lCharge.EffectiveDate.Format("2006-01-02T15:04:05Z07:00"), "\"")
+
+		// Parse the cleaned date string (without the time and timezone)
+		parsedTime, err := time.Parse("2006-01-02T15:04:05Z07:00", cleanedEffectiveDate)
+		if err != nil {
+			log.Println("Error parsing EffectiveDate:", err)
+			lChargeResp.ErrMsg = "Invalid date format"
+			lChargeResp.Status = common.ErrorCode
+			return
+		}
+
+		// Extract the date part only (set the time to midnight)
+		parsedDateOnly := parsedTime.Truncate(24 * time.Hour) // Truncate time to 00:00:00
+
+		lCharge.EffectiveDate = parsedDateOnly
+
 		lCurrTime := time.Now()
 		lCharge.CreatedBy = lName
 		lCharge.CreatedAt = lCurrTime

@@ -1,0 +1,14 @@
+2025/01/13 14:06:46 CreateBank-(+)
+2025/01/13 14:06:46 BCC-002 parsing time "\"2025-01-14\"" as "\"2006-01-02T15:04:05Z07:00\"": cannot parse "\"" as "T"
+2025/01/13 14:06:46 CreateBank-(-)
+2025/01/13 14:08:56 CreateBank-(+)
+2025/01/13 14:08:56 BCC-002 parsing time "\"2025-01-14\"" as "\"2006-01-02T15:04:05Z07:00\"": cannot parse "\"" as "T"
+2025/01/13 14:08:56 CreateBank-(-)
+2025/01/13 14:08:58 CreateBank-(+)
+2025/01/13 14:08:58 BCC-002 parsing time "\"2025-01-14\"" as "\"2006-01-02T15:04:05Z07:00\"": cannot parse "\"" as "T"
+2025/01/13 14:08:58 CreateBank-(-)
+2025/01/13 14:09:53 CreateBank-(+)
+2025/01/13 14:09:53 createChargeInDB-(+)
+2025/01/13 14:09:53 Database connection established successfully.
+2025/01/13 14:09:53 createChargeInDB-(-)
+2025/01/13 14:09:53 CreateBank-(-)

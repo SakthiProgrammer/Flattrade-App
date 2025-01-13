@@ -35,16 +35,16 @@ type LoginResponse struct {
 func LoginAll(w http.ResponseWriter, r *http.Request) {
 
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
-	(w).Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
-	(w).Header().Set("Access-Control-Allow-Headers", "CLIENT, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 	(w).Header().Set("Content-Type", "application/json")
+	(w).Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+	(w).Header().Set("Access-Control-Allow-Headers", "ROLE, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 
 	log.Println("LoginUser-(+)")
 
 	var lLoginResponse LoginResponse
 	var lUser Login
 
-	lRole := r.Header.Get("role")
+	lRole := r.Header.Get("ROLE")
 
 	lRole = strings.ToUpper(lRole)
 
@@ -177,7 +177,7 @@ func checkUser(lLoginResponse *LoginResponse, lUser *Login, lUserPassword string
 
 				lTableName = "st_918_client_table"
 
-				lResult = lGormDB.Table(lTableName).Select("password").Where("client_id=?", lUser.UserId).Find(&lUser.Password)
+				lResult = lGormDB.Table(lTableName).Select("password").Where("unique_id=?", lUser.UserId).Find(&lUser.Password)
 
 			} else if lRole == "U" {
 

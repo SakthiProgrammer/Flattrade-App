@@ -36,10 +36,10 @@ func main() {
 	http.HandleFunc("/getclients", client.GetClients)
 	http.HandleFunc("/updateclient", client.UpdateClient)
 	http.HandleFunc("/createstock", stock.CreateStock)
-	http.HandleFunc("/getstock", stock.GetStocks)
+	http.HandleFunc("/getstocks", stock.GetStocks)
 	http.HandleFunc("/updatestock", stock.UpdateStock)
 	http.HandleFunc("/createuser", user.CreateUser)
-	http.HandleFunc("/getuser", user.GetUsers)
+	http.HandleFunc("/getusers", user.GetUsers)
 	http.HandleFunc("/updateuser", user.UpdateUser)
 
 	http.ListenAndServe(":29091", nil)

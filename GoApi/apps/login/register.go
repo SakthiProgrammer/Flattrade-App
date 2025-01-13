@@ -42,7 +42,7 @@ func RegisterClient(w http.ResponseWriter, r *http.Request) {
 
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
 	(w).Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
-	(w).Header().Set("Access-Control-Allow-Headers", "CLIENT, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
+	(w).Header().Set("Access-Control-Allow-Headers", "role, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 	(w).Header().Set("Content-Type", "application/json")
 
 	log.Println("LoginUser-(+)")
@@ -117,7 +117,7 @@ func createClient(lClientResponse *ClinetResponse, lClient *Client) {
 		lClientResponse.Status = common.ErrorCode
 
 	} else {
-
+		lClient.KycIsCompleted = common.Pending
 		var lastClientID Client
 		lResult := lGormDB.Table("st_918_client_table").
 			Order("client_id desc").

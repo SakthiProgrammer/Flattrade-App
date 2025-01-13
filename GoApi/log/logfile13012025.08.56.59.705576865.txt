@@ -1,0 +1,24 @@
+2025/01/13 08:58:29 LoginUser-(+)
+2025/01/13 08:58:29 validate-(+)
+2025/01/13 08:58:29 validate-(-)
+2025/01/13 08:58:29 checkUser-(+)
+2025/01/13 08:58:29 checkAdmin-(+)
+2025/01/13 08:58:29 checkAdmin-(-)
+2025/01/13 08:58:29 checkUser-(-)
+2025/01/13 08:58:29 LoginUser-(-)
+2025/01/13 08:58:39 LoginUser-(+)
+2025/01/13 08:58:39 validate-(+)
+2025/01/13 08:58:39 validate-(-)
+2025/01/13 08:58:39 checkUser-(+)
+2025/01/13 08:58:39 Database connection established successfully.
+2025/01/13 08:58:39 LCU-002 <nil>
+2025/01/13 08:58:39 checkUser-(-)
+2025/01/13 08:58:39 LoginUser-(-)
+2025/01/13 08:58:56 LoginUser-(+)
+2025/01/13 08:58:56 validate-(+)
+2025/01/13 08:58:56 validate-(-)
+2025/01/13 08:58:56 checkUser-(+)
+2025/01/13 08:58:56 Database connection established successfully.
+2025/01/13 08:58:56 LCU-002 <nil>
+2025/01/13 08:58:56 checkUser-(-)
+2025/01/13 08:58:56 LoginUser-(-)

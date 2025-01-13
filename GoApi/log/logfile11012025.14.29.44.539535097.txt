@@ -70,3 +70,7 @@
 2025/01/11 14:37:39 generateUniqueID-(-)
 2025/01/11 14:37:39 createClient-(-)
 2025/01/11 14:37:39 RegisterUser-(-)
+2025/01/11 15:56:43 GetBank-(+)
+2025/01/11 15:56:43 Database connection established successfully.
+2025/01/11 15:56:43 Success
+2025/01/11 15:56:43 GetBank-(-)
