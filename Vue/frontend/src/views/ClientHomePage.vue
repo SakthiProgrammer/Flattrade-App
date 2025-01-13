@@ -1,16 +1,16 @@
 <template>
 
-<div>
-    <Client/>
-</div>
+    <div>
+        <Client />
+    </div>
 
 </template>
 
 
 <script>
-import Client from '../components/userHomePage/Client.vue';
-export default{
-    components:{
+import Client from '../components/ClientHomePage/Client.vue';
+export default {
+    components: {
         Client
     }
 }

@@ -19,7 +19,7 @@ const routes = [
     component: Register,
   },
   {
-    path: "/c/home",
+    path: "/c/home/:id",
     name: "ClientHomePage",
     component: ClientHomePage,
   },

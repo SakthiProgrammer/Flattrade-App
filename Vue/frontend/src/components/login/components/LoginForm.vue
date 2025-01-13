@@ -5,12 +5,10 @@
                 <h1 class="mx-auto mb-7">Sign In</h1>
             </v-row>
             <v-row>
-               
-                <v-text-field label="User Id" outlined></v-text-field>
-
+                <v-text-field v-model="Data.user_id" label="User Id" outlined></v-text-field>
             </v-row>
             <v-row>
-                <v-text-field label="Password" outlined></v-text-field>
+                <v-text-field v-model="Data.password" label="Password" outlined></v-text-field>
             </v-row>
             <v-row>
                 <h1 class="body-2"> If Don't Have an Account
@@ -24,7 +22,7 @@
             <v-row>
                 <v-col cols="12">
                     <div class="d-flex justify-center mx-8">
-                        <v-btn class="green " dark>Login</v-btn>
+                        <v-btn @click="Login" class="green " dark>Login</v-btn>
                     </div>
                 </v-col>
             </v-row>
@@ -34,4 +32,32 @@
 </template>
 
 <script>
+import EventService from '../../../Services/EventService';
+
+
+export default {
+
+    data() {
+        return {
+            Data: { user_id: "", password: "" }
+        };
+    },
+    methods: {
+        Login() {
+            EventService.LoginClient(this.Data)
+                .then((res) => {
+                    if (res.data.status == "E") {
+                        console.log(res.data.errMsg)
+                    } else {
+                        console.log("Logined Successfully")
+                        this.$store.commit("setRole", "user");
+                        this.$router.push(`/c/home/${this.Data.user_id}`)
+                    }
+                }).catch((err) => console.log(err))
+        }
+    },
+
+
+}
+
 </script>

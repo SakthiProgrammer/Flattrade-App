@@ -8,35 +8,29 @@
                 </v-row>
 
                 <v-row>
-                    <!-- First Name -->
                     <v-col cols="12" sm="4" md="4" lg="4">
                         <v-text-field v-model="registerClient.first_name" label="First Name" outlined></v-text-field>
                     </v-col>
 
-                    <!-- Last Name -->
                     <v-col cols="12" sm="4" md="4" lg="4">
                         <v-text-field v-model="registerClient.last_name" label="Last Name" outlined></v-text-field>
                     </v-col>
 
-                    <!-- Email -->
                     <v-col cols="12" sm="4" md="4" lg="4">
                         <v-text-field v-model="registerClient.email" label="Email" outlined required></v-text-field>
                     </v-col>
                 </v-row>
 
                 <v-row>
-                    <!-- Phone Number -->
                     <v-col cols="12" sm="4" md="4" lg="4">
                         <v-text-field v-model="registerClient.phone_number" label="Phone Number" outlined
                             required></v-text-field>
                     </v-col>
 
-                    <!-- Nominee Name -->
                     <v-col cols="12" sm="4" md="4" lg="4">
                         <v-text-field v-model="registerClient.nominee_name" label="Nominee Name"
                             outlined></v-text-field>
                     </v-col>
-                    <!-- Bank Account No -->
                     <v-col cols="12" sm="4" md="4" lg="4">
                         <v-text-field v-model="registerClient.bank_account" label="Bank Account Number" required
                             outlined></v-text-field>
@@ -91,9 +85,6 @@
         </v-card>
         {{ data }}
         {{ registerClient }}
-
-        <!-- {{ SelectedBank }} -->
-
         {{ registerClient.bank_id }}
     </v-container>
 </template>

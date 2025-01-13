@@ -2,7 +2,7 @@ import axios from "axios";
 
 const baseApiClient = axios.create({
   baseURL: `http://localhost:29091`,
-  withCredentials: false,
+  // withCredentials: false,
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
@@ -13,12 +13,63 @@ export default {
   LoginsApi(body, headers) {
     return baseApiClient.post("/login", body, headers);
   },
-
   GetBankDetails() {
     return baseApiClient.get("/getbanks");
   },
-
+  CreateBank(Bank) {
+    return baseApiClient.post("/createbank", Bank);
+  },
   CreateClient(ClientData) {
     return baseApiClient.post("/registerclient", ClientData);
+  },
+  LoginClient(ClientData) {
+    const head = {
+      headers: {
+        ROLE: "c",
+      },
+    };
+    return baseApiClient.post("/login", ClientData, head);
+  },
+  LoginAdmin(AdminData, Roldhead) {
+    const head = {
+      headers: Roldhead,
+    };
+    console.log(head);
+    return baseApiClient.post("/login", AdminData, head);
+  },
+  GetClientDetails() {
+    return baseApiClient.get("/getclients");
+  },
+  GetClientById(head) {
+    const header = {
+      headers: {
+        ID: head,
+      },
+    };
+    return baseApiClient.get("/getclients", header);
+  },
+  ApproveClient(ClientData) {
+    return baseApiClient.put("/updateclient", ClientData);
+  },
+  RejectClient(ClientData) {
+    return baseApiClient.put("/updateclient", ClientData);
+  },
+  GetStocks() {
+    return baseApiClient.get("/getstocks");
+  },
+  CreateStock(StockData) {
+    return baseApiClient.post("/createstock", StockData);
+  },
+  GetCharges() {
+    return baseApiClient.get("/getcharges");
+  },
+  CreateCharge(ChargeData) {
+    return baseApiClient.post("/createcharge", ChargeData);
+  },
+  GetUsers() {
+    return baseApiClient.get("/getusers");
+  },
+  CreateUser(User) {
+    return baseApiClient.post("/createuser", User);
   },
 };
