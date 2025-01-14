@@ -38,7 +38,7 @@ export default {
                 <v-btn @click="selectRole('admin')" class="ma-2 my-5" outlined color="indigo" rounded>
                     Admin
                 </v-btn>
-                <v-btn @click="selectRole('user')" class="ma-2 my-5" outlined color="indigo" rounded>
+                <v-btn @click="selectRole('client')" class="ma-2 my-5" outlined color="indigo" rounded>
                     User
                 </v-btn>
             </div>
@@ -68,7 +68,7 @@ export default {
     },
     data() {
         return {
-            selectedRole: 'user', // To track whether Admin or User is selected
+            selectedRole: 'client', // To track whether Admin or User is selected
         };
     },
     methods: {

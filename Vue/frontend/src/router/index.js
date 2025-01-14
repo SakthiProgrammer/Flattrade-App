@@ -4,6 +4,7 @@ import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import ClientHomePage from "../views/ClientHomePage.vue";
 import AdminDashboard from "../views/AdminDashboard.vue";
+import UserHome from "../views/UserHome.vue";
 
 Vue.use(VueRouter);
 
@@ -19,7 +20,7 @@ const routes = [
     component: Register,
   },
   {
-    path: "/c/home/:id",
+    path: "/c/home",
     name: "ClientHomePage",
     component: ClientHomePage,
   },
@@ -31,9 +32,9 @@ const routes = [
   {
     path: "/u/home",
     name: "User",
-    // component: Execution,
+    component: UserHome,
   },
-  {
+  /*  {
     path: "/bo/home",
     name: "BackOfficer",
     // component: Stock,
@@ -43,7 +44,7 @@ const routes = [
     name: "Bank",
     // component: Bank,
   },
-  /*  {
+  {
     path: "/brokerage",
     name: "Brokerage",
     component: Brokerage,

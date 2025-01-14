@@ -2,17 +2,24 @@
   <v-app-bar app elevation="3" elevate-on-scroll color="white" height="80px">
     <v-container fluid>
       <v-row align="center" no-gutters>
-
         <v-col cols="12" md="3" sm="6" class="d-flex align-center">
-          <v-img class="ml-5" lazy-src="https://picsum.photos/id/11/10/6" max-height="50" max-width="160"
-            src="../../assets/logo-blue.png"></v-img>
+          <v-img
+            class="ml-5"
+            lazy-src="https://picsum.photos/id/11/10/6"
+            max-height="50"
+            max-width="160"
+            src="../../assets/logo-blue.png"
+          ></v-img>
         </v-col>
-
 
         <v-col cols="12" md="6" class="d-none d-md-flex justify-center">
           <v-list class="d-flex justify-center">
-            <v-list-item v-for="(link, index) in navLinks" :key="index" @click="handleComponents(link)"
-              class="clickable">
+            <v-list-item
+              v-for="(link, index) in navLinks"
+              :key="index"
+              @click="handleComponents(link)"
+              class="clickable"
+            >
               <v-list-item-content class="px-5">
                 <v-list-item-title class="h6 font-weight-medium">
                   {{ link.title }}
@@ -22,15 +29,17 @@
           </v-list>
         </v-col>
 
-
         <v-col cols="12" sm="6" md="3" class="d-flex justify-end">
           <div v-show="userType == null">
-            <v-btn link to="/login" class="primary rounded">
-              Login
-            </v-btn>
+            <v-btn link to="/login" class="primary rounded"> Login </v-btn>
           </div>
           <div v-show="userType != null">
-            <v-btn link to="/login" @click="ClearStore()" class="primary rounded">
+            <v-btn
+              link
+              to="/login"
+              @click="clearStore()"
+              class="primary rounded"
+            >
               Logout
             </v-btn>
           </div>
@@ -47,23 +56,24 @@ export default {
   data() {
     return {
       drawer: false,
-      userType: "", // 'user', 'admin', or null
+      userType: null, // 'user', 'admin', 'client' or 'null'
       navLinks: [],
     };
   },
   mounted() {
-
-    this.userType = this.$store.state.role;
+    // this.userType = this.$store.state.role;
+    let user = localStorage.getItem("userRoleAndId");
+    this.userType = user.role;
 
     const savedComponent = localStorage.getItem("currentComponent");
     this.currentComponent = savedComponent || "Home"; // Default to "Home" if nothing is saved
 
-    if (this.userType === "user") {
+    if (this.userType === "client") {
       this.navLinks = [
         { title: "Home", path: "/c/home" },
         { title: "Execution" },
       ];
-    } else if (this.userType === "admin") {
+    } else if (this.userType === "A") {
       this.navLinks = [
         { title: "Home", path: "/a/home" },
         { title: "Stock" },
@@ -71,16 +81,19 @@ export default {
         { title: "Bank" },
         { title: "User" },
       ];
+    } else if (["B", "BO", "APPR"].includes(this.userType)) {
+      this.navLinks = [{ title: "Home", path: "/u/home" }];
     }
   },
   methods: {
     handleComponents(link) {
       this.$emit("handleComponent", link.title); // Emit the current component
     },
-    ClearStore() {
+    clearStore() {
       this.$store.commit("setRole", null);
-    }
+      localStorage.clear();
+      // localStorage.setItem("role")
+    },
   },
-
 };
 </script>

@@ -8,7 +8,7 @@
 
 
 <script>
-import Client from '../components/ClientHomePage/Client.vue';
+import Client from '../components/Client/Client.vue';
 export default {
     components: {
         Client
