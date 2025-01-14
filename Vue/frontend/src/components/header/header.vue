@@ -61,7 +61,7 @@ export default {
     };
   },
   mounted() {
-    // this.userType = this.$store.state.role;
+    this.userType = this.$store.state.role;
     let user = localStorage.getItem("userRoleAndId");
     this.userType = user.role;
 
