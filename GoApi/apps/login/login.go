@@ -37,7 +37,7 @@ func LoginAll(w http.ResponseWriter, r *http.Request) {
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
 	(w).Header().Set("Content-Type", "application/json")
 	(w).Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
-	(w).Header().Set("Access-Control-Allow-Headers", "ROLE, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
+	(w).Header().Set("Access-Control-Allow-Headers", "ROLE, USERROLE, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 
 	log.Println("LoginUser-(+)")
 
@@ -187,7 +187,7 @@ func checkUser(lLoginResponse *LoginResponse, lUser *Login, lUserPassword string
 					3. APR - Approver
 				    ===================================== */
 
-				lUserRole := r.Header.Get("UserRole")
+				lUserRole := r.Header.Get("USERROLE")
 				lUserRole = strings.ToUpper(lUserRole)
 
 				if isValidUserRole(lUserRole) {

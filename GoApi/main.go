@@ -6,6 +6,7 @@ import (
 	"flattrade/apps/client"
 	login "flattrade/apps/login"
 	"flattrade/apps/stock"
+	"flattrade/apps/trade"
 	"flattrade/apps/user"
 	"log"
 	"net/http"
@@ -41,6 +42,7 @@ func main() {
 	http.HandleFunc("/createuser", user.CreateUser)
 	http.HandleFunc("/getusers", user.GetUsers)
 	http.HandleFunc("/updateuser", user.UpdateUser)
+	http.HandleFunc("/createtrade", trade.CreateTrade)
 
 	http.ListenAndServe(":29091", nil)
 }

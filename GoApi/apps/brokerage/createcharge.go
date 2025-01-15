@@ -36,7 +36,7 @@ func CreateChager(w http.ResponseWriter, r *http.Request) {
 	(w).Header().Set("Access-Control-Allow-Headers", "ADMIN, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 	(w).Header().Set("Content-Type", "application/json")
 
-	log.Println("CreateBank-(+)")
+	log.Println("CreateChager-(+)")
 
 	var lChargeResp CreateChargeResp
 	var lCharge CreateChargeRec
@@ -76,13 +76,13 @@ func CreateChager(w http.ResponseWriter, r *http.Request) {
 	lData, lErr := json.Marshal(lChargeResp)
 
 	if lErr != nil {
-		log.Println("LRC", lErr.Error())
+		log.Println("BCC-003", lErr.Error())
 		lChargeResp.Status = common.ErrorCode
 		lChargeResp.ErrMsg = "Server Error"
 	} else {
 		fmt.Fprintf(w, string(lData))
 	}
-	log.Println("CreateBank-(-)")
+	log.Println("CreateChager-(-)")
 
 }
 

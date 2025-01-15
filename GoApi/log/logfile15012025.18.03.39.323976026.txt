@@ -1,0 +1,6 @@
+2025/01/15 18:03:42 CreateBank-(+)
+2025/01/15 18:03:42 createTradeInDB-(+)
+2025/01/15 18:03:42 Database connection established successfully.
+2025/01/15 18:03:42 TCTIDB-003 Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`training`.`st_918_trade_table`, CONSTRAINT `st_918_trade_table_ibfk_2` FOREIGN KEY (`stock_id`) REFERENCES `st_918_stock_table` (`id`))
+2025/01/15 18:03:42 createTradeInDB-(-)
+2025/01/15 18:03:42 CreateBank-(-)
