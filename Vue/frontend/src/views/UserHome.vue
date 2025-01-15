@@ -8,7 +8,7 @@
 
 
 <script>
-import User from '../components/userHomePage/User.vue';
+import User from '../components/user/User.vue';
 export default {
     components: {
         User

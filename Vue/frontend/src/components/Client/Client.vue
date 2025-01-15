@@ -1,15 +1,14 @@
 <template>
   <div>
-   <Header  @handleComponent="showComponent"/>
-
-   <div v-if="currentComponent=='Home'">
-    <ClientHomePage/>
-  </div>
-    <div v-else>
-      <execution/>
+    <Header @handleComponent="showComponent" />
+    <div v-if="currentComponent == 'Home' || currentComponent == null">
+      <ClientHomePage />
+    </div>
+    <div v-else-if="currentComponent == 'Execution'">
+      <execution />
     </div>
   </div>
-  
+
 </template>
 
 
@@ -18,9 +17,9 @@ import Header from '../header/header.vue';
 import Execution from './execution/Execution.vue';
 import ClientHomePage from './home/ClientHomePage.vue';
 export default {
-  data(){
+  data() {
     return {
-      currentComponent : "Home",
+      currentComponent: "Home",
     }
   },
   components: {
@@ -29,11 +28,13 @@ export default {
     Execution
   },
   mounted() {
-   this.currentComponent = localStorage.getItem("currentComponent")
+    this.currentComponent = localStorage.getItem("currentComponent");
+    // console.log(this.currentComponent);
+
   },
-  methods:{
-    showComponent(component){
-      localStorage.setItem("currentComponent",component)
+  methods: {
+    showComponent(component) {
+      localStorage.setItem("currentComponent", component)
       this.currentComponent = component
     }
   }

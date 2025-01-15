@@ -2,7 +2,7 @@
   <v-container class="my-8">
     {{ currentComponent }}
     <app-header @handleComponent="showComponent" />
-    <div v-if="currentComponent === 'Home'">
+    <div v-if="currentComponent === 'Home' || currentComponent === null">
       <client-table />
     </div>
     <div v-if="currentComponent === 'Brokerage'">
@@ -43,10 +43,8 @@ export default {
     "user-table": UserTable,
   },
   mounted() {
-    const savedComponent = localStorage.getItem("currentComponent");
-    if (savedComponent) {
-      this.currentComponent = savedComponent;
-    }
+    this.currentComponent = localStorage.getItem("currentComponent");
+
   },
   methods: {
     showComponent(component) {

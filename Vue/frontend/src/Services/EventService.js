@@ -37,6 +37,13 @@ export default {
     console.log(head);
     return baseApiClient.post("/login", AdminData, head);
   },
+  LoginUser(UserData, Rolehead) {
+    const head = {
+      headers: Rolehead,
+    };
+    console.log(head);
+    return baseApiClient.post("/login", UserData, head);
+  },
   GetClientDetails() {
     return baseApiClient.get("/getclients");
   },

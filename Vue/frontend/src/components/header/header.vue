@@ -3,23 +3,14 @@
     <v-container fluid>
       <v-row align="center" no-gutters>
         <v-col cols="12" md="3" sm="6" class="d-flex align-center">
-          <v-img
-            class="ml-5"
-            lazy-src="https://picsum.photos/id/11/10/6"
-            max-height="50"
-            max-width="160"
-            src="../../assets/logo-blue.png"
-          ></v-img>
+          <v-img class="ml-5" lazy-src="https://picsum.photos/id/11/10/6" max-height="50" max-width="160"
+            src="../../assets/logo-blue.png"></v-img>
         </v-col>
 
         <v-col cols="12" md="6" class="d-none d-md-flex justify-center">
           <v-list class="d-flex justify-center">
-            <v-list-item
-              v-for="(link, index) in navLinks"
-              :key="index"
-              @click="handleComponents(link)"
-              class="clickable"
-            >
+            <v-list-item v-for="(link, index) in navLinks" :key="index" @click="handleComponents(link)"
+              class="clickable">
               <v-list-item-content class="px-5">
                 <v-list-item-title class="h6 font-weight-medium">
                   {{ link.title }}
@@ -30,16 +21,11 @@
         </v-col>
 
         <v-col cols="12" sm="6" md="3" class="d-flex justify-end">
-          <div v-show="userType == null">
+          <div v-show="userType == ''">
             <v-btn link to="/login" class="primary rounded"> Login </v-btn>
           </div>
-          <div v-show="userType != null">
-            <v-btn
-              link
-              to="/login"
-              @click="clearStore()"
-              class="primary rounded"
-            >
+          <div v-show="userType != ''">
+            <v-btn @click=" clearStore()" class="primary rounded">
               Logout
             </v-btn>
           </div>
@@ -56,14 +42,15 @@ export default {
   data() {
     return {
       drawer: false,
-      userType: null, // 'user', 'admin', 'client' or 'null'
+      userType: '', // 'user', 'admin', 'client' or 'null'
       navLinks: [],
+      
     };
   },
   mounted() {
-    this.userType = this.$store.state.role;
-    let user = localStorage.getItem("userRoleAndId");
-    this.userType = user.role;
+    // this.userType = this.$store.state.role;
+    let user = JSON.parse(localStorage.getItem("userRoleAndId"));
+    this.userType = user == null ? '' : user.role;
 
     const savedComponent = localStorage.getItem("currentComponent");
     this.currentComponent = savedComponent || "Home"; // Default to "Home" if nothing is saved
@@ -90,7 +77,8 @@ export default {
       this.$emit("handleComponent", link.title); // Emit the current component
     },
     clearStore() {
-      this.$store.commit("setRole", null);
+      this.$router.push("/login")
+      // this.$store.commit("setRole", null);
       localStorage.clear();
       // localStorage.setItem("role")
     },

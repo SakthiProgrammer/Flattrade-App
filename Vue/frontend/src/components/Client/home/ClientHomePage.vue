@@ -48,7 +48,12 @@ export default {
 
   },
   beforeMount() {
-    let userId = window.location.pathname.split('/').pop();
+    // let userId = window.location.pathname.split('/').pop();
+
+    let user = JSON.parse(localStorage.getItem("userRoleAndId"))
+    let userId = user.user_id
+    console.log('hi', userId);
+
     let currentUserId = '';
     let flag = false
     for (let i = 2; i < userId.length; i++) {
@@ -57,6 +62,7 @@ export default {
         currentUserId += userId[i];
       }
     }
+
     // let head = { "ID": currentUserId }
     EventService.GetClientById(currentUserId)
       .then((res) => {
@@ -67,7 +73,7 @@ export default {
         }
       })
     console.log(currentUserId);
-    console.log(userId);
+    // console.log(userId);
   },
 
 }

@@ -47,6 +47,7 @@ export default {
   },
   methods: {
     Login() {
+      
       EventService.LoginClient(this.Data)
         .then((res) => {
           if (res.data.status == "E") {
@@ -55,7 +56,7 @@ export default {
             console.log("Logined Successfully");
             this.$store.commit("setRole", "user");
             let currentUser = { role: "client", user_id: this.Data.user_id };
-            localStorage.setItem("userRoleAndId", currentUser);
+            localStorage.setItem("userRoleAndId", JSON.stringify(currentUser));
             // this.$router.push(`/c/home/${this.Data.user_id}`)
             this.$router.push("/c/home");
           }

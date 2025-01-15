@@ -7,28 +7,14 @@
         </v-row>
         <v-row>
           <!-- <v-select v-model="name" outlined item-text="name" item-value="name" label="User ID"></v-select> -->
-          <v-text-field
-            v-model="LoginData.user_id"
-            label="Admin Id"
-            outlined
-          ></v-text-field>
+          <v-text-field v-model="LoginData.user_id" label="Admin Id" outlined></v-text-field>
         </v-row>
         <v-row>
-          <v-text-field
-            v-model="LoginData.password"
-            label="Password"
-            outlined
-          ></v-text-field>
+          <v-text-field v-model="LoginData.password" label="Password" outlined></v-text-field>
         </v-row>
         <v-row>
-          <v-select
-            v-model="head.ROLE"
-            :items="roles"
-            item-text="name"
-            item-value="id"
-            outlined
-            label="Role"
-          ></v-select>
+          <v-select v-model="head.ROLE" :items="roles" item-text="name" item-value="id" outlined
+            label="Role"></v-select>
         </v-row>
 
         <v-row>
@@ -66,24 +52,47 @@ export default {
     //     this.head.ROLE = selectedRole;
     // },
     Login() {
-      EventService.LoginAdmin(this.LoginData, this.head)
-        .then((res) => {
-          if (res.data.status == "E") {
-            console.log(res.data.errMsg);
-          } else {
-            console.log("Logined Successfully");
-            // localStorage.setItem("")
-            let user = {
-              role: this.head.ROLE,
-              user_id: this.LoginData.user_id,
-            };
-            this.$store.commit("setRole", "admin");
-            localStorage.setItem("userRoleAndId", user);
-            this.$router.push("/a/home");
-          }
-          console.log(this.head);
-        })
-        .catch((err) => console.log(err));
+      if (this.head.ROLE == 'A') {
+
+        EventService.LoginAdmin(this.LoginData, this.head)
+          .then((res) => {
+            if (res.data.status == "E") {
+              console.log(res.data.errMsg);
+            } else {
+              console.log("Logined Successfully");
+              // localStorage.setItem("")
+              let user = {
+                role: this.head.ROLE,
+                user_id: this.LoginData.user_id,
+              };
+              this.$store.commit("setRole", "admin");
+              localStorage.setItem("userRoleAndId", JSON.stringify(user));
+              this.$router.push("/a/home");
+            }
+            console.log(this.head);
+          })
+          .catch((err) => console.log(err));
+      } else {
+        let header = { ROLE: "U", USERROLE: this.head.ROLE }
+        EventService.LoginUser(this.LoginData, header)
+          .then((res) => {
+            if (res.data.status == "E") {
+              console.log(res.data.errMsg);
+            } else {
+              console.log("Logined Successfully");
+              // localStorage.setItem("")
+              let user = {
+                role: this.head.ROLE,
+                user_id: this.LoginData.user_id,
+              };
+              this.$store.commit("setRole", "admin");
+              localStorage.setItem("userRoleAndId", JSON.stringify(user));
+              this.$router.push("/a/home");
+            }
+            console.log(this.head);
+          })
+          .catch((err) => console.log(err))
+      }
     },
   },
 };
