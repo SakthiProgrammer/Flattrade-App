@@ -45,9 +45,13 @@ export default {
       Data: { user_id: "", password: "" },
     };
   },
+  destroyed() {
+    // alert("i");
+    this.Data.user_id = "";
+    this.Data.password = "";
+  },
   methods: {
     Login() {
-      
       EventService.LoginClient(this.Data)
         .then((res) => {
           if (res.data.status == "E") {

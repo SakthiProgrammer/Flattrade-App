@@ -1,20 +1,20 @@
 <template>
   <v-container class="my-8">
-    {{ currentComponent }}
+    <!-- {{ currentComponent }} -->
     <app-header @handleComponent="showComponent" />
-    <div v-if="currentComponent === 'Home' || currentComponent === null">
+    <div v-show="currentComponent === 'Home'">
       <client-table />
     </div>
-    <div v-if="currentComponent === 'Brokerage'">
+    <div v-show="currentComponent === 'Brokerage'">
       <brokerage-table />
     </div>
-    <div v-if="currentComponent === 'Bank'">
+    <div v-show="currentComponent === 'Bank'">
       <bank-table />
     </div>
-    <div v-if="currentComponent === 'Stock'">
+    <div v-show="currentComponent === 'Stock'">
       <stock-table />
     </div>
-    <div v-if="currentComponent === 'User'">
+    <div v-show="currentComponent === 'User'">
       <user-table />
     </div>
   </v-container>
@@ -43,8 +43,10 @@ export default {
     "user-table": UserTable,
   },
   mounted() {
-    this.currentComponent = localStorage.getItem("currentComponent");
-
+    this.currentComponent =
+      localStorage.getItem("currentComponent") == null
+        ? "Home"
+        : localStorage.getItem("currentComponent");
   },
   methods: {
     showComponent(component) {

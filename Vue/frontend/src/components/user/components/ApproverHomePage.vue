@@ -19,10 +19,10 @@
 
         <template v-slot:item.action="{ item }">
           <div class="d-flex">
-            <v-btn color="green" small @click="approveTrade(item)">
+            <v-btn color="green" small @click="approveClient(item)">
               Approve
             </v-btn>
-            <v-btn color="red" small class="ml-2" @click="rejectTrade(item)">
+            <v-btn color="red" small class="ml-2" @click="rejectClient(item)">
               Reject
             </v-btn>
           </div>
@@ -38,22 +38,25 @@ export default {
     return {
       headers: [
         { text: "S.No.", value: "s_no", align: "start", sortable: false },
+        { text: "Client Name", value: "client_name" },
+        { text: "Stock Name", value: "stock_name" },
+        { text: "Segment", value: "segment" },
+        // { text: "Bank Name", value: "bank_name" },
         { text: "Trade Type", value: "trade_type" },
         { text: "Quantity", value: "quantity" },
         { text: "Trade Price", value: "trade_price" },
+        { text: "Total Price", value: "total_price" },
         { text: "Trade Date", value: "trade_date" },
-        {
-          text: "Approval Status (Back Officer)",
-          value: "back_officer_approval_status",
-        },
-        { text: "Approval Status (Biller)", value: "biller_approval_status" },
-        {
-          text: "Approval Status (Approver)",
-          value: "approver_approval_status",
-        },
-        { text: "Client Name", value: "client_name" },
-        { text: "Stock Name", value: "stock_name" },
-        { text: "Action", value: "action", sortable: false },
+        // {
+        //   text: "Approval Status (Back Officer)",
+        //   value: "back_officer_approval_status",
+        // },
+        // { text: "Approval Status (Biller)", value: "biller_approval_status" },
+        // {
+        //   text: "Approval Status (Approver)",
+        //   value: "approver_approval_status",
+        // },
+        { text: "Action", value: "action", sortable: false, align: "center" },
       ],
       tradeRecords: [
         {
