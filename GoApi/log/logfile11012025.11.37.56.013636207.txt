@@ -1,9 +1,0 @@
-2025/01/11 11:37:57 CreateStock - (+)
-2025/01/11 11:37:57 CreateStocksInDB-(+)
-2025/01/11 11:37:57 Database connection established successfully.
-2025/01/11 11:37:57 CreateStocksInDB-(-)
-2025/01/11 11:37:57 CreateStock - (-)
-2025/01/11 11:38:02 GetStocks-(+)
-2025/01/11 11:38:02 Database connection established successfully.
-2025/01/11 11:38:02 Successfully Get
-2025/01/11 11:38:02 GetStocks-(-)

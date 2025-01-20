@@ -1,6 +1,0 @@
-2025/01/11 11:01:09 UpdateChage-(+)
-2025/01/11 11:01:09 updateChargeInDB-(+)
-2025/01/11 11:01:09 Database connection established successfully.
-2025/01/11 11:01:09 BUBINDB-002 Error 1054 (42S22): Unknown column 'id' in 'where clause'
-2025/01/11 11:01:09 updateChargeInDB-(-)
-2025/01/11 11:01:09 UpdateChage-(-)

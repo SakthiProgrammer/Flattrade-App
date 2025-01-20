@@ -32,7 +32,7 @@ type UpdateBankResp struct {
 
 func UpdateBank(w http.ResponseWriter, r *http.Request) {
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
-	(w).Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
+	(w).Header().Set("Access-Control-Allow-Methods", "PUT, OPTIONS")
 	(w).Header().Set("Access-Control-Allow-Headers", "ADMIN, CLIENT, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 	(w).Header().Set("Content-Type", "application/json")
 

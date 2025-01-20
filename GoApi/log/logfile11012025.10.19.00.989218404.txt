@@ -1,4 +1,0 @@
-2025/01/11 10:19:03 GetBank-(+)
-2025/01/11 10:19:03 Database connection established successfully.
-2025/01/11 10:19:03 Success
-2025/01/11 10:19:03 GetBank-(-)

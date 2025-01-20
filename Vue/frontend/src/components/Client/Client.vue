@@ -1,10 +1,13 @@
 <template>
   <div>
     <Header @handleComponent="showComponent" />
-    <div v-if="currentComponent == 'Home' || currentComponent == null">
-      <ClientHomePage />
+    <!-- <component
+      :is="currentComponent == 'Home' ? 'ClientHomePage' : 'Execution'"
+    ></component> -->
+    <div v-show="currentComponent === 'Home'">
+      <client-home-page />
     </div>
-    <div v-else-if="currentComponent == 'Execution'">
+    <div v-show="currentComponent != 'Home'">
       <execution />
     </div>
   </div>
@@ -34,9 +37,9 @@ export default {
   },
   methods: {
     showComponent(component) {
-      localStorage.setItem("currentComponent", component)
-      this.currentComponent = component
-    }
-  }
-}
+      localStorage.setItem("currentComponent", component);
+      this.currentComponent = component;
+    },
+  },
+};
 </script>

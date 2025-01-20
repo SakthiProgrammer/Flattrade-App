@@ -1,17 +1,24 @@
 <template>
-  <v-app-bar app elevation="3" elevate-on-scroll color="white" height="80px">
+  <v-app-bar app elevation="3" elevate-on-scroll color="white" height="70px">
     <v-container fluid>
       <v-row align="center" no-gutters>
         <v-col cols="12" md="3" sm="6" class="d-flex align-center">
-          <v-img class="ml-5" lazy-src="https://picsum.photos/id/11/10/6" max-height="50" max-width="160"
+          <v-img class="ml-4" lazy-src="https://picsum.photos/id/11/10/6" max-height="50" max-width="160"
             src="../../assets/logo-blue.png"></v-img>
         </v-col>
 
         <v-col cols="12" md="6" class="d-none d-md-flex justify-center">
           <v-list class="d-flex justify-center">
-            <v-list-item v-for="(link, index) in navLinks" :key="index" @click="handleComponents(link)"
-              class="clickable">
-              <v-list-item-content class="px-5">
+            <v-list-item v-for="(link, index) in navLinks" :key="index" @click="handleComponents(link)" :class="[
+              'clickable',
+              currentHeader === link.title
+                ? ' light-blue--text subtitle-2'
+                : '',
+              'rounded',
+              'px-2 py-0',
+              'mx-1.4',
+            ]">
+              <v-list-item-content class="px-4">
                 <v-list-item-title class="h6 font-weight-medium">
                   {{ link.title }}
                 </v-list-item-title>
@@ -44,9 +51,11 @@ export default {
       drawer: false,
       userType: '', // 'user', 'admin', 'client' or 'null'
       navLinks: [],
-      
+      currentHeader: "Home",
+
     };
   },
+
   mounted() {
     // this.userType = this.$store.state.role;
     let user = JSON.parse(localStorage.getItem("userRoleAndId"));
@@ -74,6 +83,7 @@ export default {
   },
   methods: {
     handleComponents(link) {
+      this.currentHeader = link.title;
       this.$emit("handleComponent", link.title); // Emit the current component
     },
     clearStore() {

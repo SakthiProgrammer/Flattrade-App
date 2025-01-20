@@ -5,18 +5,10 @@
         <h1 class="mx-auto mb-7">Sign In</h1>
       </v-row>
       <v-row>
-        <v-text-field
-          v-model="Data.user_id"
-          label="User Id"
-          outlined
-        ></v-text-field>
+        <v-text-field v-model="Data.user_id" label="User Id" outlined></v-text-field>
       </v-row>
       <v-row>
-        <v-text-field
-          v-model="Data.password"
-          label="Password"
-          outlined
-        ></v-text-field>
+        <v-text-field v-model="Data.password" label="Password" outlined></v-text-field>
       </v-row>
       <v-row>
         <h1 class="body-2">
@@ -45,9 +37,14 @@ export default {
       Data: { user_id: "", password: "" },
     };
   },
+  destroyed() {
+    // alert("i");
+    this.Data.user_id = "";
+    this.Data.password = "";
+  },
   methods: {
     Login() {
-      
+
       EventService.LoginClient(this.Data)
         .then((res) => {
           if (res.data.status == "E") {

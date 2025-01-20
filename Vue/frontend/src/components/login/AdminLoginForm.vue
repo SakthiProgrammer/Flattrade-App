@@ -46,6 +46,11 @@ export default {
       ],
     };
   },
+  destroyed() {
+    // alert("i");
+    this.LoginData.user_id = "";
+    this.LoginData.password = "";
+  },
 
   methods: {
     // changeRole(selectedRole) {
@@ -58,14 +63,14 @@ export default {
           .then((res) => {
             if (res.data.status == "E") {
               console.log(res.data.errMsg);
-            } else {
-              console.log("Logined Successfully");
+            } else if (res.data.status == "S") {
+              console.log("Login Successfully");
               // localStorage.setItem("")
               let user = {
                 role: this.head.ROLE,
                 user_id: this.LoginData.user_id,
               };
-              this.$store.commit("setRole", "admin");
+              // this.$store.commit("setRole", "admin");
               localStorage.setItem("userRoleAndId", JSON.stringify(user));
               this.$router.push("/a/home");
             }

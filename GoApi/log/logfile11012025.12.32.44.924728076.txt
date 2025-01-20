@@ -1,5 +1,0 @@
-2025/01/11 12:32:58 CreateUser - (+)
-2025/01/11 12:32:58 createUserInDB-(+)
-2025/01/11 12:32:58 Database connection established successfully.
-2025/01/11 12:32:58 createUserInDB-(-)
-2025/01/11 12:32:58 CreateUser - (-)

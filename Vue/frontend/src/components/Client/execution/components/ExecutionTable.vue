@@ -4,8 +4,13 @@
       <v-card-title class="text-h5">Stock Details</v-card-title>
       <v-card-text>
         <v-data-table :headers="headers" :items="stocks" class="elevation-1" item-value="name">
+          <template v-slot:item.s_no="{ index }">
+            {{ index + 1 }}
+          </template>
+
           <template v-slot:item.segment="{ item }">
-            <v-chip :color="item.segment === 'NSE' ? 'blue lighten-3' : 'green lighten-3'" class="white--text">
+            <v-chip :color="item.segment === 'NSE' ? 'blue lighten-3' : 'green lighten-3'
+              " class="white--text">
               {{ item.segment }}
             </v-chip>
           </template>
@@ -45,7 +50,7 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn text @click="dialog = false">Cancel</v-btn>
-              <v-btn color="primary">Save</v-btn>
+              <v-btn :color="buttonStyle.color">{{ buttonStyle.name }}</v-btn>
               <!-- @click="addTrade" -->
             </v-card-actions>
           </v-form>
@@ -63,6 +68,7 @@ export default {
   data() {
     return {
       headers: [
+        { text: "S.No.", value: "s_no", sortable: false },
         { text: "Stock Name", value: "stock_name" },
         { text: "Price", value: "stock_price" },
         { text: "Segment", value: "segment" },
@@ -70,6 +76,10 @@ export default {
         { text: "Action", value: "action", sortable: false },
       ],
       stocks: [],
+      buttonStyle: {
+        name: "",
+        color: ""
+      },
       dialog: false,
       /* newTrade: {
         client_id: '',
@@ -89,6 +99,8 @@ export default {
   },
   methods: {
     buyStock(stock) {
+      this.buttonStyle.name = "BUY";
+      this.buttonStyle.color = "primary";
       this.dialog = true
       let trade = {
         stock_name: stock.stock_name,
@@ -121,7 +133,9 @@ export default {
     },
     sellStock(stock) {
       // alert(`You clicked SELL for ${stock.name}`);
-      this.dialog = true
+      this.dialog = true;
+      this.buttonStyle.name = "SELL";
+      this.buttonStyle.color = "red darken-1";
       let trade = {
         stock_name: stock.stock_name,
         stock_price: stock.stock_price,

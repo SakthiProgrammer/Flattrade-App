@@ -83,9 +83,9 @@
                 </v-row>
             </v-form>
         </v-card>
-        {{ data }}
+        <!-- {{ data }}
         {{ registerClient }}
-        {{ registerClient.bank_id }}
+        {{ registerClient.bank_id }} -->
     </v-container>
 </template>
 

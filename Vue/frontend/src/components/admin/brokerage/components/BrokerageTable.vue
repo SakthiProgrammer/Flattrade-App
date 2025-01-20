@@ -16,6 +16,11 @@
                 <td>{{ charge.charge_type }}</td>
                 <td>{{ charge.charge_percentage }}</td>
                 <td>{{ charge.effective_date }}</td>
+                <td>
+                  <v-btn color="red" small @click="editCharge(charge)">
+                    <v-icon>mdi-pencil</v-icon>
+                  </v-btn>
+                </td>
               </tr>
             </tbody>
           </template>
@@ -29,16 +34,16 @@
           <v-card-title class="text-h5">Upload Charge Details</v-card-title>
           <v-form>
             <v-card-text>
-              <v-select label="Charge Type" v-model="newCharge.chargeType" :items="['STT', 'BROKERAGE']"
+              <v-select label="Charge Type" v-model="newCharge.charge_type" :items="['STT', 'BROKERAGE']"
                 required></v-select>
-              <v-text-field label="Charge Percentage (%)" v-model="newCharge.chargePercentage" type="number"
+              <v-text-field label="Charge Percentage (%)" v-model="newCharge.charge_percentage" type="number"
                 required></v-text-field>
-              <v-text-field label="Effective Date" v-model="newCharge.effectiveDate" type="date"
+              <v-text-field label="Effective Date" v-model="newCharge.effective_date" type="date"
                 required></v-text-field>
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn text @click="dialog = false">Cancel</v-btn>
+              <v-btn text @click="cancelDialog">Cancel</v-btn>
               <v-btn @click="AddCharge" color="primary">Save</v-btn>
             </v-card-actions>
           </v-form>
@@ -57,7 +62,7 @@ export default {
       dialog: false,
       newCharge: {
         charge_type: '',
-        charge_percentage: null,
+        charge_percentage: "",
         effective_date: '',
       },
       headers: [
@@ -65,6 +70,8 @@ export default {
         { text: 'Charge Type', value: 'charge_type' },
         { text: 'Charge Percentage (%)', value: 'charge_percentage' },
         { text: 'Effective Date', value: 'effective_date' },
+        { text: "Edit", value: "edit", sortable: false, align: "center" },
+
       ],
       charges: [],
     };
@@ -84,7 +91,19 @@ export default {
             console.log("err", res.data.errMsg);
           }
         })
-    }
+    },
+    cancelDialog() {
+      this.dialog = false;
+      this.newCharge.charge_percentage = "";
+      this.newCharge.charge_type = "";
+      this.newCharge.effective_date = "";
+    },
+    editCharge(charge) {
+      this.newCharge.charge_percentage = charge.charge_percentage;
+      this.newCharge.charge_type = charge.charge_type;
+      this.newCharge.effective_date = charge.effective_date;
+      this.dialog = true;
+    },
   },
   beforeMount() {
     EventService.GetCharges()
