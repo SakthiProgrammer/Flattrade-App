@@ -1,4 +1,0 @@
-2025/01/11 12:41:45 GetUsers-(+)
-2025/01/11 12:41:45 Database connection established successfully.
-2025/01/11 12:41:45 Successfully Get
-2025/01/11 12:41:45 GetUsers-(-)

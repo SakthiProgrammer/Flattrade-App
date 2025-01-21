@@ -83,7 +83,7 @@ export default {
 
         }).catch((err) => console.log(err))
     },
-    // to remove the array in front end
+  
     removeClient(clientId) {
       this.clients = this.clients.filter(currentClient => currentClient.client_id !== clientId)
     }
@@ -101,8 +101,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.v-data-table {
-  width: 100%;
-}
-</style>
+

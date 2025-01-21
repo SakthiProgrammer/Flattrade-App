@@ -5,6 +5,7 @@ import Register from "../views/Register.vue";
 import ClientHomePage from "../views/ClientHomePage.vue";
 import AdminDashboard from "../views/AdminDashboard.vue";
 import UserHome from "../views/UserHome.vue";
+import PageNotFound from "../components/PageNotFound.vue";
 
 Vue.use(VueRouter);
 
@@ -34,11 +35,12 @@ const routes = [
     name: "User",
     component: UserHome,
   },
-  /*  {
-    path: "/bo/home",
-    name: "BackOfficer",
-    // component: Stock,
+  {
+    path: "*",
+    name: "NotFoundPage",
+    component: PageNotFound,
   },
+  /*
   {
     path: "/appr/home",
     name: "Bank",

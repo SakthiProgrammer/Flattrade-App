@@ -3,6 +3,7 @@
     <v-container fluid>
       <v-row align="center" no-gutters>
         <v-col cols="12" md="3" sm="6" class="d-flex align-center">
+          <v-app-bar-nav-icon class="d-md-none" @click="drawer = !drawer" />
           <v-img
             class="ml-4"
             lazy-src="https://picsum.photos/id/11/10/6"
@@ -46,8 +47,6 @@
               Logout
             </v-btn>
           </div>
-
-          <v-app-bar-nav-icon class="d-md-none" @click="drawer = !drawer" />
         </v-col>
       </v-row>
     </v-container>
@@ -64,6 +63,7 @@ export default {
       currentHeader: "Home",
     };
   },
+
   mounted() {
     // this.userType = this.$store.state.role;
     let user = JSON.parse(localStorage.getItem("userRoleAndId"));

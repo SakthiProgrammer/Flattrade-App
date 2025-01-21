@@ -9,9 +9,6 @@
           class="elevation-1"
           item-value="name"
         >
-          <template v-slot:item.s_no="{ index }">
-            {{ index + 1 }}
-          </template>
           <template v-slot:item.segment="{ item }">
             <v-chip
               :color="
@@ -98,7 +95,7 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn text @click="dialog = false">Cancel</v-btn>
-              <v-btn color="primary">Save</v-btn>
+              <v-btn :color="buttonStyle.color">{{ buttonStyle.name }}</v-btn>
               <!-- @click="addTrade" -->
             </v-card-actions>
           </v-form>
@@ -123,6 +120,10 @@ export default {
         { text: "Action", value: "action", sortable: false },
       ],
       stocks: [],
+      buttonStyle: {
+        name: "",
+        color: "",
+      },
       dialog: false,
       /* newTrade: {
         client_id: '',

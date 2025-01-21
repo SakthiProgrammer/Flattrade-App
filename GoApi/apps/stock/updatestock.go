@@ -32,7 +32,7 @@ type UpdateStockResp struct {
 
 func UpdateStock(w http.ResponseWriter, r *http.Request) {
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
-	(w).Header().Set("Access-Control-Allow-Methods", ", OPTIONS")
+	(w).Header().Set("Access-Control-Allow-Methods", "PUT, OPTIONS")
 	(w).Header().Set("Access-Control-Allow-Headers", "Stock, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 	w.Header().Set("Content-Type", "application/json")
 
@@ -122,7 +122,7 @@ func updateClientInDB(lStockResp *UpdateStockResp, lStock *UpdateStockRec) {
 		lStock.UpdatedBy = "Admin: " + AdminId
 		lStock.UpdatedAt = time.Now()
 
-		lResult := lGormDB.Table("st_917_stocktable").Where("stock_id = ?", lStock.ID).UpdateColumns(&lStock)
+		lResult := lGormDB.Table("st_918_stock_table").Where("stock_id = ?", lStock.ID).UpdateColumns(&lStock)
 
 		if lResult.Error != nil {
 			log.Println("SUPSINDB-002", lResult.Error)

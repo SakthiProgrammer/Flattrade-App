@@ -17,6 +17,11 @@
                 <td>{{ user.role }}</td>
                 <td>{{ user.password }}</td>
                 <td>{{ user.status }}</td>
+                <td>
+                  <v-btn color="red" small @click="editUser(user)">
+                    <v-icon>mdi-pencil</v-icon>
+                  </v-btn>
+                </td>
               </tr>
             </tbody>
           </template>
@@ -39,7 +44,7 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn text @click="dialog = false">Cancel</v-btn>
+              <v-btn text @click="cancelDialog">Cancel</v-btn>
               <v-btn @click="addUser" color="primary">Save</v-btn>
             </v-card-actions>
           </v-form>
@@ -57,6 +62,7 @@ export default {
     return {
       dialog: false,
       newUser: {
+        id: "",
         user_name: '',
         role: '',
         // createdAt: '',
@@ -69,30 +75,68 @@ export default {
         { text: 'Role', value: 'role' },
         { text: 'password', value: 'password' },
         { text: 'Status', value: 'status' },
+        { text: "Edit", value: "edit", sortable: false, align: "center" },
+
       ],
       users: [],
+      edit: false,
     };
   },
   methods: {
-    submitUserDetails() {
-      this.users.push({ ...this.newUser, id: Date.now() });
-      this.dialog = false;
-      this.newUser = { userName: '', role: '', createdAt: '', status: '' };
-    },
-    addUser() {
-      EventService.CreateUser(this.newUser)
-        .then((res) => {
-          if (res.data.status == "S") {
-            console.log("User Created");
-            this.users.push(this.newUser)
-            this.dialog = false;
-            this.newUser = { userName: '', role: '', createdAt: '', status: '' };
 
-          } else {
-            console.log("error", res.data.errMsg);
+    addUser() {
+      if (this.edit) {
+        EventService.UpdateUser(this.newUser)
+          .then((res) => {
+            if (res.data.status == "S") {
+              console.log("Success Edit");
+
+            } else {
+              console.log(res.data.errMsg)
+            }
+          }).catch((err) => console.log(err)
+          );
+        this.users.find((item) => {
+          if (this.newUser.id === item.id) {
+            item.user_name = this.newUser.user_name;
+            item.password = this.newUser.password;
+            item.role = this.newUser.role;
+            item.status = this.newUser.status;
           }
-        }).catch((err) => console.log(err))
-    }
+        });
+      } else {
+        EventService.CreateUser(this.newUser)
+          .then((res) => {
+            if (res.data.status == "S") {
+              console.log("User Created");
+              this.users.push(this.newUser)
+
+            } else {
+              console.log("error", res.data.errMsg);
+            }
+          }).catch((err) => console.log(err))
+      }
+      this.dialog = false;
+      this.newUser = { user_name: '', role: '', password: '', status: '' };
+    },
+    cancelDialog() {
+      this.dialog = false;
+      this.newUser.id = "";
+      this.newUser.user_name = "";
+      this.newUser.role = "";
+      this.newUser.password = "";
+      this.newUser.status = "";
+    },
+
+    editUser(User) {
+      this.edit = true;
+      this.newUser.id = User.id;
+      this.newUser.user_name = User.user_name;
+      this.newUser.role = User.role;
+      this.newUser.password = User.password;
+      this.newUser.status = User.status;
+      this.dialog = true;
+    },
   },
   beforeMount() {
     EventService.GetUsers()

@@ -64,7 +64,7 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn text @click="dialog = false">Cancel</v-btn>
+              <v-btn text @click="dialog = cancelDialog()">Cancel</v-btn>
               <v-btn @click="addBank" color="primary">Save</v-btn>
             </v-card-actions>
           </v-form>
@@ -80,8 +80,10 @@ import EventService from "../../../../Services/EventService";
 export default {
   data() {
     return {
+      edit: false,
       dialog: false,
       newBank: {
+        id: "",
         bank_name: "",
         branch_name: "",
         ifsc_code: "",
@@ -93,47 +95,70 @@ export default {
         { text: "Branch Name", value: "branch_name" },
         { text: "IFSC Code", value: "ifsc_code" },
         { text: "Address", value: "address" },
-        { text: "Edit", value: "edit" },
+        { text: "Edit", value: "edit", sortable: false, align: "center" },
       ],
-      banks: [{ bank_name: "UNION", branch_name: "Pudupalayam" }],
+      banks: [],
     };
   },
   methods: {
-    submitBankDetails() {
-      this.banks.push({ ...this.newBank, id: Date.now() });
-      this.dialog = false;
+    addBank() {
+      if (this.edit) {
+        EventService.UpdateBank(this.newBank)
+          .then((res) => {
+            if (res.data.status == "S") {
+              console.log("Succefully Edit bank");
+            } else {
+              console.log(res.data.errMsg);
+            }
+          })
+          .catch((err) => console.log(err));
+        this.edit = false;
+        this.banks.find((item) => {
+          if (this.newBank.id === item.id) {
+            item.bank_name = this.newBank.bank_name;
+            item.branch_name = this.newBank.branchName;
+            item.ifsc_code = this.newBank.ifscCode;
+            item.address = this.newBank.address;
+          }
+        });
+      } else {
+        EventService.CreateBank(this.newBank)
+          .then((res) => {
+            if (res.data.status == "S") {
+              console.log("Bank Created");
+              this.banks.push(this.newBank);
+            } else {
+              console.log(res.data.errMsg);
+            }
+          })
+          .catch((err) => console.log(err));
+      }
       this.newBank = {
         bankName: "",
         branchName: "",
         ifscCode: "",
         address: "",
       };
+      this.dialog = false;
     },
-    addBank() {
-      EventService.CreateBank(this.newBank)
-        .then((res) => {
-          if (res.data.status == "S") {
-            console.log("Bank Created");
-            this.banks.push(this.newBank);
-            this.dialog = false;
-            this.newBank = {
-              bankName: "",
-              branchName: "",
-              ifscCode: "",
-              address: "",
-            };
-          } else {
-            console.log(res.data.errMsg);
-          }
-        })
-        .catch((err) => console.log(err));
+
+    cancelDialog() {
+      this.dialog = false;
+      this.newBank.id = "";
+      this.newBank.bank_name = "";
+      this.newBank.branch_name = "";
+      this.newBank.address = "";
+      this.newBank.ifsc_code = "";
     },
+
     editBank(bank) {
+      this.newBank.id = bank.id;
       this.newBank.bank_name = bank.bank_name;
       this.newBank.branch_name = bank.branch_name;
       this.newBank.address = bank.address;
       this.newBank.ifsc_code = bank.ifsc_code;
       this.dialog = true;
+      this.edit = true;
     },
   },
   beforeMount() {

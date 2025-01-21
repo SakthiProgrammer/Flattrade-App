@@ -19,6 +19,9 @@ export default {
   CreateBank(Bank) {
     return baseApiClient.post("/createbank", Bank);
   },
+  UpdateBank(Bank) {
+    return baseApiClient.put("/updatebank", Bank);
+  },
   CreateClient(ClientData) {
     return baseApiClient.post("/registerclient", ClientData);
   },
@@ -67,6 +70,9 @@ export default {
   CreateStock(StockData) {
     return baseApiClient.post("/createstock", StockData);
   },
+  UpdateStock(stock) {
+    return baseApiClient.put("/updatestock", stock);
+  },
   GetCharges() {
     return baseApiClient.get("/getcharges");
   },
@@ -78,5 +84,8 @@ export default {
   },
   CreateUser(User) {
     return baseApiClient.post("/createuser", User);
+  },
+  UpdateUser(User) {
+    return baseApiClient.put("/updateuser", User);
   },
 };

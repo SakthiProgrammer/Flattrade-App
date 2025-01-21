@@ -1,4 +1,0 @@
-2025/01/11 11:45:00 GetStocks-(+)
-2025/01/11 11:45:00 Database connection established successfully.
-2025/01/11 11:45:00 SGS-002 sql: Scan error on column index 6, name "created_at": unsupported Scan, storing driver.Value type []uint8 into type *time.Time
-2025/01/11 11:45:00 GetStocks-(-)

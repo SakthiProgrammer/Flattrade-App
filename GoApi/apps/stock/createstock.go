@@ -116,7 +116,7 @@ func createStocksInDB(lStockResp *CreateStockResp, lStock *CreateStockRec) {
 		lStock.UpdatedBy = lName
 		lStock.UpdatedAt = lCurrTime
 
-		lResult := lGormDB.Table("st_917_stocktable").Create(&lStock)
+		lResult := lGormDB.Table("st_918_stock_table").Create(&lStock)
 
 		if lResult.Error != nil {
 			log.Println("SCS-005", lResult.Error)

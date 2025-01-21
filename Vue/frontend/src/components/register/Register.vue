@@ -138,8 +138,8 @@
       </v-form>
     </v-card>
     <!-- {{ data }}
-    {{ registerClient }}
-    {{ registerClient.bank_id }} -->
+        {{ registerClient }}
+        {{ registerClient.bank_id }} -->
   </v-container>
 </template>
 

@@ -56,7 +56,7 @@ func GetStocks(w http.ResponseWriter, r *http.Request) {
 
 		} else {
 
-			lResult := lGormDb.Table("st_917_stocktable").Find(&lStockResp.StockDetailsArr)
+			lResult := lGormDb.Table("st_918_stock_table").Find(&lStockResp.StockDetailsArr)
 
 			if lResult.Error != nil {
 				log.Println("SGS-002", lResult.Error)

@@ -31,6 +31,7 @@ export default {
     <div class="my-auto fill-height">
       <v-container>
         <v-row class="fill-height align-center justify-center text-center">
+          <!-- Left Column -->
           <v-col
             cols="12"
             md="6"
@@ -98,15 +99,14 @@ export default {
   },
   data() {
     return {
-      selectedRole: "client",
-
+      selectedRole: "client", // To track whether Admin or User is selected
       isBtnSelected: true,
     };
   },
   methods: {
     selectRole(role) {
-      this.isBtnSelected = !this.isBtnSelected;
       this.selectedRole = role;
+      this.isBtnSelected = !this.isBtnSelected;
     },
   },
 };

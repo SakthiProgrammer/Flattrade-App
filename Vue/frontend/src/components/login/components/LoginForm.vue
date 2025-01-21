@@ -1,6 +1,9 @@
 <template>
   <v-container>
-    <v-card class="pa-md-15 mx-lg-auto pa-sm-10" width="500px">
+    <v-card
+      class="rounded-lg elevation-3 pa-md-15 mx-lg-auto pa-sm-10"
+      width="500px"
+    >
       <v-row>
         <h1 class="mx-auto mb-7">Sign In</h1>
       </v-row>

@@ -21,6 +21,7 @@
                   {{ index + 1 }}
                 </template>
 
+                <!-- Trade Type with v-chip -->
                 <template v-slot:[`item.trade_type`]="{ item }">
                   <v-chip
                     :color="item.trade_type === 'Buy' ? 'green' : 'red'"
@@ -30,6 +31,7 @@
                   </v-chip>
                 </template>
 
+                <!-- Status with v-chip -->
                 <template v-slot:[`item.status`]="{ item }">
                   <v-chip color="grey" dark>
                     {{ item.status }}
@@ -52,10 +54,10 @@
                 :items-per-page="5"
                 class="elevation-1"
               >
+                <!-- Trade Type with v-chip -->
                 <template v-slot:item.s_no="{ index }">
                   {{ index + 1 }}
                 </template>
-
                 <template v-slot:[`item.trade_type`]="{ item }">
                   <v-chip
                     :color="item.trade_type === 'Buy' ? 'green' : 'red'"
@@ -65,6 +67,7 @@
                   </v-chip>
                 </template>
 
+                <!-- Status with v-chip -->
                 <template v-slot:[`item.status`]="{ item }">
                   <v-chip
                     :color="item.status === 'Approved' ? 'green' : 'red'"
@@ -91,17 +94,16 @@ export default {
       pendingHeaders: [
         { text: "S.No.", value: "s_no", sortable: false },
         { text: "Stock Name", value: "name" },
-        { text: "Segment", value: "segment" },
         { text: "Trade Type", value: "trade_type" },
         { text: "Trade Date", value: "trade_date" },
         { text: "Quantity", value: "quantity" },
-        // { text: "Back Officer Status", value: "back_officer_status" },
-        // { text: "Biller Status", value: "biller_status" },
-        // { text: "Approver", value: "approver_status" },
-        { text: "Total Price", value: "total" },
-        // { text: "Status", value: "status" }, //Pending and Processing is anyone(back Officer) is approved it just change to processing
+        { text: "Back Officer Status", value: "back_officer_status" },
+        { text: "Biller Status", value: "biller_status" },
+        { text: "Approver", value: "approver_status" },
+        { text: "Total", value: "total" },
+        { text: "Status", value: "status" },
       ],
-
+      // Data for Pending Records
       pendingRecords: [
         {
           name: "Stock A",
@@ -126,7 +128,7 @@ export default {
           status: "Pending",
         },
       ],
-
+      // Data for History Records
       historyRecords: [
         {
           name: "Stock C",
