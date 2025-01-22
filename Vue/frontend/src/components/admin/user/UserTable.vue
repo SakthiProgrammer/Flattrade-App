@@ -104,6 +104,7 @@ export default {
             item.status = this.newUser.status;
           }
         });
+        this.edit = false
       } else {
         EventService.CreateUser(this.newUser)
           .then((res) => {
@@ -116,16 +117,20 @@ export default {
             }
           }).catch((err) => console.log(err))
       }
+      this.clearUser();
       this.dialog = false;
-      this.newUser = { user_name: '', role: '', password: '', status: '' };
     },
+
     cancelDialog() {
       this.dialog = false;
-      this.newUser.id = "";
-      this.newUser.user_name = "";
-      this.newUser.role = "";
-      this.newUser.password = "";
-      this.newUser.status = "";
+      this.clearUser()
+      if (this.edit) {
+        this.edit = !this.edit;
+      }
+    },
+
+    clearUser() {
+      this.newUser = { id: "", user_name: '', role: '', password: '', status: '' };
     },
 
     editUser(User) {
@@ -150,9 +155,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.v-data-table {
-  width: 100%;
-}
-</style>

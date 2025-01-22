@@ -1,5 +1,5 @@
 <template>
-  <v-card elevation="2">
+  <v-card elevation="4">
     <v-card-title class="text-h5">Client Details</v-card-title>
     <v-card-text>
       <v-data-table :headers="headers" :items="clients" class="elevation-1" fixed-header style="overflow-x: auto;"
@@ -83,7 +83,7 @@ export default {
 
         }).catch((err) => console.log(err))
     },
-  
+
     removeClient(clientId) {
       this.clients = this.clients.filter(currentClient => currentClient.client_id !== clientId)
     }
@@ -100,5 +100,3 @@ export default {
   }
 };
 </script>
-
-

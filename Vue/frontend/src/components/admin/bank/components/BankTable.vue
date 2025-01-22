@@ -3,17 +3,10 @@
     <v-card>
       <div class="d-flex justify-space-between align-center">
         <v-card-title class="text-h5">Bank Details</v-card-title>
-        <v-btn color="primary" class="mr-5" @click="dialog = true"
-          >Add Bank</v-btn
-        >
+        <v-btn color="primary" class="mr-5" @click="dialog = true">Add Bank</v-btn>
       </div>
       <v-card-text>
-        <v-data-table
-          :headers="headers"
-          :items="banks"
-          class="elevation-1"
-          fixed-header
-        >
+        <v-data-table :headers="headers" :items="banks" class="elevation-1" fixed-header>
           <template v-slot:body="{ items }">
             <tbody>
               <tr v-for="(bank, index) in items" :key="bank.id">
@@ -41,26 +34,10 @@
           <v-card-title class="text-h5">Upload Bank Details</v-card-title>
           <v-form>
             <v-card-text>
-              <v-text-field
-                label="Bank Name"
-                v-model="newBank.bank_name"
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Branch Name"
-                v-model="newBank.branch_name"
-                required
-              ></v-text-field>
-              <v-text-field
-                label="IFSC Code"
-                v-model="newBank.ifsc_code"
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Address"
-                v-model="newBank.address"
-                required
-              ></v-text-field>
+              <v-text-field label="Bank Name" v-model="newBank.bank_name" required></v-text-field>
+              <v-text-field label="Branch Name" v-model="newBank.branch_name" required></v-text-field>
+              <v-text-field label="IFSC Code" v-model="newBank.ifsc_code" required></v-text-field>
+              <v-text-field label="Address" v-model="newBank.address" required></v-text-field>
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
@@ -149,6 +126,9 @@ export default {
       this.newBank.branch_name = "";
       this.newBank.address = "";
       this.newBank.ifsc_code = "";
+      if (this.edit) {
+        this.edit = !this.edit;
+      }
     },
 
     editBank(bank) {

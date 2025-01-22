@@ -1,33 +1,22 @@
 <template>
   <v-container>
-    <v-card>
+    <v-card elevation="4">
       <v-card-title class="text-h5">Stock Details</v-card-title>
       <v-card-text>
-        <v-data-table
-          :headers="headers"
-          :items="stocks"
-          class="elevation-1"
-          item-value="name"
-        >
+        <v-data-table :headers="headers" :items="stocks" class="elevation-1" item-value="name">
+          <template v-slot:item.s_no="{ index }">
+            {{ index + 1 }}
+          </template>
           <template v-slot:item.segment="{ item }">
-            <v-chip
-              :color="
-                item.segment === 'NSE' ? 'blue lighten-3' : 'green lighten-3'
-              "
-              class="white--text"
-            >
+            <v-chip :color="item.segment === 'NSE' ? 'blue lighten-3' : 'green lighten-3'
+              " class="white--text">
               {{ item.segment }}
             </v-chip>
           </template>
 
           <template v-slot:item.action="{ item }">
             <v-btn color="primary" small @click="buyStock(item)"> BUY </v-btn>
-            <v-btn
-              color="red darken-1"
-              small
-              class="ml-2"
-              @click="sellStock(item)"
-            >
+            <v-btn color="red darken-1" small class="ml-2" @click="sellStock(item)">
               SELL
             </v-btn>
           </template>
@@ -41,51 +30,14 @@
           <v-card-title class="text-h5">Trade</v-card-title>
           <v-form>
             <v-card-text>
-              <v-text-field
-                label="Stock Name"
-                readonly
-                :value="trade.stock_name"
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Stock Price"
-                :value="trade.stock_price"
-                readonly
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Segment"
-                :value="trade.segment"
-                readonly
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Type"
-                :value="trade.trade_type"
-                readonly
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Quantity"
-                type="number"
-                min="1"
-                v-model="trade.quantity"
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Brokerage Fees"
-                :value="trade.brokerageFees"
-                v-model="brokerageFees"
-                readonly
-                type="number"
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Secure Transaction Fees"
-                :value="transactionFees"
-                readonly
-                required
-              ></v-text-field>
+              <v-text-field label="Stock Name" readonly :value="trade.stock_name" required></v-text-field>
+              <v-text-field label="Stock Price" :value="trade.stock_price" readonly required></v-text-field>
+              <v-text-field label="Segment" :value="trade.segment" readonly required></v-text-field>
+              <v-text-field label="Type" :value="trade.trade_type" readonly required></v-text-field>
+              <v-text-field label="Quantity" type="number" min="1" v-model="trade.quantity" required></v-text-field>
+              <v-text-field label="Brokerage Fees" :value="trade.brokerageFees" v-model="brokerageFees" readonly
+                type="number" required></v-text-field>
+              <v-text-field label="Secure Transaction Fees" :value="transactionFees" readonly required></v-text-field>
               <div class="d-flex justify-end ma-4">
                 <h2 class="mr-6">Total :</h2>
                 <h2>{{ totalPrice }}</h2>
@@ -152,6 +104,8 @@ export default {
         trade_type: "BUY",
       };
       this.trade = trade;
+      this.buttonStyle.name = "BUY"
+      this.buttonStyle.color = "primary"
       this.updateTotalPrice();
     },
 
@@ -188,7 +142,10 @@ export default {
         trade_type: "SELL",
         // total_price: trade.quantity * trade.stock_price,
       };
+      this.buttonStyle.name = "SELL"
+      this.buttonStyle.color = "red darken-1"
       this.trade = trade;
+
     },
   },
   beforeMount() {
@@ -200,7 +157,6 @@ export default {
       }
     });
   },
-  computed() {},
   watch: {
     "trade.quantity": function () {
       this.updateTotalPrice();

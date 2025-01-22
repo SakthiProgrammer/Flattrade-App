@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card elevation="4">
     <v-tabs v-model="activeTab" color="deep-purple accent-4" grow>
       <v-tab class="pa-3">Pending</v-tab>
       <v-tab class="pa-3">History</v-tab>
@@ -11,22 +11,14 @@
         <v-container fluid>
           <v-row>
             <v-col cols="12">
-              <v-data-table
-                :headers="pendingHeaders"
-                :items="pendingRecords"
-                :items-per-page="5"
-                class="elevation-1"
-              >
+              <v-data-table :headers="pendingHeaders" :items="pendingRecords" :items-per-page="5" class="elevation-1">
                 <template v-slot:item.s_no="{ index }">
                   {{ index + 1 }}
                 </template>
 
                 <!-- Trade Type with v-chip -->
                 <template v-slot:[`item.trade_type`]="{ item }">
-                  <v-chip
-                    :color="item.trade_type === 'Buy' ? 'green' : 'red'"
-                    dark
-                  >
+                  <v-chip :color="item.trade_type === 'Buy' ? 'green' : 'red'" dark>
                     {{ item.trade_type }}
                   </v-chip>
                 </template>
@@ -48,31 +40,20 @@
         <v-container fluid>
           <v-row>
             <v-col cols="12">
-              <v-data-table
-                :headers="pendingHeaders"
-                :items="historyRecords"
-                :items-per-page="5"
-                class="elevation-1"
-              >
+              <v-data-table :headers="pendingHeaders" :items="historyRecords" :items-per-page="5" class="elevation-1">
                 <!-- Trade Type with v-chip -->
                 <template v-slot:item.s_no="{ index }">
                   {{ index + 1 }}
                 </template>
                 <template v-slot:[`item.trade_type`]="{ item }">
-                  <v-chip
-                    :color="item.trade_type === 'Buy' ? 'green' : 'red'"
-                    dark
-                  >
+                  <v-chip :color="item.trade_type === 'Buy' ? 'green' : 'red'" dark>
                     {{ item.trade_type }}
                   </v-chip>
                 </template>
 
                 <!-- Status with v-chip -->
                 <template v-slot:[`item.status`]="{ item }">
-                  <v-chip
-                    :color="item.status === 'Approved' ? 'green' : 'red'"
-                    dark
-                  >
+                  <v-chip :color="item.status === 'Approved' ? 'green' : 'red'" dark>
                     {{ item.status }}
                   </v-chip>
                 </template>

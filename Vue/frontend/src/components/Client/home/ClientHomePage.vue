@@ -46,22 +46,29 @@ export default {
   },
   methods: {
 
-  },
-  beforeMount() {
-    // let userId = window.location.pathname.split('/').pop();
+    /* ===============  Common Method For Get User ID ==================*/
+    getUserId() {
+      let user = JSON.parse(localStorage.getItem("userRoleAndId"))
+      let userId = user.user_id
+      console.log('hi', userId);
 
-    let user = JSON.parse(localStorage.getItem("userRoleAndId"))
-    let userId = user.user_id
-    console.log('hi', userId);
-
-    let currentUserId = '';
-    let flag = false
-    for (let i = 2; i < userId.length; i++) {
-      if (userId[i] != 0 || flag) {
-        flag = true;
-        currentUserId += userId[i];
+      let currentUserId = '';
+      let flag = false
+      for (let i = 2; i < userId.length; i++) {
+        if (userId[i] != 0 || flag) {
+          flag = true;
+          currentUserId += userId[i];
+        }
       }
+      return currentUserId;
     }
+  },
+
+
+  /* ================= Getting Client Id to send in getuser&stock for purpose ==================== */
+  beforeMount() {
+
+    let currentUserId = this.getUserId();
 
     // let head = { "ID": currentUserId }
     EventService.GetClientById(currentUserId)

@@ -79,6 +79,9 @@ export default {
   CreateCharge(ChargeData) {
     return baseApiClient.post("/createcharge", ChargeData);
   },
+  UpdateCharge(ChargeData) {
+    return baseApiClient.put("/updatecharge", ChargeData);
+  },
   GetUsers() {
     return baseApiClient.get("/getusers");
   },

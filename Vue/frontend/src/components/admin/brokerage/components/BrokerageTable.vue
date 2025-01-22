@@ -3,17 +3,10 @@
     <v-card>
       <div class="d-flex justify-space-between align-center">
         <v-card-title class="text-h5">Charge Details</v-card-title>
-        <v-btn color="primary" class="mr-5" @click="dialog = true"
-          >Add Charge</v-btn
-        >
+        <v-btn color="primary" class="mr-5" @click="dialog = true">Add Charge</v-btn>
       </div>
       <v-card-text>
-        <v-data-table
-          :headers="headers"
-          :items="charges"
-          class="elevation-1"
-          fixed-header
-        >
+        <v-data-table :headers="headers" :items="charges" class="elevation-1" fixed-header>
           <template v-slot:body="{ items }">
             <tbody>
               <tr v-for="(charge, index) in items" :key="charge.id">
@@ -39,24 +32,12 @@
           <v-card-title class="text-h5">Upload Charge Details</v-card-title>
           <v-form>
             <v-card-text>
-              <v-select
-                label="Charge Type"
-                v-model="newCharge.charge_type"
-                :items="['STT', 'BROKERAGE']"
-                required
-              ></v-select>
-              <v-text-field
-                label="Charge Percentage (%)"
-                v-model="newCharge.charge_percentage"
-                type="number"
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Effective Date"
-                v-model="newCharge.effective_date"
-                type="date"
-                required
-              ></v-text-field>
+              <v-select label="Charge Type" v-model="newCharge.charge_type" :items="['STT', 'BROKERAGE']"
+                required></v-select>
+              <v-text-field label="Charge Percentage (%)" v-model="newCharge.charge_percentage" type="number"
+                required></v-text-field>
+              <v-text-field label="Effective Date" v-model="newCharge.effective_date" type="date"
+                required></v-text-field>
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
@@ -78,6 +59,7 @@ export default {
     return {
       dialog: false,
       newCharge: {
+        charge_id: "",
         charge_type: "",
         charge_percentage: "",
         effective_date: "",
@@ -90,40 +72,62 @@ export default {
         { text: "Edit", value: "edit", sortable: false, align: "center" },
       ],
       charges: [],
+      edit: false,
     };
   },
   methods: {
-    submitChargeDetails() {
-      this.charges.push({ ...this.newCharge, id: Date.now() });
-      this.newCharge = {
-        chargeType: "",
-        chargePercentage: null,
-        effectiveDate: "",
-      };
-    },
+
     AddCharge() {
-      EventService.CreateCharge(this.newCharge).then((res) => {
-        if (res.data.status == "S") {
-          this.charge.push(this.newCharge);
-          this.dialog = false;
-        } else {
-          console.log("err", res.data.errMsg);
-        }
-      });
+      if (this.edit) {
+        EventService.UpdateCharge(this.newCharge)
+          .then((res) => {
+            if (res.data.status == "S") {
+              console.log("Edit Successfully");
+            } else {
+              console.log(
+                res.data.errMsg
+              );
+            }
+          }).catch((err) => console.log(err)
+          )
+        this.edit = false;
+        this.stocks.find((item) => {
+          if (this.newCharge.id === item.id) {
+            item.charge_percentage = this.newStock.charge_percentage;
+            item.charge_type = this.newStock.charge_type;
+            item.effective_date = this.newStock.effective_date;
+          }
+        });
+      } else {
+        EventService.CreateCharge(this.newCharge).then((res) => {
+          if (res.data.status == "S") {
+            this.charge.push(this.newCharge);
+          } else {
+            console.log("err", res.data.errMsg);
+          }
+        });
+        this.dialog = false;
+      }
     },
     cancelDialog() {
       this.dialog = false;
+      this.newCharge.charge_id = ""
       this.newCharge.charge_percentage = "";
       this.newCharge.charge_type = "";
       this.newCharge.effective_date = "";
+      if (this.edit) {
+        this.edit = !this.edit;
+      }
     },
     editCharge(charge) {
+      this.newCharge.charge_id = charge.charge_id;
       this.newCharge.charge_percentage = charge.charge_percentage;
       this.newCharge.charge_type = charge.charge_type;
       this.newCharge.effective_date = charge.effective_date;
       this.dialog = true;
     },
   },
+
   beforeMount() {
     EventService.GetCharges()
       .then((res) => {

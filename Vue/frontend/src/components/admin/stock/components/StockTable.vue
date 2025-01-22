@@ -3,17 +3,10 @@
     <v-card>
       <div class="d-flex justify-space-between align-center">
         <v-card-title class="text-h5">Stock Details</v-card-title>
-        <v-btn color="primary" class="mr-5" @click="dialog = true"
-          >Add Stock</v-btn
-        >
+        <v-btn color="primary" class="mr-5" @click="dialog = true">Add Stock</v-btn>
       </div>
       <v-card-text>
-        <v-data-table
-          :headers="headers"
-          :items="stocks"
-          class="elevation-1"
-          fixed-header
-        >
+        <v-data-table :headers="headers" :items="stocks" class="elevation-1" fixed-header>
           <template v-slot:body="{ items }">
             <tbody>
               <tr v-for="(stock, index) in items" :key="stock.id">
@@ -40,28 +33,11 @@
           <v-card-title class="text-h5">Upload Stock Details</v-card-title>
           <v-form>
             <v-card-text>
-              <v-text-field
-                label="Stock Name"
-                v-model="newStock.stock_name"
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Stock Price"
-                v-model="newStock.stock_price"
-                type="number"
-                required
-              ></v-text-field>
-              <v-select
-                label="Segment"
-                v-model="newStock.segment"
-                :items="['NSE', 'BSE']"
-                required
-              ></v-select>
-              <v-text-field
-                label="ISIN"
-                v-model="newStock.isin"
-                required
-              ></v-text-field>
+              <v-text-field label="Stock Name" v-model="newStock.stock_name" required></v-text-field>
+              <v-text-field label="Stock Price" min="0" v-model="newStock.stock_price" type="number"
+                required></v-text-field>
+              <v-select label="Segment" v-model="newStock.segment" :items="['NSE', 'BSE']" required></v-select>
+              <v-text-field label="ISIN" v-model="newStock.isin" required></v-text-field>
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
@@ -70,7 +46,7 @@
             </v-card-actions>
           </v-form>
         </v-card>
-        <!-- {{ newStock }} -->
+        {{ newStock }}
       </template>
     </v-dialog>
   </div>
@@ -103,15 +79,10 @@ export default {
     };
   },
   methods: {
-    submitStockDetails() {
-      this.stocks.push({ ...this.newStock, id: Date.now() });
-      this.dialog = false;
-      this.newStock = { name: "", price: null, segment: "", isin: "" };
-    },
+
     AddStock() {
       this.newStock.stock_price = parseFloat(this.newStock.stock_price);
       if (this.edit) {
-        // alert("edit");
         EventService.UpdateStock(this.newStock)
           .then((res) => {
             if (res.data.status == "S") {
@@ -123,7 +94,7 @@ export default {
           .catch((err) => console.log(err));
         this.edit = false;
         this.stocks.find((item) => {
-          if (this.newStock.id === item.id) {
+          if (this.newStock.id == item.id) {
             item.stock_name = this.newStock.stock_name;
             item.stock_price = this.newStock.stock_price;
             item.isin = this.newStock.isin;
@@ -143,21 +114,17 @@ export default {
           .catch((err) => console.log(err));
       }
       this.dialog = false;
-      this.newStock = {
-        stock_name: "",
-        stock_price: null,
-        segment: "",
-        isin: "",
-      };
+      this.clearStock();
     },
     cancelDialog() {
       this.dialog = false;
-      this.newStock = {
-        stock_name: "",
-        stock_price: null,
-        segment: "",
-        isin: "",
-      };
+      this.clearStock();
+      if (this.edit) {
+        this.edit = !this.edit;
+      }
+    },
+    clearStock() {
+      this.newStock = { id: "", name: "", price: null, segment: "", isin: "" };
     },
     editStock(stock) {
       this.edit = true;

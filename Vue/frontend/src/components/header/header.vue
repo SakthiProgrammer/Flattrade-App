@@ -4,31 +4,21 @@
       <v-row align="center" no-gutters>
         <v-col cols="12" md="3" sm="6" class="d-flex align-center">
           <v-app-bar-nav-icon class="d-md-none" @click="drawer = !drawer" />
-          <v-img
-            class="ml-4"
-            lazy-src="https://picsum.photos/id/11/10/6"
-            max-height="50"
-            max-width="160"
-            src="../../assets/logo-blue.png"
-          ></v-img>
+          <v-img class="ml-4" lazy-src="https://picsum.photos/id/11/10/6" max-height="50" max-width="160"
+            src="../../assets/logo-blue.png"></v-img>
         </v-col>
 
         <v-col cols="12" md="6" class="d-none d-md-flex justify-center">
           <v-list class="d-flex justify-center">
-            <v-list-item
-              v-for="(link, index) in navLinks"
-              :key="index"
-              @click="handleComponents(link)"
-              :class="[
-                'clickable',
-                currentHeader === link.title
-                  ? ' light-blue--text subtitle-2'
-                  : '',
-                'rounded',
-                'px-2 py-0',
-                'mx-1.4',
-              ]"
-            >
+            <v-list-item v-for="(link, index) in navLinks" :key="index" @click="handleComponents(link)" :class="[
+              'clickable',
+              currentHeader === link.title
+                ? ' light-blue--text subtitle-2'
+                : '',
+              'rounded',
+              'px-2 py-0',
+              'mx-1.4',
+            ]">
               <v-list-item-content class="px-4">
                 <v-list-item-title class="h6 font-weight-medium">
                   {{ link.title }}
@@ -70,7 +60,8 @@ export default {
     this.userType = user == null ? "" : user.role;
 
     const savedComponent = localStorage.getItem("currentComponent");
-    this.currentComponent = savedComponent || "Home"; // Default to "Home" if nothing is saved
+    this.currentHeader = savedComponent || "Home";
+    this.$emit("handleComponent", this.currentHeader);
 
     if (this.userType === "client") {
       this.navLinks = [
