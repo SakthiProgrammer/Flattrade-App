@@ -1,7 +1,5 @@
 package trade
 
-/* package client
-
 import (
 	"encoding/json"
 	"flattrade/apps/DBConnection/gormdb"
@@ -9,142 +7,117 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"strconv"
 )
 
-type GetTradeRec struct{
-	TradeId int`json:"trade" gorm:"column:client_id"`
-	ClientId int
-	StockId int
-	TradeType string
-	quantity int
-	TradePrice float64
-	TradeDate time.Time
+type GetTradeRec struct {
+	TradeID             uint    `json:"trade_id"`
+	TradeType           string  `json:"trade_type"`
+	TotalPrice          float64 `json:"total_price"`
+	TradeDate           string  `json:"trade_date"`
+	BackOfficerApproval string  `json:"back_officer_approval"`
+	BillerApproval      string  `json:"biller_approval"`
+	ApproverApproval    string  `json:"approver_approval"`
 }
 
-type GetTradeResp struct{
-
+func (GetTradeRec) TradeTable() string {
+	return "st_918_trade_table"
 }
-/*
+
+type GetBankRec struct {
+	BankId   uint   `json:"bank_id"`
+	BankName string `json:"bank_name"`
+	IFSCCode string `json:"ifsc_code"`
+	Address  string `json:"address"`
+}
+
+func (GetBankRec) BankTable() string {
+	return "st_919_bank_table"
+}
+
 type GetClientRec struct {
-	ClientID       uint   `json:"client_id" gorm:"column:client_id"`
-	FirstName      string `json:"first_name" gorm:"column:first_name"`
-	LastName       string `json:"last_name" gorm:"column:last_name"`
-	Email          string `json:"email" gorm:"column:email"`
-	PhoneNumber    string `json:"phone_number" gorm:"column:phone_number"`
-	PanNumber      string `json:"pan_number" gorm:"column:pan_number"`
-	NomineeName    string `json:"nominee_name" gorm:"column:nominee_name"`
-	BankID         uint   `json:"bank_id" gorm:"column:bank_id"`
-	UniqueId       string `json:"unique_id" gorm:"column:unique_id"`
-	BankAccount    string `json:"bank_account" gorm:"column:bank_account"`
-	KycIsCompleted string `json:"kyc_is_completed" gorm:"column:kyc_iScompleted"`
-	CreatedBy      string `json:"created_by" gorm:"column:Created_by"`
-	CreatedAt      string `json:"created_at" gorm:"column:Created_at"`
-	UpdatedBy      string `json:"updated_by" gorm:"column:updated_by"`
-	UpdatedAt      string `json:"updated_at" gorm:"column:updated_at"`
+	ClientID       uint          `json:"client_id"`
+	FirstName      string        `json:"first_name"`
+	LastName       string        `json:"last_name"`
+	Email          string        `json:"email"`
+	PhoneNumber    string        `json:"phone_number"`
+	PanNumber      string        `json:"pan_number"`
+	NomineeName    string        `json:"nominee_name"`
+	UniqueId       string        `json:"unique_id"`
+	BankAccount    string        `json:"bank_account"`
+	KycIsCompleted string        `json:"kyc_is_completed"`
+	TradesArr      []GetTradeRec `json:"trade_details"`
+	BankRec        GetBankRec    `json:"bank_detail"`
 }
 
 type GetClientResp struct {
-	ClientArr []GetClientRec `json:"client_details"`
-	ErrMsg    string         `json:"errMsg"`
-	Status    string         `json:"status"`
+	GetClientRec `json:"client_details"`
+	Status       string `json:"status"`
+	ErrMsg       string `json:"errMsg"`
 }
 
-func GetClients(w http.ResponseWriter, r *http.Request) {
+func GetClientFullDetails(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "USERID, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
+	w.Header().Set("Content-Type", "application/json")
 
-	(w).Header().Set("Access-Control-Allow-Origin", "*")
-	(w).Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
-	(w).Header().Set("Access-Control-Allow-Headers", "ID, CLIENT, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
-	(w).Header().Set("Content-Type", "application/json")
+	log.Println("GetClientFullDetails-(+)")
 
-	lId := r.Header.Get("ID")
-
-	log.Println("GetClients-(+)")
-
+	var lClient GetClientRec
 	var lClientResp GetClientResp
 
-	// var lStock Stock
+	lClientResp.Status = common.SuccessCode
+
+	lUserId := r.Header.Get("USERID")
 
 	if r.Method == http.MethodGet {
-		lClientResp.Status = common.SuccessCode
 
-		lGormDb, lErr := gormdb.GormDBConnection()
+		if lUserId == "" {
 
-		lSql, _ := lGormDb.DB()
-
-		defer lSql.Close()
-
-		if lErr != nil {
-			log.Println("CGCS-001", lErr.Error())
 			lClientResp.Status = common.ErrorCode
-			lClientResp.ErrMsg = lErr.Error()
+			lClientResp.ErrMsg = "Provide USERID in Header"
 
 		} else {
+			lGormDb, lErr := gormdb.GormDBConnection()
 
-			if lId == "" {
+			lSql, _ := lGormDb.DB()
 
-				lResult := lGormDb.Table("st_918_client_table").Where("kyc_iScompleted = ?", common.Pending).Find(&lClientResp.ClientArr)
+			defer lSql.Close()
+
+			if lErr != nil {
+				log.Println("TGCFD-001", lErr.Error())
+				lClientResp.Status = common.ErrorCode
+				lClientResp.ErrMsg = lErr.Error()
+
+			} else {
+
+				// lResult := lGormDb.Preload("TradesArr").Preload("BankRec").Where("client_id = ? AND trades_arr.back_officer_approval = ?", lUserId, "approved").First(&lClient)
+				lResult := lGormDb.Preload("TradesArr").Preload("BankRec").Where("client_id = ?", lUserId).First(&lClient)
 
 				if lResult.Error != nil {
-					log.Println("CGCS-002", lResult.Error)
+					log.Println("TGCFD-002", lResult.Error)
 					lClientResp.ErrMsg = lResult.Error.Error()
 					lClientResp.Status = common.ErrorCode
 				} else {
 					log.Println("Successfully Get")
-					lClientResp.Status = common.SuccessCode
-					fmt.Printf("%+v", lClientResp)
-				}
-
-			} else if lId != "" {
-
-				lId := strToInt(lId, &lClientResp)
-
-				if lId != -1 {
-					lResult := lGormDb.Table("st_918_client_table").Where("client_id=?", lId).Find(&lClientResp.ClientArr)
-
-					if lResult.Error != nil {
-						log.Println("CGCS-003", lResult.Error)
-						lClientResp.ErrMsg = lResult.Error.Error()
-						lClientResp.Status = common.ErrorCode
-					} else {
-						log.Println("Successfully Get")
-						lClientResp.Status = common.SuccessCode
-						fmt.Printf("%+v", lClientResp)
-					}
-
+					fmt.Println("%+v", lClientResp)
 				}
 			}
-
 		}
-
 	} else {
-		log.Println("CGCS-004", "Invalid Method")
-		lClientResp.ErrMsg = "Invalid Method"
 		lClientResp.Status = common.ErrorCode
+		lClientResp.ErrMsg = "Invalid Method"
 	}
 
 	lData, lErr := json.Marshal(lClientResp)
 
 	if lErr != nil {
-		log.Println("CGCS-005", lErr.Error())
+		log.Println("TGCFD-", lErr.Error())
 		lClientResp.ErrMsg = lErr.Error()
-		lClientResp.Status = common.SuccessCode
+		lClientResp.Status = common.ErrorCode
 	} else {
 		fmt.Fprintf(w, string(lData))
 	}
-	log.Println("GetClients-(-)")
-}
 
-func strToInt(lId string, lClientResp *GetClientResp) int {
-	log.Println("strToInt-(+)")
-	lIndId, lErr := strconv.Atoi(lId)
-
-	if lErr != nil {
-		lClientResp.Status = common.ErrorCode
-		lClientResp.ErrMsg = lErr.Error()
-		return -1
-	}
-	log.Println("strToInt-(-)")
-	return lIndId
+	log.Println("GetClientFullDetails-(-)")
 }
-*/

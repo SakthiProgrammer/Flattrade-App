@@ -60,3 +60,177 @@ login - completed 100%
 register - completed POST, 80%
 bank -  GET, POST 70%
 
+
+1. Basic Join
+To perform a basic join between two tables, you can use the Joins method.
+
+go
+Copy
+Edit
+package main
+
+import (
+    "gorm.io/driver/sqlite"
+    "gorm.io/gorm"
+)
+
+type User struct {
+    ID    uint
+    Name  string
+    Orders []Order
+}
+
+type Order struct {
+    ID     uint
+    UserID uint
+    Total  float64
+}
+
+func main() {
+    db, err := gorm.Open(sqlite.Open("gorm.db"), &gorm.Config{})
+    if err != nil {
+        panic("failed to connect database")
+    }
+
+    // Perform join
+    var usersWithOrders []User
+    db.Preload("Orders").Find(&usersWithOrders)
+
+    // Output the results
+    for _, user := range usersWithOrders {
+        println("User:", user.Name)
+        for _, order := range user.Orders {
+            println("  Order Total:", order.Total)
+        }
+    }
+}
+2. Inner Join
+An inner join retrieves records that have matching values in both tables.
+
+go
+Copy
+Edit
+var usersWithOrders []User
+db.Joins("JOIN orders ON orders.user_id = users.id").Find(&usersWithOrders)
+3. Left Join
+A left join retrieves all records from the left table and the matching records from the right table.
+
+go
+Copy
+Edit
+var usersWithOrders []User
+db.Joins("LEFT JOIN orders ON orders.user_id = users.id").Find(&usersWithOrders)
+4. Multiple Joins
+Joining multiple tables.
+
+go
+Copy
+Edit
+type Product struct {
+    ID          uint
+    OrderID     uint
+    Order       Order
+}
+
+var usersWithOrdersAndProducts []User
+db.Joins("JOIN orders ON orders.user_id = users.id JOIN products ON products.order_id = orders.id").Find(&usersWithOrdersAndProducts)
+5. Using Conditions in Joins
+Applying conditions in joins.
+
+go
+Copy
+Edit
+var usersWithOrders []User
+db.Joins("JOIN orders ON orders.user_id = users.id").Where("orders.total > ?", 100).Find(&usersWithOrders)
+These examples illustrate how GORM can be used for various types of joins in Golang.
+
+
+
+
+
+===================  put api =============
+
+
+
+package trade
+
+import (
+	"encoding/json"
+	"flattrade/apps/DBConnection/gormdb"
+	"flattrade/common"
+	"log"
+	"net/http"
+	"strconv"
+
+	"gorm.io/gorm"
+)
+
+type GetTradeRec struct {
+	TradeID             uint    `json:"trade_id"`
+	TradeType           string  `json:"trade_type"`
+	TotalPrice          float64 `json:"total_price"`
+	TradeDate           string  `json:"trade_date"`
+	BackOfficerApproval string  `json:"back_officer_approval"`
+}
+
+func (GetTradeRec) TableName() string {
+	return "st_918_trade_table"
+}
+
+func UpdateBackOfficerApproval(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	log.Println("UpdateBackOfficerApproval-(+)")
+
+	var request struct {
+		TradeID              uint   `json:"trade_id"`
+		BackOfficerApproval string `json:"back_officer_approval"`
+	}
+
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		log.Println("Decode Error:", err)
+		http.Error(w, "Invalid request payload", http.StatusBadRequest)
+		return
+	}
+
+	lGormDb, lErr := gormdb.GormDBConnection()
+	if lErr != nil {
+		log.Println("DB Connection Error:", lErr)
+		http.Error(w, lErr.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	// Update back_officer_approval status to "approved"
+	err = lGormDb.Model(&GetTradeRec{}).Where("trade_id = ?", request.TradeID).Update("back_officer_approval", request.BackOfficerApproval).Error
+
+	if err != nil {
+		log.Println("Update Error:", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	response := struct {
+		Status  string `json:"status"`
+		Message string `json:"message"`
+	}{
+		Status:  common.SuccessCode,
+		Message: "Back Officer Approval updated successfully",
+	}
+
+	json.NewEncoder(w).Encode(response)
+
+	log.Println("UpdateBackOfficerApproval-(-)")
+}
+
+
+
+
+
+
+
+
+
+
+
+

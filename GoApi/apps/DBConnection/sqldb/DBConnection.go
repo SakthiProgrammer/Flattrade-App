@@ -11,7 +11,7 @@ import (
 func DBConnection() (*sql.DB, error) {
 	log.Println("DBConnection-(+)")
 
-	config := genpkg.ReadTomlConfig("./toml/hdfcbank_upi_dbconfig.toml")
+	config := genpkg.ReadTomlConfig("./toml/dbconfig.toml")
 	lUserName := fmt.Sprintf("%v", config.(map[string]interface{})["DBUser"])
 	lPassword := fmt.Sprintf("%v", config.(map[string]interface{})["DBPass"])
 	lHostName := fmt.Sprintf("%v", config.(map[string]interface{})["DBHost"])

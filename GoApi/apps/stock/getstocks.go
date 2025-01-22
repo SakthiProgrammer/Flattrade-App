@@ -1,90 +1,143 @@
-package stock
+package trade
 
 import (
 	"encoding/json"
-	"flattrade/apps/DBConnection/gormdb"
-	"flattrade/common"
-	"fmt"
 	"log"
 	"net/http"
 )
 
-type GetStockRec struct {
-	ID         int     `json:"id" gorm:"column:stock_id"`
-	StockName  string  `json:"stock_name" gorm:"column:stock_name"`
-	StockPrice float64 `json:"stock_price" gorm:"column:stock_price"`
-	Segment    string  `json:"segment" gorm:"column:segment"`
-	ISIN       string  `json:"isin" gorm:"column:isin"`
-	CreatedBy  string  `json:"created_by" gorm:"column:created_by"`
-	CreatedAt  string  `json:"created_at" gorm:"column:created_at"`
-	UpdatedBy  string  `json:"updated_by" gorm:"column:updated_by"`
-	UpdatedAt  string  `json:"updated_at" gorm:"column:updated_at"`
+type GetTradeRec struct {
+	TradeID             uint    `json:"trade_id"`
+	TradeType           string  `json:"trade_type"`
+	TotalPrice          float64 `json:"total_price"`
+	TradeDate           string  `json:"trade_date"`
+	BackOfficerApproval string  `json:"back_officer_approval"`
+	BillerApproval      string  `json:"biller_approval"`
+	ApproverApproval    string  `json:"approver_approval"`
 }
 
-type GetStockResp struct {
-	StockDetailsArr []GetStockRec `json:"stock_details"`
-	ErrMsg          string        `json:"errMsg"`
-	Status          string        `json:"status"`
+type GetBankRec struct {
+	BankId   uint   `json:"bank_id"`
+	BankName string `json:"bank_name"`
+	IFSCCode string `json:"ifsc_code"`
+	Address  string `json:"address"`
 }
 
-func GetStocks(w http.ResponseWriter, r *http.Request) {
+type GetClientRec struct {
+	ClientID       uint          `json:"client_id"`
+	FirstName      string        `json:"first_name"`
+	LastName       string        `json:"last_name"`
+	Email          string        `json:"email"`
+	PhoneNumber    string        `json:"phone_number"`
+	PanNumber      string        `json:"pan_number"`
+	NomineeName    string        `json:"nominee_name"`
+	UniqueId       string        `json:"unique_id"`
+	BankAccount    string        `json:"bank_account"`
+	KycIsCompleted string        `json:"kyc_is_completed"`
+	TradesArr      []GetTradeRec `json:"trade_details"`
+	BankRec        GetBankRec    `json:"bank_detail"`
+}
 
-	(w).Header().Set("Access-Control-Allow-Origin", "*")
-	(w).Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
-	(w).Header().Set("Access-Control-Allow-Headers", "ADMIN, CLIENT, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
-	(w).Header().Set("Content-Type", "application/json")
+func GetClientFullDetails(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "USERID, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
+	w.Header().Set("Content-Type", "application/json")
 
-	log.Println("GetStocks-(+)")
+	log.Println("GetClientFullDetails-(+)")
 
-	var lStockResp GetStockResp
+	if r.Method != http.MethodGet {
+		http.Error(w, "Invalid Method", http.StatusMethodNotAllowed)
+		return
+	}
 
-	// var lStock Stock
+	clientID := 3 // Replace with dynamic value if required
+	sqldb
+	if err != nil {
+		log.Println("Error connecting to database:", err)
+		http.Error(w, "Database connection error", http.StatusInternalServerError)
+		return
+	}
+	defer db.Close()
 
-	if r.Method == http.MethodGet {
-		lStockResp.Status = common.SuccessCode
+	var clientRec GetClientRec
 
-		lGormDb, lErr := gormdb.GormDBConnection()
+	// Query for client details
+	clientQuery := `
+		SELECT client_id, first_name, last_name, email, phone_number, pan_number,
+		       nominee_name, unique_id, bank_account, kyc_is_completed
+		FROM client_table
+		WHERE client_id = ?
+	`
 
-		lSql, _ := lGormDb.DB()
+	err = db.QueryRow(clientQuery, clientID).Scan(
+		&clientRec.ClientID, &clientRec.FirstName, &clientRec.LastName, &clientRec.Email,
+		&clientRec.PhoneNumber, &clientRec.PanNumber, &clientRec.NomineeName, &clientRec.UniqueId,
+		&clientRec.BankAccount, &clientRec.KycIsCompleted,
+	)
+	if err != nil {
+		log.Println("Error fetching client details:", err)
+		http.Error(w, "Error fetching client details", http.StatusInternalServerError)
+		return
+	}
 
-		defer lSql.Close()
+	// Query for bank details
+	bankQuery := `
+		SELECT bank_id, bank_name, ifsc_code, address
+		FROM bank_table
+		WHERE bank_id = (
+			SELECT bank_id FROM client_table WHERE client_id = ?
+		)
+	`
 
-		if lErr != nil {
-			log.Println("SGS-001", lErr.Error())
-			lStockResp.Status = common.ErrorCode
-			lStockResp.ErrMsg = lErr.Error()
+	err = db.QueryRow(bankQuery, clientID).Scan(
+		&clientRec.BankRec.BankId, &clientRec.BankRec.BankName,
+		&clientRec.BankRec.IFSCCode, &clientRec.BankRec.Address,
+	)
+	if err != nil {
+		log.Println("Error fetching bank details:", err)
+		http.Error(w, "Error fetching bank details", http.StatusInternalServerError)
+		return
+	}
 
-		} else {
+	// Query for trade details
+	tradeQuery := `
+		SELECT trade_id, trade_type, total_price, trade_date,
+		       back_officer_approval, biller_approval, approver_approval
+		FROM trade_table
+		WHERE client_id = ?
+	`
 
-			lResult := lGormDb.Table("st_918_stock_table").Find(&lStockResp.StockDetailsArr)
+	rows, err := db.Query(tradeQuery, clientID)
+	if err != nil {
+		log.Println("Error fetching trade details:", err)
+		http.Error(w, "Error fetching trade details", http.StatusInternalServerError)
+		return
+	}
+	defer rows.Close()
 
-			if lResult.Error != nil {
-				log.Println("SGS-002", lResult.Error)
-				lStockResp.ErrMsg = lResult.Error.Error()
-				lStockResp.Status = common.ErrorCode
-			} else {
-				log.Println("Successfully Get")
-				lStockResp.Status = common.SuccessCode
-				fmt.Printf("%+v", lStockResp)
-			}
+	for rows.Next() {
+		var trade GetTradeRec
+		err := rows.Scan(
+			&trade.TradeID, &trade.TradeType, &trade.TotalPrice, &trade.TradeDate,
+			&trade.BackOfficerApproval, &trade.BillerApproval, &trade.ApproverApproval,
+		)
+		if err != nil {
+			log.Println("Error scanning trade record:", err)
+			http.Error(w, "Error processing trade records", http.StatusInternalServerError)
+			return
 		}
-
-	} else {
-		log.Println("SGS-", "Invalid Method")
-		lStockResp.ErrMsg = "Invalid Method"
-		lStockResp.Status = common.ErrorCode
+		clientRec.TradesArr = append(clientRec.TradesArr, trade)
 	}
 
-	lData, lErr := json.Marshal(lStockResp)
-
-	if lErr != nil {
-		log.Println("SGS-", lErr.Error())
-		lStockResp.ErrMsg = lErr.Error()
-		lStockResp.Status = common.SuccessCode
-	} else {
-		fmt.Fprintf(w, string(lData))
+	// Send the response
+	response, err := json.Marshal(clientRec)
+	if err != nil {
+		log.Println("Error marshalling response:", err)
+		http.Error(w, "Error generating response", http.StatusInternalServerError)
+		return
 	}
 
-	log.Println("GetStocks-(-)")
-
+	w.Write(response)
+	log.Println("GetClientFullDetails-(-)")
 }
