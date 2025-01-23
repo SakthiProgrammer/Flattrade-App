@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"strings"
 )
 
 // client_id
@@ -138,7 +139,8 @@ func ClientTradeFullDetails(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method == http.MethodGet {
 
-		if lUserRole == "" {
+		lUserRole = strings.ToUpper(lUserRole)
+		if common.ValidateUserRole(lUserRole) {
 
 			lClientResp.Status = common.ErrorCode
 			lClientResp.ErrMsg = "Provide USERID & Role in Header"
@@ -160,8 +162,44 @@ func ClientTradeFullDetails(w http.ResponseWriter, r *http.Request) {
 				//  back_officer_approval_status
 				// biller_Approvel_status
 				// approver_Approvel_status
-				lResult := lGormDb.Joins("JOIN st_918_trade_table AS t ON t.client_id = st_918_client_table.client_id").
-					Where("t.back_officer_approval_status = ?", "").Find(&lClientResp.GetClientRec)
+
+				/* ==== Roles ====
+
+				Back Officer - BO [Find back_officer_approval_status = pending]
+				Biller - B [Find back_officer_approval_status = Approved]
+				Approver - APPR [Find biller_Approvel_status = Approved]
+
+				*/
+
+				var lColumnName string
+				var lStatus string
+				lColumnName = "back_officer_approval_status"
+				if lUserRole == "BO" {
+					lStatus = common.Pending
+				} else if lUserRole == "B" {
+					lStatus = common.Approved
+				} else if lUserRole == "APPR" {
+					lColumnName = "biller_Approvel_status"
+					lStatus = common.Approved
+				}
+
+				/* lResult := lGormDb.Table("st_918_client_table AS c").
+				Joins("JOIN st_918_trade_table AS t ON t.client_id = c.client_id").
+				Joins("JOIN st_918_stock_table AS st ON t.stock_id = st.stock_id").
+				Select(`
+					c.client_id, c.first_name, c.last_name, c.email, c.phone_number, c.pan_number,
+					c.nominee_name, c.unique_id, c.bank_account, c.kyc_iscompleted,
+					t.trade_id, t.trade_type, t.quantity, t.trade_price AS total_price,
+					t.trade_date, t.back_officer_approval AS back_officer_approval,
+					t.biller_approvel_status AS biller_approval, t.approver_approvel_status AS approver_approval,
+					st.stock_id, st.stock_name, st.stock_price, st.segment, st.isin
+				`).
+				Where(lColumnName+" = ?", lStatus).
+				Find(&lClientResp.GetClientRec)
+				*/
+
+				lResult := lGormDb.Table("st_918_client_table c").Joins("JOIN st_918_trade_table  AS t ON t.client_id = c.client_id").Joins("JOIN st_918_stock_table AS st ON t.stock_id = st.stock_id").
+					Where("t."+lColumnName+" = ?", lStatus).Find(&lClientResp.GetClientRec)
 				// lResult := lGormDb.Preload("TradesArr").Preload("BankDetail").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)
 				// lResult := lGormDb.Preload("TradesArr").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)
 

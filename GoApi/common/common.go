@@ -7,3 +7,10 @@ const (
 	Approved    = "Approved"
 	Rejected    = "Rejected"
 )
+
+func ValidateUserRole(lRole string) bool {
+	if lRole == "" || lRole != "BO" || lRole != "B" || lRole != "APPR" {
+		return false
+	}
+	return true
+}
