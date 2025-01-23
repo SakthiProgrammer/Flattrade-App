@@ -1,0 +1,4 @@
+2025/01/23 09:39:12 GetClientFullDetails-(+)
+2025/01/23 09:39:12 Database connection established successfully.
+2025/01/23 09:39:12 TGCFD-002 Error 1146 (42S02): Table 'training.get_client_recs' doesn't exist
+2025/01/23 09:39:12 GetClientFullDetails-(-)

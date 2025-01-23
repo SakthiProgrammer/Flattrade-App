@@ -1,0 +1,13 @@
+2025/01/23 10:25:28 GetClients-(+)
+2025/01/23 10:25:28 CGCS-004 Invalid Method
+2025/01/23 10:25:28 GetClients-(-)
+2025/01/23 10:25:28 GetClients-(+)
+2025/01/23 10:25:28 Database connection established successfully.
+2025/01/23 10:25:28 strToInt-(+)
+2025/01/23 10:25:28 strToInt-(-)
+2025/01/23 10:25:28 Successfully Get
+2025/01/23 10:25:28 GetClients-(-)
+2025/01/23 10:25:28 GetStocks-(+)
+2025/01/23 10:25:28 Database connection established successfully.
+2025/01/23 10:25:28 Successfully Get
+2025/01/23 10:25:28 GetStocks-(-)

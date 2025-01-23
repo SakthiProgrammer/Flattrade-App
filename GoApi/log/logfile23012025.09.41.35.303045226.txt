@@ -1,0 +1,8 @@
+2025/01/23 09:41:37 GetClientFullDetails-(+)
+2025/01/23 09:41:37 Database connection established successfully.
+2025/01/23 09:41:37 TGCFD-002 record not found
+2025/01/23 09:41:37 GetClientFullDetails-(-)
+2025/01/23 09:41:43 GetClientFullDetails-(+)
+2025/01/23 09:41:43 Database connection established successfully.
+2025/01/23 09:41:43 TGCFD-002 BankRec: unsupported relations for schema GetClientRec
+2025/01/23 09:41:43 GetClientFullDetails-(-)

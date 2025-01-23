@@ -1,0 +1,13 @@
+2025/01/23 10:24:57 GetClients-(+)
+2025/01/23 10:24:57 CGCS-004 Invalid Method
+2025/01/23 10:24:57 GetClients-(-)
+2025/01/23 10:24:57 GetClients-(+)
+2025/01/23 10:24:57 Database connection established successfully.
+2025/01/23 10:24:57 strToInt-(+)
+2025/01/23 10:24:57 strToInt-(-)
+2025/01/23 10:24:57 Successfully Get
+2025/01/23 10:24:57 GetClients-(-)
+2025/01/23 10:24:58 GetStocks-(+)
+2025/01/23 10:24:58 Database connection established successfully.
+2025/01/23 10:24:58 SGS-002 sql: Scan error on column index 6, name "created_at": unsupported Scan, storing driver.Value type []uint8 into type *time.Time; sql: Scan error on column index 6, name "created_at": unsupported Scan, storing driver.Value type []uint8 into type *time.Time; sql: Scan error on column index 6, name "created_at": unsupported Scan, storing driver.Value type []uint8 into type *time.Time; sql: Scan error on column index 6, name "created_at": unsupported Scan, storing driver.Value type []uint8 into type *time.Time; sql: Scan error on column index 6, name "created_at": unsupported Scan, storing driver.Value type []uint8 into type *time.Time; sql: Scan error on column index 6, name "created_at": unsupported Scan, storing driver.Value type []uint8 into type *time.Time; sql: Scan error on column index 6, name "created_at": unsupported Scan, storing driver.Value type []uint8 into type *time.Time; sql: Scan error on column index 6, name "created_at": unsupported Scan, storing driver.Value type []uint8 into type *time.Time; sql: Scan error on column index 6, name "created_at": unsupported Scan, storing driver.Value type []uint8 into type *time.Time; sql: Scan error on column index 6, name "created_at": unsupported Scan, storing driver.Value type []uint8 into type *time.Time
+2025/01/23 10:24:58 GetStocks-(-)

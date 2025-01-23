@@ -1,0 +1,4 @@
+2025/01/23 09:36:18 GetClientFullDetails-(+)
+2025/01/23 09:36:18 Database connection established successfully.
+2025/01/23 09:36:18 TGCFD-002 invalid field found for struct flattrade/apps/trade.GetClientRec's field TradesArr: define a valid foreign key for relations or implement the Valuer/Scanner interface
+2025/01/23 09:36:18 GetClientFullDetails-(-)

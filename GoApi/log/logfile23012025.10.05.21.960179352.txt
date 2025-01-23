@@ -1,0 +1,4 @@
+2025/01/23 10:05:23 GetClientFullDetails-(+)
+2025/01/23 10:05:23 Database connection established successfully.
+2025/01/23 10:05:23 Successfully Get
+2025/01/23 10:05:23 GetClientFullDetails-(-)

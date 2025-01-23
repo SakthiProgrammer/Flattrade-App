@@ -1,0 +1,4 @@
+2025/01/23 09:44:27 GetClientFullDetails-(+)
+2025/01/23 09:44:27 Database connection established successfully.
+2025/01/23 09:44:27 TGCFD-002 Error 1146 (42S02): Table 'training.st_918_client_details' doesn't exist
+2025/01/23 09:44:27 GetClientFullDetails-(-)

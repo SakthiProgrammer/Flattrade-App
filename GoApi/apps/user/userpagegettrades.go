@@ -1,4 +1,4 @@
-package trade
+package user
 
 import (
 	"encoding/json"
@@ -22,6 +22,22 @@ import (
 // Created_At
 // Updated_By
 // Updated_At
+
+type GetStockRec struct {
+	StockID    uint    `json:"stock_id" gorm:"column:stock_id"`
+	StockName  string  `json:"stock_name" gorm:"column:stock_name"`
+	StockPrice float64 `json:"stock_price" gorm:"column:stock_price"`
+	Segment    string  `json:"segment" gorm:"column:segment"`
+	ISIN       string  `json:"isin" gorm:"column:isin"`
+	// CreatedBy  string  `json:"created_by" gorm:"column:created_by"`
+	// CreatedAt  string  `json:"created_at" gorm:"column:created_at"`
+	// UpdatedBy  string  `json:"updated_by" gorm:"column:updated_by"`
+	// UpdatedAt  string  `json:"updated_at" gorm:"column:updated_at"`
+}
+
+func (GetStockRec) TableName() string {
+	return "st_918_stock_table"
+}
 
 /* ------ */
 
@@ -79,16 +95,16 @@ func (GetBankRec) TableName() string {
 // password
 // unique_id
 type GetClientRec struct {
-	ClientID    uint       `json:"client_id" gorm:"column:client_id"`
-	FirstName   string     `json:"first_name" gorm:"column:first_name"`
-	LastName    string     `json:"last_name" gorm:"column:last_name"`
-	Email       string     `json:"email" gorm:"column:email"`
-	BankID      uint       `json:"-" gorm:"column:bank_id"`
-	PhoneNumber string     `json:"phone_number" gorm:"column:phone_number"`
-	PanNumber   string     `json:"pan_number" gorm:"column:pan_number"`
-	NomineeName string     `json:"nominee_name" gorm:"column:nominee_name"`
-	BankDetail  GetBankRec `json:"bank_detail" gorm:"foreignKey:BankID;references:BankID"`
-	// UniqueId       string        `json:"unique_id" gorm:"column:unique_id"`
+	ClientID       uint          `json:"client_id" gorm:"column:client_id"`
+	FirstName      string        `json:"first_name" gorm:"column:first_name"`
+	LastName       string        `json:"last_name" gorm:"column:last_name"`
+	Email          string        `json:"email" gorm:"column:email"`
+	BankID         uint          `json:"-" gorm:"column:bank_id"`
+	PhoneNumber    string        `json:"phone_number" gorm:"column:phone_number"`
+	PanNumber      string        `json:"pan_number" gorm:"column:pan_number"`
+	NomineeName    string        `json:"nominee_name" gorm:"column:nominee_name"`
+	BankDetail     GetBankRec    `json:"bank_detail" gorm:"foreignKey:BankID;references:BankID"`
+	UniqueId       string        `json:"unique_id" gorm:"column:unique_id"`
 	BankAccount    string        `json:"bank_account" gorm:"column:bank_account"`
 	KycIsCompleted string        `json:"kyc_is_completed" gorm:"column:kyc_iScompleted"`
 	TradesArr      []GetTradeRec `json:"trade_details" gorm:"foreignKey:ClientID;references:ClientID"`
@@ -104,27 +120,28 @@ type GetClientResp struct {
 	ErrMsg       string `json:"errMsg"`
 }
 
-func GetClientFullDetails(w http.ResponseWriter, r *http.Request) {
+func ClientTradeFullDetails(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
-	w.Header().Set("Access-Control-Allow-Headers", "USERID, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
+	w.Header().Set("Access-Control-Allow-Headers", "ROLE, USERID, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 	w.Header().Set("Content-Type", "application/json")
 
-	log.Println("GetClientFullDetails-(+)")
+	log.Println("ClientTradeFullDetails-(+)")
 
 	// var lClient GetClientRec
 	var lClientResp GetClientResp
 
 	lClientResp.Status = common.SuccessCode
 
+	lUserRole := r.Header.Get("ROLE")
 	lUserId := r.Header.Get("USERID")
 
 	if r.Method == http.MethodGet {
 
-		if lUserId == "" {
+		if lUserId == "" && lUserRole == "" {
 
 			lClientResp.Status = common.ErrorCode
-			lClientResp.ErrMsg = "Provide USERID in Header"
+			lClientResp.ErrMsg = "Provide USERID & Role in Header"
 
 		} else {
 			lGormDb, lErr := gormdb.GormDBConnection()
@@ -134,17 +151,17 @@ func GetClientFullDetails(w http.ResponseWriter, r *http.Request) {
 			defer lSql.Close()
 
 			if lErr != nil {
-				log.Println("TGCFD-001", lErr.Error())
+				log.Println("UCTFD-001", lErr.Error())
 				lClientResp.Status = common.ErrorCode
 				lClientResp.ErrMsg = lErr.Error()
 
 			} else {
-				// lResult := lGormDb.Preload("TradesArr").Preload("BankRec").Where("client_id = ? AND trades_arr.back_officer_approval = ?", lUserId, "approved").First(&lClient)
-				lResult := lGormDb.Preload("TradesArr").Preload("BankDetail").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)
+				lResult := lGormDb.Preload("TradesArr").Preload("BankRec").Where("client_id = ? AND trades_arr.back_officer_approval = ?", lUserId, "approved").First(&lClientResp.GetClientRec)
+				// lResult := lGormDb.Preload("TradesArr").Preload("BankDetail").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)
 				// lResult := lGormDb.Preload("TradesArr").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)
 
 				if lResult.Error != nil {
-					log.Println("TGCFD-002", lResult.Error)
+					log.Println("UCTFD-002", lResult.Error)
 					lClientResp.ErrMsg = lResult.Error.Error()
 					lClientResp.Status = common.ErrorCode
 				} else {
@@ -161,12 +178,12 @@ func GetClientFullDetails(w http.ResponseWriter, r *http.Request) {
 	lData, lErr := json.Marshal(lClientResp)
 
 	if lErr != nil {
-		log.Println("TGCFD-", lErr.Error())
+		log.Println("UCTFD-003", lErr.Error())
 		lClientResp.ErrMsg = lErr.Error()
 		lClientResp.Status = common.ErrorCode
 	} else {
 		fmt.Fprintf(w, string(lData))
 	}
 
-	log.Println("GetClientFullDetails-(-)")
+	log.Println("ClientTradeFullDetails-(-)")
 }

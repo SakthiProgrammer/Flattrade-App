@@ -43,6 +43,7 @@ func main() {
 	http.HandleFunc("/getusers", user.GetUsers)
 	http.HandleFunc("/updateuser", user.UpdateUser)
 	http.HandleFunc("/createtrade", trade.CreateTrade)
+	http.HandleFunc("/getclienttrades", trade.GetClientFullDetails)
 
 	http.ListenAndServe(":29091", nil)
 }

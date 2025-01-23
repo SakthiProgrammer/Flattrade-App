@@ -1,0 +1,44 @@
+2025/01/23 10:21:47 LoginUser-(+)
+2025/01/23 10:21:47 LoginUser-(-)
+2025/01/23 10:21:47 LoginUser-(+)
+2025/01/23 10:21:47 validate-(+)
+2025/01/23 10:21:47 validate-(-)
+2025/01/23 10:21:47 checkUser-(+)
+2025/01/23 10:21:47 Database connection established successfully.
+2025/01/23 10:21:47 checkUser-(-)
+2025/01/23 10:21:47 LoginUser-(-)
+2025/01/23 10:21:47 GetClients-(+)
+2025/01/23 10:21:47 CGCS-004 Invalid Method
+2025/01/23 10:21:47 GetClients-(-)
+2025/01/23 10:21:47 GetClients-(+)
+2025/01/23 10:21:47 Database connection established successfully.
+2025/01/23 10:21:47 strToInt-(+)
+2025/01/23 10:21:47 strToInt-(-)
+2025/01/23 10:21:47 Successfully Get
+2025/01/23 10:21:47 GetClients-(-)
+2025/01/23 10:21:47 GetStocks-(+)
+2025/01/23 10:21:47 Database connection established successfully.
+2025/01/23 10:21:47 Successfully Get
+2025/01/23 10:21:47 GetStocks-(-)
+2025/01/23 10:23:07 LoginUser-(+)
+2025/01/23 10:23:07 LoginUser-(-)
+2025/01/23 10:23:07 LoginUser-(+)
+2025/01/23 10:23:07 validate-(+)
+2025/01/23 10:23:07 validate-(-)
+2025/01/23 10:23:07 checkUser-(+)
+2025/01/23 10:23:07 Database connection established successfully.
+2025/01/23 10:23:07 checkUser-(-)
+2025/01/23 10:23:07 LoginUser-(-)
+2025/01/23 10:23:07 GetClients-(+)
+2025/01/23 10:23:07 CGCS-004 Invalid Method
+2025/01/23 10:23:07 GetClients-(-)
+2025/01/23 10:23:07 GetClients-(+)
+2025/01/23 10:23:07 Database connection established successfully.
+2025/01/23 10:23:07 strToInt-(+)
+2025/01/23 10:23:07 strToInt-(-)
+2025/01/23 10:23:07 Successfully Get
+2025/01/23 10:23:07 GetClients-(-)
+2025/01/23 10:23:07 GetStocks-(+)
+2025/01/23 10:23:07 Database connection established successfully.
+2025/01/23 10:23:07 Successfully Get
+2025/01/23 10:23:07 GetStocks-(-)
