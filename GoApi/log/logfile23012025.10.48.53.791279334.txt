@@ -1,0 +1,4 @@
+2025/01/23 10:49:04 ClientTradeFullDetails-(+)
+2025/01/23 10:49:04 Database connection established successfully.
+2025/01/23 10:49:04 UCTFD-002 Error 1054 (42S22): Unknown column 'trades_arr.back_officer_approval' in 'where clause'
+2025/01/23 10:49:04 ClientTradeFullDetails-(-)

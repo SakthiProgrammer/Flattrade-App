@@ -134,11 +134,11 @@ func ClientTradeFullDetails(w http.ResponseWriter, r *http.Request) {
 	lClientResp.Status = common.SuccessCode
 
 	lUserRole := r.Header.Get("ROLE")
-	lUserId := r.Header.Get("USERID")
+	// lUserId := r.Header.Get("USERID")
 
 	if r.Method == http.MethodGet {
 
-		if lUserId == "" && lUserRole == "" {
+		if lUserRole == "" {
 
 			lClientResp.Status = common.ErrorCode
 			lClientResp.ErrMsg = "Provide USERID & Role in Header"
@@ -156,7 +156,12 @@ func ClientTradeFullDetails(w http.ResponseWriter, r *http.Request) {
 				lClientResp.ErrMsg = lErr.Error()
 
 			} else {
-				lResult := lGormDb.Preload("TradesArr").Preload("BankRec").Where("client_id = ? AND trades_arr.back_officer_approval = ?", lUserId, "approved").First(&lClientResp.GetClientRec)
+
+				//  back_officer_approval_status
+				// biller_Approvel_status
+				// approver_Approvel_status
+				lResult := lGormDb.Joins("JOIN st_918_trade_table AS t ON t.client_id = st_918_client_table.client_id").
+					Where("t.back_officer_approval_status = ?", "").Find(&lClientResp.GetClientRec)
 				// lResult := lGormDb.Preload("TradesArr").Preload("BankDetail").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)
 				// lResult := lGormDb.Preload("TradesArr").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)
 

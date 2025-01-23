@@ -1,0 +1,4 @@
+2025/01/23 10:58:15 ClientTradeFullDetails-(+)
+2025/01/23 10:58:15 Database connection established successfully.
+2025/01/23 10:58:15 UCTFD-002 invalid field found for struct flattrade/apps/user.GetClientRec's field BankDetail: define a valid foreign key for relations or implement the Valuer/Scanner interface
+2025/01/23 10:58:15 ClientTradeFullDetails-(-)

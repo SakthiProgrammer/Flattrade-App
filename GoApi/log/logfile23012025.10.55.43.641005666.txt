@@ -1,0 +1,4 @@
+2025/01/23 10:55:44 ClientTradeFullDetails-(+)
+2025/01/23 10:55:44 Database connection established successfully.
+2025/01/23 10:55:44 UCTFD-002 record not found
+2025/01/23 10:55:44 ClientTradeFullDetails-(-)

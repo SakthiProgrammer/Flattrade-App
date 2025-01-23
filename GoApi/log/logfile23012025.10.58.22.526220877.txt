@@ -1,0 +1,4 @@
+2025/01/23 10:58:24 ClientTradeFullDetails-(+)
+2025/01/23 10:58:24 Database connection established successfully.
+2025/01/23 10:58:24 UCTFD-002 Error 1146 (42S02): Table 'training.get_client_recs' doesn't exist
+2025/01/23 10:58:24 ClientTradeFullDetails-(-)
