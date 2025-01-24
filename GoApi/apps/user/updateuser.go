@@ -47,8 +47,6 @@ func UpdateUser(w http.ResponseWriter, r *http.Request) {
 
 		lBody, lErr := io.ReadAll(r.Body)
 
-		lErr = json.Unmarshal(lBody, &lUser)
-
 		if lErr != nil {
 			log.Println("UUPU-001", lErr.Error())
 			lUserResp.Status = common.ErrorCode
@@ -56,14 +54,15 @@ func UpdateUser(w http.ResponseWriter, r *http.Request) {
 
 		} else {
 
-		}
+			lErr = json.Unmarshal(lBody, &lUser)
 
-		if lErr != nil {
-			log.Println("UUPU-002", lErr.Error())
-			lUserResp.Status = common.ErrorCode
-			lUserResp.ErrMsg = lErr.Error()
-		} else {
-			updateUserInDB(&lUserResp, &lUser)
+			if lErr != nil {
+				log.Println("UUPU-002", lErr.Error())
+				lUserResp.Status = common.ErrorCode
+				lUserResp.ErrMsg = lErr.Error()
+			} else {
+				updateUserInDB(&lUserResp, &lUser)
+			}
 		}
 
 	} else {

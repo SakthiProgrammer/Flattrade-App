@@ -52,25 +52,22 @@ func UpdateClient(w http.ResponseWriter, r *http.Request) {
 
 		lBody, lErr := io.ReadAll(r.Body)
 
-		lErr = json.Unmarshal(lBody, &lClient)
-
 		if lErr != nil {
 			log.Println("CUC-001", lErr.Error())
 			lClientResp.Status = common.ErrorCode
 			lClientResp.ErrMsg = lErr.Error()
 
 		} else {
+			lErr = json.Unmarshal(lBody, &lClient)
 
+			if lErr != nil {
+				log.Println("CUC-002", lErr.Error())
+				lClientResp.Status = common.ErrorCode
+				lClientResp.ErrMsg = lErr.Error()
+			} else {
+				updateClientInDB(&lClientResp, &lClient)
+			}
 		}
-
-		if lErr != nil {
-			log.Println("CUC-002", lErr.Error())
-			lClientResp.Status = common.ErrorCode
-			lClientResp.ErrMsg = lErr.Error()
-		} else {
-			updateClientInDB(&lClientResp, &lClient)
-		}
-
 	} else {
 
 		lClientResp.ErrMsg = "Invalid Method"

@@ -12,7 +12,7 @@ import (
 )
 
 type TradeStatusRec struct {
-	ClientID       uint   `json:"role"`
+	TradeID        uint   `json:trade_id`
 	Role           string `json:"role"`
 	UserID         string `json:"user_id` // for updated by
 	ApprovalStatus string `json:"status"`
@@ -32,8 +32,9 @@ type TradeStatusRec struct {
 
 type UpdateTradeResp struct {
 	// Trade  TradeStatusRec `json:"trade_id"`
-	Status string `json:"status" `
-	ErrMsg string `json:"status" `
+	TradeStatus TradeStatusRec `json:"trade_status" `
+	Status      string         `json:"status" `
+	ErrMsg      string         `json:"status" `
 }
 
 func UpdateTradeStatus(w http.ResponseWriter, r *http.Request) {
@@ -47,38 +48,39 @@ func UpdateTradeStatus(w http.ResponseWriter, r *http.Request) {
 
 	var lResp UpdateTradeResp
 	var lTrade TradeStatusRec
-
-	lResp.Status = common.SuccessCode
-
 	if r.Method != http.MethodPut {
 
 		lData, lErr := io.ReadAll(r.Body)
 
 		if lErr != nil {
 			log.Println("UUTS-001", lErr.Error())
-			lResp.Status = common.ErrorCode
 			lResp.ErrMsg = lErr.Error()
-		} else {
+			lResp.Status = common.ErrorCode
 
+		} else {
 			lErr = json.Unmarshal(lData, &lTrade)
 
-			if common.ValidateUserRole(lTrade.Role) {
+			if lErr != nil {
 
+				log.Println("UUTS-002", lErr.Error())
+				lResp.ErrMsg = lErr.Error()
 				lResp.Status = common.ErrorCode
-				lResp.ErrMsg = "Invalid UserRole"
-
 			} else {
 
 				if lErr != nil {
-					log.Println("UUTS-002", lErr.Error())
-					lResp.Status = common.ErrorCode
+					log.Println("UUTS-003", lErr.Error())
 					lResp.ErrMsg = lErr.Error()
+					lResp.Status = common.ErrorCode
 
 				} else {
-					updateTradeInDB(&lResp, lTrade)
+
+					updateTradeINDB(&lResp, lTrade)
+
 				}
+
 			}
 		}
+
 	} else {
 		lResp.Status = common.ErrorCode
 		lResp.ErrMsg = "Invalid Method"
@@ -87,7 +89,7 @@ func UpdateTradeStatus(w http.ResponseWriter, r *http.Request) {
 	lData, lErr := json.Marshal(lResp)
 
 	if lErr != nil {
-		log.Println("UCTFD-003", lErr.Error())
+		log.Println("UUTS-005", lErr.Error())
 		lResp.ErrMsg = lErr.Error()
 		lResp.Status = common.ErrorCode
 	} else {
@@ -98,50 +100,52 @@ func UpdateTradeStatus(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func updateTradeInDB(lResp *UpdateTradeResp, lTrade TradeStatusRec) {
-	log.Println("updateTradeInDB-(+)")
-	lGormDB, lErr := gormdb.GormDBConnection()
+func updateTradeINDB(lResp *UpdateTradeResp, lTrade TradeStatusRec) {
+
+	log.Println("updateTradeINDB-(+)")
+
+	lGormDb, lErr := gormdb.GormDBConnection()
 
 	if lErr != nil {
-		log.Println("UUTINDB-001", lErr.Error())
-		lResp.Status = common.ErrorCode
+		log.Println("UUTTINDB-001", lErr.Error())
 		lResp.ErrMsg = lErr.Error()
+		lResp.Status = common.ErrorCode
+
 	} else {
 
-		lColumn := "back_officer_approval_status"
-		lStatus := lTrade.ApprovalStatus
+		// back_officer_approval_status
+		// biller_Approvel_status
+		// approver_Approvel_status
+		lColumn := ""
 
-		if lTrade.Role == "BO" {
+		switch lTrade.Role {
+		case "BO":
 			lColumn = "back_officer_approval_status"
-			lStatus = lTrade.ApprovalStatus
-		} else if lTrade.Role == "B" {
+		case "B":
 			lColumn = "biller_Approvel_status"
-			lStatus = lTrade.ApprovalStatus
-		} else if lTrade.Role == "APPR" {
+		case "APPR":
 			lColumn = "approver_Approvel_status"
-			lStatus = lTrade.ApprovalStatus
+		default:
+			log.Println(lTrade.Role)
 		}
 
-		lResult := lGormDB.Table("st_918_trade_table").
-			Where("client_id = ?", lTrade.ClientID).
+		lResult := lGormDb.Table("st_918_trade_table").
+			Where("trade_id = ?", lTrade.TradeID).
 			Updates(map[string]interface{}{
-				lColumn:      lStatus,
+				lColumn:      lTrade.ApprovalStatus,
 				"updated_by": lTrade.UserID,
 				"updated_at": time.Now(),
 			})
 
 		if lResult.Error != nil {
-			log.Println("UUTINDB-003", lErr.Error())
+			log.Println("UUTTINDB-002", lResult.Error)
 			lResp.Status = common.ErrorCode
-			lResp.ErrMsg = lErr.Error()
-
+			lResp.ErrMsg = lResult.Error.Error()
 		} else {
-			fmt.Println("Success Approved")
-			fmt.Println("%+v", lTrade)
+			fmt.Println("%+v", lResp)
 		}
-
 	}
 
-	log.Println("updateTradeInDB-(-)")
+	log.Println("updateTradeINDB-(-)")
 
 }

@@ -47,25 +47,22 @@ func UpdateBank(w http.ResponseWriter, r *http.Request) {
 
 		lBody, lErr := io.ReadAll(r.Body)
 
-		lErr = json.Unmarshal(lBody, &lBank)
-
 		if lErr != nil {
 			log.Println("BUPB-001", lErr.Error())
 			lBankResp.Status = common.ErrorCode
 			lBankResp.ErrMsg = lErr.Error()
 
 		} else {
+			lErr = json.Unmarshal(lBody, &lBank)
 
+			if lErr != nil {
+				log.Println("")
+				lBankResp.Status = common.ErrorCode
+				lBankResp.ErrMsg = lErr.Error()
+			} else {
+				updateBankInDB(&lBankResp, &lBank)
+			}
 		}
-
-		if lErr != nil {
-			log.Println("")
-			lBankResp.Status = common.ErrorCode
-			lBankResp.ErrMsg = lErr.Error()
-		} else {
-			updateBankInDB(&lBankResp, &lBank)
-		}
-
 	} else {
 
 		lBankResp.ErrMsg = "Invalid Method"

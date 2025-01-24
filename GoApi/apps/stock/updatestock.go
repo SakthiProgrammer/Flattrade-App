@@ -61,16 +61,7 @@ func UpdateStock(w http.ResponseWriter, r *http.Request) {
 				lStockResp.Status = common.ErrorCode
 			} else {
 
-				if lErr != nil {
-					log.Println("SUPS-003", lErr.Error())
-					lStockResp.ErrMsg = lErr.Error()
-					lStockResp.Status = common.ErrorCode
-
-				} else {
-
-					updateClientInDB(&lStockResp, &lStock)
-
-				}
+				updateClientInDB(&lStockResp, &lStock)
 
 			}
 

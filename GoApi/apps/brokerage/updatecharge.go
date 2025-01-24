@@ -46,8 +46,6 @@ func UpdateChage(w http.ResponseWriter, r *http.Request) {
 
 		lBody, lErr := io.ReadAll(r.Body)
 
-		lErr = json.Unmarshal(lBody, &lCharge)
-
 		if lErr != nil {
 			log.Println("BUC-001", lErr.Error())
 			lChargeResp.Status = common.ErrorCode
@@ -55,16 +53,17 @@ func UpdateChage(w http.ResponseWriter, r *http.Request) {
 
 		} else {
 
-		}
+			lErr = json.Unmarshal(lBody, &lCharge)
 
-		if lErr != nil {
-			log.Println("BUC-002", lErr.Error())
-			lChargeResp.Status = common.ErrorCode
-			lChargeResp.ErrMsg = lErr.Error()
-		} else {
-			updateChargeInDB(&lChargeResp, &lCharge)
-		}
+			if lErr != nil {
+				log.Println("BUC-002", lErr.Error())
+				lChargeResp.Status = common.ErrorCode
+				lChargeResp.ErrMsg = lErr.Error()
+			} else {
+				updateChargeInDB(&lChargeResp, &lCharge)
+			}
 
+		}
 	} else {
 
 		lChargeResp.ErrMsg = "Invalid Method"
