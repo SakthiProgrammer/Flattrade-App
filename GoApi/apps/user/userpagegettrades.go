@@ -180,11 +180,11 @@ func ClientTradeFullDetails(w http.ResponseWriter, r *http.Request) {
 				var lColumnName string
 				var lStatus string
 				lColumnName = "back_officer_approval_status"
-				if lUserRole == "BO" {
+				if lUserRole == common.BackOfficer {
 					lStatus = common.Pending
-				} else if lUserRole == "B" {
+				} else if lUserRole == common.Biller {
 					lStatus = common.Approved
-				} else if lUserRole == "APPR" {
+				} else if lUserRole == common.Approver {
 					lColumnName = "biller_Approvel_status"
 					lStatus = common.Approved
 				}

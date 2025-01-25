@@ -13,15 +13,16 @@ import (
 )
 
 type CreateUserRec struct {
-	ID        int       `json:"id" gorm:"column:user_id"`
-	UserName  string    `json:"user_name" gorm:"column:username"`
-	Role      string    `json:"role" gorm:"column:role"`
-	Status    string    `json:"status" gorm:"column:status"`
-	Password  string    `json:"password" gorm:"column:password"`
-	CreatedBy string    `json:"created_by" gorm:"column:Created_By"`
-	CreatedAt time.Time `json:"created_at" gorm:"column:Created_At"`
-	UpdatedBy string    `json:"updated_by" gorm:"column:Updated_By"`
-	UpdatedAt time.Time `json:"updated_at" gorm:"column:Updated_At"`
+	ID           int       `json:"id" gorm:"column:user_id"`
+	UserName     string    `json:"user_name" gorm:"column:username"`
+	Role         string    `json:"role" gorm:"column:role"`
+	Status       string    `json:"status" gorm:"column:status"`
+	UniqueUserID string    `json:"user_id" gorm:"column:unique_user_id"` // this field to create in db pending
+	Password     string    `json:"password" gorm:"column:password"`
+	CreatedBy    string    `json:"created_by" gorm:"column:Created_By"`
+	CreatedAt    time.Time `json:"created_at" gorm:"column:Created_At"`
+	UpdatedBy    string    `json:"updated_by" gorm:"column:Updated_By"`
+	UpdatedAt    time.Time `json:"updated_at" gorm:"column:Updated_At"`
 }
 
 type CreateUserResp struct {
@@ -115,6 +116,36 @@ func createUserInDB(lUserResp *CreateUserResp, lUser *CreateUserRec) {
 		lUser.CreatedAt = lCurrTime
 		lUser.UpdatedBy = lName
 		lUser.UpdatedAt = lCurrTime
+
+		var lUserCount int64
+		// var lUserRo
+
+		// switch lUser.Role {
+		// case common.BackOfficer:
+
+		// }
+
+		lErr = lGormDB.Table("st_918_config_users_table").
+			Where("role = ?", lUser.Role).
+			Count(&lUserCount).Error
+
+		// if lUser
+
+		// handle this error later
+
+		var lRoleForFormat string
+
+		if lUser.Role == common.Approver {
+			lRoleForFormat = "APPR"
+		} else if lUser.Role == common.Biller {
+			lRoleForFormat = "B"
+		} else if lUser.Role == common.BackOfficer {
+			lRoleForFormat = "BO"
+		}
+
+		lUserFormatedID := common.GenerateUniqueID(int(lUserCount), lRoleForFormat)
+
+		lUser.UniqueUserID = lUserFormatedID
 
 		lResult := lGormDB.Table("st_918_config_users_table").Create(&lUser)
 

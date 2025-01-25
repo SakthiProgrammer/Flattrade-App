@@ -112,11 +112,11 @@ func updateTradeINDB(lResp *UpdateTradeResp, lTrade TradeStatusRec) {
 		lColumn := ""
 
 		switch lTrade.Role {
-		case "BO":
+		case common.BackOfficer:
 			lColumn = "back_officer_approval_status"
-		case "B":
+		case common.Biller:
 			lColumn = "biller_Approvel_status"
-		case "APPR":
+		case common.Approver:
 			lColumn = "approver_Approvel_status"
 		default:
 			log.Println(lTrade.Role)
