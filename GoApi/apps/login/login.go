@@ -44,55 +44,55 @@ func LoginAll(w http.ResponseWriter, r *http.Request) {
 	var lLoginResponse LoginResponse
 	var lUser Login
 
-	lRole := r.Header.Get("ROLE")
+	// lRole := r.Header.Get("ROLE")
 
-	lRole = strings.ToUpper(lRole)
+	// lRole = strings.ToUpper(lRole)
 
-	if isRoleValid(lRole) {
-		lLoginResponse.ErrMsg = "Provide a role in header"
-		lLoginResponse.Status = common.ErrorCode
+	// if isRoleValid(lRole) {
+	// 	lLoginResponse.ErrMsg = "Provide a role in header"
+	// 	lLoginResponse.Status = common.ErrorCode
 
-	} else {
+	// } else {
 
-		lLoginResponse.Status = common.SuccessCode
+	lLoginResponse.Status = common.SuccessCode
 
-		if r.Method == http.MethodPost {
+	if r.Method == http.MethodPost {
 
-			lBody, lErr := io.ReadAll(r.Body)
+		lBody, lErr := io.ReadAll(r.Body)
+
+		if lErr != nil {
+
+			log.Println("LULU-001", lErr.Error())
+			lLoginResponse.ErrMsg = lErr.Error()
+			lLoginResponse.Status = common.ErrorCode
+
+		} else {
+
+			lErr := json.Unmarshal(lBody, &lUser)
+
+			lUserPassword := lUser.Password
 
 			if lErr != nil {
 
-				log.Println("LULU-001", lErr.Error())
+				log.Println("LULU-002", lErr.Error())
 				lLoginResponse.ErrMsg = lErr.Error()
 				lLoginResponse.Status = common.ErrorCode
 
 			} else {
+				if validate(&lLoginResponse, &lUser) {
 
-				lErr := json.Unmarshal(lBody, &lUser)
-
-				lUserPassword := lUser.Password
-
-				if lErr != nil {
-
-					log.Println("LULU-002", lErr.Error())
-					lLoginResponse.ErrMsg = lErr.Error()
-					lLoginResponse.Status = common.ErrorCode
-
-				} else {
-					if validate(&lLoginResponse, &lUser) {
-
-						checkUser(&lLoginResponse, &lUser, lUserPassword, lRole, r)
-
-					}
+					checkUser(&lLoginResponse, &lUser, lUserPassword, r)
 
 				}
-			}
 
-		} else {
-			lLoginResponse.Status = common.ErrorCode
-			lLoginResponse.ErrMsg = "Invalid Method"
+			}
 		}
+
+	} else {
+		lLoginResponse.Status = common.ErrorCode
+		lLoginResponse.ErrMsg = "Invalid Method"
 	}
+	// }
 
 	lData, lErr := json.Marshal(lLoginResponse)
 
@@ -142,15 +142,18 @@ func validate(lLoginResponse *LoginResponse, lUser *Login) bool {
 
 /* ========================================== For check in db user is Available or Not ============================================ */
 
-func checkUser(lLoginResponse *LoginResponse, lUser *Login, lUserPassword string, lRole string, r *http.Request) {
+func checkUser(lLoginResponse *LoginResponse, lUser *Login, lUserPassword string, r *http.Request) {
 
 	log.Println("checkUser-(+)")
 
-	if lRole == "A" {
+	/* ================   For Check Admin   ============= */
+	if strings.HasPrefix(lUser.UserId, "AD") {
 
-		checkAdmin(lLoginResponse, lUser, lRole)
+		checkAdmin(lLoginResponse, lUser)
 
 	} else {
+
+		// } else {
 
 		lGormDB, lErr := gormdb.GormDBConnection()
 
@@ -172,14 +175,18 @@ func checkUser(lLoginResponse *LoginResponse, lUser *Login, lUserPassword string
 			var lTableName string
 
 			var lResult *gorm.DB
+			/* ================   For Check Client   ============= */
 
-			if lRole == "C" {
+			if strings.HasPrefix(lUser.UserId, "FT000") {
 
 				lTableName = "st_918_client_table"
 
 				lResult = lGormDB.Table(lTableName).Select("password").Where("unique_id=?", lUser.UserId).Find(&lUser.Password)
 
-			} else if lRole == "U" {
+			} else if strings.HasPrefix(lUser.UserId, "UFT") ||
+				/* ================   For Check User   ============= */
+				strings.HasPrefix(lUser.UserId, "BFT") ||
+				strings.HasPrefix(lUser.UserId, "APFT") {
 
 				/*  ==============USER-ROLES=============
 					1. BO  -  Back Officer
@@ -187,42 +194,51 @@ func checkUser(lLoginResponse *LoginResponse, lUser *Login, lUserPassword string
 					3. APR - Approver
 				    ===================================== */
 
-				lUserRole := r.Header.Get("USERROLE")
-				lUserRole = strings.ToUpper(lUserRole)
+				// lUserRole := r.Header.Get("USERROLE")
+				// lUserRole = strings.ToUpper(lUserRole)
 
-				if isValidUserRole(lUserRole) {
+				// if isValidUserRole(lUserRole) {
 
-					lLoginResponse.ErrMsg = "Provide a UserRole in header - B|BO|APR"
-					lLoginResponse.Status = common.ErrorCode
-					return
+				// 	lLoginResponse.ErrMsg = "Provide a UserRole in header - B|BO|APPR"
+				// 	lLoginResponse.Status = common.ErrorCode
+				// 	return
 
-				} else {
+				// } else {
 
-					lTableName = "st_918_config_users_table"
+				var lUserRole string
 
-					lResult = lGormDB.Table(lTableName).Select("password").Where("user_id=?", lUser.UserId).Where("role=?", lUserRole).Find(&lUser.Password)
-
+				if strings.HasPrefix(lUser.UserId, "BFT") {
+					lUserRole = common.Biller
+				} else if strings.HasPrefix(lUser.UserId, "BOFT") {
+					lUserRole = common.BackOfficer
+				} else if strings.HasPrefix(lUser.UserId, "APFT") {
+					lUserRole = common.Approver
 				}
 
-			}
+				lTableName = "st_918_config_users_table"
+				// this user id is going to be change in future
+				lResult = lGormDB.Table(lTableName).Select("password").Where("user_id=?", lUser.UserId).Where("role=?", lUserRole).Find(&lUser.Password)
 
-			if lResult != nil && lResult.Error != nil || lResult.RowsAffected == 0 {
-				log.Println("LCU-002", lResult.Error)
-				lLoginResponse.Status = common.ErrorCode
-				lLoginResponse.ErrMsg = "Invalid User Id"
+				// }
 
-			} else {
-
-				if lUser.Password != lUserPassword {
-
+				if lResult != nil && lResult.Error != nil || lResult.RowsAffected == 0 {
+					log.Println("LCU-002", lResult.Error)
 					lLoginResponse.Status = common.ErrorCode
-					lLoginResponse.ErrMsg = "Password is Incorrect"
+					lLoginResponse.ErrMsg = "Invalid User Id"
 
 				} else {
 
-					lLoginResponse.Status = common.SuccessCode
-					lLoginResponse.ErrMsg = ""
-					fmt.Println("Login Successfully")
+					if lUser.Password != lUserPassword {
+
+						lLoginResponse.Status = common.ErrorCode
+						lLoginResponse.ErrMsg = "Password is Incorrect"
+
+					} else {
+
+						lLoginResponse.Status = common.SuccessCode
+						lLoginResponse.ErrMsg = ""
+						fmt.Println("Login Successfully")
+					}
 				}
 			}
 		}
@@ -239,7 +255,7 @@ func isValidUserRole(lUserRole string) bool {
 
 	log.Println("isValidUserRole-(-)")
 
-	if lUserRole != "BO" && lUserRole != "B" && lUserRole != "APR" {
+	if lUserRole != common.BackOfficer && lUserRole != common.Biller && lUserRole != common.Approver {
 		return true
 	}
 	log.Println("isValidUserRole-(-)")
@@ -248,7 +264,7 @@ func isValidUserRole(lUserRole string) bool {
 
 /* ======================= FOR check Admin id & Password in toml file =============================== */
 
-func checkAdmin(lLoginResponse *LoginResponse, lUser *Login, lRole string) {
+func checkAdmin(lLoginResponse *LoginResponse, lUser *Login) {
 
 	log.Println("checkAdmin-(+)")
 	config := genpkg.ReadTomlConfig("./toml/dbconfig.toml")
