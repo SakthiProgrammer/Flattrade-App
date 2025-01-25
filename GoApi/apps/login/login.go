@@ -217,7 +217,7 @@ func checkUser(lLoginResponse *LoginResponse, lUser *Login, lUserPassword string
 
 				lTableName = "st_918_config_users_table"
 				// this user id is going to be change in future
-				lResult = lGormDB.Table(lTableName).Select("password").Where("user_id=?", lUser.UserId).Where("role=?", lUserRole).Find(&lUser.Password)
+				lResult = lGormDB.Table(lTableName).Select("password").Where("user_id=?", lUser.UserId).Where("role=? AND status = ?", lUserRole, "ACTIVE").Find(&lUser.Password)
 
 				// }
 
