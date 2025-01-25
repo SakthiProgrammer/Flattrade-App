@@ -160,23 +160,21 @@ func GetClientFullDetails(w http.ResponseWriter, r *http.Request) {
 
 			} else {
 
-				// var pendingTrades []GetTradeRec
 				lGormDb.Table("st_918_trade_table").
-					Preload("StockRec"). // Preload stock details for each trade
+					Preload("StockRec").
 					Where("client_id = ? AND ("+
 						"back_officer_approval_status = ? OR "+
 						"biller_Approvel_status = ? OR "+
-						"approver_Approvel_status = ?)", lUserId, "Pending", "Pending", "Pending").
+						"approver_Approvel_status = ?)", lUserId, common.Pending, common.Pending, common.Pending).
 					Find(&lClientResp.PendingTrade)
 
-				// var historyTrades []GetTradeRec
 				lGormDb.Table("st_918_trade_table").
-					Preload("StockRec"). // Preload stock details for each trade
+					Preload("StockRec").
 					Where("client_id = ? AND "+
-						"(back_officer_approval_status = ? OR back_officer_approval_status = ?) AND "+
-						"(biller_Approvel_status = ? OR biller_Approvel_status = ?) AND "+
-						"(approver_Approvel_status = ? OR approver_Approvel_status = ?)", lUserId,
-						"Rejected", "Approved", "Rejected", "Approved", "Rejected", "Approved").
+						"back_officer_approval_status != ? AND "+
+						"biller_Approvel_status != ?   AND "+
+						"approver_Approvel_status != ?)", lUserId,
+						common.Pending, common.Pending, common.Pending).
 					Find(&lClientResp.HistoryTrade)
 
 				// lClientResp.GetClientRec = GetClientRec{
@@ -187,14 +185,13 @@ func GetClientFullDetails(w http.ResponseWriter, r *http.Request) {
 				// Query for client details (including BankDetail)
 				lResult := lGormDb.Preload("BankDetail").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)
 
-				// Handle errors or success
 				if lResult.Error != nil {
 					log.Println("TGCFD-002", lResult.Error)
 					lClientResp.ErrMsg = lResult.Error.Error()
 					lClientResp.Status = common.ErrorCode
 				} else {
-					log.Println("Successfully retrieved client details.")
-					fmt.Printf("%+v\n", lClientResp)
+					fmt.Printf("%+v", lClientResp)
+					lClientResp.Status = common.SuccessCode
 				}
 			}
 		}
@@ -206,7 +203,7 @@ func GetClientFullDetails(w http.ResponseWriter, r *http.Request) {
 	lData, lErr := json.Marshal(lClientResp)
 
 	if lErr != nil {
-		log.Println("TGCFD-", lErr.Error())
+		log.Println("TGCFD-3", lErr.Error())
 		lClientResp.ErrMsg = lErr.Error()
 		lClientResp.Status = common.ErrorCode
 	} else {

@@ -13,7 +13,12 @@ DBName = "training"
 AdminId = "AD-0012"
 AdminPassword = "admin@143"
 
-# ======= Unique User Id Format ====
+# ======= Unique Client Id Format ====
 
 UniqueId = "FT000"
+
+BillerUniqueId = "BFT"
+BackOfficerUniqueId = "BOFT"
+ApproverUniqueId = "APFT"
+
 
