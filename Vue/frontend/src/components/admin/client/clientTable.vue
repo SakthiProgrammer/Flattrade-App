@@ -8,13 +8,16 @@
         <template v-slot:item.s_no="{ index }">
           {{ index + 1 }}
         </template>
+        <template v-slot:item.name ="{ item }">
+          {{item.first_name +" "+ item.last_name}}
+        </template>
 
 
-        <template v-slot:item.kyc_is_completed="{ item }">
+        <!-- <template v-slot:item.kyc_is_completed="{ item }">
           <v-chip :color="item.kyc_is_completed ? 'green' : 'red'" dark small>
             {{ item.kyc_is_completed ? 'Completed' : 'Pending' }}
           </v-chip>
-        </template>
+        </template> -->
 
 
         <template v-slot:item.action="{ item }">
@@ -41,12 +44,12 @@ export default {
       headers: [
         { text: "S.No.", value: "s_no", align: "start", sortable: false },
         { text: "Client ID", value: "unique_id", align: "start" },
+        { text: "Name", value: "name" },
         { text: "Phone Number", value: "phone_number" },
-        { text: "First Name", value: "first_name" },
         // { text: "Last Name", value: "last_name" },
         { text: "PAN Number", value: "pan_number" },
         // { text: "Nominee Name", value: "nominee_name" },
-        { text: "KYC Status", value: "kyc_is_completed" },
+        //{ text: "KYC Status", value: "kyc_is_completed" },
         { text: "Bank Account", value: "bank_account" },
         { text: "Email", value: "email" },
         { text: "Action", value: "action", sortable: false },

@@ -20,10 +20,12 @@
     </v-row>
     <v-row>
       <v-col>
-        <PendingAndHistoryTable />
+        <PendingAndHistoryTable :TradeData="tradedetails" />
       </v-col>
     </v-row>
 
+    <!-- {{ client }} -->
+    <!-- {{ tradedetails }} -->
   </v-container>
 </template>
 
@@ -37,7 +39,11 @@ export default {
   data() {
     return {
       balance: 133231,
-      client: []
+      client: [],
+      tradedetails: {
+        pending: [],
+        history: []
+      }
     };
   },
   components: {
@@ -65,23 +71,33 @@ export default {
   },
 
 
-  /* ================= Getting Client Id to send in getuser&stock for purpose ==================== */
+  /* ================= Getting Client Id to send in getuser & stock for purpose ==================== */
   beforeMount() {
-
     let currentUserId = this.getUserId();
 
-    // let head = { "ID": currentUserId }
     EventService.GetClientById(currentUserId)
       .then((res) => {
         if (res.data.status == "S") {
-          this.client = res.data.client_details[0]
+          this.client = res.data.client_details;
+
+          console.log(res.data.client_details);
+
+          this.tradedetails = {
+            pending: res.data.client_details.pending,
+            history: res.data.client_details.history
+          };
+
+          // console.log('Pending:', this.tradedetails.pending);
+          // console.log('History:', this.tradedetails.history);
+
         } else {
-          console.log(res.data.errMsg)
+          console.log(res.data.errMsg);
         }
       })
-    console.log(currentUserId);
-    // console.log(userId);
-  },
+      .catch(error => {
+        console.error("Error fetching data: ", error);
+      });
+  }
 
 }
 </script>

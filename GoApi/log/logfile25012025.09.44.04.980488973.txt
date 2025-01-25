@@ -1,0 +1,46 @@
+2025/01/25 09:44:08 ClientTradeFullDetails-(+)
+2025/01/25 09:44:08 Database connection established successfully.
+2025/01/25 09:44:08 Successfully Get
+2025/01/25 09:44:08 ClientTradeFullDetails-(-)
+2025/01/25 09:44:20 ClientTradeFullDetails-(+)
+2025/01/25 09:44:20 Database connection established successfully.
+2025/01/25 09:44:20 Successfully Get
+2025/01/25 09:44:20 ClientTradeFullDetails-(-)
+2025/01/25 09:44:33 ClientTradeFullDetails-(+)
+2025/01/25 09:44:33 Database connection established successfully.
+2025/01/25 09:44:33 Successfully Get
+2025/01/25 09:44:33 ClientTradeFullDetails-(-)
+2025/01/25 09:44:43 ClientTradeFullDetails-(+)
+2025/01/25 09:44:43 Database connection established successfully.
+2025/01/25 09:44:43 Successfully Get
+2025/01/25 09:44:43 ClientTradeFullDetails-(-)
+2025/01/25 09:44:53 ClientTradeFullDetails-(+)
+2025/01/25 09:44:53 Database connection established successfully.
+2025/01/25 09:44:53 Successfully Get
+2025/01/25 09:44:53 ClientTradeFullDetails-(-)
+2025/01/25 09:45:03 ClientTradeFullDetails-(+)
+2025/01/25 09:45:03 Database connection established successfully.
+2025/01/25 09:45:03 Successfully Get
+2025/01/25 09:45:03 ClientTradeFullDetails-(-)
+2025/01/25 09:45:12 ClientTradeFullDetails-(+)
+2025/01/25 09:45:12 Database connection established successfully.
+2025/01/25 09:45:12 Successfully Get
+2025/01/25 09:45:12 ClientTradeFullDetails-(-)
+2025/01/25 09:46:49 ClientTradeFullDetails-(+)
+2025/01/25 09:46:49 Database connection established successfully.
+2025/01/25 09:46:49 Successfully Get
+2025/01/25 09:46:49 ClientTradeFullDetails-(-)
+2025/01/25 09:48:06 GetClientFullDetails-(+)
+2025/01/25 09:48:06 GetClientFullDetails-(-)
+2025/01/25 09:48:17 GetClientFullDetails-(+)
+2025/01/25 09:48:17 Database connection established successfully.
+2025/01/25 09:48:17 Successfully Get
+2025/01/25 09:48:17 GetClientFullDetails-(-)
+2025/01/25 09:48:25 GetClientFullDetails-(+)
+2025/01/25 09:48:25 Database connection established successfully.
+2025/01/25 09:48:25 Successfully Get
+2025/01/25 09:48:25 GetClientFullDetails-(-)
+2025/01/25 09:48:32 GetClientFullDetails-(+)
+2025/01/25 09:48:32 Database connection established successfully.
+2025/01/25 09:48:32 Successfully Get
+2025/01/25 09:48:32 GetClientFullDetails-(-)

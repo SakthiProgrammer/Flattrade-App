@@ -66,18 +66,18 @@ func (GetTradeRec) TableName() string {
 // Created_By
 // Created_At
 // Updated_By
-// Updated_At
-type GetBankRec struct {
-	BankID     uint   `json:"-" gorm:"column:Id"`
-	BankName   string `json:"bank_name" gorm:"column:Bank_Name"`
-	BranchName string `json:"branch_name" gorm:"column:Branch_name"`
-	IFSCCode   string `json:"ifsc_code" gorm:"column:Ifsc_code"`
-	Address    string `json:"address" gorm:"column:Address"`
-}
+// // Updated_At
+// type GetBankRec struct {
+// 	BankID     uint   `json:"-" gorm:"column:Id"`
+// 	BankName   string `json:"bank_name" gorm:"column:Bank_Name"`
+// 	BranchName string `json:"branch_name" gorm:"column:Branch_name"`
+// 	IFSCCode   string `json:"ifsc_code" gorm:"column:Ifsc_code"`
+// 	Address    string `json:"address" gorm:"column:Address"`
+// }
 
-func (GetBankRec) TableName() string {
-	return "st_918_bank_details"
-}
+// func (GetBankRec) TableName() string {
+// 	return "st_918_bank_details"
+// }
 
 // client_id
 // first_name
@@ -96,15 +96,15 @@ func (GetBankRec) TableName() string {
 // password
 // unique_id
 type GetClientRec struct {
-	ClientID       uint          `json:"client_id" gorm:"column:client_id"`
-	FirstName      string        `json:"first_name" gorm:"column:first_name"`
-	LastName       string        `json:"last_name" gorm:"column:last_name"`
-	Email          string        `json:"email" gorm:"column:email"`
-	BankID         uint          `json:"-" gorm:"column:bank_id"`
-	PhoneNumber    string        `json:"phone_number" gorm:"column:phone_number"`
-	PanNumber      string        `json:"pan_number" gorm:"column:pan_number"`
-	NomineeName    string        `json:"nominee_name" gorm:"column:nominee_name"`
-	BankDetail     GetBankRec    `json:"bank_detail" gorm:"foreignKey:BankID;references:BankID"`
+	ClientID    uint   `json:"client_id" gorm:"column:client_id"`
+	FirstName   string `json:"first_name" gorm:"column:first_name"`
+	LastName    string `json:"last_name" gorm:"column:last_name"`
+	Email       string `json:"email" gorm:"column:email"`
+	BankID      uint   `json:"-" gorm:"column:bank_id"`
+	PhoneNumber string `json:"phone_number" gorm:"column:phone_number"`
+	PanNumber   string `json:"pan_number" gorm:"column:pan_number"`
+	NomineeName string `json:"nominee_name" gorm:"column:nominee_name"`
+	// BankDetail     GetBankRec    `json:"bank_detail" gorm:"foreignKey:BankID;references:BankID"`
 	UniqueId       string        `json:"unique_id" gorm:"column:unique_id"`
 	BankAccount    string        `json:"bank_account" gorm:"column:bank_account"`
 	KycIsCompleted string        `json:"kyc_is_completed" gorm:"column:kyc_iScompleted"`
@@ -124,7 +124,7 @@ type GetClientResp struct {
 func ClientTradeFullDetails(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
-	w.Header().Set("Access-Control-Allow-Headers", "ROLE, USERID, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
+	w.Header().Set("Access-Control-Allow-Headers", "ROLE, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 	w.Header().Set("Content-Type", "application/json")
 
 	log.Println("ClientTradeFullDetails-(+)")
@@ -140,12 +140,18 @@ func ClientTradeFullDetails(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
 
 		lUserRole = strings.ToUpper(lUserRole)
+		fmt.Println(lUserRole)
+
 		if common.ValidateUserRole(lUserRole) {
 
+			fmt.Println("helo")
 			lClientResp.Status = common.ErrorCode
-			lClientResp.ErrMsg = "Provide USERID & Role in Header"
+			lClientResp.ErrMsg = "Provide Role in Header"
 
 		} else {
+
+			fmt.Println("Hi")
+
 			lGormDb, lErr := gormdb.GormDBConnection()
 
 			lSql, _ := lGormDb.DB()
@@ -198,7 +204,7 @@ func ClientTradeFullDetails(w http.ResponseWriter, r *http.Request) {
 				Find(&lClientResp.GetClientRec)
 				*/
 
-				lResult := lGormDb.Table("st_918_client_table c").Joins("JOIN st_918_trade_table  AS t ON t.client_id = c.client_id").Joins("JOIN st_918_stock_table AS st ON t.stock_id = st.stock_id").
+				lResult := lGormDb.Table("st_918_client_table c").Joins("JOIN st_918_trade_table  AS t ON t.client_id = c.client_id").Joins("JOIN st_918_stock_table AS st ON t.stock_id = st.stock_id").Preload("TradesArr").
 					Where("t."+lColumnName+" = ?", lStatus).Find(&lClientResp.GetClientRec)
 				// lResult := lGormDb.Preload("TradesArr").Preload("BankDetail").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)
 				// lResult := lGormDb.Preload("TradesArr").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)

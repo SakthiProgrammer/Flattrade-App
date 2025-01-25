@@ -8,6 +8,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"strings"
 	"time"
 )
 
@@ -18,23 +19,11 @@ type TradeStatusRec struct {
 	ApprovalStatus string `json:"status"`
 }
 
-// type UpdateTradeRec struct {
-// 	TradeID             uint    `json:"trade_id" gorm:"column:Id"`
-// 	ClientID            uint    `json:"client_id" gorm:"column:client_id"`
-// 	TradeType           string  `json:"trade_type" gorm:"column:trade_type"`
-// 	Quantity            uint    `json:"quantiry" gorm:"column:quantity"`
-// 	TotalPrice          float64 `json:"total_price" gorm:"column:trade_price"`
-// 	TradeDate           string  `json:"trade_date" gorm:"column:trade_date"`
-// 	BackOfficerApproval string  `json:"back_officer_approval" gorm:"column:back_officer_approval_status"`
-// 	BillerApproval      string  `json:"biller_approval" gorm:"column:biller_Approvel_status"`
-// 	ApproverApproval    string  `json:"approver_approval" gorm:"column:approver_Approvel_status"`
-// }
-
 type UpdateTradeResp struct {
 	// Trade  TradeStatusRec `json:"trade_id"`
 	TradeStatus TradeStatusRec `json:"trade_status" `
 	Status      string         `json:"status" `
-	ErrMsg      string         `json:"status" `
+	ErrMsg      string         `json:"errMsg" `
 }
 
 func UpdateTradeStatus(w http.ResponseWriter, r *http.Request) {
@@ -47,8 +36,8 @@ func UpdateTradeStatus(w http.ResponseWriter, r *http.Request) {
 	log.Println("UpdateTradeStatus-(+)")
 
 	var lResp UpdateTradeResp
-	var lTrade TradeStatusRec
-	if r.Method != http.MethodPut {
+	if r.Method == http.MethodPut {
+		var lTrade TradeStatusRec
 
 		lData, lErr := io.ReadAll(r.Body)
 
@@ -67,15 +56,15 @@ func UpdateTradeStatus(w http.ResponseWriter, r *http.Request) {
 				lResp.Status = common.ErrorCode
 			} else {
 
-				if lErr != nil {
-					log.Println("UUTS-003", lErr.Error())
-					lResp.ErrMsg = lErr.Error()
-					lResp.Status = common.ErrorCode
-
-				} else {
+				lTrade.Role = strings.ToUpper(lTrade.Role)
+				if common.ValidateUserRole(lTrade.Role) {
 
 					updateTradeINDB(&lResp, lTrade)
 
+				} else {
+
+					lResp.Status = common.ErrorCode
+					lResp.ErrMsg = "Invalid User Role"
 				}
 
 			}
@@ -106,6 +95,10 @@ func updateTradeINDB(lResp *UpdateTradeResp, lTrade TradeStatusRec) {
 
 	lGormDb, lErr := gormdb.GormDBConnection()
 
+	lSql, _ := lGormDb.DB()
+
+	defer lSql.Close()
+
 	if lErr != nil {
 		log.Println("UUTTINDB-001", lErr.Error())
 		lResp.ErrMsg = lErr.Error()
@@ -130,7 +123,7 @@ func updateTradeINDB(lResp *UpdateTradeResp, lTrade TradeStatusRec) {
 		}
 
 		lResult := lGormDb.Table("st_918_trade_table").
-			Where("trade_id = ?", lTrade.TradeID).
+			Where("Id = ?", lTrade.TradeID).
 			Updates(map[string]interface{}{
 				lColumn:      lTrade.ApprovalStatus,
 				"updated_by": lTrade.UserID,
@@ -142,6 +135,9 @@ func updateTradeINDB(lResp *UpdateTradeResp, lTrade TradeStatusRec) {
 			lResp.Status = common.ErrorCode
 			lResp.ErrMsg = lResult.Error.Error()
 		} else {
+
+			lResp.Status = common.SuccessCode
+			lResp.TradeStatus = lTrade
 			fmt.Println("%+v", lResp)
 		}
 	}

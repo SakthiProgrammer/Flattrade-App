@@ -1,0 +1,1184 @@
+2025/01/25 12:02:24 GetClients-(+)
+2025/01/25 12:02:24 CGCS-004 Invalid Method
+2025/01/25 12:02:24 GetClients-(-)
+2025/01/25 12:02:24 GetClients-(+)
+2025/01/25 12:02:24 Database connection established successfully.
+2025/01/25 12:02:24 Successfully Get
+2025/01/25 12:02:24 GetClients-(-)
+2025/01/25 12:03:25 GetBank-(+)
+2025/01/25 12:03:25 Database connection established successfully.
+2025/01/25 12:03:25 Success
+2025/01/25 12:03:25 GetBank-(-)
+2025/01/25 12:03:30 GetClients-(+)
+2025/01/25 12:03:30 CGCS-004 Invalid Method
+2025/01/25 12:03:30 GetClients-(-)
+2025/01/25 12:03:30 GetClients-(+)
+2025/01/25 12:03:30 Database connection established successfully.
+2025/01/25 12:03:30 Successfully Get
+2025/01/25 12:03:30 GetClients-(-)
+2025/01/25 12:03:31 GetBank-(+)
+2025/01/25 12:03:31 Database connection established successfully.
+2025/01/25 12:03:31 Success
+2025/01/25 12:03:31 GetBank-(-)
+2025/01/25 12:03:37 GetBank-(+)
+2025/01/25 12:03:37 Database connection established successfully.
+2025/01/25 12:03:37 Success
+2025/01/25 12:03:37 GetBank-(-)
+2025/01/25 12:04:43 GetClients-(+)
+2025/01/25 12:04:43 CGCS-004 Invalid Method
+2025/01/25 12:04:43 GetClients-(-)
+2025/01/25 12:04:43 GetClients-(+)
+2025/01/25 12:04:43 Database connection established successfully.
+2025/01/25 12:04:43 Successfully Get
+2025/01/25 12:04:43 GetClients-(-)
+2025/01/25 12:04:46 GetBank-(+)
+2025/01/25 12:04:46 Database connection established successfully.
+2025/01/25 12:04:46 Success
+2025/01/25 12:04:46 GetBank-(-)
+2025/01/25 12:04:49 GetClients-(+)
+2025/01/25 12:04:49 CGCS-004 Invalid Method
+2025/01/25 12:04:49 GetClients-(-)
+2025/01/25 12:04:49 GetClients-(+)
+2025/01/25 12:04:49 Database connection established successfully.
+2025/01/25 12:04:49 Successfully Get
+2025/01/25 12:04:49 GetClients-(-)
+2025/01/25 12:04:58 GetBank-(+)
+2025/01/25 12:04:58 Database connection established successfully.
+2025/01/25 12:04:58 Success
+2025/01/25 12:04:58 GetBank-(-)
+2025/01/25 12:05:04 GetClients-(+)
+2025/01/25 12:05:04 CGCS-004 Invalid Method
+2025/01/25 12:05:04 GetClients-(-)
+2025/01/25 12:05:04 GetClients-(+)
+2025/01/25 12:05:04 Database connection established successfully.
+2025/01/25 12:05:04 Successfully Get
+2025/01/25 12:05:04 GetClients-(-)
+2025/01/25 12:05:38 GetBank-(+)
+2025/01/25 12:05:38 Database connection established successfully.
+2025/01/25 12:05:38 Success
+2025/01/25 12:05:38 GetBank-(-)
+2025/01/25 12:06:04 GetBank-(+)
+2025/01/25 12:06:04 Database connection established successfully.
+2025/01/25 12:06:04 Success
+2025/01/25 12:06:04 GetBank-(-)
+2025/01/25 12:06:52 GetBank-(+)
+2025/01/25 12:06:52 Database connection established successfully.
+2025/01/25 12:06:52 Success
+2025/01/25 12:06:52 GetBank-(-)
+2025/01/25 12:06:52 GetClients-(+)
+2025/01/25 12:06:52 CGCS-004 Invalid Method
+2025/01/25 12:06:52 GetClients-(-)
+2025/01/25 12:06:52 GetClients-(+)
+2025/01/25 12:06:52 Database connection established successfully.
+2025/01/25 12:06:52 Successfully Get
+2025/01/25 12:06:52 GetClients-(-)
+2025/01/25 12:06:56 GetBank-(+)
+2025/01/25 12:06:56 Database connection established successfully.
+2025/01/25 12:06:56 Success
+2025/01/25 12:06:56 GetBank-(-)
+2025/01/25 12:07:06 GetClients-(+)
+2025/01/25 12:07:06 CGCS-004 Invalid Method
+2025/01/25 12:07:06 GetClients-(-)
+2025/01/25 12:07:06 GetClients-(+)
+2025/01/25 12:07:06 Database connection established successfully.
+2025/01/25 12:07:06 Successfully Get
+2025/01/25 12:07:06 GetClients-(-)
+2025/01/25 12:07:13 GetBank-(+)
+2025/01/25 12:07:13 Database connection established successfully.
+2025/01/25 12:07:13 Success
+2025/01/25 12:07:13 GetBank-(-)
+2025/01/25 12:07:17 GetClients-(+)
+2025/01/25 12:07:17 CGCS-004 Invalid Method
+2025/01/25 12:07:17 GetClients-(-)
+2025/01/25 12:07:17 GetClients-(+)
+2025/01/25 12:07:17 Database connection established successfully.
+2025/01/25 12:07:17 Successfully Get
+2025/01/25 12:07:17 GetClients-(-)
+2025/01/25 12:07:21 GetBank-(+)
+2025/01/25 12:07:21 Database connection established successfully.
+2025/01/25 12:07:21 Success
+2025/01/25 12:07:21 GetBank-(-)
+2025/01/25 12:07:25 GetClients-(+)
+2025/01/25 12:07:25 CGCS-004 Invalid Method
+2025/01/25 12:07:25 GetClients-(-)
+2025/01/25 12:07:25 GetClients-(+)
+2025/01/25 12:07:25 Database connection established successfully.
+2025/01/25 12:07:25 Successfully Get
+2025/01/25 12:07:25 GetClients-(-)
+2025/01/25 12:07:35 GetBank-(+)
+2025/01/25 12:07:35 Database connection established successfully.
+2025/01/25 12:07:35 Success
+2025/01/25 12:07:35 GetBank-(-)
+2025/01/25 12:08:00 GetClients-(+)
+2025/01/25 12:08:00 CGCS-004 Invalid Method
+2025/01/25 12:08:00 GetClients-(-)
+2025/01/25 12:08:00 GetClients-(+)
+2025/01/25 12:08:00 Database connection established successfully.
+2025/01/25 12:08:00 Successfully Get
+2025/01/25 12:08:00 GetClients-(-)
+2025/01/25 12:08:17 GetBank-(+)
+2025/01/25 12:08:17 Database connection established successfully.
+2025/01/25 12:08:17 Success
+2025/01/25 12:08:17 GetBank-(-)
+2025/01/25 12:08:35 GetClients-(+)
+2025/01/25 12:08:35 CGCS-004 Invalid Method
+2025/01/25 12:08:35 GetClients-(-)
+2025/01/25 12:08:35 GetClients-(+)
+2025/01/25 12:08:35 Database connection established successfully.
+2025/01/25 12:08:35 Successfully Get
+2025/01/25 12:08:35 GetClients-(-)
+2025/01/25 12:10:28 GetBank-(+)
+2025/01/25 12:10:28 Database connection established successfully.
+2025/01/25 12:10:28 Success
+2025/01/25 12:10:28 GetBank-(-)
+2025/01/25 12:11:13 GetClients-(+)
+2025/01/25 12:11:13 CGCS-004 Invalid Method
+2025/01/25 12:11:13 GetClients-(-)
+2025/01/25 12:11:13 GetClients-(+)
+2025/01/25 12:11:13 Database connection established successfully.
+2025/01/25 12:11:13 Successfully Get
+2025/01/25 12:11:13 GetClients-(-)
+2025/01/25 12:11:39 GetBank-(+)
+2025/01/25 12:11:39 Database connection established successfully.
+2025/01/25 12:11:39 Success
+2025/01/25 12:11:39 GetBank-(-)
+2025/01/25 12:11:46 GetBank-(+)
+2025/01/25 12:11:46 Database connection established successfully.
+2025/01/25 12:11:46 Success
+2025/01/25 12:11:46 GetBank-(-)
+2025/01/25 12:12:29 GetBank-(+)
+2025/01/25 12:12:29 Database connection established successfully.
+2025/01/25 12:12:29 Success
+2025/01/25 12:12:29 GetBank-(-)
+2025/01/25 12:12:32 GetClients-(+)
+2025/01/25 12:12:32 CGCS-004 Invalid Method
+2025/01/25 12:12:32 GetClients-(-)
+2025/01/25 12:12:32 GetClients-(+)
+2025/01/25 12:12:32 Database connection established successfully.
+2025/01/25 12:12:32 Successfully Get
+2025/01/25 12:12:32 GetClients-(-)
+2025/01/25 12:13:19 UpdateClient-(+)
+2025/01/25 12:13:19 UpdateClient-(-)
+2025/01/25 12:13:19 UpdateClient-(+)
+2025/01/25 12:13:19 updateClientInDB-(+)
+2025/01/25 12:13:19 Database connection established successfully.
+2025/01/25 12:13:19 updateClientInDB-(-)
+2025/01/25 12:13:19 UpdateClient-(-)
+2025/01/25 12:16:58 GetBank-(+)
+2025/01/25 12:16:58 Database connection established successfully.
+2025/01/25 12:16:58 Success
+2025/01/25 12:16:58 GetBank-(-)
+2025/01/25 12:17:00 GetClients-(+)
+2025/01/25 12:17:00 CGCS-004 Invalid Method
+2025/01/25 12:17:00 GetClients-(-)
+2025/01/25 12:17:00 GetClients-(+)
+2025/01/25 12:17:00 Database connection established successfully.
+2025/01/25 12:17:00 Successfully Get
+2025/01/25 12:17:00 GetClients-(-)
+2025/01/25 12:17:41 GetBank-(+)
+2025/01/25 12:17:41 Database connection established successfully.
+2025/01/25 12:17:41 Success
+2025/01/25 12:17:41 GetBank-(-)
+2025/01/25 12:17:42 GetClients-(+)
+2025/01/25 12:17:42 CGCS-004 Invalid Method
+2025/01/25 12:17:42 GetClients-(-)
+2025/01/25 12:17:42 GetClients-(+)
+2025/01/25 12:17:42 Database connection established successfully.
+2025/01/25 12:17:42 Successfully Get
+2025/01/25 12:17:42 GetClients-(-)
+2025/01/25 12:18:05 GetBank-(+)
+2025/01/25 12:18:05 Database connection established successfully.
+2025/01/25 12:18:05 Success
+2025/01/25 12:18:05 GetBank-(-)
+2025/01/25 12:18:16 GetClients-(+)
+2025/01/25 12:18:16 CGCS-004 Invalid Method
+2025/01/25 12:18:16 GetClients-(-)
+2025/01/25 12:18:16 GetClients-(+)
+2025/01/25 12:18:16 Database connection established successfully.
+2025/01/25 12:18:16 Successfully Get
+2025/01/25 12:18:16 GetClients-(-)
+2025/01/25 12:18:21 GetBank-(+)
+2025/01/25 12:18:21 Database connection established successfully.
+2025/01/25 12:18:21 Success
+2025/01/25 12:18:21 GetBank-(-)
+2025/01/25 12:18:28 GetBank-(+)
+2025/01/25 12:18:28 Database connection established successfully.
+2025/01/25 12:18:28 Success
+2025/01/25 12:18:28 GetBank-(-)
+2025/01/25 12:18:48 GetClients-(+)
+2025/01/25 12:18:48 CGCS-004 Invalid Method
+2025/01/25 12:18:48 GetClients-(-)
+2025/01/25 12:18:48 GetClients-(+)
+2025/01/25 12:18:48 Database connection established successfully.
+2025/01/25 12:18:48 Successfully Get
+2025/01/25 12:18:48 GetClients-(-)
+2025/01/25 12:18:49 GetBank-(+)
+2025/01/25 12:18:49 Database connection established successfully.
+2025/01/25 12:18:49 Success
+2025/01/25 12:18:49 GetBank-(-)
+2025/01/25 12:19:55 GetBank-(+)
+2025/01/25 12:19:55 Database connection established successfully.
+2025/01/25 12:19:55 Success
+2025/01/25 12:19:55 GetBank-(-)
+2025/01/25 12:21:38 GetBank-(+)
+2025/01/25 12:21:38 Database connection established successfully.
+2025/01/25 12:21:38 Success
+2025/01/25 12:21:38 GetBank-(-)
+2025/01/25 12:22:06 GetBank-(+)
+2025/01/25 12:22:06 Database connection established successfully.
+2025/01/25 12:22:06 Success
+2025/01/25 12:22:06 GetBank-(-)
+2025/01/25 12:26:21 GetClients-(+)
+2025/01/25 12:26:21 CGCS-004 Invalid Method
+2025/01/25 12:26:21 GetClients-(-)
+2025/01/25 12:26:21 GetClients-(+)
+2025/01/25 12:26:21 Database connection established successfully.
+2025/01/25 12:26:21 Successfully Get
+2025/01/25 12:26:21 GetClients-(-)
+2025/01/25 12:27:35 GetClients-(+)
+2025/01/25 12:27:35 CGCS-004 Invalid Method
+2025/01/25 12:27:35 GetClients-(-)
+2025/01/25 12:27:35 GetClients-(+)
+2025/01/25 12:27:35 Database connection established successfully.
+2025/01/25 12:27:35 Successfully Get
+2025/01/25 12:27:35 GetClients-(-)
+2025/01/25 12:29:58 GetClients-(+)
+2025/01/25 12:29:58 CGCS-004 Invalid Method
+2025/01/25 12:29:58 GetClients-(-)
+2025/01/25 12:29:58 GetClients-(+)
+2025/01/25 12:29:58 Database connection established successfully.
+2025/01/25 12:29:58 Successfully Get
+2025/01/25 12:29:58 GetClients-(-)
+2025/01/25 12:30:03 GetBank-(+)
+2025/01/25 12:30:03 Database connection established successfully.
+2025/01/25 12:30:03 Success
+2025/01/25 12:30:03 GetBank-(-)
+2025/01/25 12:30:25 GetClients-(+)
+2025/01/25 12:30:25 CGCS-004 Invalid Method
+2025/01/25 12:30:25 GetClients-(-)
+2025/01/25 12:30:25 GetClients-(+)
+2025/01/25 12:30:25 Database connection established successfully.
+2025/01/25 12:30:25 Successfully Get
+2025/01/25 12:30:26 GetClients-(-)
+2025/01/25 12:30:27 GetBank-(+)
+2025/01/25 12:30:27 Database connection established successfully.
+2025/01/25 12:30:27 Success
+2025/01/25 12:30:27 GetBank-(-)
+2025/01/25 12:30:42 GetClients-(+)
+2025/01/25 12:30:42 CGCS-004 Invalid Method
+2025/01/25 12:30:42 GetClients-(-)
+2025/01/25 12:30:42 GetClients-(+)
+2025/01/25 12:30:42 Database connection established successfully.
+2025/01/25 12:30:42 Successfully Get
+2025/01/25 12:30:42 GetClients-(-)
+2025/01/25 12:30:43 GetBank-(+)
+2025/01/25 12:30:43 Database connection established successfully.
+2025/01/25 12:30:43 Success
+2025/01/25 12:30:43 GetBank-(-)
+2025/01/25 12:31:09 GetBank-(+)
+2025/01/25 12:31:09 Database connection established successfully.
+2025/01/25 12:31:09 Success
+2025/01/25 12:31:09 GetBank-(-)
+2025/01/25 12:31:10 GetClients-(+)
+2025/01/25 12:31:10 CGCS-004 Invalid Method
+2025/01/25 12:31:10 GetClients-(-)
+2025/01/25 12:31:10 GetClients-(+)
+2025/01/25 12:31:10 Database connection established successfully.
+2025/01/25 12:31:10 Successfully Get
+2025/01/25 12:31:10 GetClients-(-)
+2025/01/25 12:31:11 GetBank-(+)
+2025/01/25 12:31:11 Database connection established successfully.
+2025/01/25 12:31:11 Success
+2025/01/25 12:31:11 GetBank-(-)
+2025/01/25 12:31:55 GetClients-(+)
+2025/01/25 12:31:55 CGCS-004 Invalid Method
+2025/01/25 12:31:55 GetClients-(-)
+2025/01/25 12:31:55 GetClients-(+)
+2025/01/25 12:31:55 Database connection established successfully.
+2025/01/25 12:31:55 Successfully Get
+2025/01/25 12:31:55 GetClients-(-)
+2025/01/25 12:32:20 GetClients-(+)
+2025/01/25 12:32:20 CGCS-004 Invalid Method
+2025/01/25 12:32:20 GetClients-(-)
+2025/01/25 12:32:20 GetClients-(+)
+2025/01/25 12:32:20 Database connection established successfully.
+2025/01/25 12:32:20 Successfully Get
+2025/01/25 12:32:20 GetClients-(-)
+2025/01/25 12:32:23 GetBank-(+)
+2025/01/25 12:32:23 Database connection established successfully.
+2025/01/25 12:32:23 Success
+2025/01/25 12:32:23 GetBank-(-)
+2025/01/25 12:32:24 GetClients-(+)
+2025/01/25 12:32:24 Database connection established successfully.
+2025/01/25 12:32:24 Successfully Get
+2025/01/25 12:32:24 GetClients-(-)
+2025/01/25 12:32:25 GetBank-(+)
+2025/01/25 12:32:25 Database connection established successfully.
+2025/01/25 12:32:25 Success
+2025/01/25 12:32:25 GetBank-(-)
+2025/01/25 12:32:28 GetBank-(+)
+2025/01/25 12:32:28 Database connection established successfully.
+2025/01/25 12:32:28 Success
+2025/01/25 12:32:28 GetBank-(-)
+2025/01/25 12:32:30 GetClients-(+)
+2025/01/25 12:32:30 CGCS-004 Invalid Method
+2025/01/25 12:32:30 GetClients-(-)
+2025/01/25 12:32:30 GetClients-(+)
+2025/01/25 12:32:30 Database connection established successfully.
+2025/01/25 12:32:30 Successfully Get
+2025/01/25 12:32:30 GetClients-(-)
+2025/01/25 12:32:31 GetBank-(+)
+2025/01/25 12:32:31 Database connection established successfully.
+2025/01/25 12:32:31 Success
+2025/01/25 12:32:31 GetBank-(-)
+2025/01/25 12:32:35 GetBank-(+)
+2025/01/25 12:32:35 Database connection established successfully.
+2025/01/25 12:32:35 Success
+2025/01/25 12:32:35 GetBank-(-)
+2025/01/25 12:35:31 GetClients-(+)
+2025/01/25 12:35:31 CGCS-004 Invalid Method
+2025/01/25 12:35:31 GetClients-(-)
+2025/01/25 12:35:31 GetClients-(+)
+2025/01/25 12:35:31 Database connection established successfully.
+2025/01/25 12:35:31 Successfully Get
+2025/01/25 12:35:31 GetClients-(-)
+2025/01/25 12:37:43 GetClients-(+)
+2025/01/25 12:37:43 CGCS-004 Invalid Method
+2025/01/25 12:37:43 GetClients-(-)
+2025/01/25 12:37:43 GetClients-(+)
+2025/01/25 12:37:43 Database connection established successfully.
+2025/01/25 12:37:43 Successfully Get
+2025/01/25 12:37:43 GetClients-(-)
+2025/01/25 12:41:35 GetClients-(+)
+2025/01/25 12:41:35 CGCS-004 Invalid Method
+2025/01/25 12:41:35 GetClients-(-)
+2025/01/25 12:41:35 GetClients-(+)
+2025/01/25 12:41:35 Database connection established successfully.
+2025/01/25 12:41:35 Successfully Get
+2025/01/25 12:41:35 GetClients-(-)
+2025/01/25 12:43:01 GetClients-(+)
+2025/01/25 12:43:01 CGCS-004 Invalid Method
+2025/01/25 12:43:01 GetClients-(-)
+2025/01/25 12:43:01 GetClients-(+)
+2025/01/25 12:43:01 Database connection established successfully.
+2025/01/25 12:43:01 Successfully Get
+2025/01/25 12:43:01 GetClients-(-)
+2025/01/25 12:43:08 GetBank-(+)
+2025/01/25 12:43:08 Database connection established successfully.
+2025/01/25 12:43:08 Success
+2025/01/25 12:43:08 GetBank-(-)
+2025/01/25 12:43:12 GetBank-(+)
+2025/01/25 12:43:12 Database connection established successfully.
+2025/01/25 12:43:12 Success
+2025/01/25 12:43:12 GetBank-(-)
+2025/01/25 12:46:09 GetClients-(+)
+2025/01/25 12:46:09 CGCS-004 Invalid Method
+2025/01/25 12:46:09 GetClients-(-)
+2025/01/25 12:46:09 GetClients-(+)
+2025/01/25 12:46:09 Database connection established successfully.
+2025/01/25 12:46:09 Successfully Get
+2025/01/25 12:46:09 GetClients-(-)
+2025/01/25 12:46:13 GetBank-(+)
+2025/01/25 12:46:13 Database connection established successfully.
+2025/01/25 12:46:13 Success
+2025/01/25 12:46:13 GetBank-(-)
+2025/01/25 12:46:36 GetClients-(+)
+2025/01/25 12:46:36 CGCS-004 Invalid Method
+2025/01/25 12:46:36 GetClients-(-)
+2025/01/25 12:46:36 GetClients-(+)
+2025/01/25 12:46:36 Database connection established successfully.
+2025/01/25 12:46:36 Successfully Get
+2025/01/25 12:46:36 GetClients-(-)
+2025/01/25 12:46:40 GetBank-(+)
+2025/01/25 12:46:40 Database connection established successfully.
+2025/01/25 12:46:40 Success
+2025/01/25 12:46:40 GetBank-(-)
+2025/01/25 12:46:46 GetClients-(+)
+2025/01/25 12:46:46 CGCS-004 Invalid Method
+2025/01/25 12:46:46 GetClients-(-)
+2025/01/25 12:46:46 GetClients-(+)
+2025/01/25 12:46:46 Database connection established successfully.
+2025/01/25 12:46:46 Successfully Get
+2025/01/25 12:46:46 GetClients-(-)
+2025/01/25 12:46:47 GetBank-(+)
+2025/01/25 12:46:47 Database connection established successfully.
+2025/01/25 12:46:47 Success
+2025/01/25 12:46:47 GetBank-(-)
+2025/01/25 12:47:32 GetClients-(+)
+2025/01/25 12:47:32 CGCS-004 Invalid Method
+2025/01/25 12:47:32 GetClients-(-)
+2025/01/25 12:47:32 GetClients-(+)
+2025/01/25 12:47:32 Database connection established successfully.
+2025/01/25 12:47:32 Successfully Get
+2025/01/25 12:47:32 GetClients-(-)
+2025/01/25 12:47:37 GetBank-(+)
+2025/01/25 12:47:37 Database connection established successfully.
+2025/01/25 12:47:37 Success
+2025/01/25 12:47:37 GetBank-(-)
+2025/01/25 12:47:38 GetClients-(+)
+2025/01/25 12:47:38 CGCS-004 Invalid Method
+2025/01/25 12:47:38 GetClients-(-)
+2025/01/25 12:47:38 GetClients-(+)
+2025/01/25 12:47:38 Database connection established successfully.
+2025/01/25 12:47:38 Successfully Get
+2025/01/25 12:47:38 GetClients-(-)
+2025/01/25 12:47:40 GetBank-(+)
+2025/01/25 12:47:40 Database connection established successfully.
+2025/01/25 12:47:40 Success
+2025/01/25 12:47:40 GetBank-(-)
+2025/01/25 12:48:44 GetClients-(+)
+2025/01/25 12:48:44 CGCS-004 Invalid Method
+2025/01/25 12:48:44 GetClients-(-)
+2025/01/25 12:48:44 GetClients-(+)
+2025/01/25 12:48:44 Database connection established successfully.
+2025/01/25 12:48:44 Successfully Get
+2025/01/25 12:48:44 GetClients-(-)
+2025/01/25 12:48:46 GetBank-(+)
+2025/01/25 12:48:46 Database connection established successfully.
+2025/01/25 12:48:46 Success
+2025/01/25 12:48:46 GetBank-(-)
+2025/01/25 12:48:57 GetClients-(+)
+2025/01/25 12:48:57 CGCS-004 Invalid Method
+2025/01/25 12:48:57 GetClients-(-)
+2025/01/25 12:48:58 GetClients-(+)
+2025/01/25 12:48:58 Database connection established successfully.
+2025/01/25 12:48:58 Successfully Get
+2025/01/25 12:48:58 GetClients-(-)
+2025/01/25 12:48:59 GetBank-(+)
+2025/01/25 12:48:59 Database connection established successfully.
+2025/01/25 12:48:59 Success
+2025/01/25 12:48:59 GetBank-(-)
+2025/01/25 12:49:01 GetClients-(+)
+2025/01/25 12:49:01 Database connection established successfully.
+2025/01/25 12:49:01 Successfully Get
+2025/01/25 12:49:01 GetClients-(-)
+2025/01/25 12:49:03 GetBank-(+)
+2025/01/25 12:49:03 Database connection established successfully.
+2025/01/25 12:49:03 Success
+2025/01/25 12:49:03 GetBank-(-)
+2025/01/25 12:49:48 GetBank-(+)
+2025/01/25 12:49:48 Database connection established successfully.
+2025/01/25 12:49:48 Success
+2025/01/25 12:49:48 GetBank-(-)
+2025/01/25 12:50:13 GetBank-(+)
+2025/01/25 12:50:13 Database connection established successfully.
+2025/01/25 12:50:13 Success
+2025/01/25 12:50:13 GetBank-(-)
+2025/01/25 12:51:48 GetCharges-(+)
+2025/01/25 12:51:48 Database connection established successfully.
+2025/01/25 12:51:48 Success
+2025/01/25 12:51:48 GetCharges-(-)
+2025/01/25 12:56:52 GetClients-(+)
+2025/01/25 12:56:52 CGCS-004 Invalid Method
+2025/01/25 12:56:52 GetClients-(-)
+2025/01/25 12:56:52 GetClients-(+)
+2025/01/25 12:56:52 Database connection established successfully.
+2025/01/25 12:56:52 Successfully Get
+2025/01/25 12:56:52 GetClients-(-)
+2025/01/25 12:57:35 GetBank-(+)
+2025/01/25 12:57:35 Database connection established successfully.
+2025/01/25 12:57:35 Success
+2025/01/25 12:57:35 GetBank-(-)
+2025/01/25 12:58:21 GetClients-(+)
+2025/01/25 12:58:21 CGCS-004 Invalid Method
+2025/01/25 12:58:21 GetClients-(-)
+2025/01/25 12:58:21 GetClients-(+)
+2025/01/25 12:58:21 Database connection established successfully.
+2025/01/25 12:58:21 Successfully Get
+2025/01/25 12:58:21 GetClients-(-)
+2025/01/25 12:58:22 GetBank-(+)
+2025/01/25 12:58:22 Database connection established successfully.
+2025/01/25 12:58:22 Success
+2025/01/25 12:58:22 GetBank-(-)
+2025/01/25 12:58:25 GetBank-(+)
+2025/01/25 12:58:25 Database connection established successfully.
+2025/01/25 12:58:25 Success
+2025/01/25 12:58:25 GetBank-(-)
+2025/01/25 13:01:19 GetClients-(+)
+2025/01/25 13:01:19 CGCS-004 Invalid Method
+2025/01/25 13:01:19 GetClients-(-)
+2025/01/25 13:01:19 GetClients-(+)
+2025/01/25 13:01:19 Database connection established successfully.
+2025/01/25 13:01:19 Successfully Get
+2025/01/25 13:01:19 GetClients-(-)
+2025/01/25 13:01:26 GetClients-(+)
+2025/01/25 13:01:26 CGCS-004 Invalid Method
+2025/01/25 13:01:26 GetClients-(-)
+2025/01/25 13:01:26 GetClients-(+)
+2025/01/25 13:01:26 Database connection established successfully.
+2025/01/25 13:01:26 Successfully Get
+2025/01/25 13:01:26 GetClients-(-)
+2025/01/25 13:01:35 GetClients-(+)
+2025/01/25 13:01:35 CGCS-004 Invalid Method
+2025/01/25 13:01:35 GetClients-(-)
+2025/01/25 13:01:35 GetClients-(+)
+2025/01/25 13:01:35 Database connection established successfully.
+2025/01/25 13:01:35 Successfully Get
+2025/01/25 13:01:35 GetClients-(-)
+2025/01/25 13:01:36 GetCharges-(+)
+2025/01/25 13:01:36 Database connection established successfully.
+2025/01/25 13:01:36 Success
+2025/01/25 13:01:36 GetCharges-(-)
+2025/01/25 13:04:06 GetClients-(+)
+2025/01/25 13:04:06 CGCS-004 Invalid Method
+2025/01/25 13:04:06 GetClients-(-)
+2025/01/25 13:04:06 GetClients-(+)
+2025/01/25 13:04:06 Database connection established successfully.
+2025/01/25 13:04:06 Successfully Get
+2025/01/25 13:04:06 GetClients-(-)
+2025/01/25 13:04:08 GetCharges-(+)
+2025/01/25 13:04:08 Database connection established successfully.
+2025/01/25 13:04:08 Success
+2025/01/25 13:04:08 GetCharges-(-)
+2025/01/25 13:04:25 GetClients-(+)
+2025/01/25 13:04:25 CGCS-004 Invalid Method
+2025/01/25 13:04:25 GetClients-(-)
+2025/01/25 13:04:25 GetClients-(+)
+2025/01/25 13:04:25 Database connection established successfully.
+2025/01/25 13:04:25 Successfully Get
+2025/01/25 13:04:25 GetClients-(-)
+2025/01/25 13:04:27 GetCharges-(+)
+2025/01/25 13:04:27 Database connection established successfully.
+2025/01/25 13:04:27 Success
+2025/01/25 13:04:27 GetCharges-(-)
+2025/01/25 13:05:05 GetClients-(+)
+2025/01/25 13:05:05 CGCS-004 Invalid Method
+2025/01/25 13:05:05 GetClients-(-)
+2025/01/25 13:05:05 GetClients-(+)
+2025/01/25 13:05:05 Database connection established successfully.
+2025/01/25 13:05:05 Successfully Get
+2025/01/25 13:05:05 GetClients-(-)
+2025/01/25 13:05:07 GetCharges-(+)
+2025/01/25 13:05:07 Database connection established successfully.
+2025/01/25 13:05:07 Success
+2025/01/25 13:05:07 GetCharges-(-)
+2025/01/25 13:07:24 GetStocks-(+)
+2025/01/25 13:07:24 Database connection established successfully.
+2025/01/25 13:07:24 Successfully Get
+2025/01/25 13:07:24 GetStocks-(-)
+2025/01/25 13:08:40 GetClients-(+)
+2025/01/25 13:08:40 CGCS-004 Invalid Method
+2025/01/25 13:08:40 GetClients-(-)
+2025/01/25 13:08:40 GetClients-(+)
+2025/01/25 13:08:40 Database connection established successfully.
+2025/01/25 13:08:40 Successfully Get
+2025/01/25 13:08:40 GetClients-(-)
+2025/01/25 13:08:50 GetClients-(+)
+2025/01/25 13:08:50 CGCS-004 Invalid Method
+2025/01/25 13:08:50 GetClients-(-)
+2025/01/25 13:08:50 GetClients-(+)
+2025/01/25 13:08:50 Database connection established successfully.
+2025/01/25 13:08:50 Successfully Get
+2025/01/25 13:08:50 GetClients-(-)
+2025/01/25 13:09:01 GetClients-(+)
+2025/01/25 13:09:01 CGCS-004 Invalid Method
+2025/01/25 13:09:01 GetClients-(-)
+2025/01/25 13:09:01 GetClients-(+)
+2025/01/25 13:09:01 Database connection established successfully.
+2025/01/25 13:09:01 Successfully Get
+2025/01/25 13:09:01 GetClients-(-)
+2025/01/25 13:09:06 GetCharges-(+)
+2025/01/25 13:09:06 Database connection established successfully.
+2025/01/25 13:09:06 Success
+2025/01/25 13:09:06 GetCharges-(-)
+2025/01/25 13:09:20 GetClients-(+)
+2025/01/25 13:09:20 CGCS-004 Invalid Method
+2025/01/25 13:09:20 GetClients-(-)
+2025/01/25 13:09:20 GetClients-(+)
+2025/01/25 13:09:20 Database connection established successfully.
+2025/01/25 13:09:20 Successfully Get
+2025/01/25 13:09:20 GetClients-(-)
+2025/01/25 13:09:23 GetStocks-(+)
+2025/01/25 13:09:23 Database connection established successfully.
+2025/01/25 13:09:23 Successfully Get
+2025/01/25 13:09:23 GetStocks-(-)
+2025/01/25 13:10:31 GetUsers-(+)
+2025/01/25 13:10:31 Database connection established successfully.
+2025/01/25 13:10:31 Successfully Get
+2025/01/25 13:10:31 GetUsers-(-)
+2025/01/25 13:11:50 GetClients-(+)
+2025/01/25 13:11:50 CGCS-004 Invalid Method
+2025/01/25 13:11:50 GetClients-(-)
+2025/01/25 13:11:50 GetClients-(+)
+2025/01/25 13:11:50 Database connection established successfully.
+2025/01/25 13:11:50 Successfully Get
+2025/01/25 13:11:50 GetClients-(-)
+2025/01/25 13:12:01 GetClients-(+)
+2025/01/25 13:12:01 CGCS-004 Invalid Method
+2025/01/25 13:12:01 GetClients-(-)
+2025/01/25 13:12:01 GetClients-(+)
+2025/01/25 13:12:01 Database connection established successfully.
+2025/01/25 13:12:01 Successfully Get
+2025/01/25 13:12:01 GetClients-(-)
+2025/01/25 13:12:07 GetStocks-(+)
+2025/01/25 13:12:07 Database connection established successfully.
+2025/01/25 13:12:07 Successfully Get
+2025/01/25 13:12:07 GetStocks-(-)
+2025/01/25 13:12:21 GetClients-(+)
+2025/01/25 13:12:21 CGCS-004 Invalid Method
+2025/01/25 13:12:21 GetClients-(-)
+2025/01/25 13:12:21 GetClients-(+)
+2025/01/25 13:12:21 Database connection established successfully.
+2025/01/25 13:12:21 Successfully Get
+2025/01/25 13:12:21 GetClients-(-)
+2025/01/25 13:12:22 GetStocks-(+)
+2025/01/25 13:12:22 Database connection established successfully.
+2025/01/25 13:12:22 Successfully Get
+2025/01/25 13:12:22 GetStocks-(-)
+2025/01/25 13:13:00 GetClients-(+)
+2025/01/25 13:13:00 CGCS-004 Invalid Method
+2025/01/25 13:13:00 GetClients-(-)
+2025/01/25 13:13:00 GetClients-(+)
+2025/01/25 13:13:00 Database connection established successfully.
+2025/01/25 13:13:00 Successfully Get
+2025/01/25 13:13:00 GetClients-(-)
+2025/01/25 13:13:02 GetUsers-(+)
+2025/01/25 13:13:02 Database connection established successfully.
+2025/01/25 13:13:02 Successfully Get
+2025/01/25 13:13:02 GetUsers-(-)
+2025/01/25 13:13:06 GetBank-(+)
+2025/01/25 13:13:06 Database connection established successfully.
+2025/01/25 13:13:06 Success
+2025/01/25 13:13:06 GetBank-(-)
+2025/01/25 13:13:09 GetCharges-(+)
+2025/01/25 13:13:09 Database connection established successfully.
+2025/01/25 13:13:09 Success
+2025/01/25 13:13:09 GetCharges-(-)
+2025/01/25 13:13:10 GetStocks-(+)
+2025/01/25 13:13:10 Database connection established successfully.
+2025/01/25 13:13:10 Successfully Get
+2025/01/25 13:13:10 GetStocks-(-)
+2025/01/25 13:13:11 GetUsers-(+)
+2025/01/25 13:13:11 Database connection established successfully.
+2025/01/25 13:13:11 Successfully Get
+2025/01/25 13:13:11 GetUsers-(-)
+2025/01/25 13:13:13 GetStocks-(+)
+2025/01/25 13:13:13 Database connection established successfully.
+2025/01/25 13:13:13 Successfully Get
+2025/01/25 13:13:13 GetStocks-(-)
+2025/01/25 13:13:13 GetCharges-(+)
+2025/01/25 13:13:13 Database connection established successfully.
+2025/01/25 13:13:13 Success
+2025/01/25 13:13:13 GetCharges-(-)
+2025/01/25 13:13:15 GetBank-(+)
+2025/01/25 13:13:15 Database connection established successfully.
+2025/01/25 13:13:15 Success
+2025/01/25 13:13:15 GetBank-(-)
+2025/01/25 13:13:16 GetCharges-(+)
+2025/01/25 13:13:16 Database connection established successfully.
+2025/01/25 13:13:16 Success
+2025/01/25 13:13:16 GetCharges-(-)
+2025/01/25 13:13:18 GetStocks-(+)
+2025/01/25 13:13:18 Database connection established successfully.
+2025/01/25 13:13:18 Successfully Get
+2025/01/25 13:13:18 GetStocks-(-)
+2025/01/25 13:13:19 GetUsers-(+)
+2025/01/25 13:13:19 Database connection established successfully.
+2025/01/25 13:13:19 Successfully Get
+2025/01/25 13:13:19 GetUsers-(-)
+2025/01/25 13:13:20 GetBank-(+)
+2025/01/25 13:13:20 Database connection established successfully.
+2025/01/25 13:13:20 Success
+2025/01/25 13:13:20 GetBank-(-)
+2025/01/25 13:18:03 GetCharges-(+)
+2025/01/25 13:18:03 Database connection established successfully.
+2025/01/25 13:18:03 Success
+2025/01/25 13:18:03 GetCharges-(-)
+2025/01/25 13:18:04 GetStocks-(+)
+2025/01/25 13:18:04 Database connection established successfully.
+2025/01/25 13:18:04 Successfully Get
+2025/01/25 13:18:04 GetStocks-(-)
+2025/01/25 13:18:05 GetUsers-(+)
+2025/01/25 13:18:05 Database connection established successfully.
+2025/01/25 13:18:05 Successfully Get
+2025/01/25 13:18:05 GetUsers-(-)
+2025/01/25 13:18:06 GetBank-(+)
+2025/01/25 13:18:06 Database connection established successfully.
+2025/01/25 13:18:06 Success
+2025/01/25 13:18:06 GetBank-(-)
+2025/01/25 13:18:21 GetCharges-(+)
+2025/01/25 13:18:21 Database connection established successfully.
+2025/01/25 13:18:21 Success
+2025/01/25 13:18:21 GetCharges-(-)
+2025/01/25 13:18:28 GetStocks-(+)
+2025/01/25 13:18:28 Database connection established successfully.
+2025/01/25 13:18:28 Successfully Get
+2025/01/25 13:18:28 GetStocks-(-)
+2025/01/25 13:18:29 GetUsers-(+)
+2025/01/25 13:18:29 Database connection established successfully.
+2025/01/25 13:18:29 Successfully Get
+2025/01/25 13:18:29 GetUsers-(-)
+2025/01/25 13:18:30 GetStocks-(+)
+2025/01/25 13:18:30 Database connection established successfully.
+2025/01/25 13:18:30 Successfully Get
+2025/01/25 13:18:30 GetStocks-(-)
+2025/01/25 13:18:31 GetCharges-(+)
+2025/01/25 13:18:31 Database connection established successfully.
+2025/01/25 13:18:31 Success
+2025/01/25 13:18:31 GetCharges-(-)
+2025/01/25 13:18:33 GetBank-(+)
+2025/01/25 13:18:33 Database connection established successfully.
+2025/01/25 13:18:33 Success
+2025/01/25 13:18:33 GetBank-(-)
+2025/01/25 13:23:37 GetClients-(+)
+2025/01/25 13:23:37 CGCS-004 Invalid Method
+2025/01/25 13:23:37 GetClients-(-)
+2025/01/25 13:23:37 GetClients-(+)
+2025/01/25 13:23:37 Database connection established successfully.
+2025/01/25 13:23:37 Successfully Get
+2025/01/25 13:23:37 GetClients-(-)
+2025/01/25 13:23:39 GetBank-(+)
+2025/01/25 13:23:39 Database connection established successfully.
+2025/01/25 13:23:39 Success
+2025/01/25 13:23:39 GetBank-(-)
+2025/01/25 13:23:40 GetCharges-(+)
+2025/01/25 13:23:40 Database connection established successfully.
+2025/01/25 13:23:40 Success
+2025/01/25 13:23:40 GetCharges-(-)
+2025/01/25 13:23:41 GetStocks-(+)
+2025/01/25 13:23:41 Database connection established successfully.
+2025/01/25 13:23:41 Successfully Get
+2025/01/25 13:23:41 GetStocks-(-)
+2025/01/25 13:23:42 GetUsers-(+)
+2025/01/25 13:23:42 Database connection established successfully.
+2025/01/25 13:23:42 Successfully Get
+2025/01/25 13:23:42 GetUsers-(-)
+2025/01/25 13:23:55 GetStocks-(+)
+2025/01/25 13:23:55 Database connection established successfully.
+2025/01/25 13:23:55 Successfully Get
+2025/01/25 13:23:55 GetStocks-(-)
+2025/01/25 13:23:56 GetCharges-(+)
+2025/01/25 13:23:56 Database connection established successfully.
+2025/01/25 13:23:56 Success
+2025/01/25 13:23:56 GetCharges-(-)
+2025/01/25 13:23:57 GetBank-(+)
+2025/01/25 13:23:57 Database connection established successfully.
+2025/01/25 13:23:57 Success
+2025/01/25 13:23:57 GetBank-(-)
+2025/01/25 13:24:00 GetClients-(+)
+2025/01/25 13:24:00 CGCS-004 Invalid Method
+2025/01/25 13:24:00 GetClients-(-)
+2025/01/25 13:24:00 GetClients-(+)
+2025/01/25 13:24:00 Database connection established successfully.
+2025/01/25 13:24:00 Successfully Get
+2025/01/25 13:24:00 GetClients-(-)
+2025/01/25 13:24:02 GetBank-(+)
+2025/01/25 13:24:02 Database connection established successfully.
+2025/01/25 13:24:02 Success
+2025/01/25 13:24:02 GetBank-(-)
+2025/01/25 13:24:03 GetCharges-(+)
+2025/01/25 13:24:03 Database connection established successfully.
+2025/01/25 13:24:03 Success
+2025/01/25 13:24:03 GetCharges-(-)
+2025/01/25 13:24:04 GetStocks-(+)
+2025/01/25 13:24:04 Database connection established successfully.
+2025/01/25 13:24:04 Successfully Get
+2025/01/25 13:24:04 GetStocks-(-)
+2025/01/25 13:24:06 GetUsers-(+)
+2025/01/25 13:24:06 Database connection established successfully.
+2025/01/25 13:24:06 Successfully Get
+2025/01/25 13:24:06 GetUsers-(-)
+2025/01/25 13:24:07 GetBank-(+)
+2025/01/25 13:24:07 Database connection established successfully.
+2025/01/25 13:24:07 Success
+2025/01/25 13:24:07 GetBank-(-)
+2025/01/25 13:24:48 GetClients-(+)
+2025/01/25 13:24:48 CGCS-004 Invalid Method
+2025/01/25 13:24:48 GetClients-(-)
+2025/01/25 13:24:48 GetClients-(+)
+2025/01/25 13:24:48 Database connection established successfully.
+2025/01/25 13:24:48 Successfully Get
+2025/01/25 13:24:48 GetClients-(-)
+2025/01/25 13:24:50 GetCharges-(+)
+2025/01/25 13:24:50 Database connection established successfully.
+2025/01/25 13:24:50 Success
+2025/01/25 13:24:50 GetCharges-(-)
+2025/01/25 13:24:51 GetBank-(+)
+2025/01/25 13:24:51 Database connection established successfully.
+2025/01/25 13:24:51 Success
+2025/01/25 13:24:51 GetBank-(-)
+2025/01/25 13:25:57 CreateBank-(+)
+2025/01/25 13:25:57 CreateBank-(-)
+2025/01/25 13:28:31 GetClients-(+)
+2025/01/25 13:28:31 CGCS-004 Invalid Method
+2025/01/25 13:28:31 GetClients-(-)
+2025/01/25 13:28:31 GetClients-(+)
+2025/01/25 13:28:31 Database connection established successfully.
+2025/01/25 13:28:31 Successfully Get
+2025/01/25 13:28:31 GetClients-(-)
+2025/01/25 13:28:54 GetClients-(+)
+2025/01/25 13:28:54 CGCS-004 Invalid Method
+2025/01/25 13:28:54 GetClients-(-)
+2025/01/25 13:28:54 GetClients-(+)
+2025/01/25 13:28:54 Database connection established successfully.
+2025/01/25 13:28:54 Successfully Get
+2025/01/25 13:28:54 GetClients-(-)
+2025/01/25 13:28:56 GetBank-(+)
+2025/01/25 13:28:56 Database connection established successfully.
+2025/01/25 13:28:56 Success
+2025/01/25 13:28:56 GetBank-(-)
+2025/01/25 13:29:23 GetUsers-(+)
+2025/01/25 13:29:23 SGS- Invalid Method
+2025/01/25 13:29:23 GetUsers-(-)
+2025/01/25 13:29:29 GetClients-(+)
+2025/01/25 13:29:29 CGCS-004 Invalid Method
+2025/01/25 13:29:29 GetClients-(-)
+2025/01/25 13:29:29 GetClients-(+)
+2025/01/25 13:29:29 Database connection established successfully.
+2025/01/25 13:29:29 Successfully Get
+2025/01/25 13:29:29 GetClients-(-)
+2025/01/25 13:29:31 GetBank-(+)
+2025/01/25 13:29:31 Database connection established successfully.
+2025/01/25 13:29:31 Success
+2025/01/25 13:29:31 GetBank-(-)
+2025/01/25 13:30:19 GetClients-(+)
+2025/01/25 13:30:19 CGCS-004 Invalid Method
+2025/01/25 13:30:19 GetClients-(-)
+2025/01/25 13:30:19 GetClients-(+)
+2025/01/25 13:30:19 Database connection established successfully.
+2025/01/25 13:30:19 Successfully Get
+2025/01/25 13:30:19 GetClients-(-)
+2025/01/25 13:30:21 GetBank-(+)
+2025/01/25 13:30:21 Database connection established successfully.
+2025/01/25 13:30:21 Success
+2025/01/25 13:30:21 GetBank-(-)
+2025/01/25 13:30:42 GetCharges-(+)
+2025/01/25 13:30:43 Database connection established successfully.
+2025/01/25 13:30:43 Success
+2025/01/25 13:30:43 GetCharges-(-)
+2025/01/25 13:30:43 GetBank-(+)
+2025/01/25 13:30:43 Database connection established successfully.
+2025/01/25 13:30:43 Success
+2025/01/25 13:30:43 GetBank-(-)
+2025/01/25 13:32:26 GetClients-(+)
+2025/01/25 13:32:26 CGCS-004 Invalid Method
+2025/01/25 13:32:26 GetClients-(-)
+2025/01/25 13:32:26 GetClients-(+)
+2025/01/25 13:32:26 Database connection established successfully.
+2025/01/25 13:32:26 Successfully Get
+2025/01/25 13:32:26 GetClients-(-)
+2025/01/25 13:32:28 GetBank-(+)
+2025/01/25 13:32:28 Database connection established successfully.
+2025/01/25 13:32:28 Success
+2025/01/25 13:32:28 GetBank-(-)
+2025/01/25 13:32:57 GetClients-(+)
+2025/01/25 13:32:57 CGCS-004 Invalid Method
+2025/01/25 13:32:57 GetClients-(-)
+2025/01/25 13:32:57 GetClients-(+)
+2025/01/25 13:32:57 Database connection established successfully.
+2025/01/25 13:32:57 Successfully Get
+2025/01/25 13:32:57 GetClients-(-)
+2025/01/25 13:32:58 GetBank-(+)
+2025/01/25 13:32:58 Database connection established successfully.
+2025/01/25 13:32:58 Success
+2025/01/25 13:32:58 GetBank-(-)
+2025/01/25 13:33:06 GetCharges-(+)
+2025/01/25 13:33:06 Database connection established successfully.
+2025/01/25 13:33:06 Success
+2025/01/25 13:33:06 GetCharges-(-)
+2025/01/25 13:33:07 GetBank-(+)
+2025/01/25 13:33:07 Database connection established successfully.
+2025/01/25 13:33:07 Success
+2025/01/25 13:33:07 GetBank-(-)
+2025/01/25 13:33:11 GetCharges-(+)
+2025/01/25 13:33:11 Database connection established successfully.
+2025/01/25 13:33:11 Success
+2025/01/25 13:33:11 GetCharges-(-)
+2025/01/25 13:33:12 GetBank-(+)
+2025/01/25 13:33:12 Database connection established successfully.
+2025/01/25 13:33:12 Success
+2025/01/25 13:33:12 GetBank-(-)
+2025/01/25 13:33:15 GetClients-(+)
+2025/01/25 13:33:15 CGCS-004 Invalid Method
+2025/01/25 13:33:15 GetClients-(-)
+2025/01/25 13:33:15 GetClients-(+)
+2025/01/25 13:33:15 Database connection established successfully.
+2025/01/25 13:33:15 Successfully Get
+2025/01/25 13:33:15 GetClients-(-)
+2025/01/25 13:33:17 GetBank-(+)
+2025/01/25 13:33:17 Database connection established successfully.
+2025/01/25 13:33:17 Success
+2025/01/25 13:33:17 GetBank-(-)
+2025/01/25 13:34:59 GetClients-(+)
+2025/01/25 13:34:59 CGCS-004 Invalid Method
+2025/01/25 13:34:59 GetClients-(-)
+2025/01/25 13:34:59 GetClients-(+)
+2025/01/25 13:34:59 Database connection established successfully.
+2025/01/25 13:34:59 Successfully Get
+2025/01/25 13:34:59 GetClients-(-)
+2025/01/25 13:35:01 GetBank-(+)
+2025/01/25 13:35:01 Database connection established successfully.
+2025/01/25 13:35:01 Success
+2025/01/25 13:35:01 GetBank-(-)
+2025/01/25 13:35:12 GetClients-(+)
+2025/01/25 13:35:12 CGCS-004 Invalid Method
+2025/01/25 13:35:12 GetClients-(-)
+2025/01/25 13:35:12 GetClients-(+)
+2025/01/25 13:35:12 Database connection established successfully.
+2025/01/25 13:35:12 Successfully Get
+2025/01/25 13:35:12 GetClients-(-)
+2025/01/25 13:35:14 GetBank-(+)
+2025/01/25 13:35:14 Database connection established successfully.
+2025/01/25 13:35:14 Success
+2025/01/25 13:35:14 GetBank-(-)
+2025/01/25 13:35:28 GetClients-(+)
+2025/01/25 13:35:28 CGCS-004 Invalid Method
+2025/01/25 13:35:28 GetClients-(-)
+2025/01/25 13:35:28 GetClients-(+)
+2025/01/25 13:35:28 Database connection established successfully.
+2025/01/25 13:35:28 Successfully Get
+2025/01/25 13:35:28 GetClients-(-)
+2025/01/25 13:35:34 GetClients-(+)
+2025/01/25 13:35:34 CGCS-004 Invalid Method
+2025/01/25 13:35:34 GetClients-(-)
+2025/01/25 13:35:34 GetClients-(+)
+2025/01/25 13:35:34 Database connection established successfully.
+2025/01/25 13:35:34 Successfully Get
+2025/01/25 13:35:34 GetClients-(-)
+2025/01/25 13:35:35 GetBank-(+)
+2025/01/25 13:35:35 Database connection established successfully.
+2025/01/25 13:35:35 Success
+2025/01/25 13:35:35 GetBank-(-)
+2025/01/25 13:35:40 CreateBank-(+)
+2025/01/25 13:35:40 createBankInDB-(+)
+2025/01/25 13:35:40 Database connection established successfully.
+2025/01/25 13:35:40 createBankInDB-(-)
+2025/01/25 13:35:40 CreateBank-(-)
+2025/01/25 13:35:43 GetClients-(+)
+2025/01/25 13:35:43 CGCS-004 Invalid Method
+2025/01/25 13:35:43 GetClients-(-)
+2025/01/25 13:35:43 GetClients-(+)
+2025/01/25 13:35:43 Database connection established successfully.
+2025/01/25 13:35:43 Successfully Get
+2025/01/25 13:35:43 GetClients-(-)
+2025/01/25 13:35:44 GetBank-(+)
+2025/01/25 13:35:44 Database connection established successfully.
+2025/01/25 13:35:44 Success
+2025/01/25 13:35:44 GetBank-(-)
+2025/01/25 14:04:38 GetClients-(+)
+2025/01/25 14:04:38 CGCS-004 Invalid Method
+2025/01/25 14:04:38 GetClients-(-)
+2025/01/25 14:04:38 GetClients-(+)
+2025/01/25 14:04:38 Database connection established successfully.
+2025/01/25 14:04:38 Successfully Get
+2025/01/25 14:04:38 GetClients-(-)
+2025/01/25 14:04:50 GetBank-(+)
+2025/01/25 14:04:50 Database connection established successfully.
+2025/01/25 14:04:50 Success
+2025/01/25 14:04:50 GetBank-(-)
+2025/01/25 14:04:53 CreateBank-(+)
+2025/01/25 14:04:53 createBankInDB-(+)
+2025/01/25 14:04:53 Database connection established successfully.
+2025/01/25 14:04:53 createBankInDB-(-)
+2025/01/25 14:04:53 CreateBank-(-)
+2025/01/25 14:06:18 GetClients-(+)
+2025/01/25 14:06:18 CGCS-004 Invalid Method
+2025/01/25 14:06:18 GetClients-(-)
+2025/01/25 14:06:18 GetClients-(+)
+2025/01/25 14:06:18 Database connection established successfully.
+2025/01/25 14:06:18 Successfully Get
+2025/01/25 14:06:18 GetClients-(-)
+2025/01/25 14:06:20 GetBank-(+)
+2025/01/25 14:06:20 Database connection established successfully.
+2025/01/25 14:06:20 Success
+2025/01/25 14:06:20 GetBank-(-)
+2025/01/25 14:14:16 GetClients-(+)
+2025/01/25 14:14:16 CGCS-004 Invalid Method
+2025/01/25 14:14:16 GetClients-(-)
+2025/01/25 14:14:16 GetClients-(+)
+2025/01/25 14:14:16 Database connection established successfully.
+2025/01/25 14:14:16 Successfully Get
+2025/01/25 14:14:16 GetClients-(-)
+2025/01/25 14:14:20 GetBank-(+)
+2025/01/25 14:14:20 Database connection established successfully.
+2025/01/25 14:14:20 Success
+2025/01/25 14:14:20 GetBank-(-)
+2025/01/25 14:14:29 GetCharges-(+)
+2025/01/25 14:14:29 Database connection established successfully.
+2025/01/25 14:14:29 Success
+2025/01/25 14:14:29 GetCharges-(-)
+2025/01/25 14:14:33 GetBank-(+)
+2025/01/25 14:14:33 Database connection established successfully.
+2025/01/25 14:14:33 Success
+2025/01/25 14:14:33 GetBank-(-)
+2025/01/25 14:16:18 GetClients-(+)
+2025/01/25 14:16:18 CGCS-004 Invalid Method
+2025/01/25 14:16:18 GetClients-(-)
+2025/01/25 14:16:18 GetClients-(+)
+2025/01/25 14:16:18 Database connection established successfully.
+2025/01/25 14:16:18 Successfully Get
+2025/01/25 14:16:18 GetClients-(-)
+2025/01/25 14:26:04 GetBank-(+)
+2025/01/25 14:26:04 Database connection established successfully.
+2025/01/25 14:26:04 Success
+2025/01/25 14:26:04 GetBank-(-)
+2025/01/25 14:26:34 GetClients-(+)
+2025/01/25 14:26:34 CGCS-004 Invalid Method
+2025/01/25 14:26:34 GetClients-(-)
+2025/01/25 14:26:34 GetClients-(+)
+2025/01/25 14:26:34 Database connection established successfully.
+2025/01/25 14:26:34 Successfully Get
+2025/01/25 14:26:34 GetClients-(-)
+2025/01/25 14:26:37 GetBank-(+)
+2025/01/25 14:26:37 Database connection established successfully.
+2025/01/25 14:26:37 Success
+2025/01/25 14:26:37 GetBank-(-)
+2025/01/25 14:30:34 GetClients-(+)
+2025/01/25 14:30:34 CGCS-004 Invalid Method
+2025/01/25 14:30:34 GetClients-(-)
+2025/01/25 14:30:34 GetClients-(+)
+2025/01/25 14:30:34 Database connection established successfully.
+2025/01/25 14:30:34 Successfully Get
+2025/01/25 14:30:34 GetClients-(-)
+2025/01/25 14:30:38 GetBank-(+)
+2025/01/25 14:30:38 Database connection established successfully.
+2025/01/25 14:30:38 Success
+2025/01/25 14:30:38 GetBank-(-)
+2025/01/25 14:30:46 GetCharges-(+)
+2025/01/25 14:30:46 Database connection established successfully.
+2025/01/25 14:30:46 Success
+2025/01/25 14:30:46 GetCharges-(-)
+2025/01/25 14:30:49 GetStocks-(+)
+2025/01/25 14:30:49 Database connection established successfully.
+2025/01/25 14:30:49 Successfully Get
+2025/01/25 14:30:49 GetStocks-(-)
+2025/01/25 14:30:52 GetUsers-(+)
+2025/01/25 14:30:52 Database connection established successfully.
+2025/01/25 14:30:52 Successfully Get
+2025/01/25 14:30:52 GetUsers-(-)
+2025/01/25 14:30:57 GetBank-(+)
+2025/01/25 14:30:57 Database connection established successfully.
+2025/01/25 14:30:57 Success
+2025/01/25 14:30:57 GetBank-(-)
+2025/01/25 14:31:40 GetClients-(+)
+2025/01/25 14:31:40 CGCS-004 Invalid Method
+2025/01/25 14:31:40 GetClients-(-)
+2025/01/25 14:31:40 GetClients-(+)
+2025/01/25 14:31:40 Database connection established successfully.
+2025/01/25 14:31:40 Successfully Get
+2025/01/25 14:31:40 GetClients-(-)
+2025/01/25 14:31:45 UpdateClient-(+)
+2025/01/25 14:31:45 UpdateClient-(-)
+2025/01/25 14:31:45 UpdateClient-(+)
+2025/01/25 14:31:45 updateClientInDB-(+)
+2025/01/25 14:31:45 Database connection established successfully.
+2025/01/25 14:31:45 updateClientInDB-(-)
+2025/01/25 14:31:45 UpdateClient-(-)
+2025/01/25 14:31:47 GetBank-(+)
+2025/01/25 14:31:47 Database connection established successfully.
+2025/01/25 14:31:47 Success
+2025/01/25 14:31:47 GetBank-(-)
+2025/01/25 14:32:15 GetClients-(+)
+2025/01/25 14:32:15 CGCS-004 Invalid Method
+2025/01/25 14:32:15 GetClients-(-)
+2025/01/25 14:32:15 GetClients-(+)
+2025/01/25 14:32:15 Database connection established successfully.
+2025/01/25 14:32:15 Successfully Get
+2025/01/25 14:32:15 GetClients-(-)
+2025/01/25 14:32:17 GetBank-(+)
+2025/01/25 14:32:17 Database connection established successfully.
+2025/01/25 14:32:17 Success
+2025/01/25 14:32:17 GetBank-(-)
+2025/01/25 14:33:42 GetClients-(+)
+2025/01/25 14:33:42 CGCS-004 Invalid Method
+2025/01/25 14:33:42 GetClients-(-)
+2025/01/25 14:33:42 GetClients-(+)
+2025/01/25 14:33:42 Database connection established successfully.
+2025/01/25 14:33:42 Successfully Get
+2025/01/25 14:33:42 GetClients-(-)
+2025/01/25 14:33:45 GetBank-(+)
+2025/01/25 14:33:45 Database connection established successfully.
+2025/01/25 14:33:45 Success
+2025/01/25 14:33:45 GetBank-(-)
+2025/01/25 14:34:03 GetClients-(+)
+2025/01/25 14:34:03 CGCS-004 Invalid Method
+2025/01/25 14:34:03 GetClients-(-)
+2025/01/25 14:34:03 GetClients-(+)
+2025/01/25 14:34:03 Database connection established successfully.
+2025/01/25 14:34:03 Successfully Get
+2025/01/25 14:34:03 GetClients-(-)
+2025/01/25 14:34:06 GetBank-(+)
+2025/01/25 14:34:06 Database connection established successfully.
+2025/01/25 14:34:06 Success
+2025/01/25 14:34:06 GetBank-(-)
+2025/01/25 14:34:31 GetClients-(+)
+2025/01/25 14:34:31 CGCS-004 Invalid Method
+2025/01/25 14:34:31 GetClients-(-)
+2025/01/25 14:34:31 GetClients-(+)
+2025/01/25 14:34:31 Database connection established successfully.
+2025/01/25 14:34:31 Successfully Get
+2025/01/25 14:34:31 GetClients-(-)
+2025/01/25 14:34:35 GetBank-(+)
+2025/01/25 14:34:35 Database connection established successfully.
+2025/01/25 14:34:35 Success
+2025/01/25 14:34:35 GetBank-(-)
+2025/01/25 14:35:05 GetClients-(+)
+2025/01/25 14:35:05 CGCS-004 Invalid Method
+2025/01/25 14:35:05 GetClients-(-)
+2025/01/25 14:35:05 GetClients-(+)
+2025/01/25 14:35:05 Database connection established successfully.
+2025/01/25 14:35:05 Successfully Get
+2025/01/25 14:35:05 GetClients-(-)
+2025/01/25 14:35:07 GetBank-(+)
+2025/01/25 14:35:07 Database connection established successfully.
+2025/01/25 14:35:07 Success
+2025/01/25 14:35:07 GetBank-(-)
+2025/01/25 14:35:24 GetClients-(+)
+2025/01/25 14:35:24 CGCS-004 Invalid Method
+2025/01/25 14:35:24 GetClients-(-)
+2025/01/25 14:35:24 GetClients-(+)
+2025/01/25 14:35:24 Database connection established successfully.
+2025/01/25 14:35:24 Successfully Get
+2025/01/25 14:35:24 GetClients-(-)
+2025/01/25 14:35:26 GetBank-(+)
+2025/01/25 14:35:26 Database connection established successfully.
+2025/01/25 14:35:26 Success
+2025/01/25 14:35:26 GetBank-(-)
+2025/01/25 14:37:42 CreateBank-(+)
+2025/01/25 14:37:42 createBankInDB-(+)
+2025/01/25 14:37:42 Database connection established successfully.
+2025/01/25 14:37:42 createBankInDB-(-)
+2025/01/25 14:37:42 CreateBank-(-)
+2025/01/25 14:38:05 GetClients-(+)
+2025/01/25 14:38:05 CGCS-004 Invalid Method
+2025/01/25 14:38:05 GetClients-(-)
+2025/01/25 14:38:05 GetClients-(+)
+2025/01/25 14:38:05 Database connection established successfully.
+2025/01/25 14:38:05 Successfully Get
+2025/01/25 14:38:05 GetClients-(-)
+2025/01/25 14:38:09 GetBank-(+)
+2025/01/25 14:38:09 Database connection established successfully.
+2025/01/25 14:38:09 Success
+2025/01/25 14:38:09 GetBank-(-)
+2025/01/25 14:38:18 CreateBank-(+)
+2025/01/25 14:38:18 createBankInDB-(+)
+2025/01/25 14:38:19 Database connection established successfully.
+2025/01/25 14:38:19 createBankInDB-(-)
+2025/01/25 14:38:19 CreateBank-(-)
+2025/01/25 14:39:58 GetCharges-(+)
+2025/01/25 14:39:58 Database connection established successfully.
+2025/01/25 14:39:58 Success
+2025/01/25 14:39:58 GetCharges-(-)
+2025/01/25 14:39:59 GetBank-(+)
+2025/01/25 14:39:59 Database connection established successfully.
+2025/01/25 14:39:59 Success
+2025/01/25 14:39:59 GetBank-(-)
+2025/01/25 14:40:07 GetCharges-(+)
+2025/01/25 14:40:07 Database connection established successfully.
+2025/01/25 14:40:07 Success
+2025/01/25 14:40:07 GetCharges-(-)
+2025/01/25 14:40:15 GetBank-(+)
+2025/01/25 14:40:15 Database connection established successfully.
+2025/01/25 14:40:15 Success
+2025/01/25 14:40:15 GetBank-(-)
+2025/01/25 14:42:25 GetClients-(+)
+2025/01/25 14:42:25 CGCS-004 Invalid Method
+2025/01/25 14:42:25 GetClients-(-)
+2025/01/25 14:42:25 GetClients-(+)
+2025/01/25 14:42:25 Database connection established successfully.
+2025/01/25 14:42:25 Successfully Get
+2025/01/25 14:42:25 GetClients-(-)
+2025/01/25 14:42:42 GetBank-(+)
+2025/01/25 14:42:42 Database connection established successfully.
+2025/01/25 14:42:42 Success
+2025/01/25 14:42:42 GetBank-(-)

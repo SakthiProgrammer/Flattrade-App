@@ -1,0 +1,424 @@
+2025/01/24 15:36:18 GetClients-(+)
+2025/01/24 15:36:18 CGCS-004 Invalid Method
+2025/01/24 15:36:18 GetClients-(-)
+2025/01/24 15:36:18 GetClients-(+)
+2025/01/24 15:36:18 Database connection established successfully.
+2025/01/24 15:36:18 Successfully Get
+2025/01/24 15:36:18 GetClients-(-)
+2025/01/24 15:37:20 GetClients-(+)
+2025/01/24 15:37:20 CGCS-004 Invalid Method
+2025/01/24 15:37:20 GetClients-(-)
+2025/01/24 15:37:20 GetClients-(+)
+2025/01/24 15:37:20 Database connection established successfully.
+2025/01/24 15:37:20 Successfully Get
+2025/01/24 15:37:20 GetClients-(-)
+2025/01/24 15:37:56 GetClients-(+)
+2025/01/24 15:37:56 CGCS-004 Invalid Method
+2025/01/24 15:37:56 GetClients-(-)
+2025/01/24 15:37:56 GetClients-(+)
+2025/01/24 15:37:56 Database connection established successfully.
+2025/01/24 15:37:56 Successfully Get
+2025/01/24 15:37:56 GetClients-(-)
+2025/01/24 15:38:20 GetClients-(+)
+2025/01/24 15:38:20 CGCS-004 Invalid Method
+2025/01/24 15:38:20 GetClients-(-)
+2025/01/24 15:38:20 GetClients-(+)
+2025/01/24 15:38:20 Database connection established successfully.
+2025/01/24 15:38:20 Successfully Get
+2025/01/24 15:38:20 GetClients-(-)
+2025/01/24 15:39:12 GetClients-(+)
+2025/01/24 15:39:12 CGCS-004 Invalid Method
+2025/01/24 15:39:12 GetClients-(-)
+2025/01/24 15:39:12 GetClients-(+)
+2025/01/24 15:39:12 Database connection established successfully.
+2025/01/24 15:39:12 Successfully Get
+2025/01/24 15:39:12 GetClients-(-)
+2025/01/24 15:39:38 GetClients-(+)
+2025/01/24 15:39:38 CGCS-004 Invalid Method
+2025/01/24 15:39:38 GetClients-(-)
+2025/01/24 15:39:38 GetClients-(+)
+2025/01/24 15:39:38 Database connection established successfully.
+2025/01/24 15:39:38 Successfully Get
+2025/01/24 15:39:38 GetClients-(-)
+2025/01/24 15:40:48 GetClients-(+)
+2025/01/24 15:40:48 CGCS-004 Invalid Method
+2025/01/24 15:40:48 GetClients-(-)
+2025/01/24 15:40:48 GetClients-(+)
+2025/01/24 15:40:48 Database connection established successfully.
+2025/01/24 15:40:48 Successfully Get
+2025/01/24 15:40:48 GetClients-(-)
+2025/01/24 15:42:10 GetClients-(+)
+2025/01/24 15:42:10 CGCS-004 Invalid Method
+2025/01/24 15:42:10 GetClients-(-)
+2025/01/24 15:42:10 GetClients-(+)
+2025/01/24 15:42:10 Database connection established successfully.
+2025/01/24 15:42:10 Successfully Get
+2025/01/24 15:42:10 GetClients-(-)
+2025/01/24 15:42:18 GetClients-(+)
+2025/01/24 15:42:18 CGCS-004 Invalid Method
+2025/01/24 15:42:18 GetClients-(-)
+2025/01/24 15:42:18 GetClients-(+)
+2025/01/24 15:42:18 Database connection established successfully.
+2025/01/24 15:42:18 Successfully Get
+2025/01/24 15:42:18 GetClients-(-)
+2025/01/24 15:48:10 GetClients-(+)
+2025/01/24 15:48:10 CGCS-004 Invalid Method
+2025/01/24 15:48:10 GetClients-(-)
+2025/01/24 15:48:10 GetClients-(+)
+2025/01/24 15:48:10 Database connection established successfully.
+2025/01/24 15:48:10 Successfully Get
+2025/01/24 15:48:10 GetClients-(-)
+2025/01/24 15:55:18 GetClients-(+)
+2025/01/24 15:55:18 CGCS-004 Invalid Method
+2025/01/24 15:55:18 GetClients-(-)
+2025/01/24 15:55:18 GetClients-(+)
+2025/01/24 15:55:18 Database connection established successfully.
+2025/01/24 15:55:18 Successfully Get
+2025/01/24 15:55:18 GetClients-(-)
+2025/01/24 15:58:34 GetClients-(+)
+2025/01/24 15:58:34 CGCS-004 Invalid Method
+2025/01/24 15:58:34 GetClients-(-)
+2025/01/24 15:58:34 GetClients-(+)
+2025/01/24 15:58:34 Database connection established successfully.
+2025/01/24 15:58:34 Successfully Get
+2025/01/24 15:58:34 GetClients-(-)
+2025/01/24 15:58:40 GetClients-(+)
+2025/01/24 15:58:40 CGCS-004 Invalid Method
+2025/01/24 15:58:40 GetClients-(-)
+2025/01/24 15:58:40 GetClients-(+)
+2025/01/24 15:58:40 Database connection established successfully.
+2025/01/24 15:58:40 Successfully Get
+2025/01/24 15:58:40 GetClients-(-)
+2025/01/24 16:04:39 GetClients-(+)
+2025/01/24 16:04:39 CGCS-004 Invalid Method
+2025/01/24 16:04:39 GetClients-(-)
+2025/01/24 16:04:39 GetClients-(+)
+2025/01/24 16:04:39 Database connection established successfully.
+2025/01/24 16:04:39 Successfully Get
+2025/01/24 16:04:39 GetClients-(-)
+2025/01/24 16:09:19 GetClients-(+)
+2025/01/24 16:09:19 CGCS-004 Invalid Method
+2025/01/24 16:09:19 GetClients-(-)
+2025/01/24 16:09:19 GetClients-(+)
+2025/01/24 16:09:19 Database connection established successfully.
+2025/01/24 16:09:19 Successfully Get
+2025/01/24 16:09:19 GetClients-(-)
+2025/01/24 16:09:56 GetClients-(+)
+2025/01/24 16:09:56 CGCS-004 Invalid Method
+2025/01/24 16:09:56 GetClients-(-)
+2025/01/24 16:09:56 GetClients-(+)
+2025/01/24 16:09:56 Database connection established successfully.
+2025/01/24 16:09:56 Successfully Get
+2025/01/24 16:09:56 GetClients-(-)
+2025/01/24 16:10:27 GetClients-(+)
+2025/01/24 16:10:27 CGCS-004 Invalid Method
+2025/01/24 16:10:27 GetClients-(-)
+2025/01/24 16:10:27 GetClients-(+)
+2025/01/24 16:10:27 Database connection established successfully.
+2025/01/24 16:10:27 Successfully Get
+2025/01/24 16:10:27 GetClients-(-)
+2025/01/24 16:11:39 GetClients-(+)
+2025/01/24 16:11:39 CGCS-004 Invalid Method
+2025/01/24 16:11:39 GetClients-(-)
+2025/01/24 16:11:39 GetClients-(+)
+2025/01/24 16:11:39 Database connection established successfully.
+2025/01/24 16:11:39 Successfully Get
+2025/01/24 16:11:39 GetClients-(-)
+2025/01/24 16:11:45 GetClients-(+)
+2025/01/24 16:11:45 CGCS-004 Invalid Method
+2025/01/24 16:11:45 GetClients-(-)
+2025/01/24 16:11:45 GetClients-(+)
+2025/01/24 16:11:45 Database connection established successfully.
+2025/01/24 16:11:45 Successfully Get
+2025/01/24 16:11:45 GetClients-(-)
+2025/01/24 16:12:01 GetClients-(+)
+2025/01/24 16:12:01 CGCS-004 Invalid Method
+2025/01/24 16:12:01 GetClients-(-)
+2025/01/24 16:12:01 GetClients-(+)
+2025/01/24 16:12:01 Database connection established successfully.
+2025/01/24 16:12:01 Successfully Get
+2025/01/24 16:12:01 GetClients-(-)
+2025/01/24 16:13:12 GetClients-(+)
+2025/01/24 16:13:12 CGCS-004 Invalid Method
+2025/01/24 16:13:12 GetClients-(-)
+2025/01/24 16:13:12 GetClients-(+)
+2025/01/24 16:13:12 Database connection established successfully.
+2025/01/24 16:13:12 Successfully Get
+2025/01/24 16:13:12 GetClients-(-)
+2025/01/24 16:13:17 GetClients-(+)
+2025/01/24 16:13:17 Database connection established successfully.
+2025/01/24 16:13:17 Successfully Get
+2025/01/24 16:13:17 GetClients-(-)
+2025/01/24 16:16:14 UpdateClient-(+)
+2025/01/24 16:16:14 updateClientInDB-(+)
+2025/01/24 16:16:14 Database connection established successfully.
+2025/01/24 16:16:14 updateClientInDB-(-)
+2025/01/24 16:16:14 UpdateClient-(-)
+2025/01/24 16:17:34 GetClients-(+)
+2025/01/24 16:17:34 CGCS-004 Invalid Method
+2025/01/24 16:17:34 GetClients-(-)
+2025/01/24 16:17:34 GetClients-(+)
+2025/01/24 16:17:34 Database connection established successfully.
+2025/01/24 16:17:34 Successfully Get
+2025/01/24 16:17:34 GetClients-(-)
+2025/01/24 16:20:03 GetClients-(+)
+2025/01/24 16:20:03 CGCS-004 Invalid Method
+2025/01/24 16:20:03 GetClients-(-)
+2025/01/24 16:20:03 GetClients-(+)
+2025/01/24 16:20:03 Database connection established successfully.
+2025/01/24 16:20:03 Successfully Get
+2025/01/24 16:20:03 GetClients-(-)
+2025/01/24 16:23:19 GetClients-(+)
+2025/01/24 16:23:19 CGCS-004 Invalid Method
+2025/01/24 16:23:19 GetClients-(-)
+2025/01/24 16:23:19 GetClients-(+)
+2025/01/24 16:23:20 Database connection established successfully.
+2025/01/24 16:23:20 Successfully Get
+2025/01/24 16:23:20 GetClients-(-)
+2025/01/24 16:23:25 UpdateClient-(+)
+2025/01/24 16:23:25 UpdateClient-(-)
+2025/01/24 16:23:25 UpdateClient-(+)
+2025/01/24 16:23:25 updateClientInDB-(+)
+2025/01/24 16:23:25 Database connection established successfully.
+2025/01/24 16:23:25 updateClientInDB-(-)
+2025/01/24 16:23:25 UpdateClient-(-)
+2025/01/24 16:23:33 GetClients-(+)
+2025/01/24 16:23:33 CGCS-004 Invalid Method
+2025/01/24 16:23:33 GetClients-(-)
+2025/01/24 16:23:33 GetClients-(+)
+2025/01/24 16:23:33 Database connection established successfully.
+2025/01/24 16:23:33 Successfully Get
+2025/01/24 16:23:33 GetClients-(-)
+2025/01/24 16:29:55 GetClients-(+)
+2025/01/24 16:29:55 CGCS-004 Invalid Method
+2025/01/24 16:29:55 GetClients-(-)
+2025/01/24 16:29:55 GetClients-(+)
+2025/01/24 16:29:55 Database connection established successfully.
+2025/01/24 16:29:55 Successfully Get
+2025/01/24 16:29:55 GetClients-(-)
+2025/01/24 16:30:04 UpdateClient-(+)
+2025/01/24 16:30:04 UpdateClient-(-)
+2025/01/24 16:30:04 UpdateClient-(+)
+2025/01/24 16:30:04 updateClientInDB-(+)
+2025/01/24 16:30:04 Database connection established successfully.
+2025/01/24 16:30:04 updateClientInDB-(-)
+2025/01/24 16:30:04 UpdateClient-(-)
+2025/01/24 16:30:09 GetClients-(+)
+2025/01/24 16:30:09 CGCS-004 Invalid Method
+2025/01/24 16:30:09 GetClients-(-)
+2025/01/24 16:30:09 GetClients-(+)
+2025/01/24 16:30:09 Database connection established successfully.
+2025/01/24 16:30:09 Successfully Get
+2025/01/24 16:30:09 GetClients-(-)
+2025/01/24 16:35:18 GetClients-(+)
+2025/01/24 16:35:18 CGCS-004 Invalid Method
+2025/01/24 16:35:18 GetClients-(-)
+2025/01/24 16:35:18 GetClients-(+)
+2025/01/24 16:35:18 Database connection established successfully.
+2025/01/24 16:35:18 Successfully Get
+2025/01/24 16:35:18 GetClients-(-)
+2025/01/24 16:35:33 GetClients-(+)
+2025/01/24 16:35:33 CGCS-004 Invalid Method
+2025/01/24 16:35:33 GetClients-(-)
+2025/01/24 16:35:33 GetClients-(+)
+2025/01/24 16:35:33 Database connection established successfully.
+2025/01/24 16:35:33 Successfully Get
+2025/01/24 16:35:33 GetClients-(-)
+2025/01/24 16:36:10 UpdateClient-(+)
+2025/01/24 16:36:10 UpdateClient-(-)
+2025/01/24 16:36:10 UpdateClient-(+)
+2025/01/24 16:36:10 updateClientInDB-(+)
+2025/01/24 16:36:10 Database connection established successfully.
+2025/01/24 16:36:10 updateClientInDB-(-)
+2025/01/24 16:36:10 UpdateClient-(-)
+2025/01/24 16:36:23 GetClients-(+)
+2025/01/24 16:36:23 CGCS-004 Invalid Method
+2025/01/24 16:36:23 GetClients-(-)
+2025/01/24 16:36:23 GetClients-(+)
+2025/01/24 16:36:23 Database connection established successfully.
+2025/01/24 16:36:23 Successfully Get
+2025/01/24 16:36:23 GetClients-(-)
+2025/01/24 16:44:16 UpdateClient-(+)
+2025/01/24 16:44:16 UpdateClient-(-)
+2025/01/24 16:44:16 UpdateClient-(+)
+2025/01/24 16:44:16 updateClientInDB-(+)
+2025/01/24 16:44:16 Database connection established successfully.
+2025/01/24 16:44:16 updateClientInDB-(-)
+2025/01/24 16:44:16 UpdateClient-(-)
+2025/01/24 16:44:18 UpdateClient-(+)
+2025/01/24 16:44:18 updateClientInDB-(+)
+2025/01/24 16:44:18 Database connection established successfully.
+2025/01/24 16:44:18 updateClientInDB-(-)
+2025/01/24 16:44:18 UpdateClient-(-)
+2025/01/24 16:44:26 GetClients-(+)
+2025/01/24 16:44:26 CGCS-004 Invalid Method
+2025/01/24 16:44:26 GetClients-(-)
+2025/01/24 16:44:26 GetClients-(+)
+2025/01/24 16:44:26 Database connection established successfully.
+2025/01/24 16:44:26 Successfully Get
+2025/01/24 16:44:26 GetClients-(-)
+2025/01/24 16:47:12 GetClients-(+)
+2025/01/24 16:47:12 CGCS-004 Invalid Method
+2025/01/24 16:47:12 GetClients-(-)
+2025/01/24 16:47:13 GetClients-(+)
+2025/01/24 16:47:13 Database connection established successfully.
+2025/01/24 16:47:14 Successfully Get
+2025/01/24 16:47:14 GetClients-(-)
+2025/01/24 16:49:18 GetClients-(+)
+2025/01/24 16:49:18 CGCS-004 Invalid Method
+2025/01/24 16:49:18 GetClients-(-)
+2025/01/24 16:49:18 GetClients-(+)
+2025/01/24 16:49:18 Database connection established successfully.
+2025/01/24 16:49:18 Successfully Get
+2025/01/24 16:49:18 GetClients-(-)
+2025/01/24 16:49:23 GetClients-(+)
+2025/01/24 16:49:23 CGCS-004 Invalid Method
+2025/01/24 16:49:23 GetClients-(-)
+2025/01/24 16:49:23 GetClients-(+)
+2025/01/24 16:49:23 Database connection established successfully.
+2025/01/24 16:49:23 Successfully Get
+2025/01/24 16:49:23 GetClients-(-)
+2025/01/24 16:51:37 GetBank-(+)
+2025/01/24 16:51:37 Database connection established successfully.
+2025/01/24 16:51:37 Success
+2025/01/24 16:51:37 GetBank-(-)
+2025/01/24 16:54:29 GetClients-(+)
+2025/01/24 16:54:29 CGCS-004 Invalid Method
+2025/01/24 16:54:29 GetClients-(-)
+2025/01/24 16:54:29 GetClients-(+)
+2025/01/24 16:54:30 Database connection established successfully.
+2025/01/24 16:54:30 Successfully Get
+2025/01/24 16:54:30 GetClients-(-)
+2025/01/24 16:56:13 UpdateClient-(+)
+2025/01/24 16:56:13 UpdateClient-(-)
+2025/01/24 16:56:13 UpdateClient-(+)
+2025/01/24 16:56:13 updateClientInDB-(+)
+2025/01/24 16:56:13 Database connection established successfully.
+2025/01/24 16:56:13 updateClientInDB-(-)
+2025/01/24 16:56:13 UpdateClient-(-)
+2025/01/24 16:56:18 GetClients-(+)
+2025/01/24 16:56:18 CGCS-004 Invalid Method
+2025/01/24 16:56:18 GetClients-(-)
+2025/01/24 16:56:18 GetClients-(+)
+2025/01/24 16:56:18 Database connection established successfully.
+2025/01/24 16:56:18 Successfully Get
+2025/01/24 16:56:18 GetClients-(-)
+2025/01/24 16:56:50 GetClients-(+)
+2025/01/24 16:56:50 CGCS-004 Invalid Method
+2025/01/24 16:56:50 GetClients-(-)
+2025/01/24 16:56:50 GetClients-(+)
+2025/01/24 16:56:50 Database connection established successfully.
+2025/01/24 16:56:50 Successfully Get
+2025/01/24 16:56:50 GetClients-(-)
+2025/01/24 16:58:26 GetClients-(+)
+2025/01/24 16:58:26 CGCS-004 Invalid Method
+2025/01/24 16:58:26 GetClients-(-)
+2025/01/24 16:58:26 GetClients-(+)
+2025/01/24 16:58:26 Database connection established successfully.
+2025/01/24 16:58:26 Successfully Get
+2025/01/24 16:58:26 GetClients-(-)
+2025/01/24 16:59:03 UpdateClient-(+)
+2025/01/24 16:59:03 UpdateClient-(-)
+2025/01/24 16:59:03 UpdateClient-(+)
+2025/01/24 16:59:03 updateClientInDB-(+)
+2025/01/24 16:59:03 Database connection established successfully.
+2025/01/24 16:59:03 updateClientInDB-(-)
+2025/01/24 16:59:03 UpdateClient-(-)
+2025/01/24 16:59:21 GetClients-(+)
+2025/01/24 16:59:21 CGCS-004 Invalid Method
+2025/01/24 16:59:21 GetClients-(-)
+2025/01/24 16:59:21 GetClients-(+)
+2025/01/24 16:59:21 Database connection established successfully.
+2025/01/24 16:59:21 Successfully Get
+2025/01/24 16:59:21 GetClients-(-)
+2025/01/24 16:59:24 UpdateClient-(+)
+2025/01/24 16:59:24 UpdateClient-(-)
+2025/01/24 16:59:24 UpdateClient-(+)
+2025/01/24 16:59:24 updateClientInDB-(+)
+2025/01/24 16:59:24 Database connection established successfully.
+2025/01/24 16:59:24 updateClientInDB-(-)
+2025/01/24 16:59:24 UpdateClient-(-)
+2025/01/24 16:59:40 GetClients-(+)
+2025/01/24 16:59:40 CGCS-004 Invalid Method
+2025/01/24 16:59:40 GetClients-(-)
+2025/01/24 16:59:40 GetClients-(+)
+2025/01/24 16:59:40 Database connection established successfully.
+2025/01/24 16:59:40 Successfully Get
+2025/01/24 16:59:40 GetClients-(-)
+2025/01/24 17:01:09 GetClients-(+)
+2025/01/24 17:01:09 CGCS-004 Invalid Method
+2025/01/24 17:01:09 GetClients-(-)
+2025/01/24 17:01:09 GetClients-(+)
+2025/01/24 17:01:09 Database connection established successfully.
+2025/01/24 17:01:09 Successfully Get
+2025/01/24 17:01:09 GetClients-(-)
+2025/01/24 17:01:27 GetClients-(+)
+2025/01/24 17:01:27 CGCS-004 Invalid Method
+2025/01/24 17:01:27 GetClients-(-)
+2025/01/24 17:01:27 GetClients-(+)
+2025/01/24 17:01:27 Database connection established successfully.
+2025/01/24 17:01:27 Successfully Get
+2025/01/24 17:01:27 GetClients-(-)
+2025/01/24 17:01:38 UpdateClient-(+)
+2025/01/24 17:01:39 UpdateClient-(-)
+2025/01/24 17:01:39 UpdateClient-(+)
+2025/01/24 17:01:39 updateClientInDB-(+)
+2025/01/24 17:01:39 Database connection established successfully.
+2025/01/24 17:01:39 updateClientInDB-(-)
+2025/01/24 17:01:39 UpdateClient-(-)
+2025/01/24 17:01:50 UpdateClient-(+)
+2025/01/24 17:01:50 UpdateClient-(-)
+2025/01/24 17:01:50 UpdateClient-(+)
+2025/01/24 17:01:50 updateClientInDB-(+)
+2025/01/24 17:01:50 Database connection established successfully.
+2025/01/24 17:01:50 updateClientInDB-(-)
+2025/01/24 17:01:50 UpdateClient-(-)
+2025/01/24 17:02:06 GetClients-(+)
+2025/01/24 17:02:06 CGCS-004 Invalid Method
+2025/01/24 17:02:06 GetClients-(-)
+2025/01/24 17:02:06 GetClients-(+)
+2025/01/24 17:02:06 Database connection established successfully.
+2025/01/24 17:02:06 Successfully Get
+2025/01/24 17:02:06 GetClients-(-)
+2025/01/24 17:02:28 UpdateClient-(+)
+2025/01/24 17:02:28 UpdateClient-(-)
+2025/01/24 17:02:28 UpdateClient-(+)
+2025/01/24 17:02:28 updateClientInDB-(+)
+2025/01/24 17:02:28 Database connection established successfully.
+2025/01/24 17:02:28 updateClientInDB-(-)
+2025/01/24 17:02:28 UpdateClient-(-)
+2025/01/24 17:02:43 UpdateClient-(+)
+2025/01/24 17:02:43 UpdateClient-(-)
+2025/01/24 17:02:44 UpdateClient-(+)
+2025/01/24 17:02:44 updateClientInDB-(+)
+2025/01/24 17:02:44 Database connection established successfully.
+2025/01/24 17:02:44 updateClientInDB-(-)
+2025/01/24 17:02:44 UpdateClient-(-)
+2025/01/24 17:03:18 GetClients-(+)
+2025/01/24 17:03:18 CGCS-004 Invalid Method
+2025/01/24 17:03:18 GetClients-(-)
+2025/01/24 17:03:18 GetClients-(+)
+2025/01/24 17:03:18 Database connection established successfully.
+2025/01/24 17:03:18 Successfully Get
+2025/01/24 17:03:18 GetClients-(-)
+2025/01/24 17:04:14 UpdateClient-(+)
+2025/01/24 17:04:14 UpdateClient-(-)
+2025/01/24 17:04:14 UpdateClient-(+)
+2025/01/24 17:04:14 updateClientInDB-(+)
+2025/01/24 17:04:14 Database connection established successfully.
+2025/01/24 17:04:14 updateClientInDB-(-)
+2025/01/24 17:04:14 UpdateClient-(-)
+2025/01/24 17:04:31 UpdateClient-(+)
+2025/01/24 17:04:31 UpdateClient-(-)
+2025/01/24 17:04:31 UpdateClient-(+)
+2025/01/24 17:04:31 updateClientInDB-(+)
+2025/01/24 17:04:31 Database connection established successfully.
+2025/01/24 17:04:31 updateClientInDB-(-)
+2025/01/24 17:04:31 UpdateClient-(-)
+2025/01/24 17:33:12 GetClients-(+)
+2025/01/24 17:33:12 CGCS-004 Invalid Method
+2025/01/24 17:33:12 GetClients-(-)
+2025/01/24 17:33:12 GetClients-(+)
+2025/01/24 17:33:12 Database connection established successfully.
+2025/01/24 17:33:12 Successfully Get
+2025/01/24 17:33:12 GetClients-(-)

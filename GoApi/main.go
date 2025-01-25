@@ -45,6 +45,7 @@ func main() {
 	http.HandleFunc("/createtrade", trade.CreateTrade)
 	http.HandleFunc("/getclienttrades", trade.GetClientFullDetails)
 	http.HandleFunc("/getclientstrades", user.ClientTradeFullDetails)
+	http.HandleFunc("/updatetradestatus", user.UpdateTradeStatus)
 
 	http.ListenAndServe(":29091", nil)
 }

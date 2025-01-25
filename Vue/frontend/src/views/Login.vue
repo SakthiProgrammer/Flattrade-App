@@ -1,11 +1,12 @@
 <template>
-  <div>
+  <div class="fill-height d-flex flex-column pb-8">
     <Header />
-    <div class="my-auto fill-height">
+    <div class="d-flex flex-grow-1 align-center justify-center ">
       <v-container>
-        <v-row class="fill-height align-center justify-center text-center">
-          <!-- Left Column -->
-          <v-col cols="12" md="6" sm="12" class="d-flex flex-column align-center justify-center">
+        <v-row class="d-flex align-center justify-center fill-height">
+
+
+          <v-col cols="12" md="6" sm="12" class="fill-height align-center justify-center text-center">
             <h1>Welcome to Flattrade</h1>
             <div>
               <v-btn @click="selectRole('admin')" class="ma-2 my-5" :outlined="isBtnSelected" color="cyan" rounded

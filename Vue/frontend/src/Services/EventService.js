@@ -53,11 +53,19 @@ export default {
   GetClientById(head) {
     const header = {
       headers: {
-        ID: head,
+        CLIENTID: head,
       },
     };
-    return baseApiClient.get("/getclients", header);
+    return baseApiClient.get("/getclienttrades", header);
   },
+  // GetCliendAndTrade(head) {
+  //   const header = {
+  //     headers: {
+  //       ID: head,
+  //     },
+  //   };
+  //   return baseApiClient.get("/getclients", header);
+  // },
   ApproveClient(ClientData) {
     return baseApiClient.put("/updateclient", ClientData);
   },

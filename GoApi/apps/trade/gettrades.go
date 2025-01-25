@@ -26,19 +26,33 @@ import (
 /* ------ */
 
 type GetTradeRec struct {
-	TradeID             uint    `json:"trade_id" gorm:"column:Id"`
-	ClientID            uint    `json:"client_id" gorm:"column:client_id"`
-	TradeType           string  `json:"trade_type" gorm:"column:trade_type"`
-	Quantity            uint    `json:"quantiry" gorm:"column:quantity"`
-	TotalPrice          float64 `json:"total_price" gorm:"column:trade_price"`
-	TradeDate           string  `json:"trade_date" gorm:"column:trade_date"`
-	BackOfficerApproval string  `json:"back_officer_approval" gorm:"column:back_officer_approval_status"`
-	BillerApproval      string  `json:"biller_approval" gorm:"column:biller_Approvel_status"`
-	ApproverApproval    string  `json:"approver_approval" gorm:"column:approver_Approvel_status"`
+	TradeID             uint        `json:"trade_id" gorm:"column:Id"`
+	ClientID            uint        `json:"client_id" gorm:"column:client_id"`
+	StockId             uint        `json:"stock_id" gorm:"column:stock_id"`
+	TradeType           string      `json:"trade_type" gorm:"column:trade_type"`
+	Quantity            uint        `json:"quantity" gorm:"column:quantity"`
+	TotalPrice          float64     `json:"total_price" gorm:"column:trade_price"`
+	TradeDate           string      `json:"trade_date" gorm:"column:trade_date"`
+	StockRec            GetStockRec `json:"stock_detail" gorm:"foreignKey:StockId;references:ID"`
+	BackOfficerApproval string      `json:"back_officer_approval" gorm:"column:back_officer_approval_status"`
+	BillerApproval      string      `json:"biller_approval" gorm:"column:biller_Approvel_status"`
+	ApproverApproval    string      `json:"approver_approval" gorm:"column:approver_Approvel_status"`
 }
 
 func (GetTradeRec) TableName() string {
 	return "st_918_trade_table"
+}
+
+type GetStockRec struct {
+	ID         int     `json:"id" gorm:"column:stock_id"`
+	StockName  string  `json:"stock_name" gorm:"column:stock_name"`
+	StockPrice float64 `json:"stock_price" gorm:"column:stock_price"`
+	Segment    string  `json:"segment" gorm:"column:segment"`
+	ISIN       string  `json:"isin" gorm:"column:isin"`
+	// CreatedBy  string  `json:"created_by" gorm:"column:created_by"`
+	// CreatedAt  string  `json:"created_at" gorm:"column:created_at"`
+	// UpdatedBy  string  `json:"updated_by" gorm:"column:updated_by"`
+	// UpdatedAt  string  `json:"updated_at" gorm:"column:updated_at"`
 }
 
 // Id
@@ -62,6 +76,10 @@ func (GetBankRec) TableName() string {
 	return "st_918_bank_details"
 }
 
+func (GetStockRec) TableName() string {
+	return "st_918_stock_table"
+}
+
 // client_id
 // first_name
 // last_name
@@ -79,19 +97,21 @@ func (GetBankRec) TableName() string {
 // password
 // unique_id
 type GetClientRec struct {
-	ClientID    uint       `json:"client_id" gorm:"column:client_id"`
-	FirstName   string     `json:"first_name" gorm:"column:first_name"`
-	LastName    string     `json:"last_name" gorm:"column:last_name"`
-	Email       string     `json:"email" gorm:"column:email"`
-	BankID      uint       `json:"-" gorm:"column:bank_id"`
-	PhoneNumber string     `json:"phone_number" gorm:"column:phone_number"`
-	PanNumber   string     `json:"pan_number" gorm:"column:pan_number"`
-	NomineeName string     `json:"nominee_name" gorm:"column:nominee_name"`
-	BankDetail  GetBankRec `json:"bank_detail" gorm:"foreignKey:BankID;references:BankID"`
-	// UniqueId       string        `json:"unique_id" gorm:"column:unique_id"`
+	ClientID       uint          `json:"client_id" gorm:"column:client_id"`
+	FirstName      string        `json:"first_name" gorm:"column:first_name"`
+	LastName       string        `json:"last_name" gorm:"column:last_name"`
+	Email          string        `json:"email" gorm:"column:email"`
+	BankID         uint          `json:"-" gorm:"column:bank_id"`
+	PhoneNumber    string        `json:"phone_number" gorm:"column:phone_number"`
+	PanNumber      string        `json:"pan_number" gorm:"column:pan_number"`
+	NomineeName    string        `json:"nominee_name" gorm:"column:nominee_name"`
+	BankDetail     GetBankRec    `json:"bank_detail" gorm:"foreignKey:BankID;references:BankID"`
+	UniqueId       string        `json:"unique_id" gorm:"column:unique_id"`
 	BankAccount    string        `json:"bank_account" gorm:"column:bank_account"`
 	KycIsCompleted string        `json:"kyc_is_completed" gorm:"column:kyc_iScompleted"`
-	TradesArr      []GetTradeRec `json:"trade_details" gorm:"foreignKey:ClientID;references:ClientID"`
+	PendingTrade   []GetTradeRec `json:"pending" gorm:"foreignKey:ClientID;references:ClientID"`
+	HistoryTrade   []GetTradeRec `json:"history" gorm:"foreignKey:ClientID;references:ClientID"`
+	// Pending
 }
 
 func (GetClientRec) TableName() string {
@@ -107,7 +127,7 @@ type GetClientResp struct {
 func GetClientFullDetails(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
-	w.Header().Set("Access-Control-Allow-Headers", "USERID, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
+	w.Header().Set("Access-Control-Allow-Headers", "CLIENTID, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 	w.Header().Set("Content-Type", "application/json")
 
 	log.Println("GetClientFullDetails-(+)")
@@ -117,7 +137,7 @@ func GetClientFullDetails(w http.ResponseWriter, r *http.Request) {
 
 	lClientResp.Status = common.SuccessCode
 
-	lUserId := r.Header.Get("USERID")
+	lUserId := r.Header.Get("CLIENTID")
 
 	if r.Method == http.MethodGet {
 
@@ -139,17 +159,42 @@ func GetClientFullDetails(w http.ResponseWriter, r *http.Request) {
 				lClientResp.ErrMsg = lErr.Error()
 
 			} else {
-				// lResult := lGormDb.Preload("TradesArr").Preload("BankRec").Where("client_id = ? AND trades_arr.back_officer_approval = ?", lUserId, "approved").First(&lClient)
-				lResult := lGormDb.Preload("TradesArr").Preload("BankDetail").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)
-				// lResult := lGormDb.Preload("TradesArr").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)
 
+				// var pendingTrades []GetTradeRec
+				lGormDb.Table("st_918_trade_table").
+					Preload("StockRec"). // Preload stock details for each trade
+					Where("client_id = ? AND ("+
+						"back_officer_approval_status = ? OR "+
+						"biller_Approvel_status = ? OR "+
+						"approver_Approvel_status = ?)", lUserId, "Pending", "Pending", "Pending").
+					Find(&lClientResp.PendingTrade)
+
+				// var historyTrades []GetTradeRec
+				lGormDb.Table("st_918_trade_table").
+					Preload("StockRec"). // Preload stock details for each trade
+					Where("client_id = ? AND "+
+						"(back_officer_approval_status = ? OR back_officer_approval_status = ?) AND "+
+						"(biller_Approvel_status = ? OR biller_Approvel_status = ?) AND "+
+						"(approver_Approvel_status = ? OR approver_Approvel_status = ?)", lUserId,
+						"Rejected", "Approved", "Rejected", "Approved", "Rejected", "Approved").
+					Find(&lClientResp.HistoryTrade)
+
+				// lClientResp.GetClientRec = GetClientRec{
+				// 	PendingTrade: pendingTrades,
+				// 	HistoryTrade: historyTrades,
+				// }
+
+				// Query for client details (including BankDetail)
+				lResult := lGormDb.Preload("BankDetail").Where("client_id = ?", lUserId).First(&lClientResp.GetClientRec)
+
+				// Handle errors or success
 				if lResult.Error != nil {
 					log.Println("TGCFD-002", lResult.Error)
 					lClientResp.ErrMsg = lResult.Error.Error()
 					lClientResp.Status = common.ErrorCode
 				} else {
-					log.Println("Successfully Get")
-					fmt.Println("%+v", lClientResp)
+					log.Println("Successfully retrieved client details.")
+					fmt.Printf("%+v\n", lClientResp)
 				}
 			}
 		}

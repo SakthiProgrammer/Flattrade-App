@@ -1,0 +1,109 @@
+2025/01/25 11:27:51 GetClientFullDetails-(+)
+2025/01/25 11:27:51 GetClientFullDetails-(-)
+2025/01/25 11:27:51 GetClientFullDetails-(+)
+2025/01/25 11:27:51 Database connection established successfully.
+2025/01/25 11:27:51 Successfully retrieved client details.
+2025/01/25 11:27:51 GetClientFullDetails-(-)
+2025/01/25 11:27:51 GetStocks-(+)
+2025/01/25 11:27:51 Database connection established successfully.
+2025/01/25 11:27:51 Successfully Get
+2025/01/25 11:27:51 GetStocks-(-)
+2025/01/25 11:29:56 GetClientFullDetails-(+)
+2025/01/25 11:29:56 GetClientFullDetails-(-)
+2025/01/25 11:29:56 GetClientFullDetails-(+)
+2025/01/25 11:29:56 Database connection established successfully.
+2025/01/25 11:29:56 Successfully retrieved client details.
+2025/01/25 11:29:56 GetClientFullDetails-(-)
+2025/01/25 11:29:56 GetStocks-(+)
+2025/01/25 11:29:56 Database connection established successfully.
+2025/01/25 11:29:56 Successfully Get
+2025/01/25 11:29:56 GetStocks-(-)
+2025/01/25 11:30:23 GetClientFullDetails-(+)
+2025/01/25 11:30:23 GetClientFullDetails-(-)
+2025/01/25 11:30:23 GetClientFullDetails-(+)
+2025/01/25 11:30:23 Database connection established successfully.
+2025/01/25 11:30:23 Successfully retrieved client details.
+2025/01/25 11:30:23 GetClientFullDetails-(-)
+2025/01/25 11:30:23 GetStocks-(+)
+2025/01/25 11:30:23 Database connection established successfully.
+2025/01/25 11:30:23 Successfully Get
+2025/01/25 11:30:23 GetStocks-(-)
+2025/01/25 11:34:13 GetStocks-(+)
+2025/01/25 11:34:13 Database connection established successfully.
+2025/01/25 11:34:13 Successfully Get
+2025/01/25 11:34:13 GetStocks-(-)
+2025/01/25 11:34:19 LoginUser-(+)
+2025/01/25 11:34:19 LoginUser-(-)
+2025/01/25 11:34:19 LoginUser-(+)
+2025/01/25 11:34:19 validate-(+)
+2025/01/25 11:34:19 validate-(-)
+2025/01/25 11:34:19 checkUser-(+)
+2025/01/25 11:34:19 Database connection established successfully.
+2025/01/25 11:34:19 LCU-002 <nil>
+2025/01/25 11:34:19 checkUser-(-)
+2025/01/25 11:34:19 LoginUser-(-)
+2025/01/25 11:34:32 LoginUser-(+)
+2025/01/25 11:34:32 LoginUser-(-)
+2025/01/25 11:34:32 LoginUser-(+)
+2025/01/25 11:34:32 validate-(+)
+2025/01/25 11:34:32 validate-(-)
+2025/01/25 11:34:32 checkUser-(+)
+2025/01/25 11:34:32 Database connection established successfully.
+2025/01/25 11:34:32 LCU-002 <nil>
+2025/01/25 11:34:32 checkUser-(-)
+2025/01/25 11:34:32 LoginUser-(-)
+2025/01/25 11:34:35 LoginUser-(+)
+2025/01/25 11:34:35 validate-(+)
+2025/01/25 11:34:35 validate-(-)
+2025/01/25 11:34:35 checkUser-(+)
+2025/01/25 11:34:35 Database connection established successfully.
+2025/01/25 11:34:35 checkUser-(-)
+2025/01/25 11:34:35 LoginUser-(-)
+2025/01/25 11:34:35 GetClientFullDetails-(+)
+2025/01/25 11:34:35 GetClientFullDetails-(-)
+2025/01/25 11:34:35 GetClientFullDetails-(+)
+2025/01/25 11:34:35 Database connection established successfully.
+2025/01/25 11:34:35 Successfully retrieved client details.
+2025/01/25 11:34:35 GetClientFullDetails-(-)
+2025/01/25 11:34:35 GetStocks-(+)
+2025/01/25 11:34:35 Database connection established successfully.
+2025/01/25 11:34:35 Successfully Get
+2025/01/25 11:34:35 GetStocks-(-)
+2025/01/25 11:37:14 LoginUser-(+)
+2025/01/25 11:37:14 LoginUser-(-)
+2025/01/25 11:37:14 LoginUser-(+)
+2025/01/25 11:37:14 validate-(+)
+2025/01/25 11:37:14 validate-(-)
+2025/01/25 11:37:14 checkUser-(+)
+2025/01/25 11:37:15 Database connection established successfully.
+2025/01/25 11:37:15 checkUser-(-)
+2025/01/25 11:37:15 LoginUser-(-)
+2025/01/25 11:37:15 GetClientFullDetails-(+)
+2025/01/25 11:37:15 GetClientFullDetails-(-)
+2025/01/25 11:37:15 GetClientFullDetails-(+)
+2025/01/25 11:37:15 Database connection established successfully.
+2025/01/25 11:37:15 Successfully retrieved client details.
+2025/01/25 11:37:15 GetClientFullDetails-(-)
+2025/01/25 11:37:15 GetStocks-(+)
+2025/01/25 11:37:15 Database connection established successfully.
+2025/01/25 11:37:15 Successfully Get
+2025/01/25 11:37:15 GetStocks-(-)
+2025/01/25 11:37:56 LoginUser-(+)
+2025/01/25 11:37:56 LoginUser-(-)
+2025/01/25 11:37:56 LoginUser-(+)
+2025/01/25 11:37:56 validate-(+)
+2025/01/25 11:37:56 validate-(-)
+2025/01/25 11:37:56 checkUser-(+)
+2025/01/25 11:37:56 Database connection established successfully.
+2025/01/25 11:37:56 checkUser-(-)
+2025/01/25 11:37:56 LoginUser-(-)
+2025/01/25 11:37:56 GetClientFullDetails-(+)
+2025/01/25 11:37:56 GetClientFullDetails-(-)
+2025/01/25 11:37:56 GetClientFullDetails-(+)
+2025/01/25 11:37:56 Database connection established successfully.
+2025/01/25 11:37:56 Successfully retrieved client details.
+2025/01/25 11:37:56 GetClientFullDetails-(-)
+2025/01/25 11:37:56 GetStocks-(+)
+2025/01/25 11:37:56 Database connection established successfully.
+2025/01/25 11:37:56 Successfully Get
+2025/01/25 11:37:56 GetStocks-(-)

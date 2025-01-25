@@ -1,0 +1,10 @@
+2025/01/25 09:18:15 UpdateTradeStatus-(+)
+2025/01/25 09:18:15 UpdateTradeStatus-(-)
+2025/01/25 09:20:12 UpdateTradeStatus-(+)
+2025/01/25 09:20:12 UpdateTradeStatus-(-)
+2025/01/25 09:20:18 UpdateTradeStatus-(+)
+2025/01/25 09:20:18 updateTradeINDB-(+)
+2025/01/25 09:20:18 Database connection established successfully.
+2025/01/25 09:20:18 UUTTINDB-002 Error 1054 (42S22): Unknown column 'trade_id' in 'where clause'
+2025/01/25 09:20:18 updateTradeINDB-(-)
+2025/01/25 09:20:18 UpdateTradeStatus-(-)

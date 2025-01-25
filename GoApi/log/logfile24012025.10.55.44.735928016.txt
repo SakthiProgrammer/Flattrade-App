@@ -1,0 +1,32 @@
+2025/01/24 10:55:47 GetClients-(+)
+2025/01/24 10:55:47 Database connection established successfully.
+2025/01/24 10:55:47 strToInt-(+)
+2025/01/24 10:55:47 strToInt-(-)
+2025/01/24 10:55:47 Successfully Get
+2025/01/24 10:55:47 GetClients-(-)
+2025/01/24 10:57:24 GetClients-(+)
+2025/01/24 10:57:24 Database connection established successfully.
+2025/01/24 10:57:24 strToInt-(+)
+2025/01/24 10:57:24 strToInt-(-)
+2025/01/24 10:57:24 Successfully Get
+2025/01/24 10:57:24 GetClients-(-)
+2025/01/24 10:57:47 ClientTradeFullDetails-(+)
+2025/01/24 10:57:47 Database connection established successfully.
+2025/01/24 10:57:47 Successfully Get
+2025/01/24 10:57:47 ClientTradeFullDetails-(-)
+2025/01/24 10:58:19 ClientTradeFullDetails-(+)
+2025/01/24 10:58:19 Database connection established successfully.
+2025/01/24 10:58:19 Successfully Get
+2025/01/24 10:58:19 ClientTradeFullDetails-(-)
+2025/01/24 10:58:28 ClientTradeFullDetails-(+)
+2025/01/24 10:58:28 Database connection established successfully.
+2025/01/24 10:58:28 Successfully Get
+2025/01/24 10:58:28 ClientTradeFullDetails-(-)
+2025/01/24 10:58:35 ClientTradeFullDetails-(+)
+2025/01/24 10:58:35 Database connection established successfully.
+2025/01/24 10:58:35 Successfully Get
+2025/01/24 10:58:35 ClientTradeFullDetails-(-)
+2025/01/24 10:58:41 ClientTradeFullDetails-(+)
+2025/01/24 10:58:41 Database connection established successfully.
+2025/01/24 10:58:41 Successfully Get
+2025/01/24 10:58:41 ClientTradeFullDetails-(-)

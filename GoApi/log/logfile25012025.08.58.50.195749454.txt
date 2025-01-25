@@ -1,0 +1,181 @@
+2025/01/25 08:59:17 GetClients-(+)
+2025/01/25 08:59:17 CGCS-004 Invalid Method
+2025/01/25 08:59:17 GetClients-(-)
+2025/01/25 08:59:17 GetClients-(+)
+2025/01/25 08:59:17 Database connection established successfully.
+2025/01/25 08:59:17 strToInt-(+)
+2025/01/25 08:59:17 strToInt-(-)
+2025/01/25 08:59:17 Successfully Get
+2025/01/25 08:59:17 GetClients-(-)
+2025/01/25 08:59:17 GetStocks-(+)
+2025/01/25 08:59:17 Database connection established successfully.
+2025/01/25 08:59:17 Successfully Get
+2025/01/25 08:59:17 GetStocks-(-)
+2025/01/25 09:01:30 LoginUser-(+)
+2025/01/25 09:01:30 LoginUser-(-)
+2025/01/25 09:01:30 LoginUser-(+)
+2025/01/25 09:01:30 validate-(+)
+2025/01/25 09:01:30 validate-(-)
+2025/01/25 09:01:30 checkUser-(+)
+2025/01/25 09:01:30 checkAdmin-(+)
+2025/01/25 09:01:30 checkAdmin-(-)
+2025/01/25 09:01:30 checkUser-(-)
+2025/01/25 09:01:30 LoginUser-(-)
+2025/01/25 09:01:30 GetClients-(+)
+2025/01/25 09:01:30 Database connection established successfully.
+2025/01/25 09:01:30 Successfully Get
+2025/01/25 09:01:30 GetClients-(-)
+2025/01/25 09:01:34 GetStocks-(+)
+2025/01/25 09:01:34 Database connection established successfully.
+2025/01/25 09:01:34 Successfully Get
+2025/01/25 09:01:34 GetStocks-(-)
+2025/01/25 09:01:34 GetCharges-(+)
+2025/01/25 09:01:34 Database connection established successfully.
+2025/01/25 09:01:34 Success
+2025/01/25 09:01:34 GetCharges-(-)
+2025/01/25 09:01:53 CreateChager-(+)
+2025/01/25 09:01:53 CreateChager-(-)
+2025/01/25 09:01:53 CreateChager-(+)
+2025/01/25 09:01:53 BCC-002 parsing time "\"2025-01-26\"" as "\"2006-01-02T15:04:05Z07:00\"": cannot parse "\"" as "T"
+2025/01/25 09:01:53 CreateChager-(-)
+2025/01/25 09:02:09 GetClients-(+)
+2025/01/25 09:02:09 Database connection established successfully.
+2025/01/25 09:02:09 Successfully Get
+2025/01/25 09:02:09 GetClients-(-)
+2025/01/25 09:02:09 GetCharges-(+)
+2025/01/25 09:02:09 Database connection established successfully.
+2025/01/25 09:02:09 Success
+2025/01/25 09:02:09 GetCharges-(-)
+2025/01/25 09:02:49 CreateChager-(+)
+2025/01/25 09:02:49 CreateChager-(-)
+2025/01/25 09:02:49 CreateChager-(+)
+2025/01/25 09:02:49 BCC-002 parsing time "\"2025-02-01\"" as "\"2006-01-02T15:04:05Z07:00\"": cannot parse "\"" as "T"
+2025/01/25 09:02:49 CreateChager-(-)
+2025/01/25 09:02:53 CreateChager-(+)
+2025/01/25 09:02:53 BCC-002 parsing time "\"2025-02-14\"" as "\"2006-01-02T15:04:05Z07:00\"": cannot parse "\"" as "T"
+2025/01/25 09:02:53 CreateChager-(-)
+2025/01/25 09:03:01 CreateChager-(+)
+2025/01/25 09:03:01 CreateChager-(-)
+2025/01/25 09:03:01 CreateChager-(+)
+2025/01/25 09:03:01 BCC-002 parsing time "\"2025-02-18\"" as "\"2006-01-02T15:04:05Z07:00\"": cannot parse "\"" as "T"
+2025/01/25 09:03:01 CreateChager-(-)
+2025/01/25 09:03:02 GetClients-(+)
+2025/01/25 09:03:02 Database connection established successfully.
+2025/01/25 09:03:02 Successfully Get
+2025/01/25 09:03:02 GetClients-(-)
+2025/01/25 09:03:02 GetCharges-(+)
+2025/01/25 09:03:02 Database connection established successfully.
+2025/01/25 09:03:02 Success
+2025/01/25 09:03:02 GetCharges-(-)
+2025/01/25 09:03:05 GetBank-(+)
+2025/01/25 09:03:06 Database connection established successfully.
+2025/01/25 09:03:06 Success
+2025/01/25 09:03:06 GetBank-(-)
+2025/01/25 09:03:12 UpdateBank-(+)
+2025/01/25 09:03:12 UpdateBank-(-)
+2025/01/25 09:03:12 UpdateBank-(+)
+2025/01/25 09:03:12 updateBankInDB-(+)
+2025/01/25 09:03:12 Database connection established successfully.
+2025/01/25 09:03:12 updateBankInDB-(-)
+2025/01/25 09:03:12 UpdateBank-(-)
+2025/01/25 09:03:18 UpdateBank-(+)
+2025/01/25 09:03:18 UpdateBank-(-)
+2025/01/25 09:03:18 UpdateBank-(+)
+2025/01/25 09:03:18 updateBankInDB-(+)
+2025/01/25 09:03:18 Database connection established successfully.
+2025/01/25 09:03:18 updateBankInDB-(-)
+2025/01/25 09:03:18 UpdateBank-(-)
+2025/01/25 09:03:26 UpdateBank-(+)
+2025/01/25 09:03:26 UpdateBank-(-)
+2025/01/25 09:03:26 UpdateBank-(+)
+2025/01/25 09:03:26 updateBankInDB-(+)
+2025/01/25 09:03:26 Database connection established successfully.
+2025/01/25 09:03:26 updateBankInDB-(-)
+2025/01/25 09:03:26 UpdateBank-(-)
+2025/01/25 09:03:30 GetClients-(+)
+2025/01/25 09:03:30 Database connection established successfully.
+2025/01/25 09:03:30 Successfully Get
+2025/01/25 09:03:30 GetClients-(-)
+2025/01/25 09:03:30 GetBank-(+)
+2025/01/25 09:03:30 Database connection established successfully.
+2025/01/25 09:03:30 Success
+2025/01/25 09:03:30 GetBank-(-)
+2025/01/25 09:03:33 GetClients-(+)
+2025/01/25 09:03:33 Database connection established successfully.
+2025/01/25 09:03:33 Successfully Get
+2025/01/25 09:03:33 GetClients-(-)
+2025/01/25 09:03:33 GetBank-(+)
+2025/01/25 09:03:33 Database connection established successfully.
+2025/01/25 09:03:33 Success
+2025/01/25 09:03:33 GetBank-(-)
+2025/01/25 09:03:46 UpdateBank-(+)
+2025/01/25 09:03:46 UpdateBank-(-)
+2025/01/25 09:03:46 UpdateBank-(+)
+2025/01/25 09:03:46 updateBankInDB-(+)
+2025/01/25 09:03:46 Database connection established successfully.
+2025/01/25 09:03:46 updateBankInDB-(-)
+2025/01/25 09:03:46 UpdateBank-(-)
+2025/01/25 09:03:52 UpdateBank-(+)
+2025/01/25 09:03:52 UpdateBank-(-)
+2025/01/25 09:03:52 UpdateBank-(+)
+2025/01/25 09:03:52 updateBankInDB-(+)
+2025/01/25 09:03:52 Database connection established successfully.
+2025/01/25 09:03:52 updateBankInDB-(-)
+2025/01/25 09:03:52 UpdateBank-(-)
+2025/01/25 09:03:54 GetClients-(+)
+2025/01/25 09:03:54 Database connection established successfully.
+2025/01/25 09:03:54 Successfully Get
+2025/01/25 09:03:54 GetClients-(-)
+2025/01/25 09:03:54 GetBank-(+)
+2025/01/25 09:03:54 Database connection established successfully.
+2025/01/25 09:03:54 Success
+2025/01/25 09:03:54 GetBank-(-)
+2025/01/25 09:04:00 GetClients-(+)
+2025/01/25 09:04:00 Database connection established successfully.
+2025/01/25 09:04:00 Successfully Get
+2025/01/25 09:04:00 GetClients-(-)
+2025/01/25 09:04:00 GetBank-(+)
+2025/01/25 09:04:00 Database connection established successfully.
+2025/01/25 09:04:00 Success
+2025/01/25 09:04:00 GetBank-(-)
+2025/01/25 09:04:03 GetCharges-(+)
+2025/01/25 09:04:03 Database connection established successfully.
+2025/01/25 09:04:03 Success
+2025/01/25 09:04:03 GetCharges-(-)
+2025/01/25 09:04:06 GetStocks-(+)
+2025/01/25 09:04:06 Database connection established successfully.
+2025/01/25 09:04:06 Successfully Get
+2025/01/25 09:04:06 GetStocks-(-)
+2025/01/25 09:04:11 UpdateStock- (+)
+2025/01/25 09:04:11 UpdateStock- (-)
+2025/01/25 09:04:11 UpdateStock- (+)
+2025/01/25 09:04:11 updateClientInDB-(+)
+2025/01/25 09:04:11 Database connection established successfully.
+2025/01/25 09:04:11 updateClientInDB-(-)
+2025/01/25 09:04:11 UpdateStock- (-)
+2025/01/25 09:04:18 UpdateStock- (+)
+2025/01/25 09:04:18 UpdateStock- (-)
+2025/01/25 09:04:18 UpdateStock- (+)
+2025/01/25 09:04:18 updateClientInDB-(+)
+2025/01/25 09:04:19 Database connection established successfully.
+2025/01/25 09:04:19 updateClientInDB-(-)
+2025/01/25 09:04:19 UpdateStock- (-)
+2025/01/25 09:04:21 GetCharges-(+)
+2025/01/25 09:04:21 Database connection established successfully.
+2025/01/25 09:04:21 Success
+2025/01/25 09:04:21 GetCharges-(-)
+2025/01/25 09:04:21 GetBank-(+)
+2025/01/25 09:04:21 Database connection established successfully.
+2025/01/25 09:04:21 Success
+2025/01/25 09:04:21 GetBank-(-)
+2025/01/25 09:04:22 GetUsers-(+)
+2025/01/25 09:04:22 Database connection established successfully.
+2025/01/25 09:04:22 Successfully Get
+2025/01/25 09:04:22 GetUsers-(-)
+2025/01/25 09:04:27 UpdateUser-(+)
+2025/01/25 09:04:27 UpdateUser-(-)
+2025/01/25 09:04:27 UpdateUser-(+)
+2025/01/25 09:04:27 updateUserInDB-(+)
+2025/01/25 09:04:27 Database connection established successfully.
+2025/01/25 09:04:27 updateUserInDB-(-)
+2025/01/25 09:04:27 UpdateUser-(-)

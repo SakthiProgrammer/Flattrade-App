@@ -110,10 +110,10 @@ func createChargeInDB(lChargeResp *CreateChargeResp, lCharge *CreateChargeRec) {
 		lName := "Admin: " + AdminId
 
 		// Clean up the EffectiveDate string by trimming any unwanted quotes
-		cleanedEffectiveDate := strings.Trim(lCharge.EffectiveDate.Format("2006-01-02T15:04:05Z07:00"), "\"")
+		cleanedEffectiveDate := strings.Trim(lCharge.EffectiveDate.Format("2006-01-02"), "\"")
 
 		// Parse the cleaned date string (without the time and timezone)
-		parsedTime, err := time.Parse("2006-01-02T15:04:05Z07:00", cleanedEffectiveDate)
+		parsedTime, err := time.Parse("2006-01-02", cleanedEffectiveDate)
 		if err != nil {
 			log.Println("Error parsing EffectiveDate:", err)
 			lChargeResp.ErrMsg = "Invalid date format"

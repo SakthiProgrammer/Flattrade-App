@@ -33,12 +33,24 @@
             <v-btn link to="/login" class="primary rounded"> Login </v-btn>
           </div>
           <div v-show="userType != ''">
-            <v-btn @click="clearStore()" class="primary rounded">
+            <v-btn @click="confirmLogout()" class="primary rounded">
               Logout
             </v-btn>
           </div>
         </v-col>
       </v-row>
+      <v-dialog v-model="logoutDialog" max-width="400">
+        <v-card>
+          <v-card-title class="headline">Confirm Logout</v-card-title>
+          <v-card-text>
+            Are you sure you want to log out?
+          </v-card-text>
+          <v-card-actions class="d-flex justify-end">
+            <v-btn color="grey" text @click="cancelLogout">Cancel</v-btn>
+            <v-btn color="primary" text @click="performLogout">Logout</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-container>
   </v-app-bar>
 </template>
@@ -48,6 +60,7 @@ export default {
   data() {
     return {
       drawer: false,
+      logoutDialog: false,
       userType: "", // 'user', 'admin', 'client' or 'null'
       navLinks: [],
       currentHeader: "Home",
@@ -81,9 +94,20 @@ export default {
     }
   },
   methods: {
+    confirmLogout() {
+      this.logoutDialog = true;
+    },
+    cancelLogout() {
+      this.logoutDialog = false;
+    },
+    performLogout() {
+      this.logoutDialog = false;
+      this.clearStore();
+      this.$router.push('/login');
+    },
     handleComponents(link) {
       this.currentHeader = link.title;
-      this.$emit("handleComponent", link.title); // Emit the current component
+      this.$emit("handleComponent", link.title);
     },
     clearStore() {
       this.$router.push("/login");

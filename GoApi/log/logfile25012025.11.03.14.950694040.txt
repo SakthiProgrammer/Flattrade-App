@@ -1,0 +1,357 @@
+2025/01/25 11:03:20 GetClientFullDetails-(+)
+2025/01/25 11:03:20 GetClientFullDetails-(-)
+2025/01/25 11:03:20 GetClientFullDetails-(+)
+2025/01/25 11:03:20 Database connection established successfully.
+2025/01/25 11:03:20 Successfully retrieved client details.
+2025/01/25 11:03:20 GetClientFullDetails-(-)
+2025/01/25 11:03:20 GetStocks-(+)
+2025/01/25 11:03:20 Database connection established successfully.
+2025/01/25 11:03:20 Successfully Get
+2025/01/25 11:03:20 GetStocks-(-)
+2025/01/25 11:04:24 LoginUser-(+)
+2025/01/25 11:04:24 LoginUser-(-)
+2025/01/25 11:04:24 LoginUser-(+)
+2025/01/25 11:04:24 validate-(+)
+2025/01/25 11:04:24 validate-(-)
+2025/01/25 11:04:24 checkUser-(+)
+2025/01/25 11:04:24 Database connection established successfully.
+2025/01/25 11:04:24 checkUser-(-)
+2025/01/25 11:04:24 LoginUser-(-)
+2025/01/25 11:04:24 GetClientFullDetails-(+)
+2025/01/25 11:04:24 GetClientFullDetails-(-)
+2025/01/25 11:04:24 GetClientFullDetails-(+)
+2025/01/25 11:04:24 Database connection established successfully.
+2025/01/25 11:04:24 Successfully retrieved client details.
+2025/01/25 11:04:24 GetClientFullDetails-(-)
+2025/01/25 11:04:24 GetStocks-(+)
+2025/01/25 11:04:24 Database connection established successfully.
+2025/01/25 11:04:24 Successfully Get
+2025/01/25 11:04:24 GetStocks-(-)
+2025/01/25 11:05:38 GetClientFullDetails-(+)
+2025/01/25 11:05:38 GetClientFullDetails-(-)
+2025/01/25 11:05:38 GetClientFullDetails-(+)
+2025/01/25 11:05:38 Database connection established successfully.
+2025/01/25 11:05:38 Successfully retrieved client details.
+2025/01/25 11:05:38 GetClientFullDetails-(-)
+2025/01/25 11:05:38 GetStocks-(+)
+2025/01/25 11:05:38 Database connection established successfully.
+2025/01/25 11:05:38 Successfully Get
+2025/01/25 11:05:38 GetStocks-(-)
+2025/01/25 11:05:50 GetClientFullDetails-(+)
+2025/01/25 11:05:50 GetClientFullDetails-(-)
+2025/01/25 11:05:50 GetClientFullDetails-(+)
+2025/01/25 11:05:50 Database connection established successfully.
+2025/01/25 11:05:50 Successfully retrieved client details.
+2025/01/25 11:05:50 GetClientFullDetails-(-)
+2025/01/25 11:06:02 GetClientFullDetails-(+)
+2025/01/25 11:06:02 GetClientFullDetails-(-)
+2025/01/25 11:06:02 GetClientFullDetails-(+)
+2025/01/25 11:06:02 Database connection established successfully.
+2025/01/25 11:06:02 Successfully retrieved client details.
+2025/01/25 11:06:02 GetClientFullDetails-(-)
+2025/01/25 11:06:13 GetClientFullDetails-(+)
+2025/01/25 11:06:13 GetClientFullDetails-(-)
+2025/01/25 11:06:13 GetClientFullDetails-(+)
+2025/01/25 11:06:13 Database connection established successfully.
+2025/01/25 11:06:13 Successfully retrieved client details.
+2025/01/25 11:06:13 GetClientFullDetails-(-)
+2025/01/25 11:06:14 GetClientFullDetails-(+)
+2025/01/25 11:06:14 Database connection established successfully.
+2025/01/25 11:06:14 Successfully retrieved client details.
+2025/01/25 11:06:14 GetClientFullDetails-(-)
+2025/01/25 11:06:14 GetStocks-(+)
+2025/01/25 11:06:14 Database connection established successfully.
+2025/01/25 11:06:14 Successfully Get
+2025/01/25 11:06:14 GetStocks-(-)
+2025/01/25 11:06:15 GetClientFullDetails-(+)
+2025/01/25 11:06:15 Database connection established successfully.
+2025/01/25 11:06:15 Successfully retrieved client details.
+2025/01/25 11:06:15 GetClientFullDetails-(-)
+2025/01/25 11:06:41 GetClientFullDetails-(+)
+2025/01/25 11:06:41 GetClientFullDetails-(-)
+2025/01/25 11:06:41 GetClientFullDetails-(+)
+2025/01/25 11:06:41 Database connection established successfully.
+2025/01/25 11:06:41 Successfully retrieved client details.
+2025/01/25 11:06:41 GetClientFullDetails-(-)
+2025/01/25 11:06:41 GetStocks-(+)
+2025/01/25 11:06:41 Database connection established successfully.
+2025/01/25 11:06:41 Successfully Get
+2025/01/25 11:06:41 GetStocks-(-)
+2025/01/25 11:06:42 GetClientFullDetails-(+)
+2025/01/25 11:06:42 Database connection established successfully.
+2025/01/25 11:06:42 Successfully retrieved client details.
+2025/01/25 11:06:42 GetClientFullDetails-(-)
+2025/01/25 11:06:44 GetClientFullDetails-(+)
+2025/01/25 11:06:44 Database connection established successfully.
+2025/01/25 11:06:44 Successfully retrieved client details.
+2025/01/25 11:06:44 GetClientFullDetails-(-)
+2025/01/25 11:06:49 GetClientFullDetails-(+)
+2025/01/25 11:06:49 GetClientFullDetails-(-)
+2025/01/25 11:06:49 GetClientFullDetails-(+)
+2025/01/25 11:06:49 Database connection established successfully.
+2025/01/25 11:06:49 Successfully retrieved client details.
+2025/01/25 11:06:49 GetClientFullDetails-(-)
+2025/01/25 11:07:22 GetClientFullDetails-(+)
+2025/01/25 11:07:22 GetClientFullDetails-(-)
+2025/01/25 11:07:22 GetClientFullDetails-(+)
+2025/01/25 11:07:22 GetStocks-(+)
+2025/01/25 11:07:22 Database connection established successfully.
+2025/01/25 11:07:22 Database connection established successfully.
+2025/01/25 11:07:23 Successfully Get
+2025/01/25 11:07:23 GetStocks-(-)
+2025/01/25 11:07:23 Successfully retrieved client details.
+2025/01/25 11:07:23 GetClientFullDetails-(-)
+2025/01/25 11:08:55 GetClientFullDetails-(+)
+2025/01/25 11:08:55 GetClientFullDetails-(-)
+2025/01/25 11:08:55 GetClientFullDetails-(+)
+2025/01/25 11:08:55 Database connection established successfully.
+2025/01/25 11:08:55 Successfully retrieved client details.
+2025/01/25 11:08:55 GetClientFullDetails-(-)
+2025/01/25 11:08:57 GetClientFullDetails-(+)
+2025/01/25 11:08:57 Database connection established successfully.
+2025/01/25 11:08:57 Successfully retrieved client details.
+2025/01/25 11:08:57 GetClientFullDetails-(-)
+2025/01/25 11:09:00 GetClientFullDetails-(+)
+2025/01/25 11:09:00 Database connection established successfully.
+2025/01/25 11:09:00 Successfully retrieved client details.
+2025/01/25 11:09:00 GetClientFullDetails-(-)
+2025/01/25 11:09:09 GetClientFullDetails-(+)
+2025/01/25 11:09:09 GetClientFullDetails-(-)
+2025/01/25 11:09:09 GetClientFullDetails-(+)
+2025/01/25 11:09:09 GetStocks-(+)
+2025/01/25 11:09:09 Database connection established successfully.
+2025/01/25 11:09:09 Database connection established successfully.
+2025/01/25 11:09:10 Successfully retrieved client details.
+2025/01/25 11:09:10 Successfully Get
+2025/01/25 11:09:10 GetClientFullDetails-(-)
+2025/01/25 11:09:10 GetStocks-(-)
+2025/01/25 11:09:56 GetClientFullDetails-(+)
+2025/01/25 11:09:56 GetClientFullDetails-(-)
+2025/01/25 11:09:56 GetClientFullDetails-(+)
+2025/01/25 11:09:56 Database connection established successfully.
+2025/01/25 11:09:56 Successfully retrieved client details.
+2025/01/25 11:09:56 GetClientFullDetails-(-)
+2025/01/25 11:09:56 GetStocks-(+)
+2025/01/25 11:09:57 Database connection established successfully.
+2025/01/25 11:09:57 Successfully Get
+2025/01/25 11:09:57 GetStocks-(-)
+2025/01/25 11:09:59 GetClientFullDetails-(+)
+2025/01/25 11:09:59 Database connection established successfully.
+2025/01/25 11:09:59 Successfully retrieved client details.
+2025/01/25 11:09:59 GetClientFullDetails-(-)
+2025/01/25 11:10:00 GetClientFullDetails-(+)
+2025/01/25 11:10:00 Database connection established successfully.
+2025/01/25 11:10:00 Successfully retrieved client details.
+2025/01/25 11:10:00 GetClientFullDetails-(-)
+2025/01/25 11:10:04 GetClientFullDetails-(+)
+2025/01/25 11:10:04 GetClientFullDetails-(-)
+2025/01/25 11:10:04 GetClientFullDetails-(+)
+2025/01/25 11:10:04 Database connection established successfully.
+2025/01/25 11:10:05 Successfully retrieved client details.
+2025/01/25 11:10:05 GetClientFullDetails-(-)
+2025/01/25 11:10:24 GetClientFullDetails-(+)
+2025/01/25 11:10:24 GetClientFullDetails-(-)
+2025/01/25 11:10:24 GetClientFullDetails-(+)
+2025/01/25 11:10:24 Database connection established successfully.
+2025/01/25 11:10:24 Successfully retrieved client details.
+2025/01/25 11:10:24 GetClientFullDetails-(-)
+2025/01/25 11:10:24 GetStocks-(+)
+2025/01/25 11:10:24 Database connection established successfully.
+2025/01/25 11:10:24 Successfully Get
+2025/01/25 11:10:24 GetStocks-(-)
+2025/01/25 11:10:27 GetClientFullDetails-(+)
+2025/01/25 11:10:27 Database connection established successfully.
+2025/01/25 11:10:27 Successfully retrieved client details.
+2025/01/25 11:10:27 GetClientFullDetails-(-)
+2025/01/25 11:11:13 GetClientFullDetails-(+)
+2025/01/25 11:11:13 GetClientFullDetails-(-)
+2025/01/25 11:11:13 GetClientFullDetails-(+)
+2025/01/25 11:11:13 Database connection established successfully.
+2025/01/25 11:11:13 Successfully retrieved client details.
+2025/01/25 11:11:13 GetClientFullDetails-(-)
+2025/01/25 11:11:13 GetStocks-(+)
+2025/01/25 11:11:13 Database connection established successfully.
+2025/01/25 11:11:13 Successfully Get
+2025/01/25 11:11:13 GetStocks-(-)
+2025/01/25 11:11:16 GetClientFullDetails-(+)
+2025/01/25 11:11:16 Database connection established successfully.
+2025/01/25 11:11:16 Successfully retrieved client details.
+2025/01/25 11:11:16 GetClientFullDetails-(-)
+2025/01/25 11:11:21 GetClientFullDetails-(+)
+2025/01/25 11:11:21 GetClientFullDetails-(-)
+2025/01/25 11:11:21 GetClientFullDetails-(+)
+2025/01/25 11:11:21 Database connection established successfully.
+2025/01/25 11:11:21 Successfully retrieved client details.
+2025/01/25 11:11:21 GetClientFullDetails-(-)
+2025/01/25 11:11:21 GetStocks-(+)
+2025/01/25 11:11:21 Database connection established successfully.
+2025/01/25 11:11:21 Successfully Get
+2025/01/25 11:11:21 GetStocks-(-)
+2025/01/25 11:12:52 GetClientFullDetails-(+)
+2025/01/25 11:12:52 GetClientFullDetails-(-)
+2025/01/25 11:12:52 GetClientFullDetails-(+)
+2025/01/25 11:12:52 Database connection established successfully.
+2025/01/25 11:12:52 Successfully retrieved client details.
+2025/01/25 11:12:52 GetClientFullDetails-(-)
+2025/01/25 11:12:56 GetClientFullDetails-(+)
+2025/01/25 11:12:56 Database connection established successfully.
+2025/01/25 11:12:56 Successfully retrieved client details.
+2025/01/25 11:12:56 GetClientFullDetails-(-)
+2025/01/25 11:12:57 GetClientFullDetails-(+)
+2025/01/25 11:12:57 Database connection established successfully.
+2025/01/25 11:12:57 Successfully retrieved client details.
+2025/01/25 11:12:57 GetClientFullDetails-(-)
+2025/01/25 11:13:02 GetClientFullDetails-(+)
+2025/01/25 11:13:02 GetClientFullDetails-(-)
+2025/01/25 11:13:02 GetClientFullDetails-(+)
+2025/01/25 11:13:02 Database connection established successfully.
+2025/01/25 11:13:02 Successfully retrieved client details.
+2025/01/25 11:13:02 GetClientFullDetails-(-)
+2025/01/25 11:13:02 GetStocks-(+)
+2025/01/25 11:13:02 Database connection established successfully.
+2025/01/25 11:13:02 Successfully Get
+2025/01/25 11:13:02 GetStocks-(-)
+2025/01/25 11:13:32 GetClientFullDetails-(+)
+2025/01/25 11:13:32 GetClientFullDetails-(-)
+2025/01/25 11:13:32 GetClientFullDetails-(+)
+2025/01/25 11:13:32 Database connection established successfully.
+2025/01/25 11:13:32 Successfully retrieved client details.
+2025/01/25 11:13:32 GetClientFullDetails-(-)
+2025/01/25 11:13:32 GetStocks-(+)
+2025/01/25 11:13:32 Database connection established successfully.
+2025/01/25 11:13:32 Successfully Get
+2025/01/25 11:13:32 GetStocks-(-)
+2025/01/25 11:13:45 GetClientFullDetails-(+)
+2025/01/25 11:13:45 GetClientFullDetails-(-)
+2025/01/25 11:13:45 GetClientFullDetails-(+)
+2025/01/25 11:13:45 Database connection established successfully.
+2025/01/25 11:13:45 Successfully retrieved client details.
+2025/01/25 11:13:45 GetClientFullDetails-(-)
+2025/01/25 11:13:52 GetClientFullDetails-(+)
+2025/01/25 11:13:52 GetClientFullDetails-(-)
+2025/01/25 11:13:52 GetClientFullDetails-(+)
+2025/01/25 11:13:52 Database connection established successfully.
+2025/01/25 11:13:52 Successfully retrieved client details.
+2025/01/25 11:13:52 GetClientFullDetails-(-)
+2025/01/25 11:15:16 GetClientFullDetails-(+)
+2025/01/25 11:15:16 GetClientFullDetails-(-)
+2025/01/25 11:15:16 GetClientFullDetails-(+)
+2025/01/25 11:15:16 Database connection established successfully.
+2025/01/25 11:15:16 Successfully retrieved client details.
+2025/01/25 11:15:16 GetClientFullDetails-(-)
+2025/01/25 11:15:16 GetStocks-(+)
+2025/01/25 11:15:16 Database connection established successfully.
+2025/01/25 11:15:16 Successfully Get
+2025/01/25 11:15:16 GetStocks-(-)
+2025/01/25 11:16:01 GetClientFullDetails-(+)
+2025/01/25 11:16:01 GetClientFullDetails-(-)
+2025/01/25 11:16:01 GetClientFullDetails-(+)
+2025/01/25 11:16:01 Database connection established successfully.
+2025/01/25 11:16:01 Successfully retrieved client details.
+2025/01/25 11:16:01 GetClientFullDetails-(-)
+2025/01/25 11:16:01 GetStocks-(+)
+2025/01/25 11:16:01 Database connection established successfully.
+2025/01/25 11:16:01 Successfully Get
+2025/01/25 11:16:01 GetStocks-(-)
+2025/01/25 11:16:24 GetClientFullDetails-(+)
+2025/01/25 11:16:24 GetClientFullDetails-(-)
+2025/01/25 11:16:24 GetClientFullDetails-(+)
+2025/01/25 11:16:24 Database connection established successfully.
+2025/01/25 11:16:24 Successfully retrieved client details.
+2025/01/25 11:16:24 GetClientFullDetails-(-)
+2025/01/25 11:16:26 GetClientFullDetails-(+)
+2025/01/25 11:16:26 Database connection established successfully.
+2025/01/25 11:16:26 Successfully retrieved client details.
+2025/01/25 11:16:26 GetClientFullDetails-(-)
+2025/01/25 11:16:30 GetClientFullDetails-(+)
+2025/01/25 11:16:30 GetClientFullDetails-(-)
+2025/01/25 11:16:30 GetClientFullDetails-(+)
+2025/01/25 11:16:30 Database connection established successfully.
+2025/01/25 11:16:30 Successfully retrieved client details.
+2025/01/25 11:16:30 GetClientFullDetails-(-)
+2025/01/25 11:16:31 GetClientFullDetails-(+)
+2025/01/25 11:16:31 Database connection established successfully.
+2025/01/25 11:16:31 Successfully retrieved client details.
+2025/01/25 11:16:31 GetClientFullDetails-(-)
+2025/01/25 11:16:40 GetClientFullDetails-(+)
+2025/01/25 11:16:40 GetClientFullDetails-(-)
+2025/01/25 11:16:40 GetClientFullDetails-(+)
+2025/01/25 11:16:40 Database connection established successfully.
+2025/01/25 11:16:40 Successfully retrieved client details.
+2025/01/25 11:16:40 GetClientFullDetails-(-)
+2025/01/25 11:17:57 GetClientFullDetails-(+)
+2025/01/25 11:17:57 GetClientFullDetails-(-)
+2025/01/25 11:17:57 GetClientFullDetails-(+)
+2025/01/25 11:17:57 Database connection established successfully.
+2025/01/25 11:17:57 Successfully retrieved client details.
+2025/01/25 11:17:57 GetClientFullDetails-(-)
+2025/01/25 11:17:57 GetStocks-(+)
+2025/01/25 11:17:57 Database connection established successfully.
+2025/01/25 11:17:57 Successfully Get
+2025/01/25 11:17:57 GetStocks-(-)
+2025/01/25 11:18:09 GetClientFullDetails-(+)
+2025/01/25 11:18:09 GetClientFullDetails-(-)
+2025/01/25 11:18:09 GetClientFullDetails-(+)
+2025/01/25 11:18:09 Database connection established successfully.
+2025/01/25 11:18:09 Successfully retrieved client details.
+2025/01/25 11:18:09 GetClientFullDetails-(-)
+2025/01/25 11:18:09 GetStocks-(+)
+2025/01/25 11:18:09 Database connection established successfully.
+2025/01/25 11:18:09 Successfully Get
+2025/01/25 11:18:09 GetStocks-(-)
+2025/01/25 11:18:44 GetClientFullDetails-(+)
+2025/01/25 11:18:44 GetClientFullDetails-(-)
+2025/01/25 11:18:44 GetClientFullDetails-(+)
+2025/01/25 11:18:44 Database connection established successfully.
+2025/01/25 11:18:44 Successfully retrieved client details.
+2025/01/25 11:18:44 GetClientFullDetails-(-)
+2025/01/25 11:18:44 GetStocks-(+)
+2025/01/25 11:18:44 Database connection established successfully.
+2025/01/25 11:18:44 Successfully Get
+2025/01/25 11:18:44 GetStocks-(-)
+2025/01/25 11:19:00 GetClientFullDetails-(+)
+2025/01/25 11:19:00 GetClientFullDetails-(-)
+2025/01/25 11:19:00 GetClientFullDetails-(+)
+2025/01/25 11:19:00 Database connection established successfully.
+2025/01/25 11:19:00 Successfully retrieved client details.
+2025/01/25 11:19:00 GetClientFullDetails-(-)
+2025/01/25 11:19:00 GetStocks-(+)
+2025/01/25 11:19:00 Database connection established successfully.
+2025/01/25 11:19:00 Successfully Get
+2025/01/25 11:19:00 GetStocks-(-)
+2025/01/25 11:19:49 GetClientFullDetails-(+)
+2025/01/25 11:19:49 GetClientFullDetails-(-)
+2025/01/25 11:19:49 GetClientFullDetails-(+)
+2025/01/25 11:19:49 Database connection established successfully.
+2025/01/25 11:19:49 Successfully retrieved client details.
+2025/01/25 11:19:49 GetClientFullDetails-(-)
+2025/01/25 11:19:49 GetStocks-(+)
+2025/01/25 11:19:49 Database connection established successfully.
+2025/01/25 11:19:49 Successfully Get
+2025/01/25 11:19:49 GetStocks-(-)
+2025/01/25 11:20:56 GetClientFullDetails-(+)
+2025/01/25 11:20:56 GetClientFullDetails-(-)
+2025/01/25 11:20:56 GetClientFullDetails-(+)
+2025/01/25 11:20:56 Database connection established successfully.
+2025/01/25 11:20:56 Successfully retrieved client details.
+2025/01/25 11:20:56 GetClientFullDetails-(-)
+2025/01/25 11:20:56 GetStocks-(+)
+2025/01/25 11:20:56 Database connection established successfully.
+2025/01/25 11:20:56 Successfully Get
+2025/01/25 11:20:56 GetStocks-(-)
+2025/01/25 11:23:36 GetClientFullDetails-(+)
+2025/01/25 11:23:36 GetClientFullDetails-(-)
+2025/01/25 11:23:49 GetClientFullDetails-(+)
+2025/01/25 11:23:49 GetClientFullDetails-(-)
+2025/01/25 11:23:57 GetClientFullDetails-(+)
+2025/01/25 11:23:57 GetClientFullDetails-(-)
+2025/01/25 11:24:01 GetClientFullDetails-(+)
+2025/01/25 11:24:01 GetClientFullDetails-(-)
+2025/01/25 11:24:10 GetClientFullDetails-(+)
+2025/01/25 11:24:10 Database connection established successfully.
+2025/01/25 11:24:10 TGCFD-002 record not found
+2025/01/25 11:24:10 GetClientFullDetails-(-)
+2025/01/25 11:24:22 GetClientFullDetails-(+)
+2025/01/25 11:24:22 Database connection established successfully.
+2025/01/25 11:24:22 Successfully retrieved client details.
+2025/01/25 11:24:22 GetClientFullDetails-(-)
