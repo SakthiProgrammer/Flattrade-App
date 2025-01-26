@@ -1,5 +1,3 @@
-
-
 <template>
   <v-container>
     <v-card elevation="6" class="pa-md-15 mx-lg-auto pa-sm-10" width="100%">
@@ -139,6 +137,31 @@
         </v-row>
       </v-form>
     </v-card>
+    <v-dialog
+      v-model="dialog"
+      transition="dialog-top-transition"
+      max-width="500"
+    >
+      <template v-slot:default>
+        <v-card flat>
+          <v-card-title class="text-h6 text-center">User ID</v-card-title>
+          <v-card-text>
+            <v-text-field
+              v-model="textToCopy"
+              outlined
+              readonly
+              :append-icon="icon"
+              :class="{ 'success-icon': icon === 'mdi-check-circle' }"
+              @click:append="copyToClipboard"
+            ></v-text-field>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="primary" @click="navigateToLogin()">Login</v-btn>
+          </v-card-actions>
+        </v-card>
+      </template>
+    </v-dialog>
     <!-- {{ data }}
         {{ registerClient }}
         {{ registerClient.bank_id }} -->
@@ -154,8 +177,11 @@ export default {
       data: [],
       SelectedBank: 0,
       bankDetails: [],
+      textToCopy: "FT0001",
       branchName: "",
       ifscCode: "",
+      dialog: true,
+      icon: "mdi-content-copy",
       // password: "",
       ConformPassword: "",
       showPassword: false,
@@ -183,6 +209,10 @@ export default {
       .catch((err) => console.log(err));
   },
   methods: {
+    navigateToLogin() {
+      this.dialog = false;
+      this.$router.push("/login");
+    },
     updateBankDetails() {
       const selectedItem = this.bankDetails.bank_details.find(
         (bank) => bank.id === this.SelectedBank
@@ -198,12 +228,27 @@ export default {
       }
     },
 
+    copyToClipboard() {
+      navigator.clipboard.writeText(this.textToCopy).then(
+        () => {
+          this.icon = "mdi-check-circle"; // Change to check icon on success
+          this.$toast?.success("Text copied to clipboard!");
+          setTimeout(() => {
+            this.icon = "mdi-content-copy"; // Reset back to copy icon after 2 seconds
+          }, 2000);
+        },
+        (err) => {
+          this.$toast?.error("Failed to copy text: " + err);
+        }
+      );
+    },
     RegisterClient() {
       EventService.CreateClient(this.registerClient)
         .then((res) => {
           if (res.data.errMsg != "") {
             console.log(res.data.errMsg);
             this.data = res.data;
+            this.dialog = true;
           }
         })
         .catch((err) => console.log(err));
@@ -211,4 +256,3 @@ export default {
   },
 };
 </script>
-
