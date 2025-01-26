@@ -1,11 +1,9 @@
 <template>
   <div>
-    <h6 class="text-center title pa-10">404 Page Not Found</h6>
+    <h6 class="mt-30 text-center title">404 Page Not Found</h6>
   </div>
 </template>
 
 <script>
-export default {
-
-};
+export default {};
 </script>

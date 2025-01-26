@@ -38,15 +38,16 @@ export default {
     return {
       headers: [
         { text: "S.No.", value: "s_no", align: "start", sortable: false },
+        { text: "Client ID", value: "client_id" },
         { text: "Client Name", value: "client_name" },
         { text: "Stock Name", value: "stock_name" },
         { text: "Segment", value: "segment" },
         // { text: "Bank Name", value: "bank_name" },
         { text: "Trade Type", value: "trade_type" },
         { text: "Quantity", value: "quantity" },
-        { text: "Trade Price", value: "trade_price" },
-        { text: "Total Price", value: "total_price" },
+        { text: "Stock Price", value: "trade_price" },
         { text: "Trade Date", value: "trade_date" },
+        { text: "Total Price", value: "total_price" },
         // {
         //   text: "Approval Status (Back Officer)",
         //   value: "back_officer_approval_status",
