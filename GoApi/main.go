@@ -6,8 +6,10 @@ import (
 	"flattrade/apps/client"
 	login "flattrade/apps/login"
 	"flattrade/apps/stock"
+	"flattrade/apps/test"
 	"flattrade/apps/trade"
 	"flattrade/apps/user"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -46,6 +48,12 @@ func main() {
 	http.HandleFunc("/getclienttrades", trade.GetClientFullDetails)
 	http.HandleFunc("/getclientstrades", user.ClientTradeFullDetails)
 	http.HandleFunc("/updatetradestatus", user.UpdateTradeStatus)
+
+	/* === sample testing === */
+
+	fmt.Println(test.GenerateUniqueID(3, "B"))
+	fmt.Println(test.GenerateUniqueID(3, "BO"))
+	fmt.Println(test.GenerateUniqueID(3, "APPR"))
 
 	http.ListenAndServe(":29091", nil)
 }

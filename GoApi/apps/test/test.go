@@ -1,4 +1,4 @@
-package common
+package test
 
 import (
 	"flattrade/genpkg"
@@ -6,26 +6,6 @@ import (
 	"log"
 	"strconv"
 )
-
-const (
-	SuccessCode = "S"
-	ErrorCode   = "E"
-	Pending     = "Pending"
-	Approved    = "Approved"
-	Rejected    = "Rejected"
-	BackOfficer = "BO"
-	Biller      = "B"
-	Approver    = "APPR"
-)
-
-func ValidateUserRole(lRole string) bool {
-	log.Println("ValidateUserRole-(+)")
-	if lRole == "" || lRole != BackOfficer || lRole != Biller || lRole != Approver {
-		return false
-	}
-	log.Println("ValidateUserRole-(+)")
-	return true
-}
 
 func GenerateUniqueID(clientId int, role string) string {
 
