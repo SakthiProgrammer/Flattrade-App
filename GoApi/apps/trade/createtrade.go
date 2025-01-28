@@ -9,10 +9,13 @@ import (
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/jinzhu/gorm"
 )
 
 type CreateTradeRec struct {
 	ClientID                  uint      `json:"client_id" gorm:"column:client_id"`
+	TradeID                   uint      `json:"trade_id" gorm:"-"`
 	StockID                   uint      `json:"stock_id" gorm:"column:stock_id"`
 	TradeType                 string    `json:"trade_type" gorm:"column:trade_type"`
 	Quantity                  uint      `json:"quantity" gorm:"column:quantity"`
@@ -36,7 +39,7 @@ type CreateTradeResp struct {
 func CreateTrade(w http.ResponseWriter, r *http.Request) {
 	(w).Header().Set("Access-Control-Allow-Origin", "*")
 	(w).Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
-	(w).Header().Set("Access-Control-Allow-Headers", "USER, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
+	(w).Header().Set("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 	(w).Header().Set("Content-Type", "application/json")
 
 	log.Println("CreateBank-(+)")
@@ -101,7 +104,7 @@ func createTradeInDB(lTradeResp *CreateTradeResp, lTrade *CreateTradeRec) {
 	defer lSql.Close()
 
 	if lErr != nil {
-		log.Println("T", lErr.Error())
+		log.Println("TCTIDB-001", lErr.Error())
 		lTradeResp.ErrMsg = lErr.Error()
 		lTradeResp.Status = common.ErrorCode
 
@@ -123,7 +126,38 @@ func createTradeInDB(lTradeResp *CreateTradeResp, lTrade *CreateTradeRec) {
 			lTrade.BackOfficerApprovalStatus = lPending
 			lTrade.BillerApprovalStatus = lPending
 
-			lResult := lGormDB.Table("st_918_trade_table").Create(&lTrade)
+			var lResult *gorm.DB
+
+			if lTrade.TradeType == "BUY" {
+
+				lResult = lGormDB.Table("st_918_trade_table").Create(&lTrade)
+
+			} else {
+
+				var lQuantity uint
+				lResult = lGormDB.Table("st_918_trade_table").
+					Select("quantity").
+					Where("Id = ?", lTrade.TradeID).
+					Scan(&lQuantity)
+
+				if lQuantity < lTrade.Quantity {
+					lTradeResp.ErrMsg = "You Don't have that quantity to SELL"
+					lTradeResp.Status = common.ErrorCode
+				} else {
+
+					lResult = lGormDB.Exec(`
+	UPDATE st_918_trade_table 
+	SET 
+		quantity = (SELECT quantity FROM st_918_trade_table WHERE Id = ?) - ?, 
+		trade_price = ? 
+	WHERE Id = ?`,
+						lTrade.TradeID,
+						lTrade.Quantity,
+						lTrade.TradePrice, lTrade.TradeID)
+
+					lResult = lGormDB.Table("st_918_trade_table").Create(&lTrade)
+				}
+			}
 
 			if lResult.Error != nil {
 				log.Println("TCTIDB-003", lResult.Error)

@@ -160,21 +160,24 @@ func GetClientFullDetails(w http.ResponseWriter, r *http.Request) {
 
 			} else {
 
+				// Query for PendingTrade
 				lGormDb.Table("st_918_trade_table").
 					Preload("StockRec").
 					Where("client_id = ? AND ("+
 						"back_officer_approval_status = ? OR "+
 						"biller_Approvel_status = ? OR "+
-						"approver_Approvel_status = ?)", lUserId, common.Pending, common.Pending, common.Pending).
+						"approver_Approvel_status = ?) AND quantity > 0",
+						lUserId, common.Pending, common.Pending, common.Pending).
 					Find(&lClientResp.PendingTrade)
 
+				// Query for HistoryTrade
 				lGormDb.Table("st_918_trade_table").
 					Preload("StockRec").
 					Where("client_id = ? AND "+
 						"back_officer_approval_status != ? AND "+
-						"biller_Approvel_status != ?   AND "+
-						"approver_Approvel_status != ?)", lUserId,
-						common.Pending, common.Pending, common.Pending).
+						"biller_Approvel_status != ? AND "+
+						"approver_Approvel_status != ? AND quantity > 0",
+						lUserId, common.Pending, common.Pending, common.Pending).
 					Find(&lClientResp.HistoryTrade)
 
 				// lClientResp.GetClientRec = GetClientRec{
